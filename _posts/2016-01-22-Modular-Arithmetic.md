@@ -7,7 +7,7 @@ author:     "NivenT"
 header-img: "img/blog/header/post-bg-03.jpg"
 thumbnail: /img/blog/thumbs/empty.png
 tags: [math, modular, number theory, code, algebra]
-category: [math, CS]
+category: math
 comments: true
 ---
 
@@ -49,7 +49,7 @@ $$\begin{align*}
 These properties motivate the following definition.
 {: style="font-size: 60%;"}
 > Definition of $$a\equiv b\pmod n$$:<br>
-We write $$a\equiv b\pmod n$$ iff $$a-b|n$$. We read this as $$a$$ is congruent to $$b$$ mod $$n$$.
+We write $$a\equiv b\pmod n$$ iff $$(a-b)|n$$. We read this as "$$a$$ is congruent to $$b$$ modulo $$n$$".
 {: style="font-size: 60%;"}
 Note that the above definition is equivalent to saying that $$a\equiv b\pmod n$$ iff $$a\bmod n=b\bmod n$$ [^2]. It is easy to see that this new form of mod inherits some nice properties from the one we first introduced. Namely,
 {: style="font-size: 60%;"}
@@ -89,7 +89,7 @@ def gcd(a,b):
 		return gcd(b,a%b)
 ~~~
 {: style="font-size: 60%;"}
-To finish this section, lets calculate the greatest common divisor of $$23456$$ and $$123456$$.
+To finish this section, let's calculate the greatest common divisor of $$23456$$ and $$123456$$.
 $$\begin{matrix}
 123456 &=& 5  &*& 23456 &+& &6176\\
 23456  &=& 3  &*& 6176  &+& &4928\\
@@ -132,7 +132,7 @@ Pf: Let $$m=2\lfloor\log_2b\rfloor+2=2(\lfloor\log_2b\rfloor+1)$$ and note that,
 Division $$\bmod n$$
 -----------------------
 -----------------------
-One thing that may be surprising to hear is that modular arithmetic allows for division (sometimes). The division problem is as follows. Given $$a$$ and $$n$$, find a $$b$$ such that $$ab\equiv1\pmod n$$. We will simply take for granted the fact that such a $$b$$ exits iff $$a$$ and $$n$$ are coprime and that such a $$b$$ is unique (up to modular congruence) when it does exits. Furthermore, without going in to the details, I will mention that $$b$$ and be computed from $$a$$ and $$n$$ using the Extended Euclidean Algorithm or Fermat's Little Theorem. If $$b$$ exists, then we call it the inverse of $$a\pmod p$$. Motivated by the fact that the inverse of $$a$$ exists only when $$a$$ is coprime to $$n$$, we present the following definition.
+One thing that may be surprising to hear is that modular arithmetic allows for division (sometimes). The division problem is as follows. Given $$a$$ and $$n$$, find a $$b$$ such that $$ab\equiv1\pmod n$$. We will simply take for granted the fact that such a $$b$$ exits iff $$a$$ and $$n$$ are coprime and that such a $$b$$ is unique (up to modular congruence) when it does exits. Furthermore, without going in to the details here, I will mention that $$b$$ and be computed from $$a$$ and $$n$$ using the Extended Euclidean Algorithm or Fermat's Little Theorem. If $$b$$ exists, then we call it the inverse of $$a\pmod p$$. Motivated by the fact that the inverse of $$a$$ exists only when $$a$$ is coprime to $$n$$, we present the following definition.
 {: style="font-size: 60%;"}
 > Defintion of $$\mathbb Z_n^*$$:<br>
 $$\mathbb Z_n^*$$ is the set of all numbers less than or equal to $$n$$ that are coprime to $$n$$. This set is sometimes referred to as $$U(n)$$.
