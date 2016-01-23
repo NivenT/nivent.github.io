@@ -19,7 +19,8 @@ I plan on writing a couple posts related to cryptography soon. Before I do that,
 Divisibility
 ------------
 ------------
-The first thing to know is that modular arithmetic is all about integers. We do not care about rationals, reals, or anything else, only integers [^1]. As such, all our definitions have to be written in terms of integers, and the first such definition is that of divisibility. It is tempting to say that $$a$$ divides $$b$$ iff $$\frac ba$$ is an integer, but writing $$\frac ba$$ means we are entering the realm of rationals, which we cannot do. Therefore, we instead say that $$a$$ divides $$b$$ iff there exists an integer $$k$$ such that $$b=ak$$. This way we are defining divisibility in terms of multiplication (which is defined for integers) instead of division (which is not defined for integers in general). We write $$a|b$$ when $$a$$ divides $$b$$. The following are a few properties of divisibility.<br>
+The first thing to know is that modular arithmetic is all about integers. We do not care about rationals, reals, or anything else, only integers [^1]. As such, all our definitions have to be written in terms of integers, and the first such definition is that of divisibility. It is tempting to say that $$a$$ divides $$b$$ iff $$\frac ba$$ is an integer, but writing $$\frac ba$$ means we are entering the realm of rationals, which we cannot do. Therefore, we instead say that $$a$$ divides $$b$$ iff there exists an integer $$k$$ such that $$b=ak$$. This way we are defining divisibility in terms of multiplication (which is defined for integers) instead of division (which is not defined for integers in general). We write $$a|b$$ when $$a$$ divides $$b$$. The following are a few properties of divisibility.
+{: style="font-size: 60%;"}
 $$\begin{equation}
 \text{If } a|b \text{ and } a|c \text{, then } a|(b\pm c)\\
 \text{If } a|b \text{ and } a|c \text{, then } a|bc
@@ -164,5 +165,5 @@ If $$a$$ is coprime to $$b$$, then $$a^{\phi(b)}\equiv1\pmod b$$.
 [^2]: This definition was also motivated by the desire to write mod less frequently.
 [^3]: For those of you with some familiarity in algebra, this is a group under addition for all n and field under addition and multiplication when n is prime.
 [^4]: If b is bigger than a, then simply swap a and b.
-[^5]: Probably should have mentioned this earlier. When a and b are negative, we make use of the fact that gcd(a,b)=gcd(|a|,|b|) and compute their gcd that way.
-[^6]: The truly vigilant reader will notice that I misspelled vigilant
+[^5]: Probably should have mentioned this earlier. When a and b are negative, we make use of the fact that gcd(a,b)=gcd(\|a\|,\|b\|) and compute their gcd that way.
+[^6]: The truly vigilant reader will notice that I misspelled vigilant.
