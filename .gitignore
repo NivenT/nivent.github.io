@@ -2,3 +2,4 @@ _site
 node_modules
 Thumbs.db
 Unused
+_plugins/kramdown-with-pygments
