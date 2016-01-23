@@ -7,7 +7,7 @@ author:     "NivenT"
 header-img: "img/blog/header/post-bg-03.jpg"
 thumbnail: /img/blog/thumbs/empty.png
 tags: [math, modular, number theory, code, algebra]
-category: math
+category: [math]
 comments: true
 ---
 
