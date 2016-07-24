@@ -2,7 +2,7 @@
 layout:     post
 title:      "Square Triangles"
 subtitle:   "1 + 2 + 3 + ... + m = n^2"
-date:       2016-07-23 19:40:00
+date:       2016-07-24 03:06:00
 author:     "NivenT"
 header-img: "img/blog/header/post-bg-04.jpg"
 thumbnail:  /img/blog/thumbs/empty.png
