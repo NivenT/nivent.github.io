@@ -216,7 +216,7 @@ At this point, I had found a method for generating infinitely many solutions whe
 Things were looking good, until I came across the solution $$(m,n)=(49,35)$$ [^12]. This was an issue for two reasons. One, you cannot find this solution by starting with $$m=1$$ and using $$t$$ to generate new solutions. Two, $$m+1=50$$ is twice a perfect square. The first issue I can deal with. All it means is that my iteration idea does not generate all solutions; it still generates valid solution, so that doesn't bother me too much. The second issue is much more disturbing. I thought I had shown that there was no solution where $$m+1$$ is twice a square. This means that there must have been some flaw in my reasoning somewhere, and I need to reconsider my approach to this problem.
 {: style="font-size: 60%;"}
 
-Once I realized I had flaws, I decided I had done enough math for one night [^13], and would continue my investigation some other time. Thus, I leave you on a bit of a cliffhanger.
+Once I realized I had flaws, I decided I had done enough math for one night [^13], and would continue my investigation some other time. Thus, I leave you on a bit of a cliffhanger [^14].
 {: style="font-size: 60%;"}
 
 [^1]: This post will try to show my entire approach to this problem, and not just where it worked. There will be places where my reasoning was more complicated than it needed to be. I will not point these out, because they seem obvious in hindsight.
@@ -232,3 +232,4 @@ Once I realized I had flaws, I decided I had done enough math for one night [^13
 [^11]: Values such that 2t(t+1) is a perfect square.
 [^12]: Just when I think I had done good math for once, a counterexample ruins everything.
 [^13]: I had almost filled a page, and turning to the next page in my notebook would have been too much trouble.
+[^14]: In case anyone is curious, the problem was that I forgot to square q after writing q=2t+1, so I had 2k^2=q+1 instead of 2k^2=q^2+1. Also, I don't plan on writing another post about what I did after finding the error.
