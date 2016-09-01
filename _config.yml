@@ -5,7 +5,7 @@ locale: en_US
 description: #Niven Achenjang's Personal Website
 logo: site-logo.png
 search: true
-url: http://localhost:4000 #http://nivent.github.io
+url: http://nivent.github.io
 comments: true
 
 # Jekyll configuration
