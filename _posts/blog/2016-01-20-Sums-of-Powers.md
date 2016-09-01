@@ -8,6 +8,7 @@ tags: [math, sum, algebra]
 image: 
   feature: blog/feature/post-bg-02.jpg
 date: 2016-01-20 17:11:00
+search_omit: true #Search does not work when not ommitted
 ---
 
 Overview of Post
@@ -25,7 +26,7 @@ $$\begin{matrix}
 	  + &   n   & + & (n-1) & + & (n-1) & + & \dots & + &   1\\
 	  \hline
 	    & (n+1) & + & (n+1) & + & (n+1) & + & \dots & + & (n+1)
-\end{matrix}$$<br>
+\end{matrix}$$
 Since there are $$n$$ columns in the above addition, there are $$n$$ copies of $$(n+1)$$ in the resulting sum. So, $$2\sum_{i=1}^ni=n(n+1)$$. This gives us our final answer of
 
 <center>

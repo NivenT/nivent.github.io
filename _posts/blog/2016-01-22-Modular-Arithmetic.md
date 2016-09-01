@@ -8,6 +8,7 @@ tags: [math, modular, number theory, code, algebra]
 image: 
   feature: blog/feature/post-bg-03.jpg
 date: 2016-01-22 19:40:00
+search_omit: true #Search does not work when not ommitted
 ---
 
 I plan on writing a couple posts related to cryptography soon. Before I do that, I wanted to have a post covering some of the basics of modular arithmetic first, because this material will be needed for the cryptographic posts.
