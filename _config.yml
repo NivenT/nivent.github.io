@@ -1,66 +1,60 @@
-# Site settings
-title: "Thoughts of a Programmer"
-description: Niven Achenjang's Personal Website
-logo: favicon.png
-discus_shortname: NivenT
-header-img: img/home-bg.jpg
-email: nachenjang@gmail.com
-url: http://nivent.github.io
+# Site wide configuration
+
+title: Thoughts of a Programmer
+locale: en_US
+description: #Niven Achenjang's Personal Website
+logo: site-logo.png
 search: true
-share: true
+url: http://localhost:4000 #http://nivent.github.io
 comments: true
 
-# Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
-readtime: true
+# Jekyll configuration
 
-# Specify the average Words per minute. If not defined, 180 will be used
-wpm: 200
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
 
-# Owner/author information
-owner:
-  name:   NivenT
-  avatar: avatar.jpg
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    
-
-# Social networking links used in footer. Update and remove as you like.
-github_username: NivenT
-
- 
-# Internal nav
-nav:
- writing: "source_url/writing/"
- gallery: "source_url/gallery/"
- about: "source_url/about/"
-
-
-# Server
-destination:      	 ./_site
-port:             	 4000
-
-# Build settings
-#highlighter:         pygments
-markdown:           kramdown
 kramdown:
+  input: GFM
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  input: GFM
-sass:
-    style:          :compressed
-paginate: 5
-paginate_path: "/writing/page:num/"
-#permalink: "/writing/:title/"
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-slugify: "pretty"
+  toc_levels: 1..2
+  enable_coderay: false
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   UA-xxxxxxxx-x
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+mathjax: true
 
-# Gems
-gems: [jekyll-paginate]
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: NivenT
+  avatar: bio-photo.jpg
+  email: nachenjang@gmail.com
+  disqus-shortname: nivent.github.io
+  twitter: #username
+  facebook: #Niven Achenjang
+  github: NivenT
+  stackexchange: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  pinterest: #username
+  weibo: #userid
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:

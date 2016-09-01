@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script>
+	var xmlhttp = new XMLHttpRequest();
+
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4) {
+			if (xmlhttp.status == 200) {
+				var repos = JSON.parse(xmlhttp.responseText);
+				var index = Math.floor(Math.random()*repos.length);
+				window.location.replace(repos[index].html_url);
+			} else {
+				window.location.replace('nivent.github.io');
+			}
+		}
+	};
+	xmlhttp.open("GET", "https://api.github.com/users/nivent/repos", true);
+	xmlhttp.send();
+</script>
+</html>

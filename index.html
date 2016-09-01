@@ -1,108 +1,14 @@
 ---
 layout: page
-title: "Niven Achenjang"
-description: "Under construction..."
-header-img: "img/home-bg.jpg"
+title: Latest Posts
+excerpt: ""
+search_omit: true
 ---
 
-<html class="no-js" lang="en">
-<head>
-	<meta content="charset=utf-8">
+<b><a href="{{ site.url }}/tags">All posts grouped by tags</a></b>
 
-<!-- CSS -->
-	<link rel="stylesheet" href="../css/intro.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-
-	<!-- Modernizr -->
-  <script src="js/modernizr.js"></script>
-
-<!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-
-  <!-- FlexSlider -->
-  <script defer src="js/jquery.flexslider.js"></script>
-
-  <!-- Back To Top -->
-  <script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        slideshow: false,
-        slideshowSpeed: 12000,
-        pausePlay: true,
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
-
-  <!-- Circular images -->
-  <style>
-  #circle {
-    border-radius:50% 50% 50% 50%;  
-    width:250px;
-    height:220px;
-  }
-  </style>
-
-</head>
-
-<body>
-
- <!-- intro -->
-<div class="">
-  <div class="row">
-        <div class="col-sm-4">
-        <br>
-        <img src="img/about-img.jpg" id="circle">
-        </div>
-
-        <div class="col-sm-5">
-
-          <h2>Welcome</h2>
-          <h3>I am a student hoping to become a computer scientist/mathematician. This website is a place for me to talk about interesting topics I come across and motivation for me to learn web development.
-          <a href="{{root_url}}/about">read more</a>
-          </h3>
-
-        </div>  
-
-
-        <div class="col-sm-3">
-    {% include links.html %}
-         </div>  
- 
- </div>
-</div>
-
-
-<!-- slider -->
-
-	<div class="flexslider" style="display:none;">
-  <ul class="slides">
-    <li>
-      <img src="img/slider/bg1.jpg" />
-<p class="flex-caption">Source: <a href="https://unsplash.com/">Unsplash</a></p>
-    </li>
-    <li>
-      <img src="img/slider/bg2.jpg" />
-<p class="flex-caption">Source: <a href="https://unsplash.com/">Unsplash</a></p>
-    </li>
-    <li>
-      <img src="img/slider/bg3.jpg" />
-<p class="flex-caption">Source: <a href="https://unsplash.com/">Unsplash</a></p>
-    </li>
-      </ul>
-</div>
-
-
-
-
-
-
-
-       </body>
-    </html>
+<ul class="post-list">
+{% for post in site.posts limit:5 %}
+  <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once | truncate:500}}</span>{% endif %}</a></article></li>
+{% endfor %}
+</ul>

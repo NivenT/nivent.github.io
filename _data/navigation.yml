@@ -1,0 +1,22 @@
+# Site navigation links
+
+- title: About
+  url: /about/
+
+#- title: Articles
+#  url: /articles/
+
+- title: Blog
+  url: /blog/
+
+#- title: Theme Setup
+#  url: /theme-setup/
+
+- title: Random Project
+  url: /random/
+
+- title: Resume
+  url: http://resume.github.io/?nivent
+
+- title: Search
+  url: /search/
