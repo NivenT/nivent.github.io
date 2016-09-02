@@ -6,6 +6,14 @@
 <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="{{ site.url }}/assets/js/scripts.min.js"></script>
 
+<!-- bigfootjs.com -->
+<script type="text/javascript" src="{{ site.url }}/assets/js/plugins/bigfoot.js"></script>
+<script type="text/javascript">
+    $.bigfoot({
+      positionContent: true
+    });
+</script>
+
 {% if site.owner.google.analytics %}
 <!-- Asynchronous Google Analytics snippet -->
 <script>
