@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["EGreedyQAgent","Epsilon Greedy Q-Agent"],["GreedyQAgent","Greedy Q-Agent"]]});

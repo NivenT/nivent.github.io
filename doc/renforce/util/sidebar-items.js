@@ -1,1 +1,0 @@
-initSidebarItems({"mod":[["chooser","Chooser Module"],["table","Table Module"]],"trait":[["Chooser","Choose Trait"],["QFunction","QFunction Trait"],["VFunction","VFunction Trait"]]});

@@ -1,1 +1,0 @@
-initSidebarItems({"mod":[["finite","Finite Module"]],"struct":[["Observation","Observation"]],"trait":[["Environment","Environment Trait"],["FiniteSpace","Finite Space Trait"],["Space","Space Trait"]],"type":[["Transition","A transition experienced by the agent"]]});
