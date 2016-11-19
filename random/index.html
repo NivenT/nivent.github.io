@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
 <script>
-	var xmlhttp = new XMLHttpRequest();
+	var reposRequest = new XMLHttpRequest();
+	var gistsRequest = new XMLHttpRequest();
 
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4) {
-			if (xmlhttp.status == 200) {
-				var repos = JSON.parse(xmlhttp.responseText);
-				var index = Math.floor(Math.random()*repos.length);
-				window.location.replace(repos[index].html_url);
+	reposRequest.open("GET", "https://api.github.com/users/nivent/repos", true);
+	reposRequest.send();
+
+	reposRequest.onreadystatechange = function() {
+		if (reposRequest.readyState == 4) {
+			if (reposRequest.status == 200) {
+				var repos = JSON.parse(reposRequest.responseText);
+				var index = Math.round(Math.random()*10*repos.length/9);
+
+				if (index < repos.length) {
+					window.location.replace(repos[index].html_url);
+				} else {
+					gistsRequest.open("GET", "https://api.github.com/users/nivent/gists", true);
+					gistsRequest.send();
+				}
 			} else {
 				window.location.replace('nivent.github.io');
 			}
 		}
 	};
-	xmlhttp.open("GET", "https://api.github.com/users/nivent/repos", true);
-	xmlhttp.send();
+
+	gistsRequest.onreadystatechange = function() {
+		if (gistsRequest.readyState == 4) {
+			if (gistsRequest.status == 200) {
+				var gists = JSON.parse(gistsRequest.responseText);
+				var index = Math.floor(Math.random()*gists.length);
+				window.location.replace(gists[index].html_url);
+			} else {
+				window.location.replace('nivent.github.io');
+			}
+		}
+	};
 </script>
 </html>
