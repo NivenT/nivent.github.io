@@ -7,7 +7,7 @@ excerpt:
 tags: [Rust, REnforce, CS]
 image: 
   feature: 
-date: 2016-11-18 23:23:00
+date: 2016-11-19 02:30:00
 ---
 
 When I began coding, I focussed mainly on games. I programmed tic-tac-toe, snake[^1], a side scrolling ASCII game I called jumper[^2], a couple mario clones, a maze solving game, and a few others[^3]. Somewhere along the way, I started losing interests in games, and gaining interests elsewhere; the types of programs I made changed. I wrote programs to do a little exploring of some mathy things, and tried to do some AI-y things as well. However, despite this, one thing stayed the same: I only wrote applications. But everything changed, when [the fire nation attacked](https://github.com/NivenT/REnforce)[^4].
