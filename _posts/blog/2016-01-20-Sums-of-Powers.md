@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sums of Powers"
-modified: 2016-09-03
+modified: 2016-11-30
 categories: blog
 excerpt:
 tags: [math, sum, algebra]
@@ -70,7 +70,7 @@ Now that we know each $$k$$'s coefficient, we can write
 <center>$$\left(\sum\limits_{i=1}^ni\right)^2=1(1^2)+2(2^2)+3(3^2)+\dots+n(n^2)=\sum\limits_{i=1}^ni^3$$</center>
 
 
-At this point, we could be done. We've answered our question, but our answer is very algebraic. It would be nice if we could have a visual way of explaining some of this math, so, with this hope in mind, we continue our investigation. Still considering the coefficient of $$k$$, from our earlier discussion, it should not be to head to realize that $$k$$'s coefficient can be written as $$1+2+\dots+(k-1)+k+(k-1)+\dots+2+1$$. This, as the picture below shows, is where we can begin to visualize. Thinking of each term in the sum as a diagonal in a square grid, it is easy to see that this sum is $$k^2$$.
+At this point, we could be done. We've answered our question, but our answer is very algebraic. It would be nice if we could have a visual way of explaining some of this math[^2], so, with this hope in mind, we continue our investigation. Still considering the coefficient of $$k$$, from our earlier discussion, it should not be to head to realize that $$k$$'s coefficient can be written as $$1+2+\dots+(k-1)+k+(k-1)+\dots+2+1$$. This, as the picture below shows, is where we can begin to visualize. Thinking of each term in the sum as a diagonal in a square grid, it is easy to see that this sum is $$k^2$$.
 
 
 <center><img src="{{ site.url }}/images/blog/sums-of-powers/img0.png"
