@@ -39,7 +39,7 @@ So maybe there's no escaping the both of you defecting. Maybe that's just what's
 In our current model, you and your partner essentially move simultaneously. The cops separate you, offer both of you deals, and then you respond before knowing what the other did. This might not be completely realistic. Maybe the cops took you away before taking your partner away and so you were able to somehow communicate with him what you did. Maybe there's only 1 interrogation room, so you had to go one at a time and the other was able to figure out what the first one did. Maybe you didn't commit a crime and there's no police involved and you're actually in a different prisoner's dilema where it makes more sense to think about you two moving one at a time (like drugs in sports)[^9]. It doen't matter the reason. Let's just say you decide to defect or cooperate first, your partner sees what you did, then he decides to defect or cooperate. If he sees that you cooperated without a doubt, that might be enough for him to cooperate as well. Our model now looks like this
 
 <center><img src="{{ site.url }}/images/blog/prisoners-dilema/extensiveform.png"
-			 width="800" height="200"></center>
+			 width="600" height="100"></center>
 
 The poorly made tree above describes the situation where 1 is interrorgated first, decides to defect or cooperate, 2 sees what 1 did, then 2 is interrorgated and decides to either defect or cooperate. Let's say you cooperate. Unfortunately, evening knowing that, 2 still won't cooperate with you; he will defect. It doesn't matter than 2 knows your loyal. To him, its a choice between 1 life sentence and 0 life sentences. He's gonna choose 0. 
 
