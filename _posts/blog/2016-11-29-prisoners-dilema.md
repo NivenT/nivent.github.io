@@ -105,7 +105,7 @@ $$\begin{align*}
 	\iff \delta<\frac12
 \end{align*}$$
 
-Which means you will want to always cooperate if $$\delta<\frac12$$[^15]! Finally, true justification for our intuition. This essentially says that if your at least as patient as average [^16], then you want to cooperate, which makes sense. You wouldn't really expect a short-sided person to want to cooperate, but you would expect someone willing to wait for future benefit to.
+Which means you will want to always cooperate if $$\delta\ge\frac12$$[^15]! Finally, true justification for our intuition. This essentially says that if your at least as patient as average [^16], then you want to cooperate, which makes sense. You wouldn't really expect a short-sided person to want to cooperate, but you would expect someone willing to wait for future benefit to.
 
 # Some Thoughts
 The Prisoner's Dilema -- and more generally, the type(s) of reasoning we touched upon here -- come from a field known as Game Theory. Basically, game theorists study how rational beings should behave in different situations. There's way more to game theory than just this prisoner's dilema, and many more types of models of games than I introduced here. 
