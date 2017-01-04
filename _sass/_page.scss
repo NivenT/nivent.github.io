@@ -195,12 +195,20 @@ span + .entry-title {
 }
 
 /*
-   Pagination
-   ========================================================================== */
+	Pagination
+	========================================================================= */
 
-.pagination {
-	margin-top: 2em;
-	text-align: center;
+.older {
+	@extend .btn;
+	padding: 4px 10px;
+	@include font-size(18);
+	float: right;
+}
+
+.newer {
+	@extend .btn;
+	padding: 4px 10px;
+	@include font-size(18);
 }
 
 /*
@@ -311,18 +319,9 @@ span + .entry-title {
 }
 
 /*
-	Pagination
-	========================================================================= */
-
-.older {
-	@extend .btn;
-	padding: 4px 10px;
-	@include font-size(18);
-	float: right;
-}
-
-.newer {
-	@extend .btn;
-	padding: 4px 10px;
-	@include font-size(18);
+   Proof Blocks
+   ========================================================================== */
+.proof {
+	background-color: #383838;
+	color: #FFFFFF;
 }
