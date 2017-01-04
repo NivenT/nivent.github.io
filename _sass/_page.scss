@@ -309,3 +309,20 @@ span + .entry-title {
 		vertical-align: middle;
 	}
 }
+
+/*
+	Pagination
+	========================================================================= */
+
+.older {
+	@extend .btn;
+	padding: 4px 10px;
+	@include font-size(18);
+	float: right;
+}
+
+.newer {
+	@extend .btn;
+	padding: 4px 10px;
+	@include font-size(18);
+}
