@@ -40,7 +40,7 @@ paginate_path: "/blog/:num/"
 
 # Site owner
 owner:
-  name: NivenT
+  name: Niven Achenjang
   avatar: bio-photo.jpg
   email: nachenjang@gmail.com
   disqus-shortname: nivent-github-io
