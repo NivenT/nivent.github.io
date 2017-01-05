@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Surreal Numbers"
-modified: 
+modified: 2017-01-05 13:03:00
 categories: blog
 excerpt:
 tags: [math]
@@ -154,7 +154,7 @@ x+y=
 \{X_L+y,x+Y_L\mid X_R+y,x+Y_R\}=
 \{y+X_L,Y_L+x\mid y+X_R,Y_R+x\}=
 y+x
-\end{align*}$$
+\end{align*}$$ \(\square\)
 </div>
 
 Nice and simple. Another thing of note is the following
@@ -169,7 +169,7 @@ x+* &= \{X_L+*,x+\emptyset\mid X_R+*,x+\emptyset\} \\
 &= \{X_L+*\mid X_R+*\} \\
 &= \{X_L\mid X_R\} \\
 &= x
-\end{align*}$$
+\end{align*}$$ \(\square\)
 </div>
 
 Awesome. We just found an additive identity, and we use this as justification to name $$0=\{\mid\}$$. Seeing that we have a $$0$$, the next natural question is to ask whether there are additive inverses, and if so, how to find them.
@@ -201,7 +201,7 @@ $$0x=0=x0$$ and $$x*\{0|\}=x=\{0|\}*x$$
 
 <div class="proof">
 Each sum involved in calculating \(0x\) or \(x0\) includes a term containing the left (or right) set of \(0\). This is the empty set, so when you multiply it by something, you still get the empty set. When that resulting empty set is added to other sets, you still have the empty set so both the left and right sets of \(0x\) or \(x0\) are empty and hence \(0x=0=x0\).<br>
-The other half of the theorem is easily seen.
+The other half of the theorem is easily seen. \(\square\)
 </div>
 
 Now that we have an additive inverse as well, we call $$1=\{0\mid\}$$. Furthermore, we note that, by definition, $$-1=\{\mid-0\}=\{\mid0\}$$, and so we finally have approriate names for all 3 surreal numbers we have constructed.
@@ -214,7 +214,7 @@ What about the rationals? First note that, letting $$x=\{0\mid1\}$$, $$\{0\mid1\
 We can combine these two observations into the following theorem
 
 >Theorem<br>
-Let $$-x_<\dots<-x_1<x_0=0=x_0<x_1<\dots<x_m$$ be all the numbers born on some (finite) day $$n$$ or earlier. Then, the numbers born on day $$n+1$$ are the following where $$0\le i\le m-1$$
+Let $$-x_m<\dots<-x_1<x_0=0=x_0<x_1<\dots<x_m$$ be all the numbers born on some (finite) day $$n$$ or earlier. Then, the numbers born on day $$n+1$$ are the following where $$0\le i\le m-1$$
 $$\begin{matrix}
 \{x_m\mid\hfill\} &=& x_m+1\\
 \{x_i\mid\hfill x_{i+1}\} &=& \frac12(x_i+x_{i+1})\\
@@ -222,11 +222,11 @@ $$\begin{matrix}
 \{-x_{i+1}\mid\hfill-x_i\} &=& -\frac12(x_i+x_{i+1})
 \end{matrix}$$
 
-The proof of this theorem is omitted. Hint for proving it yourself, use the simplicity theorem.
+The proof of this theorem is omitted. Hint for proving it yourself, use the simplicity theorem and use $$x=\frac12y\implies x+x=y$$.
 
 The above theorem classifies all numbers born on finite days. One thing to notice is that the integers get special treatment, and the dyadic rationals [^17] get special treatment, but the reals and the rationals in general do not. In fact, on any finite day, the only numbers are integers and dyadic rationals. There's no $$\pi$$, no $$e$$, nothing. Things don't really get interesting until day $$\omega$$.
 
-[$$\omega$$](https://www.wikiwand.com/en/Ordinal_number#/Transfinite_induction) can be thought of as the number after all the natural numbers. In the surreals, we actually define $$\omega=\{0,1,2,3,\dots\mid\}$$ and this is a completely legitimate bonafide surreal number; it behaves all the same rules as the other surreals and can. It is born on day $$\omega$$, but is not the only number born on day $$\omega$$. You also get, for example,
+[$$\omega$$](https://www.wikiwand.com/en/Ordinal_number#/Transfinite_induction) can be thought of as the number after all the natural numbers. In the surreals, we actually define $$\omega=\{0,1,2,3,\dots\mid\}$$ and this is a completely legitimate surreal number; it behaves all the same rules as the other surreals and can. It is born on day $$\omega$$, but is not the only number born on day $$\omega$$. You also get, for example,
 
 $$\begin{align*}
 \frac13&=\left\{\frac14,\frac5{16},\frac{21}{64},\dots\mid\frac12,\frac38,\frac{11}{32},\dots\right\}\\
@@ -235,7 +235,7 @@ $$\begin{align*}
 
 $$\varepsilon$$ is an interesting number. It is larger than $$0$$, but smaller than any positive dyadic rational (and by extension, any positive real number). For this reason, it is called an infinitesimal. 
 
-One interesting fact is that on day $$\omega$$, you get every real number. They can be constructed using a process similar to [Dedekind cuts](https://www.wikiwand.com/en/Dedekind_cut). This is nothing new, but what makes things interesting is that the fact that prior to day $$\omega$$ the only non-integers constructed are the dyadic rationals suggests a method of finding appropriate cuts for each real number. Consider any real number $$x$$ and write it out in binary [^18] (Ex. $$\pi=11.00100100001111110\dots_2$$). To form the members of $$X_L$$, take substrings of $$x$$'s binary expansion that end in 1. To form the members of $$X_R$$, take substrings of $$x$$'s binary expansion that end in 0, execpt replace the final 0 with a 1. Doing this for real number yields its equivalent surreal number and shows that all real numbers are born by the end of day $$\omega$$. Ex.
+Another interesting fact is that on day $$\omega$$, you get every real number. They can be constructed using a process similar to [Dedekind cuts](https://www.wikiwand.com/en/Dedekind_cut). This is nothing new, but what makes things interesting is that the fact that prior to day $$\omega$$ the only non-integers constructed are the dyadic rationals suggests a method of finding appropriate cuts for each real number. Consider any real number $$x$$ and write it out in binary [^18] (Ex. $$\pi=11.00100100001111110\dots_2$$). To form the members of $$X_L$$, take substrings of $$x$$'s binary expansion that end in 1. To form the members of $$X_R$$, take substrings of $$x$$'s binary expansion that end in 0, execpt replace the final 0 with a 1. Doing this for real number yields its equivalent surreal number and shows that all real numbers are born by the end of day $$\omega$$. Ex.
 
 $$\begin{align*}
 \pi=\left\{3,3\frac18,3\frac9{64},\dots\mid3\frac12,3\frac14,3\frac3{16},\dots\right\}
@@ -244,9 +244,15 @@ $$\begin{align*}
 So on day $$\omega$$ you have all the reals, an infinite number, and an infinitesimal. Of course, it doesn't stop there. On day $$\omega+1$$, you get numbers like
 
 $$\begin{matrix}
-\{\omega,\omega+1,\omega+2,\omega+3,\dots\mid\} &=& 2\omega\\
 \{0,1,2,3,\dots\mid\omega\} &=& \omega-1\\
 \{0\mid\varepsilon\} &=& \frac\varepsilon2\\
+\end{matrix}$$
+
+By the time you reach day $$\omega$$, you start seeing things like
+
+$$\begin{matrix}
+\{\omega,\omega+1,\omega+2,\omega+3,\dots\mid\} &=& 2\omega\\
+\{0,1,2,3,\dots\mid\omega,\omega-1,\omega-2,\omega-3,\dots\} &=& \frac\omega2\\
 \varepsilon\omega &=& 1
 \end{matrix}$$
 
@@ -276,14 +282,14 @@ In you just want more practise with surreals, Knuth has a [nice book](https://ww
 [^6]: That is, any statement of the form "for all x in A, blah" is true when A is empty
 [^7]: Truth for 0 implies truth for 1, truth for 1 implies truth for 2, etc. It's like how if you line up a bunch of dominoes and knock over the first one, you know they'll all fall because the first one falls and every one that falls knocks over the next one
 [^8]: I'm not sure how I feel about making the areas where the proof is stand out.
-[^9]: Try and see why
+[^9]: Try to see why (Hint: This upper bound is much larger than the true number, and much larger than other upper bounds you could come up with)
 [^10]: I will most likely end up using x_L to refer to different things at different times in the same proof (either as a specific member of X_L or any general member of X_L). Try to keep up.
 [^11]: Throughout this whole post, I'm talking about things in the order in which they pop into my head, so theorems and definitions do not necessarily appear in the most logical order. Keep that in mind.
 [^12]: If it's not clear from reading the follow proof, I was not entirely sure how to formulate in the induction in a way that didn't feel hand-wavy. What you see below is the result of me going back and forth between different formulations and between whether or not I should just ignore the specifics and hope no one notices. Honestly, no one reads this blog so I could have done that.
 [^13]: Also show that if x is not lequal to y, then y is lequal to x to show that it is in fact a total order
 [^14]: Hint: It's much less than the 4^k upper bound
 [^15]: Seriously, look up the definitions for 1/x and sqrt(x).
-[^16]: I suspect this equals {x+1|}. i.e. I suspect that x+1 >= y, but I haven't though about it enough to give a convincing argument.
+[^16]: When y is an integer, x+1 >= y. For what other cases does this inequality hold?
 [^17]: rationals with denominator a power of 2
 [^18]: we use binary because writing a number in binary is equivalent to writing it as a sum of numbers of the form 1/2^n and so we are only using already constructed numbers
 [^19]: does? performs? What's a good verb here?
