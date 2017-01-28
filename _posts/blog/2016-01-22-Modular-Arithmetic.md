@@ -75,7 +75,7 @@ We say that $$a$$ and $$b$$ are **coprime** (or relatively prime) if they have n
 
 We will see some of the uses of these concepts later in this post, but first, it would be nice if we had a way of calculating the greatest common divisior of two numbers. We could check each number that was less than them and find the largest one that divides both of them that way, but that would be time consuming. For a faster method, we use the Euclidean Algorithm.
 
-The idea is to define a sequence of numbers $$r_0, r_1, r_2,\dots,r_n$$ such that $$\gcd(a,b)=r_{n-1}$$. To do this, we start with $$r_0=a$$ and $$r_1=b$$ where $$|a|\ge|b|$$ [^4]. We then define subsequent $$r$$'s by division: $$r_{k-1} = qr_k + r_{k+1}$$. In other words, $$r_{k+1}=r_{k-1}\bmod r_k$$. We keep doing this until we finally reach $$r_n=0$$. Our answer is then $$r_{n-1}$$. This algorithm can be implemented in (python) code as follows:
+The idea is to define a sequence of numbers $$r_0, r_1, r_2,\dots,r_n$$ such that $$\gcd(a,b)=r_{n-1}$$. To do this, we start with $$r_0=a$$ and $$r_1=b$$ where $$\mid a\mid\ge\mid b\mid$$ [^4]. We then define subsequent $$r$$'s by division: $$r_{k-1} = qr_k + r_{k+1}$$. In other words, $$r_{k+1}=r_{k-1}\bmod r_k$$. We keep doing this until we finally reach $$r_n=0$$. Our answer is then $$r_{n-1}$$. This algorithm can be implemented in (python) code as follows:
 
 ~~~ python
 def gcd(a,b):

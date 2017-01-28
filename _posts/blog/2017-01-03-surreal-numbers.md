@@ -226,7 +226,7 @@ The proof of this theorem is omitted. Hint for proving it yourself, use the simp
 
 The above theorem classifies all numbers born on finite days. One thing to notice is that the integers get special treatment, and the dyadic rationals [^17] get special treatment, but the reals and the rationals in general do not. In fact, on any finite day, the only numbers are integers and dyadic rationals. There's no $$\pi$$, no $$e$$, nothing. Things don't really get interesting until day $$\omega$$.
 
-[$$\omega$$](https://www.wikiwand.com/en/Ordinal_number#/Transfinite_induction) can be thought of as the number after all the natural numbers. In the surreals, we actually define $$\omega=\{0,1,2,3,\dots\mid\}$$ and this is a completely legitimate surreal number; it behaves all the same rules as the other surreals and can. It is born on day $$\omega$$, but is not the only number born on day $$\omega$$. You also get, for example,
+[$$\omega$$](https://www.wikiwand.com/en/Ordinal_number#/Transfinite_induction) can be thought of as the number after all the natural numbers. In the surreals, we actually define $$\omega=\{0,1,2,3,\dots\mid\}$$ and this is a completely legitimate surreal number; it obeys all the same rules as the other surreals. It is born on day $$\omega$$, but is not the only number born on day $$\omega$$. You also get, for example,
 
 $$\begin{align*}
 \frac13&=\left\{\frac14,\frac5{16},\frac{21}{64},\dots\mid\frac12,\frac38,\frac{11}{32},\dots\right\}\\
@@ -248,7 +248,7 @@ $$\begin{matrix}
 \{0\mid\varepsilon\} &=& \frac\varepsilon2\\
 \end{matrix}$$
 
-By the time you reach day $$\omega$$, you start seeing things like
+By the time you reach day $$2\omega$$, you start seeing things like
 
 $$\begin{matrix}
 \{\omega,\omega+1,\omega+2,\omega+3,\dots\mid\} &=& 2\omega\\
@@ -267,12 +267,12 @@ e^{\omega/3} & &
 \omega^{\omega^{\omega^{\omega^{\omega^{\omega^{\omega^{\omega^\omega}}}}}}}
 \end{align*}$$
 
-The amazing thing about this is not that these are actual constructible numbers, but they these are well-behaved numbers. Most notions of doing arithmetic with infinity that you come across either don't work very well or are very limited. Here, you have infinities and infinitesimals interacting just like any pair of numbers. Everything is legitimate and well-definied, and the whole thing forms an ordered field! You can pick any two of the numbers above, and one is larger than the other, and that order is well-behaved. It plays nice with multiplication and addition and many other operations. Not only that, but you can do more than just arithmetic with surreal numbers. In his book [On Numbers and Games](https://www.amazon.com/Numbers-Games-John-H-Conway/dp/1568811276), Conway takes the theory of surreals much farther than I touched on in this post. He studies [^19] analysis, algebra, and number theory of surreals.
+The amazing thing about this is not that these are actual constructible numbers, but that these are well-behaved numbers. Most notions of doing arithmetic with infinity that you come across either don't work very well or are very limited. Here, you have infinities and infinitesimals behaving just like any other numbers. Everything is legitimate and well-definied, and the whole thing forms an ordered field! You can pick any two of the numbers above, and one is larger than the other, and that order is well-behaved. It plays nice with multiplication and addition and many other operations. Not only that, but you can do more than just arithmetic with surreal numbers. In his book [On Numbers and Games](https://www.amazon.com/Numbers-Games-John-H-Conway/dp/1568811276), Conway takes the theory of surreals much farther than I touched on in this post. He studies [^19] analysis, algebra, and number theory of surreals.
 
 # There's More
 Unfortunately, this post got really long, really fast, and so I was not able to talk about everything I wanted to. In particular, I didn't even touch on what's maybe the most surprising property of surreal numbers: how they were discovered. [Conway](https://www.wikiwand.com/en/John_Horton_Conway) originally discovered surreal numbers while studying the board game [Go](https://www.wikiwand.com/en/Go_(game)). He found a way to represent Go positions as sums of smaller games, and evenetually realized that the games he was studying behaved like numbers. What I called a surreal number form in the beginning is more appropriately dubbed a Game. Games in general share many of the properties of surreal numbers (which are just a subclass of games), and there are many interesting games that are not well-formed. This post is too long as is to go into the details, but if you want learn more about the connection between surreal numbers and games, I recommend [Winning Ways for Your Mathematical Plays](https://www.amazon.com/Winning-Ways-Your-Mathematical-Plays/dp/1568811306).
 
-In you just want more practise with surreals, Knuth has a [nice book](https://www.amazon.com/Surreal-Numbers-Donald-Knuth/dp/0201038129) about them, told from the perspective of two people stranded on an island who find a rock with a couple definitions, and find they have way too much free time.
+In you just want more practice with surreals, Knuth has a [nice book](https://www.amazon.com/Surreal-Numbers-Donald-Knuth/dp/0201038129) about them, told from the perspective of two people stranded on an island who find a rock with a couple definitions, and find they have way too much free time.
 
 [^1]: We'll see later in this post that this number is 0. Technically, we can call this whatever we want. We'll see that we want to call it 0
 [^2]: The upside-down A means "for all". There's also a backwards E that means "there exists"

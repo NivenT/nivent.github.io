@@ -4,7 +4,7 @@ title: "Square Triangles"
 modified: 2016-09-01
 categories: blog
 excerpt:
-tags: [math, number theory, algebra]
+tags: [math, number theory, algebra, problem]
 image: 
   feature: blog/feature/post-bg-04.jpg
 date: 2016-07-24 03:06:00
