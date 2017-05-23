@@ -224,7 +224,7 @@ Pf: Assume prime \(p\equiv1\pmod4\). Consider the group \(\mathbb F_p^\times\) o
 Alternative Pf: Use <a href="https://www.wikiwand.com/en/Wilson%27s_theorem">Wilson's Theorem</a> to show that \((2k)!(2k)!\equiv-1\pmod p\) if \(p=4k+1\). Details left to reader. \(\square\)
 </div>
 
-Now that we've taken that step, we can finally proof the other direction of our previous theorem [^*].
+Now that we've taken that step, we can finally proof the other direction of our previous theorem [^16].
 
 >Theorem<br>
 An odd prime $$p$$ can be written as the sum of two squares if $$p\equiv1\pmod4$$.
@@ -259,4 +259,4 @@ The second half of this post did not turn out as well as I had hoped it would ha
 [^13]: or at least not one that I know
 [^14]: and is up to you to show that. One direction is easy. The other I'm not 100% sure is true but I'm pretty sure it is.
 [^15]: and it being almost circular in the end
-[^*]: Here, I ignore the issuze of Z[i] being a UFD which means every number factors uniquely into primes like they do in the integers. This is not a trivial/obvious property for a set of numbers to have, but I didn't want to get into the details of proving this.
+[^16]: Here, I ignore the issuze of Z[i] being a UFD which means every number factors uniquely into primes like they do in the integers. This is not a trivial/obvious property for a set of numbers to have, but I didn't want to get into the details of proving this.
