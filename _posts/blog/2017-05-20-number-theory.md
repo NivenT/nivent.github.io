@@ -7,10 +7,10 @@ excerpt:
 tags: [math, number theory]
 image: 
   feature: 
-date: 2017-05-20 14:45:00
+date: 2017-05-20 21:01:00
 ---
 
-When I was a freshman in high-school[^1], my math teacher showed me [this](brilliant.org) site where you can find a seemingly endless supply of math problems; I loved it. I spent a decent amount of my time solving problems, and a significant amount of my time failing to solve problems, but I enjoyed it either way. On the site, there are different categories, and you have a level from 1-5 in each category, indicating how well you do at solving those problems. After a while on the site, I came to be level 5 in number theory[^2], and was pretty shocked. I had barely heard of this "number theory" field, and wasn't sure what about it made me do well[^3], so even before I had an idea of what number theory was, it seemed like a interesting field. 
+When I was a freshman in high-school[^1], my math teacher showed me [this](https://brilliant.org/) site where you can find a seemingly endless supply of math problems; I loved it. I spent a decent amount of my time solving problems, and a significant amount of my time failing to solve problems, but I enjoyed it either way. On the site, there are different categories, and you have a level from 1-5 in each category, indicating how well you do at solving those problems. After a while on the site, I came to be level 5 in number theory[^2], and was pretty shocked. I had barely heard of this "number theory" field, and wasn't sure what about it made me do well[^3], so even before I had an idea of what number theory was, it seemed like a interesting field. 
 
 In general, I feel like number theory is a relatively unknown field to most people, so this is my little part in changing that. This post is probably gonna be a long one. In it, I want to talk about two (hopefully somewhat motivated) problems that lead to some interesting mathematics. Because I want to do the mathematics justice, I will try my best to keep the post self-contained, proving any non-trivial claims I make[^4]. If you are more interested in the results/overall argument than the details, you can skip these.
 
@@ -25,7 +25,7 @@ I said I would try to prove any non-trivial claim I made, and this theorem has a
 
 <a href="http://www.mathalino.com/reviewer/derivation-of-formulas/derivation-of-pythagorean-theorem"><center><img src="{{ site.url }}/images/blog/number-theory/pythagoras.jpg" width="250" height="100"></center> </a>
 
-Now that we have this, this lets us see that we can have a right triangle with side lengths $$(3,4,5)$$, $$(5,12,13)$$, $$(21,28,35)$$, or $$(7,24,25)$$ but not one with side lengths $$(1,2,3)$$ or $$(4,4,4)$$. In fact, if we think about it, this says we can't have any equilateral right triangle. If we did and the side length was $$x$$, then this would give $$x^2+x^2=x^2\implies 2x^2=x^2\implies x=0$$, and a triangle with 0 side length is no triangle at all. I think a natural question to ask at this point would be "what side lengths can we get?". Now, we have to be careful about how we phrase this, because obviosly given any $$a$$ and $$b$$, we can find some $$c$$ that gives a right triangle, but that $$c$$ may not be nice. For example, if $$a=2$$ and $$b=4$$, then $$c=\sqrt{a^2+b^2}=\sqrt{20}=2\sqrt5$$ isn't the nice looking solution. What we really want is a triangle where all side lengths are whole numbers.
+Now that we have this, this lets us see that we can have a right triangle with side lengths $$(3,4,5)$$, $$(5,12,13)$$, $$(21,28,35)$$, or $$(7,24,25)$$ but not one with side lengths $$(1,2,3)$$ or $$(4,4,4)$$. In fact, if we think about it, this says we can't have any equilateral right triangle. If we did and the side length was $$x$$, then this would give $$x^2+x^2=x^2\implies 2x^2=x^2\implies x=0$$, and a triangle with 0 side length is no triangle at all. I think a natural question to ask at this point would be "what side lengths can we get?". Now, we have to be careful about how we phrase this, because obviosly given any $$a$$ and $$b$$, we can find some $$c$$ that gives a right triangle, but that $$c$$ may not be nice. For example, if $$a=2$$ and $$b=4$$, then $$c=\sqrt{a^2+b^2}=\sqrt{20}=2\sqrt5$$ isn't the nicest looking solution. What we really want is a triangle where all side lengths are whole numbers.
 
 >Question<br>
 What are the triples of integers $$(a,b,c)$$ where $$a,b,c\in\mathbb Z$$[^6] such that $$a^2+b^2=c^2$$?
@@ -135,7 +135,7 @@ X+1=\frac{2t^2}{t^2+4} &\implies X=\frac{t^2-4}{t^2+4}\\
 
 This seems like another good place for a quick pause. What we have just done is found a way to turn a rational number $$t$$ into a pair of rational numbers $$(X,Y)$$ on the unit circle which can be turned into 3 coprime integers $$(X,Y,Z)$$ that satisfy the Pythagorean theorem. In essence, we have found a 1-1 correspondence between fractions and rational points on the circle [^10] which solves our problem by our earlier observation that rational points on the circle are in 1-1 correspondence with coprime Pythagorean triples.
 
-To finish up, we'll note that a rational number is really just two integers as we can write $$t=\frac mn$$ where $$m,n\in\mathbb Z$$ are coprime. Thus, to form any Pythagorean triple, pick any two integers $$m,n$$ and use calculate the following: $$\left(\frac{t^2-4}{t^2+4},\frac{4t}{t^2+4}\right)=\left(\frac{(m/n)^2-4}{(m/n)^4+4},\frac{4m/n}{(m/n)^2+4}\right)=\left(\frac{m^2-4n^2}{m^2+4n^2},\frac{4mn}{m^2+4n^2}\right)$$
+To finish up, we'll note that a rational number is really just two integers as we can write $$t=\frac mn$$ where $$m,n\in\mathbb Z$$ are coprime. Thus, to form any Pythagorean triple, pick any two integers $$m,n$$ and use calculate the following: $$\left(\frac{t^2-4}{t^2+4},\frac{4t}{t^2+4}\right)=\left(\frac{(m/n)^2-4}{(m/n)^2+4},\frac{4m/n}{(m/n)^2+4}\right)=\left(\frac{m^2-4n^2}{m^2+4n^2},\frac{4mn}{m^2+4n^2}\right)$$
 which corresponds to the solution[^11]
 
 $$\begin{align*}
@@ -189,22 +189,22 @@ A number $$u$$ that divides $$1$$ is called a <b>unit</b>. Equivalently, if ther
 When we talk about factorization, we don't care about units. Furthermore,
 
 >Theorem<br>
-In $$\mathbb Z[i]$$ the only units are $$\pm1,\pm i$$, and a number $$x$$ is a unit if and only iff $$N(x)=1$$
+In $$\mathbb Z[i]$$ the only units are $$\pm1,\pm i$$, and a number $$x$$ is a unit if and only if $$N(x)=1$$
 
 <div class="proof2">
-Pf: \(uv=1\iff N(uv)=N(u)N(v)=N(1)=1\iff N(u),N(v)=1\). For the first part of the theorem, assume \(u\) is a unit and write \(u=a+bi\) so \(a^2+b^2=1\). Clearly, either \((a,b)=(1,0)\) or \((a,b)=(0,a)\) so the claim holds. \(\square\)
+Pf: \(uv=1\iff N(uv)=N(u)N(v)=N(1)=1\iff N(u),N(v)=1\). For the first part of the theorem, assume \(u\) is a unit and write \(u=a+bi\) so \(a^2+b^2=1\). Clearly, either \((a,b)=(1,0)\) or \((a,b)=(0,1)\) so the claim holds. \(\square\)
 </div>
 
 >Theorem<br>
 (Normal) prime $$p$$ factors in $$\mathbb Z[i]$$ if and only if $$p$$ can be written as the sum of two squares.
 
 <div class="proof2">
-Pf: \((\rightarrow)\) Assume \(p=\alpha\beta\) factors in \(\mathbb Z[i]\) with \(\alpha,\beta\in\mathbb Z[i]\) both non-units. Then, \(p^2=N(p)=N(\alpha\beta)=N(\alpha)N(\beta)\). Since \(N(\alpha),N(\beta)\neq-1\) by assumption, this means \(N(\alpha)=p\). Write \(\alpha=a+bi\) to get the result.<br>
+Pf: \((\rightarrow)\) Assume \(p=\alpha\beta\) factors in \(\mathbb Z[i]\) with \(\alpha,\beta\in\mathbb Z[i]\) both non-units. Then, \(p^2=N(p)=N(\alpha\beta)=N(\alpha)N(\beta)\). Since \(N(\alpha),N(\beta)\neq1\) by assumption, this means \(N(\alpha)=p\). Write \(\alpha=a+bi\) to get the result.<br>
 
 (\(\leftarrow\)) If \(a^2+b^2=p\), then \(p=(a+bi)(a-bi)\).\(\square\)
 </div>
 
-This means we can classify the normal primes that are Gaussian primes by figuring out which can be written as the sum of two squares. This turns out to have a surprising answering using some modular arithmetic.
+This means we can classify the normal primes that are Gaussian primes by figuring out which can be written as the sum of two squares. This turns out to have a surprising answer using some modular arithmetic.
 
 >Theorem<br>
 An odd prime $$p$$ can be written as the sum of two squares only if $$p\equiv1\pmod4$$.
@@ -224,19 +224,19 @@ Pf: Assume prime \(p\equiv1\pmod4\). Consider the group \(\mathbb F_p^\times\) o
 Alternative Pf: Use <a href="https://www.wikiwand.com/en/Wilson%27s_theorem">Wilson's Theorem</a> to show that \((2k)!(2k)!\equiv-1\pmod p\) if \(p=4k+1\). Details left to reader. \(\square\)
 </div>
 
-Now that we've taken that step, we can finally proof the other direction of our previous theorem.
+Now that we've taken that step, we can finally proof the other direction of our previous theorem [^*].
 
 >Theorem<br>
 An odd prime $$p$$ can be written as the sum of two squares if $$p\equiv1\pmod4$$.
 
 <div class="proof2">
-Pf: Assume \(p\equiv1\pmod4\) and pick some integer \(n\) such that \(p\mid(n^2+1\). Working in \(\mathbb Z[i]\), we can write \(n^2+1=(n-i)(n+i)\). Assume that \(p\) remains in the Gaussian integers. This would mean that \(p\mid(n-i)\) or \(p\mid(n+i)\). However, both of these are nonsense because \(\frac{n\pm i}p\not\in\mathbb Z[i]\) since its coefficients are not integers. Thus, \(p\) must not be prime so it factors and hence is the sum of two squares. \(\square\)
+Pf: Assume \(p\equiv1\pmod4\) and pick some integer \(n\) such that \(p\mid(n^2+1)\). Working in \(\mathbb Z[i]\), we can write \(n^2+1=(n-i)(n+i)\). Assume that \(p\) remains in the Gaussian integers. This would mean that \(p\mid(n-i)\) or \(p\mid(n+i)\). However, both of these are nonsense because \(\frac{n\pm i}p\not\in\mathbb Z[i]\) since its coefficients are not integers. Thus, \(p\) must not be prime so it factors and hence is the sum of two squares. \(\square\)
 </div>
 
-This means that the normal primes that are also Gaussian primes are exactly thos are are congruenct to 1 modulo 4. However, are there any Gaussian primes that are not normal primes? Short answer, yes. In fact, if $$p$$ is a Guassian prime, then so is $$ip$$. Furthermore, it can be shown [^14] that $$a+bi$$ with $$a,b\neq0$$ is a Gaussian prime if and only if $$N(a+bi)$$ is a normal prime. Finally, because why stop there, I have one last exercise
+This means that the normal primes that are also Gaussian primes are exactly those that are congruenct to 1 modulo 4. However, are there any Gaussian primes that are not normal primes? Short answer, yes. In fact, if $$p$$ is a Guassian prime, then so is $$ip$$. Furthermore, it can be shown [^14] that $$a+bi$$ with $$a,b\neq0$$ is a Gaussian prime if and only if $$N(a+bi)$$ is a normal prime. Finally, because why stop there, I have one last exercise
 
 >Exercise<br>
-Extend the work done here to show that an integer $$N\in\mathbb Z$$ can be written as the sum of two squares if and only iff every prime $$p\equiv3\pmod4$$ that divides it does so evenly many times.
+Extend the work done here to show that an integer $$N\in\mathbb Z$$ can be written as the sum of two squares if and only if every prime $$p\equiv3\pmod4$$ that divides it does so evenly many times.
 
 As an example, we can write $$180=2^2*3^2*5=6^2+12^2$$, but we cannot write $$105=3*5*7$$ as the sum of two squares no matter how hard we try.
 
@@ -257,5 +257,6 @@ The second half of this post did not turn out as well as I had hoped it would ha
 [^11]: If the last footnote makes you think, we still missed (1,0) <---> (1,0,0), this solution comes from m=1 and n=0. This doesn't contradict the previous footnote, because this choice of m and n gives t=1/0 which is very much not rational.
 [^12]: I don't know the exact details but I saw them once long ago. I'm not going to try to reproduce them here.
 [^13]: or at least not one that I know
-[^14]: and is up to you to show that
+[^14]: and is up to you to show that. One direction is easy. The other I'm not 100% sure is true but I'm pretty sure it is.
 [^15]: and it being almost circular in the end
+[^*]: Here, I ignore the issuze of Z[i] being a UFD which means every number factors uniquely into primes like they do in the integers. This is not a trivial/obvious property for a set of numbers to have, but I didn't want to get into the details of proving this.
