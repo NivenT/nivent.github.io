@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Surreal Numbers"
-modified: 2017-01-05 13:03:00
+modified: 2017-06-03 22:23:00
 categories: blog
 excerpt:
 tags: [math]
@@ -49,9 +49,9 @@ So, a surreal number is two sets of surreal numbers, a left set and a right set.
 
 Honestly, it's not even obvious this makes sense. In the standard approach to constructing numbers, you have real numbers made from rational numbers, and ration numbers made from integers. Every type is constructed using previous types. Here, there is only one type, so isn't it circular? [^5]
 
-The thing to keep in mind is that concepts surrounding surreal numbers are defined in terms of other surreal numbers, but they only in terms of simpler surreal numbers! As you "unfold" these definitions, you will eventually reach the simplest surreal number of all $$\{\mid\}$$, and at this point you are done. Since there is nothing left to unfold (and members of the empty set satisfy all properties[^6]), these definitions are perfectly fine. This actually has a nice side affect. If you want to prove a statement about the natural numbers, you can do so inductively. You show that it holds for 0, and that if it holds for some number $$k$$, then it also holds for $$k+1$$, and this shows that it's true for all natural numbers [^7]. Surreal numbers have their own form of induction. If you want to prove a statement holds for all surreal numbers, it's enough to show that if it holds for all members a number's left and right sets, then it holds for that number; you don't even need a base case! This is because the base case would be $$\{\mid\}$$ but everything holds for the empty set so its trivially satisfied.
+The thing to keep in mind is that concepts surrounding surreal numbers are defined in terms of other surreal numbers, but they're only defined in terms of simpler surreal numbers! As you "unfold" these definitions, you will eventually reach the simplest surreal number of all $$\{\mid\}$$, and at this point you are done. Since there is nothing left to unfold (and members of the empty set satisfy all properties[^6]), these definitions are perfectly fine. This actually has a nice side affect. If you want to prove a statement about the natural numbers, you can do so inductively. You show that it holds for 0, and that if it holds for some number $$k$$, then it also holds for $$k+1$$, and this shows that it's true for all natural numbers [^7]. Surreal numbers have their own form of induction. If you want to prove a statement holds for all surreal numbers, it's enough to show that if it holds for all members a number's left and right sets, then it holds for that number; you don't even need a base case! This is because the base case would be $$\{\mid\}$$ but everything holds for the empty set so its trivially satisfied.
 
-To summarize, surreal number definitions make sense because everything is defined in terms of simpler numbers. A consequence of this is that statements can be proved inductively by showing that if a claim holds for all $$x_L$$ and all $$x_R$$, then it also holds for $$x$$. In my opinion, this second part is amazing. Surreal numbers contain far more values than the real numbers, but at the same time allow for induction that is arguable simpler than induction on natural numbers.
+To summarize, surreal number definitions make sense because everything is defined in terms of simpler numbers. A consequence of this is that statements can be proved inductively by showing that if a claim holds for all $$x_L$$ and all $$x_R$$, then it also holds for $$x$$. In my opinion, this second part is amazing. Surreal numbers contain far more values than the real numbers, but at the same time allow for induction that is arguably more simple than induction on natural numbers.
 
 # Happy Birthday
 Finally, all the set up is out of the way; we can start playing with these things. As I mentioned before, the first and simplest surreal number is $$\{\mid\}$$ which we'll call $$*$$ for now. From this, we can create 4 possible new forms
@@ -61,7 +61,7 @@ $$\begin{array}[c c]
 \{\mid*\} && \{*\mid*\}
 \end{array}$$
 
-The top-left one is just $$0$$ again so nothing new. The bottom right one is not well-formed so that's not a surreal numbers. The other two however actually look like two new surreal numbers. We'll call them $$\{*\mid\}=\uparrow$$ and $$\{\mid*\}=\downarrow$$. Before moving on, let's verify that these actually are new numbers, and not just $$*$$ in disguise.
+The top-left one is just $$*$$ again so nothing new. The bottom right one is not well-formed so that's not a surreal numbers. The other two however actually look like two new surreal numbers. We'll call them $$\{*\mid\}=\uparrow$$ and $$\{\mid*\}=\downarrow$$. Before moving on, let's verify that these actually are new numbers, and not just $$*$$ in disguise.
 
 >Theorem<br>
 $$\downarrow<*<\uparrow$$
@@ -81,17 +81,17 @@ We want to show that \(\{\mid\}\not\le\{\mid*\}\). This is the case since \(*\le
 </div>
 I won't bother doing the other two parts, but they work out as well and you can do them youself.$$\square$$
 
-The above proof should seem misleading. Not because the theorem is false, but because I'm using things we haven't prooved yet. Namely, reflexivity and transitivity of $$\le$$. These properties hold for $$\le_{\mathbb R}$$, but we're working with a different concept of lequality here. To calm our worries, in the next section, we will show that transitivity and reflexivity hold here as well. We'll also recover some other familiar properties of "numbers", and rename the 3 numbers we've created thus far.
+The above proof should seem misleading. Not because the theorem is false, but because I'm using things we haven't proved yet. Namely, reflexivity and transitivity of $$\le$$. These properties hold for $$\le_{\mathbb R}$$, but we're working with a different concept of lequality here. To calm our worries, in the next section, we will show that transitivity and reflexivity hold here as well. We'll also recover some other familiar properties of "numbers", and rename the 3 numbers we've created thus far.
 
 Before that though, let's introduce some useful terminology for talking about surreal numbers. From the three we've seen so far, it's clear how the rest of the numbers will be constructed. Each step along the way, the $$k$$ numbers already construct form $$4^k$$ [^9] candidate new surreal numbers, some (only few) of which will actually be new numbers. With this in mind, there's a kind of order to the numbers separate from lequality: some are made before others. To capture this notion, we define the following
 
->Definition
-The ancestors of $$x$$ are all the numbers $$x_L$$ and all the numbers $$x_R$$
+>Definition<br>
+The <b>ancestors</b> of $$x$$ are all the numbers $$x_L$$ and all the numbers $$x_R$$
 
->Definition
+>Definition<br>
 We say $$\{\mid\}$$ was **born on day 0**. In general, $$x$$ was born 1 day after the oldest of its ancestors (members of either $$X_L$$ or $$X_R$$). We call the day a number $$x$$ was born its **birthday** or **birthday number**.
 
->Definition
+>Definition<br>
 We say $$x$$ is **simpler** than $$y$$ if $$x$$ was born before $$y$$
 
 These definitions will give a nice way of identifying surreal numbers. In the next section, we will prove the following theorem
@@ -99,7 +99,7 @@ These definitions will give a nice way of identifying surreal numbers. In the ne
 >The Simplicity Theorem<br>
 Given any surreal number $$y=\{Y_L\mid Y_R\}$$, if $$x$$ is the simplest number such that $$Y_L<x<Y_R$$, then $$x=y$$.
 
-The notation $$Y_L<x$$ means that $$\forall y_L$$ $$y_L < x$$. In generally, when a relation is applied to a set (of surreals), it is applied elementwise.
+The notation $$Y_L<x$$ means that $$\forall y_L:y_L < x$$. In generally, when a relation is applied to a set (of surreals), it is applied elementwise.
 
 # Some Properties
 The surreal numbers form what's called an [ordered Field](https://www.wikiwand.com/en/Ordered_field). This means four things. You can add them, you can multiply, you can order them, and all these things play nicely with each other and generally behave as you would expect. We won't show all of this here because it would be a lot and I don't want to, but we'll a thing or two about the ordering, define addition and multiplication, and then probably show some other stuff [^10] [^11].
@@ -108,10 +108,10 @@ The surreal numbers form what's called an [ordered Field](https://www.wikiwand.c
 If $$x\le y$$ and $$y\le z$$, then $$x\le z$$ [^12]
 
 <div class="proof">
-As I suggested before, the standard way for proving things about surreal numbers is induction. With that said, assume the theorem holds for any triple (\(x', y', z')\) where \(x'\) is an ancestory of \(x\) and similarly for \(y'\) and \(z'\). Furthermore, assume \(x\le y\) and \(y\le z\). We need to show that \(x\) is lequal to every \(z_R\) and every \(x_L\) is lequal to \(z\). For the first condition, \(x\le y\) and \(y\le z_R\) (by assumption), and so \(x\le z_R\) by induction (since \(z_R\) is an ancestor of z). For the second condition, \(x_L\le y\le z\) by assumption and so \(x_L\le z\) (by induction). Hence, \(x\le z\) and we are done. \(\square\)
+As I suggested before, the standard way for proving things about surreal numbers is induction. With that said, assume the theorem holds for any triple (\(x', y', z')\) where \(x'\) is an ancestor of \(x\) (or \(x'=x\)) and similarly for \(y'\) and \(z'\). Furthermore, assume \(x\le y\) and \(y\le z\). We need to show that \(x\) is lequal to every \(z_R\) and every \(x_L\) is lequal to \(z\). For the first condition, \(x\le y\) and \(y\le z_R\) (by assumption), and so \(x\le z_R\) by induction (since \(z_R\) is an ancestor of z). For the second condition, \(x_L\le y\le z\) by assumption and so \(x_L\le z\) (by induction). Hence, \(x\le z\) and we are done. \(\square\)
 </div>
 
-We had this messy recursive definition of $$\le$$, and we just showed it was transitive using induction pretty simply without even needing a base case. Take some time to convince yourself that the above proof is actually correct and not just cheating. I'll wait. Now that we have transitivity, the natural thing to prove next is reflexivity, and then we'll have shown that $$\le$$ is a partial order[^13]. Instead of doing that here, I'll leave that to you and prove something else.
+We had this messy recursive definition of $$\le$$, and we just showed it was transitive using induction pretty simply without even needing a base case. Take some time to convince yourself that the above proof is actually correct and not just cheating[^20]. I'll wait. Now that we have transitivity, the natural thing to prove next is reflexivity, and then we'll have shown that $$\le$$ is a partial order[^13]. Instead of doing that here, I'll leave that to you and prove something else.
 
 >Theorem<br>
 $$X_L<x<X_R$$. Possibly more clearly, $$\forall x_L\in X_L\forall x_R\in X_R$$ we have $$x_L<x<x_R$$
@@ -293,3 +293,4 @@ In you just want more practice with surreals, Knuth has a [nice book](https://ww
 [^17]: rationals with denominator a power of 2
 [^18]: we use binary because writing a number in binary is equivalent to writing it as a sum of numbers of the form 1/2^n and so we are only using already constructed numbers
 [^19]: does? performs? What's a good verb here?
+[^20]: Probably worth mentioning that I haven't been super strict/formal in setting up how induction on surreals works. Basically, given some tuple (x_1,...,x_n) of surreal numbers, you can consider the sum of their birthdays, and call one tuple simpler than another if its members have a lower bitherday sum than the other. Then you do induction on the birthday sum of tuples and you win.
