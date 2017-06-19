@@ -7,7 +7,7 @@ excerpt:
 tags: [math, algebra, complex numbers, fundamental, topology]
 image: 
   feature: 
-date: 2017-06-17 12:00:00
+date: 2017-06-18 18:12:00
 ---
 
 One of the first "theorems" I heard about was The Fundamental Theorem of Algebra, and I remember being kind of drawn to it for a long time after first seeing it. I think this was less because of the statement of the theorem itself, and more because the word fundamental in its title made it seem really important and imposing [^1]. Either way, I was convinced for a long time that it was somehow a mysterious theorem, that although easy to state, must have one of those impossible to understand, complicated proofs; the kind of thing that's proved once via a lot of effort, and then is just applied afterwards without many people wanting to return to the proof because it's just that out there. Despite this, my fascination with it made me determined to see and understand its proof once I became really good at/knowledgable of math. Luckily for me, I was wrong. The proof of the theorem is not arcane. In fact, there are [many](Add link to book later) proofs of it, some of which even I can understand. 
@@ -96,7 +96,7 @@ The degree of a path is homotopy-invariant. That is, if $$f\sim g$$, then $$\deg
 
 Before we get to the proof, let's look at a picture of what's going on here.
 
-<center><img src="{{ site.url }}/images/blog/fund-theorem/lift.jpeg" width="500" height="200"></center>
+<center><img src="{{ site.url }}/images/blog/fund-theorem/lift.gif" width="500" height="200"></center>
 
 We have a path $$f$$ going around the circle (here $$f=\omega_2$$), and by using local inverses of $$p$$, we lift this to a path in $$\mathbb R$$ from $$0$$ to $$2$$. This captures the fact that this circle loop makes two full revolutions around the circle. The idea behind the proof is similar to the proof of paths having unique lefts. You essentially show that you can also lift homotopies, so if $$f\sim g$$, then $$\tilde f\sim\tilde g$$ which means they have the same endpoints.
 
