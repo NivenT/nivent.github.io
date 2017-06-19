@@ -135,7 +135,9 @@ $$\begin{matrix}
 \end{matrix}$$
 
 >Exercise<br>
-Write code that performs this algorithm, and count the number of steps (comparisons) it takes to find a local minimum on a large sample of random $$n\times n$$ matrices. See if this number is actually roughly $$3n$$ as expected. Finally, a far too wordy proof...
+Write code that performs this algorithm, and count the number of steps (comparisons) it takes to find a local minimum on a large sample of random $$n\times n$$ matrices. See if this number is actually roughly $$3n$$ as expected. 
+
+Finally, a far too wordy proof...
 
 >Theorem<br>
 This algorithm is correct with time complexity $$O(n)$$.
@@ -150,7 +152,7 @@ Take some time to make sure this proof makes sense to you and is legit. If after
 This post lacked much motivation and insight into where these solutions came from, and I usually like to try to have those things. I won't include them here, but I will say I feel I somewhat robbed you of the chance to solve these problems yourself, so here's an (unrelated) bonus problem I found just before writing this post. It's not quite as difficult as this problem, but (hopefully) not immediately obvious
 
 >Problem<br>
-Give a sorted $$n$$-element array where every element appears 2 except for a single number appearing once, how do you find this number in time $$O(\log n)$$?
+Given a sorted $$n$$-element array where every element appears 2 times except for a single number appearing once, how do you find this number in time $$O(\log n)$$?
 
 As an example, given the array $$\{1,1,2,2,3,3,5,5,7,8,8,9,9\}$$, you would return $$7$$ as your answer. 
 
