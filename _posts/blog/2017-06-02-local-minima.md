@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Local Minima"
-modified: 
 categories: blog
+modified: 
 excerpt:
 tags: [CS, matrix]
 image: 

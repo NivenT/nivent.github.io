@@ -150,7 +150,7 @@ $$\begin{align*}
 \mid z^n + s(a_{n-1}z^{n-1}+\dots+a_1z+a_0)\mid
 &\ge |z|^n - s|a_{n-1}z^{n-1}+\dots+a_1z+a_0|\\
 &\ge |z|^n - s(|a_{n-1}||z^{n-1}|+\dots+|a_1||z|+|a_0|)\\
-&= 1 - s(|a_{n-1}+\dots+|a_1|+|a_0|)\\
+&= 1 - s(|a_{n-1}|+\dots+|a_1|+|a_0|)\\
 &> 1 - s\\
 &\ge 0
 \end{align*}$$
