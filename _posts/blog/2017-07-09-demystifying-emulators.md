@@ -78,9 +78,9 @@ f_0 & f_1 & f_2 & \dots & f_{79} & g_0 & g_1 & g_2 & \dots & 0 & 1 & 2 & \dots\\
 \hline
 \end{array}$$
 
-where $$f_0,f_1,f_2,\dots,f_{79}$$ is the font data [^6], $$g_0,g_1,g_2,\dots,g_N$$ is the game data, and $$S=0x50+N+1$$ is the beginning of memory after all game data.
+where $$f_0,f_1,f_2,\dots,f_{79}$$ is the font data [^6], $$g_0,g_1,g_2,\dots,g_N$$ is the game data, and $$S=0\x50+N+1$$ is the beginning of memory after all game data.
 
-This is wrong for two reasons. First of all, the Chip-8 begins executing instructions from memory address $$0x200$$ so that's where game data should begin. Secondly, the unused locations ($$S$$ and beyond) should be populated with all $$0$$'s. I caught this bug because earlier versions of the emulator would try to execute a non-existent instruction. If I had implemented all instructions before testing and only seen the issue then, I would have assumed the issue was with an incorrectly implemented instruction and not been able to fix things as quickly. 
+This is wrong for two reasons. First of all, the Chip-8 begins executing instructions from memory address $$0\x200$$ so that's where game data should begin. Secondly, the unused locations ($$S$$ and beyond) should be populated with all $$0$$'s. I caught this bug because earlier versions of the emulator would try to execute a non-existent instruction. If I had implemented all instructions before testing and only seen the issue then, I would have assumed the issue was with an incorrectly implemented instruction and not been able to fix things as quickly. 
 
 The [correct memory layout](https://github.com/NivenT/curly-succotash/blob/master/emu.hs#L110) is
 
@@ -91,7 +91,7 @@ f_0 & f_1 & \dots & f_{79} & 0 & 0 & \dots & g_0 & g_1 & \dots & 0 & 0 & \dots\\
 \hline
 \end{array}$$
 
-where $$T=0x200+N+1$$ takes the role of $$S$$.
+where $$T=0\x200+N+1$$ takes the role of $$S$$.
 
 For actually implementing instructions, you need some kind of mapping from opcodes to the execution of the instruction itself. One way of doing this that works fairly well is to just use a `switch` statement like in the calculator emulator we started with. The nice thing about this is that, if done right [^7], it's simple, efficient [^8], and [works](https://github.com/NivenT/curly-succotash/blob/master/op.hs#L81). However, it can also be a pain to maintain a giant switch statement, so you might want something more sophisticated. One things you can do is use a [struct](https://github.com/NivenT/RGB/blob/master/src/emulator/instructions.rs#L542) to hold basic information about instructions that can replace you having to re-lookup all the details hidden in your switch statement [when things go wrong](https://github.com/NivenT/RGB/blob/master/src/emulator/emulator.rs#L326).
 

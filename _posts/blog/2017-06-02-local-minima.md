@@ -4,7 +4,7 @@ title: "Local Minima"
 categories: blog
 modified: 
 excerpt:
-tags: [CS, matrix]
+tags: [CS, matrix, problem, C++]
 image: 
   feature: 
 date: 2017-06-02 22:48:00
@@ -87,7 +87,7 @@ Now that we got that out of the way, let's look at something a little bit harder
 >Problem<br>
 Given an $$n\times n$$ matrix of unique numbers, how can you find a local minimum in time at worse $$O(n)$$?
 
-The first thing to notice is that moving from arrays to matrices cause our time complexity to go from $$O(\log n)$$ to $$O(n)$$. I don't know about you, but seemed strange to me. I don't know of a clear realtion between $$\log n$$ and $$n$$ in the context of matrices. Furthermore, you would expect the matrix problem to be slower, but it actually has better complexity in relation to what it could be[^5]. What I mean is that in the worst case we check every element, so we can look at ratios to get a sense of how much better than worst-possible we are doing. In the array case, we get $$\frac{\log n}n$$, but in the matrix case we get $$\frac n{n^2}=\frac1n$$ which is even smaller. 
+The first thing to notice is that moving from arrays to matrices cause our time complexity to go from $$O(\log n)$$ to $$O(n)$$. I don't know about you, but this seemed strange to me. I don't know of a clear realtion between $$\log n$$ and $$n$$ in the context of matrices. Furthermore, you would expect the matrix problem to be slower, but it actually has better complexity in relation to what it could be[^5]. What I mean is that in the worst case we check every element, so we can look at ratios to get a sense of how much better than worst-possible we are doing. In the array case, we get $$\frac{\log n}n$$, but in the matrix case we get $$\frac n{n^2}=\frac1n$$ which is even smaller. 
 
 At this point, I encourage you to stop reading and spend the next couple of hours thinking about this problem, trying to come up with a solution. I'll wait$$\dots$$
 

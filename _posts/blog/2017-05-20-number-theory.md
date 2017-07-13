@@ -216,13 +216,16 @@ Pf: Assume \(p=a^2+b^2\). Note that the only squares\({}\bmod4\) are \(0\) and \
 We would like to prove the other direction, that if $$p\equiv1\pmod4$$, then its the sum of two squares. While this turns out to be true, it doesn't have as simple of a proof [^13]. First, note that if we have a a number $$d$$ s.t. $$d^2\equiv-s^2\pmod p$$ for some $$s$$, then we know that $$p$$ divides $$d^2+s^2$$ which looks like a step in the right direction. This motivates the following theorem.
 
 >Lemma<br>
-If prime $$p\equiv1\pmod4$$, then $$-1\equiv\square\pmod4$$.
+If prime $$p\equiv1\pmod4$$, then $$-1\equiv\square\pmod p$$.
 
 <div class="proof2">
 Pf: Assume prime \(p\equiv1\pmod4\). Consider the group \(\mathbb F_p^\times\) of non-zero integers modulo \(p\) under multiplication. Writing \(p=4k+1\), this group is cyclic of order \(4k\) so there exists some \(g\in\mathbb F_p^\times\) with order \(4k\). Hence \(g^{4k}=1\implies g^{2k}g^{2k}=1\implies g^{2k}=-1\implies (g^k)^2=-1\) so \(-1\) is a square modulo \(p\) as claimed. \(\square\)<br><br>
 
 Alternative Pf: Use <a href="https://www.wikiwand.com/en/Wilson%27s_theorem">Wilson's Theorem</a> to show that \((2k)!(2k)!\equiv-1\pmod p\) if \(p=4k+1\). Details left to reader. \(\square\)
 </div>
+
+>Exercise<br>
+Show that the converse of this lemma holds as well. If $$-1\equiv\square\pmod p$$ for odd prime $$p$$, then $$p\equiv1\pmod4$$.
 
 Now that we've taken that step, we can finally proof the other direction of our previous theorem [^16].
 
