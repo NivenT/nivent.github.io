@@ -1,0 +1,13 @@
+---
+---
+[
+    {% for article in site.categories.articles %}
+    {
+      "title"        : "{{ article.title }}",
+      "author"       : "{{ article.author }}",
+      "description"  : "{{ article.description }}",
+      "link"         : "{{ article.link }}"
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]

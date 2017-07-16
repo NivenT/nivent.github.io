@@ -75,3 +75,51 @@
     }
   }
 }
+
+/*
+   Article archive
+   ========================================================================== */
+
+.article-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    background-color: #ccccff;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px black;
+    padding: 8px 0;
+
+    @include font-size(18,no);
+  }
+  .title {
+    text-shadow: 1px 1px 2px black;
+    font-size: 24px;
+    margin-left: 16px;
+    display: inline;
+    vertical-align: middle;
+    color: black;
+  }
+  .description {
+    margin: auto;
+    display: block;
+    float: none;
+    font-size: 16px;
+
+    @include media($medium) {
+      width: 90%;
+    }
+    @include media($large) {
+      width: 80%;
+    }
+  }
+  .author {
+    text-align: right;
+    float: right;
+    font-weight: bold;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+}
