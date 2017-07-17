@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: "Doing without diagrams"
 categories: articles
 link: http://www.maths.ed.ac.uk/~tl/elements.pdf

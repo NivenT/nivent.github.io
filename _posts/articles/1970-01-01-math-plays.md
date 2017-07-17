@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: "Winning Ways for Your Mathematical Plays"
 categories: articles
 link: https://www.amazon.com/Winning-Ways-Your-Mathematical-Plays/dp/1568811306
