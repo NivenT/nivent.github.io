@@ -75,3 +75,9 @@ Sometimes I come across interesting articles or books or whatever that I read on
 {% endfor %}
 -->
 </ul>
+<div class="entry-content">
+	{% if (site.owner.disqus-shortname and page.comments) or site.comments %}
+	  <div id="disqus_thread"></div><!-- /#disqus_thread -->
+	  {% include disqus-comments.html %}
+	{% endif %}
+</div>
