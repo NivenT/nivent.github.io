@@ -336,3 +336,13 @@ span + .entry-title {
 	color: #000000;
 	padding: (0px + $doc-line-height)/2;
 }
+
+/*
+   Mathjax
+   ========================================================================== */
+
+.latex-commands {
+	width: 0;
+	height: 0;
+	display: none;
+}
