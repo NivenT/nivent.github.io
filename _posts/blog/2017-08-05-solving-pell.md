@@ -12,9 +12,9 @@ date: 2017-08-05 15:50:00
 
 I think this is going to end up being a long one [^21], and possibly not the easiest post to follow that I've made; mostly because I will likely end up introducing a decent number of topics I haven't talked about here before. I guess we'll see how things turn out [^19].
 
-Historically, one topic of interest to number theorists has been diophantine equations. The are equations where you are looking for integer -- or rational, they're basically the same thing [^1] -- solutions. One famous example is $$a^2+b^2=c^2$$ where you look for integer solutions. In general, there's no overarching method to solve any diophantine equation [^2], and see individual equations may be solved using ad hoc seeming methods. For example, the pythagorean equation can be solved [by project points from the unit circle onto a line](../number-theory) [^3]. Another (class of) well-known example(s) is due to Fermat: $$a^n+b^n=c^n, n>2$$, but we'll put off solving this one until a later post. 
+Historically, one topic of interest to number theorists has been diophantine equations. The are equations where you are looking for integer solutions. One famous example is $$a^2+b^2=c^2$$ where you look for integer solutions. In general, there's no overarching method to solve any diophantine equation [^2], and so individual equations may be solved using ad hoc seeming methods. For example, the pythagorean equation can be solved [by projecting points from the unit circle onto a line](../number-theory) [^3]. Another (class of) well-known example(s) is due to Fermat: $$a^n+b^n=c^n, n>2$$, but we'll put off solving this one until a later post. 
 
-This post is all about solving Pell's equation (of course, $$x,y,d$$ are integers)
+This post is all about solving Pell's equation (here, of course, $$x,y,$$ and $$d$$ are integers)
 
 $$\begin{align*}
 x^2-dy^2 = 1 && d>1
@@ -24,7 +24,7 @@ x^2-dy^2 = 1 && d>1
 Why do we require $$d>1$$? What happens if $$d\le1$$?
 
 # A Warm-up Problem: $$y^2=x^3-2$$
-Before solving Pell's equations, we'll start with a simpler task (although it may not be immediately obvious that this equation is any easier to solve). At this point, if it seems like things here will be novel to you, then I recommend that you check out by [previous post on number theory](../number-theory). It's not required to understand this post, and won't necessarily add a bunch to your knowledge of the ideas used here, but I think it could serve as good motivation for seeing that geometric reasoning and working in number systems larger than $$\Z$$ can both be helpful in number theoretic problems [^8].
+Before solving Pell's equations, we'll start with a simpler task (although it may not be immediately obvious that this equation is any easier to solve). At this point, if it seems like things here will be novel to you, then I recommend that you check out by [previous post on number theory](../number-theory). It's not required to understand this post, and won't necessarily add a bunch to your knowledge of the ideas used here, but I think it could serve as good motivation for seeing that both geometric reasoning and working in number systems larger than $$\Z$$ can be helpful in number theoretic problems [^8].
 
 If you were to decide to stop reading, leave this post, and go start finding and solving diophantine equations, one thing you will notice is that multiplication makes things so much easier.
 
@@ -40,9 +40,9 @@ $$\begin{align*}
 \end{align*}$$<br>
 Hence, this particular diophantine equation has no solutions.
 
-If you can set you set your problem up as something times something else equals a third thing, then since everything is an integer, the things on the left hand side must be factors of the right hand side! This vastly reduces the number of potential solutions [^4], and often can lead directly into a solution. 
+If you can set your problem up as one thing times another thing equals a third thing, then since everything is an integer, the things on the left hand side must be factors of the right hand side! This vastly reduces the number of potential solutions [^4], and often can lead directly into an actual solution (ot show that non exist). 
 
-That being said, the key insight to solving our warmup problem is that we can rewrite it as $$y^2+2=x^3$$. I'll take a second to pause so you can let out a gasp of amazement. Once things are in this form, we can see that the left hand side is almost a difference of squares. The only problem is that it's not a difference and $$2$$'s not a square, but motivated by the possibility of factoring the left hand side, we ignore these constraints, stop restricting ourselves to $$\Z$$, and from here on out, do our work in $$\zadjns2=\{a+b\sqrt{-2}\mid a,b\in\Z\}$$ instead. I don't know if this feels illegitamate, but it shouldn't because it's not, so I'm gonna move on.
+That being said, the key insight to solving our warmup problem is that we can rewrite it as $$y^2+2=x^3$$. I'll take a second to pause so you can let out a gasp of amazement. Once things are in this form, we can see that the left hand side is almost a difference of squares. The only problem is that it's not a difference and $$2$$'s not a square, but motivated by the possibility of factoring the left hand side, we ignore these constraints, stop restricting ourselves to $$\Z$$, and from here on out, do our work in $$\zadjns2=\{a+b\sqrt{-2}\mid a,b\in\Z\}$$ instead [^35]. I don't know if this feels illegitamate, but it shouldn't because it's not, so I'm gonna move on.
 
 We can now write our equation as $$(y+\sqrt{-2})(y-\sqrt{-2})=x^3$$. At this point, we really hope that $$y\pm\sqrt{-2}$$ are coprime so that they must both be perfect cubes; this would be a fairly restrictive condition. However, hoping this would be getting ahead of ourselves. This line of thinking would work in $$\Z$$, but the reason it works (and the reason we can have a sensible definiton of coprime in the first place) is because $$\Z$$ is a unique factorization domain [^5], but we're working with $$\zadjns2$$ instead of just $$\Z$$. Luckily, it turns out that this is a UFD as well, but this is a non-trivial claim that could have failed if we had added a different square root instead [^6].
 
@@ -62,7 +62,7 @@ Before proceeding, a quick note. When considering factoring and related concepts
 Now, back to out problem. The following proposition implies that $$p=u\sqrt{-2}^e$$ for some unit $$u\in\Z[\sqrt{-2}]$$ and integer $$0\le e\le 3$$.
 
 >Proposition<br>
-In $$\zadjns2$$, $$\sqrt{-2}$$ is prime. 
+In $$\zadjns2$$, $$\sqrt{-2}$$ is prime [^36]. 
 
 <div class="proof2">
 Pf: It suffices to note that \(N(\sqrt{-2})=2\) is prime (why?). \(\square\)
@@ -104,7 +104,7 @@ $$\begin{matrix}
 I didn't feel like explaining all those implications, but the moral of the story is that we have two solutions given by $$(a,b)=(\pm1, 1)$$ which correspond to $$y+\sqrt{-2}=(1+\sqrt{-2})^3=-5+\sqrt{-2}$$ and $$y+\sqrt{-2}=(-1+\sqrt{-2})^3=5+\sqrt{-2}$$. Both of these solutions for $$y$$ corresponsd to $$x=3$$, so our original equation has two solutions: $$(x,y)=(3,\pm5)$$.
 
 # Introduction to Algebraic Integers
-Now that the warmup is done, we can start building all the theory we'll need to solve Pell's equations. The first thing we'll need is the so-called ring of integers. As the warmup demonstrated, it's often helpful to work in "large" systems of numbers instead of the relatively small $$\Z$$. However, it may not always be clear what group of numbers is the right one for a problem. To answer this question, we focus our attention on algebraic integers. The idea is that regular integers are a particular, nice subset of the field $$\Q$$ of rational numbers [^9], and so the right systems of numbers to work with a analagous nice subsets of fields bigger than $$\Q$$. Because we're doing algebra, and algebraists love little more than polynomials, the characterization of nice will be done in terms a polynomial condition inspired by the [rational root theorem](https://www.wikiwand.com/en/Rational_root_theorem). With all of that said, let's see some definitions
+Now that the warmup is done, we can start building all the theory we'll need to solve Pell's equations. The first thing we'll need is the so-called ring of integers. As the warmup demonstrated, it's often helpful to work in "large" systems of numbers instead of the relatively small $$\Z$$. However, it may not always be clear what group of numbers is the right one for a problem. To answer this question, we focus our attention on algebraic integers. The idea is that regular integers are a particular, nice subset of the field $$\Q$$ of rational numbers [^9], and so the right systems of numbers to work with are analagous nice subsets of fields bigger than $$\Q$$. Because we're doing algebra, and algebraists love little more than polynomials, the characterization of nice will be done in terms of a polynomial condition inspired by the [rational root theorem](https://www.wikiwand.com/en/Rational_root_theorem). With all of that said, let's see some definitions
 
 >Definition<br>
 A **number field** $$K$$ is a finite field extension [^10] of $$\Q$$. Furthermore, if $$K$$ is of the form $$K=\Q(\sqrt d)=\{a+b\sqrt d\mid a,b\in\Q\}$$ for squarefree $$d\in\Z$$, then $$K$$ is called a **(real or imaginary) quadratic number field**.
@@ -150,13 +150,13 @@ Pf: \((\rightarrow)\) Assume \(\alpha\in\ints K\) is a unit, and write \(\alpha\
 (\(\leftarrow\)) Coversely, assume \(\knorm(\alpha)=\pm1\). As the above discussion noted, \(\knorm(\alpha)\) is a product of two numbers, so this says exactly that \(\alpha\) is a unit. \(\square\)
 </div>
 
-The diligent reader will be somewhat bothered by the above proof. That's because it implicitly relies upon something I forgot to prove first, which is the following.
+The diligent reader will be somewhat bothered by the above proof. That's because it implicitly relies upon something I forgot to prove first, which is the following (where does the above proof rely on this theorem?).
 
 >Theorem<br>
 Let $$K$$ be a quadratic number field. Then, $$\knorm(\ints K)\subseteq\ints\Q$$ which is to say that the norm of an algebraic integer is a rational integer [^22].
 
 <div class="proof3">
-Pf: First, let $$K=\qadjs d$$ and $$\alpha=a+b\sqrt d$$ with $$a,b\in\Q$$. Then, $$\alpha$$ is an algebraic integer if and only if $$\conj\alpha:=a-b\sqrt d$$ is an algebraic integer. This is because the map $${}^-:\ints K\rightarrow\ints K$$ fixes $$\Z$$ and preserves both addition and multiplication, so polynomial $$f\in\Z[X]$$ satisfied by $$\alpha$$ is also satisfied by $$\conj\alpha$$. In particular, $$\alpha$$ satisfies a monic polynomial $$f\in\Z[X]$$ if and only if $$\conj\alpha$$ does so they share integrality statuses. Now, the product of two algebraic integers is an algebraic integer (mentioned before, not proved), so $$\knorm(\alpha)$$ is an algebraic integer whenever $$\alpha$$ is. Since it's also a rational number, this means $$\knorm$$ maps algebraic integers into rational integers as claimed. $$\square$$
+Pf: First, let $$K=\qadjs d$$ and $$\alpha=a+b\sqrt d$$ with $$a,b\in\Q$$. Then, $$\alpha$$ is an algebraic integer if and only if $$\conj\alpha:=a-b\sqrt d$$ is an algebraic integer. This is because the map $${}^-:\ints K\rightarrow\ints K$$ fixes $$\Z$$ and preserves both addition and multiplication, so a polynomial $$f\in\Z[X]$$ satisfied by $$\alpha$$ is also satisfied by $$\conj\alpha$$. In particular, $$\alpha$$ satisfies a monic polynomial $$f\in\Z[X]$$ if and only if $$\conj\alpha$$ does, so they share integrality statuses. Now, the product of two algebraic integers is an algebraic integer (mentioned before, not proved), so $$\knorm(\alpha)$$ is an algebraic integer whenever $$\alpha$$ is. Since it's also a rational number, this means $$\knorm$$ maps algebraic integers into rational integers as claimed. $$\square$$
 </div>
 
 Now, one last thing, and then we'll say how all of this discussion on integers and norms relates to Pell's equations [^16]. I've tried to be careful so far to be conscious of the fact than a priori, an elment of $$\ints K$$ could look like a general member of $$K$$ in the sense that it's coefficients could be general rational numbers. From here on out, we'll be a little more concrete because we're going to actually compute $$\ints K$$ in the quadratic case.
@@ -175,14 +175,14 @@ Case 1: $$x\in\Z$$<br>
 We also know that $$\knorm(\alpha)=\alpha\conj\alpha=x^2-dy^2\in\Z$$ so by taking a difference, this means that $$dy^2\in\Z$$. This means that $$y\in\Z$$. If it were not, then the denominator of $$y^2$$ would be divided by some prime $$p$$ more than once. However, $$d$$ is divisible by $$p$$ at most once, so the product $$dy^2$$ would contain a $$p$$ in the denominator and hence not be an integer. Thus, $$\alpha\in\Z[\sqrt d]$$.<br><br>
 
 Case 2: $$x=\frac n2$$ for some odd $$n\in\Z$$<br>
-Once again, $$\knorm(\alpha)=x^2-dy^2=n^2/4-dy^2\in\Z$$. Note that $$y\not\in\Z$$ since otherwise we would have $$n^2/4\in\Z$$. Counting prime factors again shows us that we must have $$y=m/2$$ for some odd $$m\in\Z$$ which means that $$n^2-dm^2\equiv0\pmod4$$ with $$n,m\equiv4$$ so $$d\equiv1\pmod4$$. Hence, $$\alpha=n/2+m/2\sqrt d=(1+\sqrt d)/2+(n-1)/2+\sqrt d(m-1)/2\in\Z[(1+\sqrt d)/2]$$ since $$\sqrt d=2(1+\sqrt d)/d - 1\in\Z[(1+\sqrt d)/2]$$<br>
+Once again, $$\knorm(\alpha)=x^2-dy^2=n^2/4-dy^2\in\Z$$. Note that $$y\not\in\Z$$ since otherwise we would have $$n^2/4\in\Z$$. Counting prime factors again shows us that we must have $$y=m/2$$ for some odd $$m\in\Z$$ which means that $$n^2-dm^2\equiv0\pmod4$$ with $$n^2,m^2\equiv1\pmod4$$ so $$d\equiv1\pmod4$$. Hence, $$\alpha=n/2+m\sqrt d/2=(1+\sqrt d)/2+(n-1)/2+\sqrt d(m-1)/2\in\Z[(1+\sqrt d)/2]$$ since $$\sqrt d=2(1+\sqrt d)/d - 1\in\Z[(1+\sqrt d)/2]$$<br>
 <div align="right">\(\square\)</div>
 </div>
 
 >Corollary<br>
 $$\ints{\Q(\sqrt{-2})}=\Z[\sqrt{-2}]$$ so this was the right setting for the warmup problem.
 
-At this point, I think we know everything about rings of integers that we'll need [^17]. In case you have forgotten, out goal is find all integer solutions to Pell's equations which are $$x^2-dy^2=1$$ for integers $$x,y\in\Z$$ and positive integer $$d\in\Z_{>1}$$. As this discussion hinted at, for the time being, we'll further restrict $$d$$ to be square free. This has the advantage that Pell's equation can then be written as $$(x-y\sqrt d)(x+y\sqrt d)=1$$ which means that we're really just looking for units of $$\Z[\sqrt d]$$, and this is convenient because $$\Z[\sqrt d]=\ints{\Q(\sqrt d)}$$! (or at least it is 2 times out of 3) [^18]
+At this point, I think we know everything about rings of integers that we'll need [^17]. In case you have forgotten, our goal is find all integer solutions to Pell's equations which are $$x^2-dy^2=1$$ for integers $$x,y\in\Z$$ and positive integer $$d\in\Z_{>1}$$. As this discussion hinted at, for the time being, we'll further restrict $$d$$ to be square free. This has the advantage that since Pell's equation can then be written as $$(x-y\sqrt d)(x+y\sqrt d)=1$$, $$d$$ which means that we're really just looking for units of $$\Z[\sqrt d]$$, which is convenient because $$\Z[\sqrt d]=\ints{\Q(\sqrt d)}$$ for square free $$d$$ (or at least it is 2 times out of 3) [^18].
 
 # Geometry of Numbers
 I debated whether I should talk about what comes next in one section or two. I ultimately decided on two because I didn't want to introduct too much stuff all at once. A priori, the material of this section isn't relevant to the larger discussion at hand, but in the next section, we'll see it play a crucial role. This is the point in the post where we open up to the possibility of me throwing in some pictures.
@@ -203,7 +203,7 @@ One property of lattices that will come up is that they are discrete.
 >Definition<br>
 A subset $$D\subset\R^n$$ is called **discrete** if only finitely many of its points are contained in any bounded region. That is, it is discrete if $$D\cap B_r$$ is finite for all $$r\in\R$$ where $$B_r$$ is the (solid) ball of radius $$r$$ centered at the origin.
 
-I won't give a full, formal proof that all lattices are discrete, but I will sketch one direction you could take. The idea is that in a lattice, there exists some $$\eps>0$$ such that any two lattice points are a distance greater than $$\eps$$ apart. So, if you have sound bounded set $$B$$, you can split it up into finitely many balls $$B_{\frac{\eps}2}$$ of radius $$\eps/2$$. Each of this contains at most 1 lattice point, so $$B$$ contains a finite number of lattice points.
+I won't give a full, formal proof that all lattices are discrete, but I will sketch one direction you could take. The idea is that in a lattice, there exists some $$\eps>0$$ such that any two lattice points are a distance greater than $$\eps$$ apart. So, if you have some bounded set $$B$$, you can split it up into finitely many balls $$B_{\frac{\eps}2}$$ of radius $$\eps/2$$. Each of these contains at most 1 lattice point, so $$B$$ contains a finite number of lattice points.
 
 Now, lattices are discrete and look a lot like $$\Z^n$$, so it's natural to think that have some connection with numbers[^23]. Because of this, and because they have applications in number theory, some results on or relating to lattices form the so-called [geometry of numbers](https://www.wikiwand.com/en/Geometry_of_numbers). Here, we'll prove and use one such theorem, but before that, we need to describe the volume of a lattice.
 
@@ -211,7 +211,7 @@ Now, lattices are discrete and look a lot like $$\Z^n$$, so it's natural to thin
 Let $$\Gamma$$ be a lattice in $$\R^n$$. Then, we say the **volume** $$\vol_{\Gamma}$$ of $$\Gamma$$ is the volume of a parrallelogram [^24] spanned by a $$\Z$$-basis of $$\Gamma$$.
 
 >Examples<br>
-The standard lattice $$\Gamma_1=\Z^2=\Z(1,0)\oplus\Z(0,1)$$ has volume $$\vol_{\Gamma_1}=1$$ since the basis $$\{(0,1),(1,0)\}$$ spans a square.<br><br>
+The standard lattice $$\Gamma_1=\Z^2=\Z(1,0)\oplus\Z(0,1)$$ has volume $$\vol_{\Gamma_1}=1$$ since the basis $$\{(0,1),(1,0)\}$$ spans a unit square.<br><br>
 The lattice $$\Gamma_2 = \Z(1,\sqrt2)\oplus\Z(0,-2\sqrt2)$$ has voluem $$\vol_{\Gamma_2}=2\sqrt2$$
 
 <center>
@@ -234,7 +234,7 @@ Now, a couple definitions just to make sure everyone is on the same page, and th
 >Definitions<br>
 Fix some subset $$D\subseteq\R^n$$.<br>
 We say $$D$$ is <b>compact</b> if it is closed [^25] and bounded.<br><br>
-We say $$D$$ is **convex** if it any line between points in $$D$$ is contained in $$D$$. That is, for any $$a,b\in D$$ and $$t\in[0,1]$$, the point $$at+b(1-t)\in D$$.<br><br>
+We say $$D$$ is **convex** if any line between points in $$D$$ is contained in $$D$$. That is, for any $$a,b\in D$$ and $$t\in[0,1]$$, the point $$at+b(1-t)\in D$$.<br><br>
 Fixing some point $$o\in\R^n$$, we say $$D$$ is **symmetric about $$o$$** if for all $$p\in D$$, we also have $$o-p\in D$$.
 
 - A ball is compact, convex, and symmetric about it's center
@@ -248,7 +248,7 @@ Fixing some point $$o\in\R^n$$, we say $$D$$ is **symmetric about $$o$$** if for
 >Minkowski Convex Body Theorem<br>
 Let $$\Gamma$$ be a lattice in $$\R^n$$, and $$D\subseteq\R^n$$ be compact, convex, and symmetric about the origin. Furthermore, assume $$\vol(D)\ge2^n\vol_\Gamma$$. Then, $$\Gamma\cap D\neq\{0\}$$.
 
-The idea behind the proof is that $$D$$ is just too big to miss all of $$\Gamma$$. You essentially take a big parralellogram spanned by a basis of $$\Gamma$$ and tile $$\R^n$$ with it. After that you move all the pieces touching $$D$$ back to the original piece about the origin, and if the volume of $$D$$ is greater than the volume of the original piece, then two points of $$D$$ must end up at the same point of the parallelogram. Thus means that their difference must be twice a lattice point, so their midpoint is a lattice point.
+The idea behind the proof is that $$D$$ is just too big to miss all of $$\Gamma$$. You essentially take a big parralellogram spanned by a basis of $$\Gamma$$ and tile $$\R^n$$ with it. After that you move all the pieces touching $$D$$ back to the original piece about the origin, and if the volume of $$D$$ is greater than the volume of the original piece, then two points of $$D$$ must end up at the same point of the parallelogram. This means that their difference must be twice a lattice point, so their midpoint is a lattice point.
 
 I wasn't sure what the best way to visualize this without it being a mess was, so here's a picture of the parralellogram to keep in mind. You can add in $$D$$ and whatnot using your imagination.
 
@@ -258,7 +258,7 @@ I wasn't sure what the best way to visualize this without it being a mess was, s
 			 height="150">
 </center>
 
-If you follow the sketch above, in the end, it relies on $$D$$ have strictly greater volume, but in theorem doesn't. This is reconciled by the following.
+If you follow the sketch above, in the end, it relies on $$D$$ have strictly greater volume, but the theorem doesn't. This is reconciled by the following.
 
 >Lemma<br>
 If Minkowski's theorem holds for all $$D$$ with $$\vol(D)>2^n\vol_\Gamma$$, then it holds for all $$D$$ with $$\vol(D)=2^n\vol_\Gamma$$ as well.
@@ -270,7 +270,7 @@ Pf: Assume $$D,\Gamma$$ satisfy all the conditions of Minkowski's theorem, and t
 Awesome, now we handle the main theorem with the further assumption that $$D$$ has strictly greater volume.
 
 <div class="proof3">
-Pf: Assume $$D,\Gamma$$ satisfy all the conditions of Minkowski's theorem, and that $$\vol(D)>2^n\vol_\Gamma$$. Pick some $$\Z$$-basis $$\mathbb e=\{e_i\}_{i=1}^n$$ of $$\Gamma$$, and let $$P:=\{\sum_{i=1}^nt_ie_i:-1\le t_i\le 1\}$$. Note that $$\vol(P)=2^n\vol_\Gamma$$, and that $$\R^n=\bigsqcup_{\ell\in\Gamma}(P+2\ell)$$. Because $$D$$ is bounded, $$D_\ell=D\cap(P+\ell)$$ is nonempty for only finitely many $$\ell\in\Gamma$$. Now, consider translates $$D_\ell'=D_\ell-\ell\subseteq P$$ and note that<br>
+Pf: Assume $$D,\Gamma$$ satisfy all the conditions of Minkowski's theorem, and that $$\vol(D)>2^n\vol_\Gamma$$. Pick some $$\Z$$-basis $$\mathbb e=\{e_i\}_{i=1}^n$$ of $$\Gamma$$, and let $$P:=\left\{\sum_{i=1}^nt_ie_i:-1\le t_i\le 1\right\}$$. Note that $$\vol(P)=2^n\vol_\Gamma$$, and that $$\R^n=\bigsqcup_{\ell\in\Gamma}(P+2\ell)$$. Because $$D$$ is bounded, $$D_\ell=D\cap(P+\ell)$$ is nonempty for only finitely many $$\ell\in\Gamma$$. Now, consider translates $$D_\ell'=D_\ell-\ell\subseteq P$$ and note that<br>
 <center>
 $$\begin{align*}
 \sum_{\ell\in\Gamma}\vol(D_\ell')
@@ -291,16 +291,16 @@ Thus, the theorem holds. $$\square$$
 
 # Real Embeddings of Quadratic Number Fields
 
-Now we know some things about about quadratic number fields, and we know a little about the geometry of numbers, so let's put the two together. The bridge between abstract fields, and more concrete geometric ideas will be embeddings.
+Now we know some things about about quadratic number fields, and we know a little about the geometry of numbers, so let's put the two together. The bridge between abstract fields and more concrete geometric ideas will be embeddings.
 
 >Definition<br>
 A **real embedding of a number field** $$K$$ is a ring homomorphism [^26] $$K\hookrightarrow\R$$.
 
-If you'll recall, in Pell's equations, he some some $$d>1$$, so consider such a $$d$$ and a number field $$K=\Q(\sqrt d)$$. This field has 2 real embeddings. An embedding is determined by where it sends $$1$$ and $$\sqrt d$$ (why?), but $$1$$ must map into $$1$$. However, $$\sqrt d$$ has two possible images corresponding to the two solutions to $$x^2-d=0$$. In fact, if $$\sigma:K\hookrightarrow\R$$ is an embedding, then $$\sigma(x^2-d)=\sigma(x)^2-d$$ so $$\sigma(\sqrt d)^2-d=\sigma((\sqrt d)^2-d)=\sigma(0)=0$$. This is all to say that a real quadratic field has two real embeddings. Because these are equivalent as far as algebra is concerned, instead of choosing one arbitarily, we'll make use of both. Define the function [^27] 
+If you'll recall, in Pell's equations, we have some $$d>1$$, so consider such a $$d$$ and a number field $$K=\Q(\sqrt d)$$. This field has 2 real embeddings. An embedding is determined by where it sends $$1$$ and $$\sqrt d$$ (why?), but $$1$$ must map into $$1$$. However, $$\sqrt d$$ has two possible images corresponding to the two solutions to $$x^2-d=0$$. In fact, if $$\sigma:K\hookrightarrow\R$$ is an embedding, then $$\sigma(x^2-d)=\sigma(x)^2-d$$ so $$\sigma(\sqrt d)^2-d=\sigma((\sqrt d)^2-d)=\sigma(0)=0$$. This is all to say that a real quadratic field has two real embeddings. Because these are equivalent as far as algebra is concerned, instead of choosing one arbitarily, we'll make use of both. Define the function [^27] 
 
 $$\begin{matrix}
 \iota: &K &\longrightarrow& \R^2\\
-&\alpha &\longmapsto& (\alpha, \conj\alpha) && a,b\in\Q\\
+&\alpha &\longmapsto& (\alpha, \conj\alpha)\\
 &a+b\sqrt d &\longmapsto& (a+b\sqrt d, a-b\sqrt d) && a,b\in\Q
 \end{matrix}$$
 
@@ -314,29 +314,29 @@ Pf: Proof left as an exercise for the reader. $$\square$$
 A natural question to ask is what is the volume of $$\iota(\ints K)$$? Once again, fix some square free $$d>1$$ and let $$K=\Q(\sqrt d)$$. Then,
 
 $$\begin{matrix}
-\vol_{\iota(\ints K)} =
+\vol_{\iota(\ints K)} &=&
 \begin{vmatrix}
 \iota(1) \\
 \iota(\sqrt d)
-\end{vmatrix} =
+\end{vmatrix} &=&
 \begin{vmatrix}
 1 & 1\\
 \sqrt d & -\sqrt d
-\end{vmatrix} =
-|-2\sqrt d| =
+\end{vmatrix} &=&
+|-2\sqrt d| &=&
 2\sqrt d
 && \text{if }d\equiv2,3\pmod4\\
 
-\vol_{\iota(\ints K)} =
+\vol_{\iota(\ints K)} &=&
 \begin{vmatrix}
 \iota(1) \\
-\iota(\frac{1+\sqrt d}2)
-\end{vmatrix} =
+\iota\left(\frac{1+\sqrt d}2\right)
+\end{vmatrix} &=&
 \begin{vmatrix}
 1 & 1\\
 \frac{1+\sqrt d}2 & \frac{1-\sqrt d}2
-\end{vmatrix} =
-|-\sqrt d| =
+\end{vmatrix} &=&
+|-\sqrt d| &=&
 \sqrt d
 && \text{if }d\equiv1\pmod4
 \end{matrix}$$
@@ -351,7 +351,7 @@ Note that $$\vol_{\ints K}:=\vol_{\iota(\ints K)}=\sqrt{\zdisc(\ints K)}$$. Furt
 >Theorem<br>
 If $$K=\Q(\sqrt d)$$ is a real quadratic number field, then<br>
 <center>$$\begin{align*}
-\ints K \simeq\frac{\Z[X]}{(X^2-DX+(D^2-D)/4)}\simeq\zadj{\frac{D_K+\sqrt{D_K}}2}
+\ints K \simeq\frac{\Z[X]}{(X^2-D_KX+(D_K^2-D_K)/4)}\simeq\zadj{\frac{D_K+\sqrt{D_K}}2}
 \end{align*}$$</center>
 
 <div class="proof3">
@@ -368,7 +368,7 @@ h: &(\R^\times)^2 &\longrightarrow& \R^2\\
 &(x,y) &\longmapsto& (\log|x|, \log|y|)
 \end{matrix}$$
 
-Note that $$\ell=h\circ\iota\mid_{\ints K^\times}$$. Furthermore, since $$N(u)=u\conj u=\pm1$$ for any unit, $$\iota(\ints K^\times)$$ lies on the hyperbola $$xy=\pm$$, since $$\log$$'s turn multiplication into addition [^30] this means that $$\ell(\ints K^\times)$$ lies on the line $$x+y=0$$. The picure looks something like
+Note that $$\ell=h\circ\iota\mid_{\ints K^\times}$$. Furthermore, since $$N(u)=u\conj u=\pm1$$ for any unit, $$\iota(\ints K^\times)$$ lies on the hyperbola $$xy=\pm1$$, since $$\log$$'s turn multiplication into addition [^30] this means that $$\ell(\ints K^\times)$$ lies on the line $$x+y=0$$. The picure looks something like
 
 <center>
 <img src="{{ site.url }}/images/blog/pell-equations/embed.jpg"
@@ -394,7 +394,7 @@ Thus, once we figure out what $$\ell(\ints K^\times)$$ is, we will perfectly und
 $$\ell(\ints K^\times)$$ is discrete.
 
 <div class="proof3">
-Pf: Fix any $$f\in\R_{\ge0}$$. We will show that $$\ell^{-1}([-r,r]^2)\subseteq\ints K^\times$$ is finie. Consider an arbitrary $$u\in\ints K^\times$$ s.t. $$\ell(u)\in[-r,r]^2$$. This means that $$(\log|u|,\log|\conj u|)\in[-r,r]^2$$ so $$|u|,|\conj u|\in[e^{-r},e^r]$$ which means that $$|u+\conj u|\le2e^r$$ and $$|u\conj u|\le e^{2r}$$. Now, notice that $$u$$ must satisfy the following equation<br>
+Pf: Fix any $$f\in\R_{\ge0}$$. We will show that $$\ell^{-1}([-r,r]^2)\subseteq\ints K^\times$$ is finite. Consider an arbitrary $$u\in\ints K^\times$$ s.t. $$\ell(u)\in[-r,r]^2$$. This means that $$(\log|u|,\log|\conj u|)\in[-r,r]^2$$ so $$|u|,|\conj u|\in[e^{-r},e^r]$$ which means that $$|u+\conj u|\le2e^r$$ and $$|u\conj u|\le e^{2r}$$. Now, notice that $$u$$ must satisfy the following equation<br>
 <center>
 $$\begin{align*}
 X^2 - aX + b = 0 && a=u+\conj u\in\Z, b=u\conj u\in\Z
@@ -407,7 +407,7 @@ Now, remember earlier when I said that $$\ell(\ints K^\times)$$ lies on the line
 
 The idea is to find to elements of $$\ints K$$ that are equal in norm but not absolute value. Then, they must differ by a unit $$u$$, and $$\ell(u)\neq0$$ (why?), so there's some nonzero elment which means the group must be $$\Z$$, and we win.
 
-When writing the below proof, I got kinda lost in the details. To help me remember what everything is, and what's going on, I quickly put together the following image. It's not labelled or anything, but it illustrates the $$\alpha_\lambda$$ we are going to find, and why we can bound it's absolute value both above and below.
+When writing the below proof, I got kinda lost in the details. To help me remember what everything is, and what's going on, I quickly put together the following image. It's not labelled or anything, but it illustrates the $$\alpha_\lambda$$ (the x-coordinate of the green point) we are going to find, and why we can bound it's absolute value both above and below.
 
 <center>
 <img src="{{ site.url }}/images/blog/pell-equations/proof.jpg"
@@ -422,8 +422,7 @@ $$\ell(\ints K^\times)\simeq\Z$$
 Pf: Fix a real number $$\lambda>0$$ and cosider the box $$B=[-\lambda,\lambda]\times[-\sqrt{D_K}/\lambda,\sqrt{D_K}/\lambda]$$. It is symmetric about the origin, compact, convex, and has area $$4\sqrt{D_K}=2^2\vol_{\ints K}$$. Our time looking at the geometry of numbers tells us that this means there's a nonzero $$\alpha_\lambda\in\ints K$$ with $$\iota(\alpha_\lambda)\in B$$. Note that this means $$|\knorm(\alpha_\lambda)|\le\sqrt{D_K}$$ as the norm of $$\alpha_\lambda$$ is the product of the coordinates of $$\iota(\alpha_\lambda)$$. Furthermore, $$\knorm(\alpha_\lambda)\ge1$$ since it's a nonzero (rational) integer so $$\iota(\alpha_\lambda)$$ lies outside of the hyperbola $$|xy|=1$$. This hyperbola intersects $$B$$ at the top and bottom when $$|x|=\lambda/\sqrt{D_K}$$ so we've shown that<br>
 <center>
 $$\begin{align*}
-\lambda/\sqrt{D_K} \le |\alpha_\lambda| &\le \lambda \\
-1/\lambda &\le 1/|\alpha_\lambda|
+\lambda/\sqrt{D_K} \le |\alpha_\lambda| \le \lambda
 \end{align*}$$
 </center>
 as $$\alpha_\lambda$$ is the $$x$$-coordinate of $$\iota(\alpha_\lambda)\in B$$. Now pick another $$\lambda'>\lambda\sqrt{D_K}$$ and we can fine some $$\alpha_{\lambda'}$$ with <br>
@@ -432,13 +431,13 @@ $$\begin{align*}
 |\alpha_\lambda| \le \lambda < \lambda'/\sqrt{D_K} \le |\alpha_{\lambda'}|
 \end{align*}$$
 </center>
-Now, we just keep on doing doing this, producing a sequence $$\{\alpha_{\lambda_n}\}_{n=1}^\infty$$ with the property that $$|\alpha_{\lambda_i}|<|\alpha_{\lambda_j}|$$ whenever $$i < j$$, and $$|\knorm(\alpha_{\lambda i})|\le\sqrt{D_K}$$ for all $$i$$. Now, all these norms are bounded integers, so there's only finitely many possible distinct values among them, but there are infinitely many $$\alpha$$'s in our sequence. Thus, there must exist some $$i\neq j$$ such that $$\knorm(\alpha_{\lambda_i})=\knorm(\alpha_{\lambda_j})$$ but $$|\alpha_{\lambda_i}|\neq|\alpha_{\lambda_j}|$$ so $$\alpha_{\lambda_i}=u\alpha_{\lambda_j}$$ for some unit $$u\in\ints K^\times$$ not equal to $$1$$. Thus, $$\ell(u)\neq0$$, and the theorem follows. $$\square$$
+Now, we just keep on doing doing this, producing a sequence $$\{\alpha_{\lambda_n}\}_{n=1}^\infty$$ with the property that $$|\alpha_{\lambda_i}|<|\alpha_{\lambda_j}|$$ whenever $$i < j$$, and $$|\knorm(\alpha_{\lambda i})|\le\sqrt{D_K}$$ for all $$i$$. Now, all these norms are bounded integers, so there's only finitely many possible distinct values among them, but there are infinitely many $$\alpha$$'s in our sequence. Thus, there must exist some $$i\neq j$$ such that $$\knorm(\alpha_{\lambda_i})=\knorm(\alpha_{\lambda_j})$$ but $$|\alpha_{\lambda_i}|\neq|\alpha_{\lambda_j}|$$ so $$\alpha_{\lambda_i}=u\alpha_{\lambda_j}$$ for some unit $$u\in\ints K^\times$$ not equal to $$\pm1$$. Thus, $$\ell(u)\neq0$$, and the theorem follows. $$\square$$
 </div>
 
 I should mention by appealing to absolute value, the above proof implicitly fixes a choice of an embedding $$K\hookrightarrow\R$$. It doesn't really matter which one is used, but worth noting what's going on behind the scenes.
 
 # Pell at Last
-Well, we've gone over a lot, and if you're still here, kudos to you [^33], but we're finally read to actually solve Pell's equations. Fix any square free $$d\in\Z_{>1}$$. Integer solutions to the equation $$x^2-dy^2=1$$ are units of $$\ints{\Q(\sqrt d)}$$, and these units are all in the form $$\pm\eps^n$$ for some fundamental unit $$\eps$$. In order to call this equation solved, we only need to find a fundamental unit. I'll handle the case that $$d\equiv2,3\pmod4$$. The other case can be down analagously, and figuring out its details are left as an exercise.
+Well, we've gone over a lot, and if you're still here, kudos to you [^33], but we're finally ready to actually solve Pell's equations. Fix any square free $$d\in\Z_{>1}$$. Integer solutions to the equation $$x^2-dy^2=1$$ are units of $$\ints{\Q(\sqrt d)}$$, and these units are all in the form $$\pm\eps^n$$ for some fundamental unit $$\eps$$. In order to call this equation solved, we only need to find a fundamental unit. I'll handle the case that $$d\equiv2,3\pmod4$$. The other case can be done analagously, and figuring out its details is left as an exercise.
 
 Assume $$d\equiv2,3\pmod4$$ and $$\eps$$ is a fundamental unit of $$K:=\Q(\sqrt d)$$. Then, $$-\eps,\eps^{-1}$$, and $$-\eps^{-1}$$ are all fundamental units as well [^34]. Write $$\eps=a_1+b_2\sqrt d$$ with $$a_1,b_1\in\Q^+$$. We can always get positive coefficients by appropriately choosing one of the four fundamental units. Now let $$\eps^k:=a_k+b_k\sqrt d$$ be the positive powers of $$\eps$$ and note that $$b_k=a_1b_{k-1}+b_1a_{k-1}$$ so the sequence $$\{b_k\}$$ is increasing. Thus, if you want to find a fundamental unit, just guess and check. Start with $$b_1=1$$ and check to see if $$db_1^2\pm1$$ is a perfect square. If not, move on to $$b_1=2$$ and repeat. Once you've found a value that works, write $$nb_1^2\pm1=a_1^2$$ and your fundamental unit is $$a_1+b_1\sqrt d$$.
 
@@ -448,15 +447,14 @@ Let $$d=11$$. If we take $$b_1=1$$, then $$11b_1^2\pm1=\{10,12\}$$ so no good. I
 >Example<br>
 Now, take $$d=2$$ instead. If we let $$b_1=1$$, then $$2b_2^2\pm1=\{1,3\}$$ so our fundamental unit is $$\eps=1+\sqrt 2$$. However, this has norm $$1-2=-1$$ so it's not a solution to Pell's equation. In cases like this, we instead focus our attention on $$\eps^2=3+2\sqrt2$$ and use this to generate solutions.
 
-I'd like to say that's everything, but I've left a few loose ends. These include, what to do if $$d$$ isn't square free, and what about the case where $$d\equiv1\pmod4$$ so the fundamental unit can have non-integer coefficients. Honestly, I wanted to take care of them myself, but this post became much longer than I anticipated, so I'll leave them to you. I will say that they have similar resolutions. The main issue in both cases is that $$\Z[\sqrt d]$$ may not be all of $$\ints K$$. However, it can be shown that in general, $$\Z[\sqrt d]$$ has finite index in $$\ints K$$. This means in particular that it is still infinite cyclic, and so we still can a fundamental unit $$\eps\in\Z[\sqrt d]^\times$$. Then, solutions to Pell's equation either correspond to powers of $$\eps$$ or even powers of $$\eps$$ depending if $$\knorm(\eps)=\pm1$$.
+I'd like to say that's everything, but I've left a few loose ends. These include what to do if $$d$$ isn't square free, and what about the case where $$d\equiv1\pmod4$$ so the fundamental unit can have non-integer coefficients. Honestly, I wanted to take care of them myself, but this post became much longer than I anticipated, so I'll leave them to you. I will say that they have similar resolutions. The main issue in both cases is that $$\Z[\sqrt d]$$ may not be all of $$\ints K$$. However, it can be shown that in general, $$\Z[\sqrt d]$$ has finite index in $$\ints K$$. This means in particular that it is still infinite cyclic (why?), and so we still can find a fundamental unit $$\eps\in\Z[\sqrt d]^\times$$. Then, solutions to Pell's equation either correspond to powers of $$\eps$$ or even powers of $$\eps$$ depending on if $$\knorm(\eps)=\pm1$$.
 
-[^1]: why?
 [^2]: this statement can be made precise and proven. I might do that if ever I come up with a good excuse to introduce computability theory on this blog.
 [^3]: another way to do it is hinted at at the beginning of the second half of that post. You just need to use the fact that the norm N(a+bi)=a^2+b^2 of a Guassian integer is multiplicative.
 [^4]: from infinite to finite
 [^5]: if you don't know what this is, it basically means that the fundamental theorem of arithmetic holds: every integer can be factored uniquely into primes
 [^6]: For example, let d^2=-5. Then, Z[d] is not a UFD since 2*3=(1+d)(1-d) and all of these are (different) primes
-[^7]: Not a technical term. What I mean is that if you have x,y in Z[-sqrt{2}], then x/y exists in Q[-sqrt{2}], and this is what I mean by their ambient quotient.
+[^7]: Not a technical term. What I mean is that if you have x,y in Z[-sqrt{2}], then x/y exists in Q(-sqrt{2}), and this is what I mean by their ambient quotient.
 [^8]: I should mention that, as is not [uncommon](../fundamental-theorem) in this blog, this post won't necessarily present the simplest way to get solve things, but instead opt for one that introduces interesting mathematics. Also, as always, minimal planning is done before I begin writing so almost certainly details will be missing or presented out of their usual order. It is up to the reader to reconstruct coherent arguments where this happens (it's a good test of understanding)
 [^9]: I'm gonna use some algrebraic words like field, ring, etc. in this section. If you don't know what they are, that's fine; I don't think knowing their definition is technically required to understand how we're gonna solve Pell's equations. I'll also try to include watered-down versions of what they mean for some of them. For example, a ring is a set with addition and multiplication. A field, has both of these plus division. Integers are a ring; fractions are a field. 
 [^10]: A field extension K of Q (often written K/Q) is just a field K that contains Q (Ex. R is a field extension of Q). Every field extension has a degree d (written [K:Q]) which is a measure of much bigger K is than Q (formally speaking, if K/Q is a field extension, then K is a Q-vector space (why?) and the degree of K/Q is the Q-dimension of K as a vector space). We say a field extension is finite if it has finite degree (ex. Q(sqrt{-2}) is a finite field extension of Q (of degree 2) and hence a number field. R is and infinite field extension of Q and hence not a number field)
@@ -466,7 +464,7 @@ I'd like to say that's everything, but I've left a few loose ends. These include
 [^14]: This is no coincidence, but we won't get into the reason why here.
 [^15]: It's true in general, but the general proof requires a property of the norm I won't mention here since the norm isn't always given as a nice product. We got lucky here that quadratic fields are in a sense "complete" (read: Galois)
 [^16]: Although maybe you've already made the connection by now
-[^17]: If I'm wrong, we'll introduct the other stuff as it pops up
+[^17]: If I'm wrong, we'll introduce the other stuff as it pops up
 [^18]: Which reminds me, why don't we consider the case d = 0 (mod 4) in the previous theorem?
 [^19]: I usually try not to have prereqs for gaining understanding from my posts, but for this one, I feel like you should at least be comfortable with linear algebra (and in particular abstract vector spaces and determinants), or you'll likely be lost at some key points. Once we start talking about embeddings, a little big of abstract algebra will help too (in particular, knowing about group homomorphisms)
 [^20]: Why not just call this dimension? Because lattices are free Z-modules, and free modules have rank instead of dimesnion. Modules are something I want to talk about on this blog at some point, but for now, just know that although lattices have geometric interpretations, modules (and even free modules) in general do not (unlike typical vector spaces), so we use the less geometric-sounding rank instead of dimension.
@@ -475,12 +473,14 @@ I'd like to say that's everything, but I've left a few loose ends. These include
 [^23]: By numbers, I mean as in number theory. i.e. integers and their analouges
 [^24]: parrallelopiped?
 [^25]: meaning it contains all the points on its boundary
-[^26]: i.e. a function that preserves addition and multiplication in the sense that f(ab)=f(a)f(b) and f(a+b)=f(a)+f(b)
+[^26]: i.e. a function f that preserves addition and multiplication in the sense that f(ab)=f(a)f(b) and f(a+b)=f(a)+f(b)
 [^27]: there's some abuse of notation going on here. In a number field, sqrt(d) is really just an abstract number whose square happens to be d whereas in the setting of real numbers (where there are two numbers matching this description) it is specifically the positive sqrt(d).
 [^28]: as far as I know, there isn't some deep reason why this expression in particular works. It's just a happy coincidence. I could be wrong through; coincidences are rare in math.
 [^29]: this basically just means if you multiply two units you get another unit, but the same doesn't necessarily hold for addition
 [^30]: and since log(1)=0
 [^31]: plus possible an argument involving splitting O_K^x into "positive" and "negative" parts and mentioning phrases like [semidirect product](https://www.wikiwand.com/en/Semidirect_product#/Relation_to_direct_products) (the argument I have in my head does this, but I'm pretty sure it's overkill)
-[^32]: for out purposes, the plus in a circle is just another way of writing the direct product
+[^32]: for our purposes, the plus in a circle is just another way of writing the direct product. It has the advantage of looking like addition which is good because the dimension of A x B is dim A + dim B instead of dim A * dim B. This notation helps hint at the idea that things should be thought of additively, so you might want to represent the pair (a,b) in A x B as a single value a+b instead (be warned. This is not always a legitimate alternate representation of pairs)
 [^33]: no way I'd ever read this much math without losing interest and moving on to something else
 [^34]: if you fix an embedding into R, then the unique fundamental unit > 1 is often called **the** fundamental unit
+[^35]: at this point, you might wonder why I didn't just write the problem like this in the first place. That's because the place I stole it from wrote it as y^2=x^3-2 originally as well. 
+[^36]: If you write it as the product of two numbers, one of them is a unit
