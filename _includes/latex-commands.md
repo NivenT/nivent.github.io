@@ -1,4 +1,3 @@
-<div style="{{display: none;}}">
 $$
 
 \newcommand{\cdstrut}{\vrule height .8em width 0pt depth 1.6em}
@@ -71,9 +70,10 @@ $$
 \DeclareMathOperator{\Frac}{Frac}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\eps}{\varepsilon}
+\DeclareMathOperator{\vol}{vol}
 
 \newcommand{\mspacing}[0]{\hspace*{50pt}}
 \newcommand{\Text}[2]{\text{#2 #1 #2}}
 
 $$
-</div>

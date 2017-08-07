@@ -192,7 +192,9 @@ When we talk about factorization, we don't care about units. Furthermore,
 In $$\mathbb Z[i]$$ the only units are $$\pm1,\pm i$$, and a number $$x$$ is a unit if and only if $$N(x)=1$$
 
 <div class="proof2">
-Pf: \(uv=1\iff N(uv)=N(u)N(v)=N(1)=1\iff N(u),N(v)=1\). For the first part of the theorem, assume \(u\) is a unit and write \(u=a+bi\) so \(a^2+b^2=1\). Clearly, either \((a,b)=(1,0)\) or \((a,b)=(0,1)\) so the claim holds. \(\square\)
+Pf: \(uv=1\implies N(uv)=N(u)N(v)=N(1)=1\implies N(u),N(v)=1\). Conversely, the statement \(N(u)=1\) itself says that \(u\) is a unit (why?).<br>
+
+For the first part of the theorem, assume \(u\) is a unit and write \(u=a+bi\) so \(a^2+b^2=1\). Clearly, either \((a,b)=(1,0)\) or \((a,b)=(0,1)\) so the claim holds. \(\square\)
 </div>
 
 >Theorem<br>
