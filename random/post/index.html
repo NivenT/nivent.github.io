@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+{% include scripts.html %}
 <script type="text/javascript">
 function gotoRandomPost() {
 	$.getJSON("/posts.json", function (posts) {
