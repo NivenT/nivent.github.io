@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html>
+---
+---
+
 {% include scripts.html %}
+
 <script type="text/javascript">
 function gotoRandomPost() {
 	$.getJSON("/posts.json", function (posts) {
@@ -15,4 +17,3 @@ function gotoRandomPost() {
 
 $(document).ready(() => gotoRandomPost());
 </script>
-</html>
