@@ -71,6 +71,7 @@ function initSearch() {
  */
 function execSearch(q) {
     if (q != '' || allowEmpty) {
+        //console.log("q: " + q)
         if (showLoader) {
             toggleLoadingClass();
         }
@@ -99,6 +100,10 @@ function getSearchResults(callbackFunction) {
     $.get(BASE_URL + jsonFeedUrl, callbackFunction, 'json');
 }
 
+function fnd(sup, sub) {
+    return sup.toLowerCase().indexOf(sub.toLowerCase())
+}
+
 
 /**
  * Process search result data
@@ -113,8 +118,9 @@ function processData() {
             results = "";
 
         $.each(data, function(index, item) {
+            //console.log("item: " + item)
             // check if search term is in content or title 
-            if (item.excerpt.toLowerCase().indexOf(q.toLowerCase()) > -1 || item.title.toLowerCase().indexOf(q.toLowerCase()) > -1) {
+            if (fnd(item.title, q) > -1 || fnd(item.tags, q) > -1 || fnd(item.content, q)) {
                 var result = populateResultContent($resultTemplate.html(), item);
                 resultsCount++;
                 results += result;
@@ -149,9 +155,11 @@ function showSearchResults(results) {
  * @return {String} Populated HTML
  */
 function populateResultContent(html, item) {
+    //console.log("html: " + html)
+
     html = injectContent(html, item.title, '##Title##');
     html = injectContent(html, item.link, '##Url##');
-    html = injectContent(html, item.excerpt, '##Excerpt##');
+    //html = injectContent(html, item.excerpt, '##Excerpt##');
     html = injectContent(html, item.date, '##Date##');
     return html;
 }
