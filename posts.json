@@ -1,0 +1,9 @@
+---
+---
+{% assign posts = site.posts | where:"layout", "post" %}
+[
+    {% for post in posts %}
+    "{{ site.url }}{{ post.url }}"
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]

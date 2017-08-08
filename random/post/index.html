@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+function gotoRandomPost() {
+	$.getJSON("/posts.json", function (posts) {
+		var numPosts = posts.length;
+		var index = Math.floor(Math.random() * numPosts)
+
+		console.log("numPosts: " + numPosts)
+
+		window.location.replace(posts[index])
+	})
+}
+
+$(document).ready(() => gotoRandomPost());
+</script>
+</html>
