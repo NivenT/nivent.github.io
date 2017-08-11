@@ -480,7 +480,7 @@ I'd like to say that's everything, but I've left a few loose ends. These include
 [^28]: as far as I know, there isn't some deep reason why this expression in particular works. It's just a happy coincidence. I could be wrong through; coincidences are rare in math.
 [^29]: this basically just means if you multiply two units you get another unit, but the same doesn't necessarily hold for addition
 [^30]: and since log(1)=0
-[^31]: plus possible an argument involving splitting O_K^x into "positive" and "negative" parts and mentioning phrases like [semidirect product](https://www.wikiwand.com/en/Semidirect_product#/Relation_to_direct_products) (the argument I have in my head does this, but I'm pretty sure it's overkill)
+[^31]: plus possibly an argument involving splitting O_K^x into "positive" and "negative" parts and mentioning phrases like [semidirect product](https://www.wikiwand.com/en/Semidirect_product#/Relation_to_direct_products) (the argument I have in my head does this, but I'm pretty sure it's overkill)
 [^32]: for our purposes, the plus in a circle is just another way of writing the direct product. It has the advantage of looking like addition which is good because the dimension of A x B is dim A + dim B instead of dim A * dim B. This notation helps hint at the idea that things should be thought of additively, so you might want to represent the pair (a,b) in A x B as a single value a+b instead (be warned. This is not always a legitimate alternate representation of pairs)
 [^33]: no way I'd ever read this much math without losing interest and moving on to something else
 [^34]: if you fix an embedding into R, then the unique fundamental unit > 1 is often called **the** fundamental unit
