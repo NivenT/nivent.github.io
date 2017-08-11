@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Solving Pell's Equations"
-modified: 
+modified: 2017-08-10 22:46:00
 categories: blog
 excerpt:
 tags: [math, number theory, geometry of numbers, algebraic number theory]
@@ -23,6 +23,8 @@ x^2-dy^2 = 1 && d>1
 >Question<br>
 Why do we require $$d>1$$? What happens if $$d\le1$$?
 
+Edit: I never mentioned this in the original post [^37], but we also want to assume that $$d$$ is not a square number. If $$d=k^2$$, then the equation becomes $$(x-ky)(x+ky)=1$$ which means $$x+ky=x-ky=\pm1$$ so $$ky=-ky\implies y=0$$ and $$(x,y)=(\pm1,0)$$ are the only solutions.
+
 # A Warm-up Problem: $$y^2=x^3-2$$
 Before solving Pell's equations, we'll start with a simpler task (although it may not be immediately obvious that this equation is any easier to solve). At this point, if it seems like things here will be novel to you, then I recommend that you check out by [previous post on number theory](../number-theory). It's not required to understand this post, and won't necessarily add a bunch to your knowledge of the ideas used here, but I think it could serve as good motivation for seeing that both geometric reasoning and working in number systems larger than $$\Z$$ can be helpful in number theoretic problems [^8].
 
@@ -42,7 +44,7 @@ Hence, this particular diophantine equation has no solutions.
 
 If you can set your problem up as one thing times another thing equals a third thing, then since everything is an integer, the things on the left hand side must be factors of the right hand side! This vastly reduces the number of potential solutions [^4], and often can lead directly into an actual solution (ot show that non exist). 
 
-That being said, the key insight to solving our warmup problem is that we can rewrite it as $$y^2+2=x^3$$. I'll take a second to pause so you can let out a gasp of amazement. Once things are in this form, we can see that the left hand side is almost a difference of squares. The only problem is that it's not a difference and $$2$$'s not a square, but motivated by the possibility of factoring the left hand side, we ignore these constraints, stop restricting ourselves to $$\Z$$, and from here on out, do our work in $$\zadjns2=\{a+b\sqrt{-2}\mid a,b\in\Z\}$$ instead [^35]. I don't know if this feels illegitamate, but it shouldn't because it's not, so I'm gonna move on.
+That being said, the key insight to solving our warmup problem is that we can rewrite it as $$y^2+2=x^3$$. I'll take a second to pause so you can let out a gasp [^38] of amazement. Once things are in this form, we can see that the left hand side is almost a difference of squares. The only problem is that it's not a difference and $$2$$'s not a square, but motivated by the possibility of factoring the left hand side, we ignore these constraints, stop restricting ourselves to $$\Z$$, and from here on out, do our work in $$\zadjns2=\{a+b\sqrt{-2}\mid a,b\in\Z\}$$ instead [^35]. I don't know if this feels illegitamate, but it shouldn't because it's not, so I'm gonna move on.
 
 We can now write our equation as $$(y+\sqrt{-2})(y-\sqrt{-2})=x^3$$. At this point, we really hope that $$y\pm\sqrt{-2}$$ are coprime so that they must both be perfect cubes; this would be a fairly restrictive condition. However, hoping this would be getting ahead of ourselves. This line of thinking would work in $$\Z$$, but the reason it works (and the reason we can have a sensible definiton of coprime in the first place) is because $$\Z$$ is a unique factorization domain [^5], but we're working with $$\zadjns2$$ instead of just $$\Z$$. Luckily, it turns out that this is a UFD as well, but this is a non-trivial claim that could have failed if we had added a different square root instead [^6].
 
@@ -270,7 +272,7 @@ Pf: Assume $$D,\Gamma$$ satisfy all the conditions of Minkowski's theorem, and t
 Awesome, now we handle the main theorem with the further assumption that $$D$$ has strictly greater volume.
 
 <div class="proof3">
-Pf: Assume $$D,\Gamma$$ satisfy all the conditions of Minkowski's theorem, and that $$\vol(D)>2^n\vol_\Gamma$$. Pick some $$\Z$$-basis $$\mathbb e=\{e_i\}_{i=1}^n$$ of $$\Gamma$$, and let $$P:=\left\{\sum_{i=1}^nt_ie_i:-1\le t_i\le 1\right\}$$. Note that $$\vol(P)=2^n\vol_\Gamma$$, and that $$\R^n=\bigsqcup_{\ell\in\Gamma}(P+2\ell)$$. Because $$D$$ is bounded, $$D_\ell=D\cap(P+\ell)$$ is nonempty for only finitely many $$\ell\in\Gamma$$. Now, consider translates $$D_\ell'=D_\ell-\ell\subseteq P$$ and note that<br>
+Pf: Assume $$D,\Gamma$$ satisfy all the conditions of Minkowski's theorem, and that $$\vol(D)>2^n\vol_\Gamma$$. Pick some $$\Z$$-basis $$\mathbb e=\{e_i\}_{i=1}^n$$ of $$\Gamma$$, and let $$P:=\left\{\sum_{i=1}^nt_ie_i:-1\le t_i< 1\right\}$$. Note that $$\vol(P)=2^n\vol_\Gamma$$, and that $$\R^n=\bigsqcup_{\ell\in\Gamma}(P+2\ell)$$. Because $$D$$ is bounded, $$D_\ell:=D\cap(P+\ell)$$ is nonempty for only finitely many $$\ell\in\Gamma$$. Now, consider translates $$D_\ell':=D_\ell-\ell\subseteq P$$ and note that<br>
 <center>
 $$\begin{align*}
 \sum_{\ell\in\Gamma}\vol(D_\ell')
@@ -425,13 +427,13 @@ $$\begin{align*}
 \lambda/\sqrt{D_K} \le |\alpha_\lambda| \le \lambda
 \end{align*}$$
 </center>
-as $$\alpha_\lambda$$ is the $$x$$-coordinate of $$\iota(\alpha_\lambda)\in B$$. Now pick another $$\lambda'>\lambda\sqrt{D_K}$$ and we can fine some $$\alpha_{\lambda'}$$ with <br>
+as $$\alpha_\lambda$$ is the $$x$$-coordinate of $$\iota(\alpha_\lambda)\in B$$. Now pick another $$\lambda'>\lambda\sqrt{D_K}$$ and we can find some $$\alpha_{\lambda'}$$ with <br>
 <center>
 $$\begin{align*}
 |\alpha_\lambda| \le \lambda < \lambda'/\sqrt{D_K} \le |\alpha_{\lambda'}|
 \end{align*}$$
 </center>
-Now, we just keep on doing doing this, producing a sequence $$\{\alpha_{\lambda_n}\}_{n=1}^\infty$$ with the property that $$|\alpha_{\lambda_i}|<|\alpha_{\lambda_j}|$$ whenever $$i < j$$, and $$|\knorm(\alpha_{\lambda i})|\le\sqrt{D_K}$$ for all $$i$$. Now, all these norms are bounded integers, so there's only finitely many possible distinct values among them, but there are infinitely many $$\alpha$$'s in our sequence. Thus, there must exist some $$i\neq j$$ such that $$\knorm(\alpha_{\lambda_i})=\knorm(\alpha_{\lambda_j})$$ but $$|\alpha_{\lambda_i}|\neq|\alpha_{\lambda_j}|$$ so $$\alpha_{\lambda_i}=u\alpha_{\lambda_j}$$ for some unit $$u\in\ints K^\times$$ not equal to $$\pm1$$. Thus, $$\ell(u)\neq0$$, and the theorem follows. $$\square$$
+Now, we just keep on doing this, producing a sequence $$\{\alpha_{\lambda_n}\}_{n=1}^\infty\subset\ints K$$ with the property that $$|\alpha_{\lambda_i}|<|\alpha_{\lambda_j}|$$ whenever $$i < j$$, and $$|\knorm(\alpha_{\lambda i})|\le\sqrt{D_K}$$ for all $$i$$. Now, all these norms are bounded integers, so there's only finitely many possible distinct values among them, but there are infinitely many $$\alpha$$'s in our sequence. Thus, there must exist some $$i\neq j$$ such that $$\knorm(\alpha_{\lambda_i})=\knorm(\alpha_{\lambda_j})$$ but $$|\alpha_{\lambda_i}|\neq|\alpha_{\lambda_j}|$$ so $$\alpha_{\lambda_i}=u\alpha_{\lambda_j}$$ for some unit $$u\in\ints K^\times$$ not equal to $$\pm1$$. Thus, $$\ell(u)\neq0$$, and the theorem follows. $$\square$$
 </div>
 
 I should mention by appealing to absolute value, the above proof implicitly fixes a choice of an embedding $$K\hookrightarrow\R$$. It doesn't really matter which one is used, but worth noting what's going on behind the scenes.
@@ -439,13 +441,13 @@ I should mention by appealing to absolute value, the above proof implicitly fixe
 # Pell at Last
 Well, we've gone over a lot, and if you're still here, kudos to you [^33], but we're finally ready to actually solve Pell's equations. Fix any square free $$d\in\Z_{>1}$$. Integer solutions to the equation $$x^2-dy^2=1$$ are units of $$\ints{\Q(\sqrt d)}$$, and these units are all in the form $$\pm\eps^n$$ for some fundamental unit $$\eps$$. In order to call this equation solved, we only need to find a fundamental unit. I'll handle the case that $$d\equiv2,3\pmod4$$. The other case can be done analagously, and figuring out its details is left as an exercise.
 
-Assume $$d\equiv2,3\pmod4$$ and $$\eps$$ is a fundamental unit of $$K:=\Q(\sqrt d)$$. Then, $$-\eps,\eps^{-1}$$, and $$-\eps^{-1}$$ are all fundamental units as well [^34]. Write $$\eps=a_1+b_2\sqrt d$$ with $$a_1,b_1\in\Q^+$$. We can always get positive coefficients by appropriately choosing one of the four fundamental units. Now let $$\eps^k:=a_k+b_k\sqrt d$$ be the positive powers of $$\eps$$ and note that $$b_k=a_1b_{k-1}+b_1a_{k-1}$$ so the sequence $$\{b_k\}$$ is increasing. Thus, if you want to find a fundamental unit, just guess and check. Start with $$b_1=1$$ and check to see if $$db_1^2\pm1$$ is a perfect square. If not, move on to $$b_1=2$$ and repeat. Once you've found a value that works, write $$nb_1^2\pm1=a_1^2$$ and your fundamental unit is $$a_1+b_1\sqrt d$$.
+Assume $$d\equiv2,3\pmod4$$ and $$\eps$$ is a fundamental unit of $$K:=\Q(\sqrt d)$$. Then, $$-\eps,\eps^{-1}$$, and $$-\eps^{-1}$$ are all fundamental units as well [^34]. Write $$\eps=a_1+b_1\sqrt d$$ with $$a_1,b_1\in\Q^+$$. We can always get positive coefficients by appropriately choosing one of the four fundamental units. Now let $$\eps^k:=a_k+b_k\sqrt d$$ be the positive powers of $$\eps$$ and note that $$b_k=a_1b_{k-1}+b_1a_{k-1}$$ so the sequence $$\{b_k\}$$ is increasing. Thus, if you want to find a fundamental unit, just guess and check. Start with $$b_1=1$$ and check to see if $$db_1^2\pm1$$ is a perfect square. If not, move on to $$b_1=2$$ and repeat. Once you've found a value that works, write $$nb_1^2\pm1=a_1^2$$ and your fundamental unit is $$a_1+b_1\sqrt d$$.
 
 >Example<br>
-Let $$d=11$$. If we take $$b_1=1$$, then $$11b_1^2\pm1=\{10,12\}$$ so no good. If we take $$b_1=2$$, then $$11b_2^2\pm1=\{45,43\}$$ so still no luck. Now we try $$b_1=3$$ to get $$11b_1^2\pm1=\{100,98\}$$ and we have a winner. Our fundamental unit is $$10+3\sqrt{11}$$. Indeed, $$10^2-11*3^2=1$$ is a solution to Pell's equation.
+Let $$d=11$$. If we take $$b_1=1$$, then $$11b_1^2\pm1=\{10,12\}$$ so no good. If we take $$b_1=2$$, then $$11b_1^2\pm1=\{45,43\}$$ so still no luck. Now we try $$b_1=3$$ to get $$11b_1^2\pm1=\{100,98\}$$ and we have a winner. Our fundamental unit is $$10+3\sqrt{11}$$. Indeed, $$10^2-11*3^2=1$$ is a solution to Pell's equation.
 
 >Example<br>
-Now, take $$d=2$$ instead. If we let $$b_1=1$$, then $$2b_2^2\pm1=\{1,3\}$$ so our fundamental unit is $$\eps=1+\sqrt 2$$. However, this has norm $$1-2=-1$$ so it's not a solution to Pell's equation. In cases like this, we instead focus our attention on $$\eps^2=3+2\sqrt2$$ and use this to generate solutions.
+Now, take $$d=2$$ instead. If we let $$b_1=1$$, then $$2b_1^2\pm1=\{1,3\}$$ so our fundamental unit is $$\eps=1+\sqrt 2$$. However, this has norm $$1-2=-1$$ so it's not a solution to Pell's equation. In cases like this, we instead focus our attention on $$\eps^2=3+2\sqrt2$$ and use this to generate solutions.
 
 I'd like to say that's everything, but I've left a few loose ends. These include what to do if $$d$$ isn't square free, and what about the case where $$d\equiv1\pmod4$$ so the fundamental unit can have non-integer coefficients. Honestly, I wanted to take care of them myself, but this post became much longer than I anticipated, so I'll leave them to you. I will say that they have similar resolutions. The main issue in both cases is that $$\Z[\sqrt d]$$ may not be all of $$\ints K$$. However, it can be shown that in general, $$\Z[\sqrt d]$$ has finite index in $$\ints K$$. This means in particular that it is still infinite cyclic (why?), and so we still can find a fundamental unit $$\eps\in\Z[\sqrt d]^\times$$. Then, solutions to Pell's equation either correspond to powers of $$\eps$$ or even powers of $$\eps$$ depending on if $$\knorm(\eps)=\pm1$$.
 
@@ -484,3 +486,5 @@ I'd like to say that's everything, but I've left a few loose ends. These include
 [^34]: if you fix an embedding into R, then the unique fundamental unit > 1 is often called **the** fundamental unit
 [^35]: at this point, you might wonder why I didn't just write the problem like this in the first place. That's because the place I stole it from wrote it as y^2=x^3-2 originally as well. 
 [^36]: If you write it as the product of two numbers, one of them is a unit
+[^37]: because I forgot it was possible for it not to be the case
+[^38]: some people will try to tell you that this is impossible, but do not be fooled. I believe in you, and I know you can let out a gasp if you so will it.
