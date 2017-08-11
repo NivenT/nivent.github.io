@@ -23,7 +23,8 @@ x^2-dy^2 = 1 && d>1
 >Question<br>
 Why do we require $$d>1$$? What happens if $$d\le1$$?
 
-Edit: I never mentioned this in the original post [^37], but we also want to assume that $$d$$ is not a square number. If $$d=k^2$$, then the equation becomes $$(x-ky)(x+ky)=1$$ which means $$x+ky=x-ky=\pm1$$ so $$ky=-ky\implies y=0$$ and $$(x,y)=(\pm1,0)$$ are the only solutions.
+>Edit<br>
+I never mentioned this in the original post [^37], but we also want to assume that $$d$$ is not a square number. If $$d=k^2$$, then the equation becomes $$(x-ky)(x+ky)=1$$ which means $$x+ky=x-ky=\pm1$$ so $$ky=-ky\implies y=0$$ and $$(x,y)=(\pm1,0)$$ are the only solutions.
 
 # A Warm-up Problem: $$y^2=x^3-2$$
 Before solving Pell's equations, we'll start with a simpler task (although it may not be immediately obvious that this equation is any easier to solve). At this point, if it seems like things here will be novel to you, then I recommend that you check out by [previous post on number theory](../number-theory). It's not required to understand this post, and won't necessarily add a bunch to your knowledge of the ideas used here, but I think it could serve as good motivation for seeing that both geometric reasoning and working in number systems larger than $$\Z$$ can be helpful in number theoretic problems [^8].
