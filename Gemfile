@@ -7,4 +7,5 @@ gem "jekyll-feed"
 
 group :jekyll_plugins do
   gem 'hawkins'
+  gem 'github-pages'
 end
