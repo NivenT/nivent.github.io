@@ -120,7 +120,7 @@ function processData() {
         $.each(data, function(index, item) {
             //console.log("item: " + item)
             // check if search term is in content or title 
-            if (fnd(item.title, q) > -1 || fnd(item.tags, q) > -1 || fnd(item.content, q)) {
+            if (fnd(item.title, q) > -1 || fnd(item.tags, q) > -1 || fnd(item.content, q) > -1) {
                 var result = populateResultContent($resultTemplate.html(), item);
                 resultsCount++;
                 results += result;
