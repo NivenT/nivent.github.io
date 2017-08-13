@@ -5,8 +5,6 @@ modified: 2017-08-10 22:46:00
 categories: blog
 excerpt:
 tags: [math, number theory, geometry of numbers, algebraic number theory]
-image: 
-  feature: 
 date: 2017-08-05 15:50:00
 ---
 

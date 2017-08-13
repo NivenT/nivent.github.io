@@ -6,7 +6,7 @@ categories: blog
 excerpt:
 tags: [math, modular, number theory, code, algebra]
 image: 
-  feature: blog/feature/post-bg-03.jpg
+  path: blog/feature/post-bg-03.jpg
 date: 2016-01-22 19:40:00
 search_omit: true #Search does not work when not ommitted
 ---

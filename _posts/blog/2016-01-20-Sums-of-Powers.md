@@ -6,7 +6,7 @@ categories: blog
 excerpt:
 tags: [math, sum, algebra]
 image: 
-  feature: blog/feature/post-bg-02.jpg
+  path: blog/feature/post-bg-02.jpg
 date: 2016-01-20 17:11:00
 search_omit: true #Search does not work when not ommitted
 ---

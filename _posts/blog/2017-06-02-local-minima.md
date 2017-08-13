@@ -5,8 +5,6 @@ categories: blog
 modified: 
 excerpt:
 tags: [CS, matrix, problem, C++]
-image: 
-  feature: 
 date: 2017-06-02 22:48:00
 ---
 

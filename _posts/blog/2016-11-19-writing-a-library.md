@@ -5,8 +5,6 @@ modified:
 categories: blog
 excerpt:
 tags: [Rust, REnforce, CS]
-image: 
-  feature: 
 date: 2016-11-19 02:30:00
 ---
 

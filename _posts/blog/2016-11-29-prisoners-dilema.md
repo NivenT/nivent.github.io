@@ -5,8 +5,6 @@ modified:
 categories: blog
 excerpt:
 tags: [game theory, class]
-image: 
-  feature: 
 date: 2016-11-30 12:30:00
 ---
 

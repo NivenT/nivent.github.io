@@ -5,8 +5,6 @@ modified:
 categories: blog
 excerpt:
 tags: [C++, CS]
-image: 
-  feature: 
 date: 2016-09-03 23:23:00
 ---
 

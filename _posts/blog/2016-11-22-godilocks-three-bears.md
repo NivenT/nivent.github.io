@@ -5,8 +5,6 @@ modified:
 categories: blog
 excerpt:
 tags: [math, linear algebra, combinatorics]
-image: 
-  feature: 
 date: 2016-11-22 09:50:00
 ---
 

@@ -5,8 +5,6 @@ modified:
 categories: blog
 excerpt:
 tags: [math, number theory]
-image: 
-  feature: 
 date: 2017-05-20 21:01:00
 ---
 

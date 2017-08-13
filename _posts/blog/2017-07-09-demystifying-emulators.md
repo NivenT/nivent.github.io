@@ -5,8 +5,6 @@ categories: blog
 modified:
 excerpt:
 tags: [CS, emulator, Haskell, Chip-8, C++, Python, Rust]
-image: 
-  feature: 
 date: 2017-07-12 00:00:00
 ---
 

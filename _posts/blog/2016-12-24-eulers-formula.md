@@ -5,8 +5,6 @@ modified:
 categories: blog
 excerpt: The above equation is known as [Euler's identity](https://www.wikiwand.com/en/Euler%27s_identity). It's often described as one of the most [beautiful equations](http://www.bbc.com/earth/story/20160120-the-most-beautiful-equation-is-eulers-identity) in all of mathematics, since it makes use of 5 important constants.
 tags: [calculus, math]
-image: 
-  feature: 
 date: 2016-12-24 20:18:00
 ---
 

@@ -5,8 +5,6 @@ modified:
 categories: blog
 excerpt:
 tags: [probability, combinatorics, math, graph theory, number theory]
-image: 
-  feature: 
 date: 2016-12-23 18:57:00
 ---
 

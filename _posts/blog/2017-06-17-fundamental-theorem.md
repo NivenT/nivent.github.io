@@ -5,8 +5,6 @@ modified: 2017-06-21 20:20:00
 categories: blog
 excerpt:
 tags: [math, algebra, complex numbers, fundamental, topology]
-image: 
-  feature: 
 date: 2017-06-18 18:12:00
 ---
 

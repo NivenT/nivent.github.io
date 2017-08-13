@@ -5,8 +5,6 @@ modified:
 categories: blog
 excerpt:
 tags: [math, stolen, problem, generating functions]
-image: 
-  feature: 
 date: 2017-01-27 22:40:00
 ---
 

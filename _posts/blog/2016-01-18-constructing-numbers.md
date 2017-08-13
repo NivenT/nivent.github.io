@@ -6,7 +6,7 @@ categories: blog
 excerpt:
 tags: [math, sets, first]
 image: 
-  feature: blog/feature/post-bg-01.jpg
+  path: blog/feature/post-bg-01.jpg
   credit: 123RF
   creditlink: https://www.123rf.com/photo_24386233_red-brickwork-the-number-1961-on-background-white-bricks.html
 date: 2016-01-18 19:17:00

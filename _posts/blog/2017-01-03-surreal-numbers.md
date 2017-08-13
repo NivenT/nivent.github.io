@@ -5,8 +5,6 @@ modified: 2017-06-03 22:23:00
 categories: blog
 excerpt:
 tags: [math, surreal numbers, non-standard material]
-image: 
-  feature: 
 date: 2017-01-04 03:30:00
 ---
 

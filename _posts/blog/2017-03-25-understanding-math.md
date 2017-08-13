@@ -3,10 +3,8 @@ layout: post
 title: "When do you understand mathematics?"
 modified: 
 categories: blog
-excerpt:
+excerpt: I remember one day in middle school when I was complaining about my math homework [^1]. Fed up with my complaints, and wanting to put me in my place, my sister decided to show me her homwork. It made no sense. It was asking strange questions about even stranger concepts.
 tags: [math, maybe some other stuff]
-image: 
-  feature: 
 date: 2017-03-25 22:05:00
 ---
 
