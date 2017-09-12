@@ -5,7 +5,7 @@ modified:
 categories: blog
 excerpt:
 tags: [math, algebra, groups, group theory]
-date: 2017-09-09 13:00:00
+date: 2017-09-12 5:00:00
 ---
 
 I have ideas for a couple posts I want to write, but unfortunately, they both will require some level of familiarity with abstract algebra, and I don't want to just assume the reader has the necessary prereq and then go on writing them. Instead, I've given myself the ambitious [^1] goal of introducing most of the relevant algebra (spoiler: [^2]) in a series of blog posts beginning with this one on group theory. 
