@@ -1,18 +1,6 @@
 $$
 
-\newcommand{\cdstrut}{\vrule height .8em width 0pt depth 1.6em}
 \newcommand{\downmapsto}{\rotatebox[origin=c]{-90}{$\scriptstyle\mapsto$}\mkern2mu}
-
-\newcommand{\arrow}[2]{
-	\ifx d#1
-	\llap{$\scriptstyle#2$}\left\downarrow\cdstrut\right.\cdstrut\fi
-	\ifx u#1
-	\llap{$\scriptstyle#2$}\left\uparrow\cdstrut\right.\cdstrut\fi
-	\ifx r#1
-	\mathop{\hbox to 4em{\rightarrowfill}}\limits^{#2}\fi
-	\ifx l#1
-	\mathop{\hbox to 4em{\leftarrowfill}}\limits^{#2}\fi
-}
 
 \newcommand{\qadj}[1]{\mathbb Q\left(#1\right)}
 \newcommand{\qadjs}[1]{\qadj{\sqrt {#1}}}
@@ -36,6 +24,17 @@ $$
 \newcommand{\conj}{\overline}
 \newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\pderivf}[2]{\partial #1/\partial #2}
+\newcommand{\pderivd}[1]{\pderiv{}{#1}}
+\newcommand{\pderivdf}[1]{\pderivf{}{#1}}
+\newcommand{\Pderiv}[3]{\frac{\partial #1}{\partial #2\partial #3}}
+\newcommand{\dtwo}[1]{\pderiv{#1}x\,dx + \pderiv{#1}y\,dy}
+\newcommand{\dthree}[1]{\dtwo{#1} + \pderiv{#1}z\,dz}
+\newcommand{\mfp}{\mathfrak p}
+\newcommand{\mfm}{\mathfrak m}
+\newcommand{\mfX}{\mathfrak X}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\smooth}[0]{C^\infty}
+\newcommand{\del}[0]{\partial}
 
 \DeclareMathOperator{\image}{image}
 \DeclareMathOperator{\Hom}{Hom}
@@ -71,7 +70,33 @@ $$
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\Fr}{Fr}
 \DeclareMathOperator{\eps}{\varepsilon}
-\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\vphi}{\varphi}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conject}[thm]{Conjecture}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{heur}[thm]{Heuristic}
+\newtheorem{qn}[thm]{Question}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{prob}{Problem}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{cond}[thm]{Conditions}
+\newtheorem{notn}{Notation}
+\newtheorem{anotn}[notn]{Abuse of Notation}
+\newtheorem{san}[thm]{Sanity Check}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem*{ex}{Example}
+\newtheorem*{nonex}{Non-example}
+\newtheorem*{exc}{Exercise}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
 
 \newcommand{\mspacing}[0]{\hspace*{50pt}}
 \newcommand{\Text}[2]{\text{#2 #1 #2}}
