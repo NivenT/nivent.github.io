@@ -370,14 +370,14 @@ In this section, I'm gonna include some pictures, but they'll be different from 
 I mentioned before that we would prove the first isomorphism theorem. Instead of proving it directly, we will derive it as a corollary of a better theorem in my opinion.
 
 >Factor Theorem<br>
-Let $$f:G\rightarrow H$$ be a homomorphism, and let $$K\le\ker f$$. Then, there exists a unique homomorphism $$h:G/K\rightarrow H$$ such that $$f$$ factors through $$h$$ in the sense that the following diagram commutes<br><center>
+Let $$f:G\rightarrow H$$ be a homomorphism, and let $$K\le\ker f$$. Then, there exists a unique homomorphism $$h:G/K\rightarrow H$$ such that $$f$$ factors through $$h$$ in the sense that the following diagram commutes<center>
 <img src="{{ site.url }}/images/blog/group-intro/factor.png"
 			 width ="200"
 			 height="200"></center>
 That is, $$f$$ is the composition of $$h$$ and the quotient map. Furthermore, $$h$$ is injective iff $$K=\ker f$$, and $$h$$ is surjective iff $$f$$ is surjective.
 
 <div class="proof3">
-Pf: Let $$f,G,H,K$$ be as in the statement of the theorem. We first want to show that there is a unique $$h:G/K\rightarrow H$$ such that $$h(xK)=f(x)$$ for all $$x\in G$$. Well, define $$h$$ based solely off of this equation. Every element of $$G/K$$ is of the form $$xK$$ and $$f(x)$$ is unique given a choice of $$x$$, so this gives a unique satisying $$h$$. We now need to make sure that $$h$$ is well-definied (the fact that it's a homomorphism follows from $$f$$ being one), so pick $$g,g'\in G$$ s.t. $$gK=g'K$$. Then, $$g^{-1}g'\in K$$ so $$f(g')=f(gg^{-1}g')=f(g)\implies h(gK)=h(g'K)$$ so we're good. For the statements about injectivity and surjectivity, convince yourself that a homomorphism is injective iff it's kernel is trivial, and that $$\image(h)=\image(f)$$. $$\square$$
+Pf: Let $$f,G,H,K$$ be as in the statement of the theorem. We first want to show that there is a unique $$h:G/K\rightarrow H$$ such that $$h(xK)=f(x)$$ for all $$x\in G$$. Well, define $$h$$ based solely off of this equation. Every element of $$G/K$$ is of the form $$xK$$ and $$f(x)$$ is unique given a choice of $$x$$, so this gives a unique satisying $$h$$. We now need to make sure that $$h$$ is well-definied (the fact that it's a homomorphism follows from $$f$$ being one), so pick $$g,g'\in G$$ s.t. $$gK=g'K$$. Then, $$g^{-1}g'\in K$$ so $$f(g')=f(gg^{-1}g')=f(g)f(g^{-1}g')=f(g)\implies h(gK)=h(g'K)$$ so we're good. For the statements about injectivity and surjectivity, convince yourself that a homomorphism is injective iff it's kernel is trivial, and that $$\image(h)=\image(f)$$. $$\square$$
 </div>
 
 >Corollary (First isomorphism theorem)<br>
@@ -390,17 +390,17 @@ Pf: By the above theorem, $$f$$ must factor through some map $$g:G/\ker f\righta
 Lagrange's Theorem and the first isomorphism theorem are two of the big, foundational theorems for group theory, and we've now proven both of them. Normally, this would be a good place to stop, but there's one last thing I want to quickly introduce [^11].
 
 >Definition<br>
-Consider a sequence of groups and homomorphisms between them<br><center>
+Consider a sequence of groups and homomorphisms between them<center>
 $$\begin{CD}
 G_1 @>f_1>> G_2 @>f_2>> G_3 @>f_3>> G_4 @>f_4>> \dots @>f_{n-1}>> G_n
 \end{CD}$$</center>
-We say such a sequence is **exact** if $$\image(f_k)=\ker(f_{k+1})$$ for all $$1\le k<n$$. In particular, a **short exact sequence** is an exact sequence of the form<br><center>
+We say such a sequence is **exact** if $$\image(f_k)=\ker(f_{k+1})$$ for all $$1\le k<n$$. In particular, a **short exact sequence** is an exact sequence of the form<center>
 $$\begin{CD}
 \{e\} @>>> N @>f>> G @>g>> H @>>> \{e\}
 \end{CD}$$</center>
 where $$\{e\}$$ is the trivial group.
 
-The first time I saw exact sequences, all I could think was, "Why? Who cares?" At first glance, they seem pretty artificial, but they actually give a compact way of codying some information about how groups are related to each other. Let's look at the short exact sequence appearing in the above definition for example. The fact that the sequence is exact that $$N$$ says that the image of the incoming map (which must send the trivial element to the identity in $$N$$) is the kernal of $$f$$. This is just the statement that $$\ker f=\{e\}$$ or equivalently that $$f$$ is injective! Similarly, exactness at $$H$$ says that the image of $$g$$ is the kernel of the map sending all of $$H$$ to the identity, so $$\image g=H$$ and $$g$$ is surjective! Finally, exactness at $$G$$ says that $$\image f=\ker g$$. Since we know $$f$$ is injective, this means we can embed $$N$$ in $$G$$ as a normal subgroup. Furthermore, since $$g$$ is surjective, the first isomorphism theorem tells us that $$G/N\simeq G/\image f\simeq G/\ker g\simeq H$$, so we get the sense that $$G$$ is somehow made up from $$N$$ and $$H$$ (the simplest example is $$G\simeq N\times H$$, and you can easily pick $f,g$ to form a short exact sequence in this case, but other choices of $G$ may work too). Because of this observation, we make our final definition.
+The first time I saw exact sequences, all I could think was, "Why? Who cares?" At first glance, they seem pretty artificial, but they actually give a compact way of codifying some information about how groups are related to each other. Let's look at the short exact sequence appearing in the above definition for example. The fact that the sequence is exact that $$N$$ says that the image of the incoming map (which must send the trivial element to the identity in $$N$$) is the kernal of $$f$$. This is just the statement that $$\ker f=\{e\}$$ or equivalently that $$f$$ is injective! Similarly, exactness at $$H$$ says that the image of $$g$$ is the kernel of the map sending all of $$H$$ to the identity, so $$\image g=H$$ and $$g$$ is surjective! Finally, exactness at $$G$$ says that $$\image f=\ker g$$. Since we know $$f$$ is injective, this means we can embed $$N$$ in $$G$$ as a normal subgroup. Furthermore, since $$g$$ is surjective, the first isomorphism theorem tells us that $$G/N\simeq G/\image f\simeq G/\ker g\simeq H$$, so we get the sense that $$G$$ is somehow made up from $$N$$ and $$H$$ (the simplest example is $$G\simeq N\times H$$, and you can easily pick $f,g$ to form a short exact sequence in this case, but other choices of $G$ may work too). Because of this observation, we make our final definition.
 
 >Definition<br>
 We say $$G$$ is an extension of $$N$$ by $$H$$ [^12] if there exists a short exact sequence<br><center>
