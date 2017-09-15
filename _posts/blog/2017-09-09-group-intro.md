@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Algebra Part I"
-modified:
+modified: 2017-09-15
 categories: blog
 excerpt:
 tags: [math, algebra, groups, group theory]
@@ -236,7 +236,7 @@ Pf: Exercise for the reader
 When introducing embeddings, I mentioned that they give us a way of viewing one group inside of another. This idea is formalized view the notion of subgroups which are pretty much exactly what they sound like.
 
 >Definition<br>
-Let $$H\subseteq G$$ be a subset of a group $$G$$. We say $$H$$ is a subgroup of $$G$$, denote $$H\le G$$, is $$H$$ itself is a group.
+Let $$H\subseteq G$$ be a subset of a group $$G$$. We say $$H$$ is a subgroup of $$G$$, denoted $$H\le G$$, if $$H$$ itself is a group.
 
 >Theorem<br>
 Let $$f:G\rightarrow H$$ be a homomorphism. Then, $$f(G)\subseteq H$$ is a subgroup of $$H$$. Furthermore, if $$f$$ is injective, then $$f(G)\simeq G$$.
@@ -271,6 +271,15 @@ $$\langle a\rangle\le G$$
 Pf: Pick any two elements, $a^n,a^m\in\gen a$. Then, $(a^n)(a^m)^{-1}=(a^n)(a^{-m})=a^{n-m}\in\gen a$. Furthermore, $\gen a$ is visibly non-empty, so it's a subgroup by the 1-step test. $\square$
 </div>
 
+So as an example, in $$\Z$$, $$\langle3\rangle=3\Z$$ the multiplies of $$3$$. This brings up a good source of confusion. When considering $$\Z$$ as a group under addition, $$3^n$$ is not $$3$$ raised to the $$n$$th power, but instead $$3$$ times $$n$$. Luckily, $$\Z$$ is abelian so this is normally written as $$3n$$, but just wanted to clarify. 
+
+One important notion in group theory, that unfortunately plays a minor role in this post, is that of the order of an element. For a group $$G$$, the order of the group is simply its size. For some element, $$a\in G$$ its order, denoted $\|a\|$ is the smallest positive exponent $n$ s.t. $$a^n=e$$. If no such $$n$$ exists, then $$a$$ is said to have infinite order. For a finite group, every element has some finite order (why?). Calling this the order of $$a$$ is justified by the following.
+
+>Exercise<br>
+$$|a|=|\gen a|$$
+
+Note that a (finite) cyclic group is one where the order of some element is the order of the group. Furthermore, since I didn't make this an exercise before, show that any cyclic group is abelian.
+
 >Definition<br>
 Let $f:G\rightarrow H$ be a group homomorphism. We define the **kernel** of $f$ as $$\ker f=\{g\in G:f(g)=e\}$$ the set of elements mapped to the identity.
 
@@ -281,8 +290,6 @@ Let $$f:G\rightarrow H$$ be a group homomorphism. Then, $\ker f\le G$
 Pf: Exercise for the reader
 </div>
 
-So as an example, in $$\Z$$, $$\langle3\rangle=3\Z$$ the multiplies of $$3$$. This brings up a good source of confusion. When considering $$\Z$$ as a group under addition, $$3^n$$ is not $$3$$ raised to the $$n$$th power, but instead $$3$$ times $$n$$. Luckily, $$\Z$$ is abelian so this is normally written as $$3n$$, but just wanted to clarify. 
-
 Since we now know some stuff about homormorphisms and subgroups, the majority of what follows will focus on proving two main theorems: Langrange's Theorem and the First Isomorphism Theorem. After that, I will mention something that will be useful for one of the things I wanna talk about in a future post.
 
 # Cosets
@@ -291,7 +298,7 @@ The goal for this section is to find a way to generalize modular arithmetic to a
 >Definition<br>
 Let $$H\le G$$ be a subgroup. We say that $$H$$ is **normal** if it is the kernel of some homomorphism. We denote this $$H\trianglelefteq G$$.
 
-Returning to out $$7\equiv4\pmod3$$ example, from the perspective of $3$ being $0$ (i.e. $3\Z$ being normal), this equivalence is really expressing that $7=4+3\equiv4+0=4$. We can take this a step further by writing $$7=1+2*3$$ and $4=1+1*3$ which makes it apparent that they are equivalent because they are both $1$ more than a multiple of $3$. In the context of general groups, if we are going to treat some subgroup as being $0$, then any elements that are a fixed amount more than members of the subgroup should similarly be considered equivalent.
+Returning to our $$7\equiv4\pmod3$$ example, from the perspective of $3$ being $0$ (i.e. $3\Z$ being normal), this equivalence is really expressing that $7=4+3\equiv4+0=4$. We can take this a step further by writing $$7=1+2*3$$ and $4=1+1*3$ which makes it apparent that they are equivalent because they are both $1$ more than a multiple of $3$. In the context of general groups, if we are going to treat some subgroup as being $0$, then any elements that are a fixed amount more than members of the subgroup should similarly be considered equivalent.
 
 >Definition<br>
 Let $$H\le G$$ be a subgroup, and fix some element $$a\in G$$. A **(left) coset** of $$H$$ is a set of the form $$aH=\{ah:h\in H\}$$
@@ -330,9 +337,15 @@ Pf: Pick two cosets $aH$ and $bH$ of $G$. Then, the map $ah\mapsto (ba^{-1})ah$ 
 </div>
 
 >Corollary<br>
+The order of an element of a group divides the order of the group.
+
+>Corollary<br>
 Every group of prime order is cyclic
 
 Most everything after the definition of a coset wasn't strictly needed for this, but is still good to know. We finally say what it means to mod out by a subgroup.
+
+>Definition<br>
+The **index** of $$H$$ in $$G$$ is the number of (left) cosets of $$H$$ in $$G$$ and is denoted $$[G:H]$$ or $$|G:H|$$.
 
 >Definition<br>
 Let $H\trianglelefteq G$ be a normal subgroup. We define the **quotient group** $G/H$ to be the set of left cosets of $H$ together with the multiplication operation $(aH)(bH)=(ab)H$.
@@ -363,6 +376,16 @@ Pf: (important) exercise to the reader.
 
 >Exercise<br>
 Prove that a subgroup $$H\le G$$ is normal iff $$xH=Hx$$ for all $$x\in G$$. After this, prove that this is the case iff $$x^{-1}Hx\subseteq H$$ for all $$x\in G$$.
+
+>Exercise<br>
+Prove that for an abelian group, every subgroup is normal.
+
+>Theorem<br>
+Let $$H\trianglelefteq G$$ be a normal group of finite index, and fix any $$a\in G$$. Then, $$a^{[G:H]}\in H$$.
+
+<div class="proof3">
+Pf: Let $$f:G\rightarrow G/H$$ be the quotient map, and note that $$|G/H|=[G:H]$$. Thus, $$f(a)=a+H$$ has order dividing $$[G:H]$$ by Lagrange, so $$f(a^{[G:H]})=(a+H)^{[G:H]}=H$$ so $$a^{[G:H]}\in\ker f=H$$. $$\square$$
+</div>
 
 # Diagrams et al.
 In this section, I'm gonna include some pictures, but they'll be different from the type of images I usually include. Here, I'll use so-called commutative diagrams. A diagram is a collection of objects (i.e. groups) with direct arrows (i.e. homomorphisms) drawn between them that makes it easier to discuss things when you have several functions going between different groups. We say such a diagram commutes when any path along arrows from one group to another gives the same result [^10]. This will make more sense when we see some.
@@ -403,7 +426,7 @@ where $$\{e\}$$ is the trivial group.
 The first time I saw exact sequences, all I could think was, "Why? Who cares?" At first glance, they seem pretty artificial, but they actually give a compact way of codifying some information about how groups are related to each other. Let's look at the short exact sequence appearing in the above definition for example. The fact that the sequence is exact that $$N$$ says that the image of the incoming map (which must send the trivial element to the identity in $$N$$) is the kernal of $$f$$. This is just the statement that $$\ker f=\{e\}$$ or equivalently that $$f$$ is injective! Similarly, exactness at $$H$$ says that the image of $$g$$ is the kernel of the map sending all of $$H$$ to the identity, so $$\image g=H$$ and $$g$$ is surjective! Finally, exactness at $$G$$ says that $$\image f=\ker g$$. Since we know $$f$$ is injective, this means we can embed $$N$$ in $$G$$ as a normal subgroup. Furthermore, since $$g$$ is surjective, the first isomorphism theorem tells us that $$G/N\simeq G/\image f\simeq G/\ker g\simeq H$$, so we get the sense that $$G$$ is somehow made up from $$N$$ and $$H$$ (the simplest example is $$G\simeq N\times H$$, and you can easily pick $f,g$ to form a short exact sequence in this case, but other choices of $G$ may work too). Because of this observation, we make our final definition.
 
 >Definition<br>
-We say $$G$$ is an extension of $$N$$ by $$H$$ [^12] if there exists a short exact sequence<br><center>
+We say $$G$$ is an **extension** of $$N$$ by $$H$$ [^12] if there exists a short exact sequence<br><center>
 $$\begin{CD}
 \{e\} @>>> N @>f>> G @>g>> H @>>> \{e\}
 \end{CD}$$</center>
@@ -419,4 +442,4 @@ $$\begin{CD}
 [^9]: This might be more apparent after we define quotient groups
 [^10]: Basically every diagram you see in the wild will be commutative
 [^11]: Before I forget to mention this, exercise: look up the like 3 other isomorphism theorems. Also, there's a decent amount of group theory you'd usually learn leading up to some of the stuff I've mentioned here that I didn't bring up at all.
-[^12]: Somepeople say G is an extension of H by N instead. Doesn't really matter
+[^12]: Some people say G is an extension of H by N instead. Doesn't really matter
