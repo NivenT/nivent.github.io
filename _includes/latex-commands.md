@@ -71,6 +71,7 @@ $$
 \DeclareMathOperator{\Fr}{Fr}
 \DeclareMathOperator{\eps}{\varepsilon}
 \DeclareMathOperator{\vphi}{\varphi}
+\DeclareMathOperator{\vol}{vol}
 
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}
