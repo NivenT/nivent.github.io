@@ -133,7 +133,7 @@ Given a finite field extension $$L/K$$, let $$\alpha\in L$$ be an arbitary eleme
 
 This definition is quite a bit to digest, but we'll unpack it in the case of quadratic number fields. One thing of note we can quickly gleen from this definition is that it makes the statement that the norm is multiplicative almost trivial (why?).
 
-Now, let's see what this definition gives in the quadratic case. Fix some squarefree $$d\in\Z-\{1\}$$, and let $$K=\Q(\sqrt d)$$ so $$K/\Q$$ is a degree 2 [^13] field extension, and one $$\Q$$-basis of $$K$$ is $$\{1,\sqrt d\}$$. Fix any element $$\alpha=a+b\sqrt d$$ of $$K$$ with $$a,b\in\Q$$. We are interested in the determinant of its multiplication map, so we'll first find the matrix for this map. To do this me only need to compute $$m_\alpha(1)=\alpha=a+b\sqrt d$$ and $$m_\alpha(\sqrt d)=\alpha\sqrt d=db+a\sqrt d$$. Hence, the $$m_\alpha$$ is given by this matrix (assuming we use the basis $$\{1,\sqrt d\}$$):
+Now, let's see what this definition gives in the quadratic case. Fix some squarefree $$d\in\Z-\{1\}$$, and let $$K=\Q(\sqrt d)$$ so $$K/\Q$$ is a degree 2 [^13] field extension, and one $$\Q$$-basis of $$K$$ is $$\{1,\sqrt d\}$$. Fix any element $$\alpha=a+b\sqrt d$$ of $$K$$ with $$a,b\in\Q$$. We are interested in the determinant of its multiplication map, so we'll first find the matrix for this map. To do this we only need to compute $$m_\alpha(1)=\alpha=a+b\sqrt d$$ and $$m_\alpha(\sqrt d)=\alpha\sqrt d=db+a\sqrt d$$. Hence, the $$m_\alpha$$ is given by this matrix (assuming we use the basis $$\{1,\sqrt d\}$$):
 
 $$\begin{pmatrix}
 a & db\\
@@ -191,7 +191,7 @@ I debated whether I should talk about what comes next in one section or two. I u
 >Definition<br>
 A **lattice** of a real vector space is the $$\Z$$-span of some $$\R$$-basis. If $$L$$ is a lattice of a real vector space $$V$$, then we say the **rank** of $$L$$ is the dimension of $$V$$ [^20].
 
-The only (finite-dimensional) real vector spaces are $$\R^n$$ for various choices of $$n$$, so a lattice is really just a set of the form $$\{a_1b_1+a_2b_2+\dots+a_nb_n:a_1,\dots,a_n\in\Z, b_1,\dots,b_n\in\R\}$$ and the $$b_i$$'s are $$\R$$-linearly independent. We might write such a lattice using the notation $$L=\Z b_1\oplus\Z b_2\oplus\dots\oplus\Z b_n$$ [^32]. The canonical example (and in some sense only (finite) example) of a lattice is $$\Z^n$$. Some lattices of $$\R^2$$ are pictured below
+The only (finite-dimensional) real vector spaces are $$\R^n$$ for various choices of $$n$$, so a lattice is really just a set of the form $$\{a_1b_1+a_2b_2+\dots+a_nb_n:a_1,\dots,a_n\in\Z, b_1,\dots,b_n\in\R\}$$ and the $$b_i$$'s are $$\Z$$-linearly independent. We might write such a lattice using the notation $$L=\Z b_1\oplus\Z b_2\oplus\dots\oplus\Z b_n$$ [^32]. The canonical example (and in some sense only (finite) example) of a lattice is $$\Z^n$$. Some lattices of $$\R^2$$ are pictured below
 
 <center>
 <img src="{{ site.url }}/images/blog/pell-equations/lattices.jpg"
