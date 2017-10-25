@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Solving Pell's Equations"
-modified: 2017-08-10 22:46:00
+modified: 2017-10-07 15:46:00
 categories: blog
 excerpt:
 tags: [math, number theory, geometry of numbers, algebraic number theory]
@@ -186,7 +186,7 @@ $$\ints{\Q(\sqrt{-2})}=\Z[\sqrt{-2}]$$ so this was the right setting for the war
 At this point, I think we know everything about rings of integers that we'll need [^17]. In case you have forgotten, our goal is find all integer solutions to Pell's equations which are $$x^2-dy^2=1$$ for integers $$x,y\in\Z$$ and positive integer $$d\in\Z_{>1}$$. As this discussion hinted at, for the time being, we'll further restrict $$d$$ to be square free. This has the advantage that since Pell's equation can then be written as $$(x-y\sqrt d)(x+y\sqrt d)=1$$, $$d$$ which means that we're really just looking for units of $$\Z[\sqrt d]$$, which is convenient because $$\Z[\sqrt d]=\ints{\Q(\sqrt d)}$$ for square free $$d$$ (or at least it is 2 times out of 3) [^18].
 
 # Geometry of Numbers
-I debated whether I should talk about what comes next in one section or two. I ultimately decided on two because I didn't want to introduct too much stuff all at once. A priori, the material of this section isn't relevant to the larger discussion at hand, but in the next section, we'll see it play a crucial role. This is the point in the post where we open up to the possibility of me throwing in some pictures.
+I debated whether I should talk about what comes next in one section or two. I ultimately decided on two because I didn't want to introduce too much stuff all at once. A priori, the material of this section isn't relevant to the larger discussion at hand, but in the next section, we'll see it play a crucial role. This is the point in the post where we open up to the possibility of me throwing in some pictures.
 
 >Definition<br>
 A **lattice** of a real vector space is the $$\Z$$-span of some $$\R$$-basis. If $$L$$ is a lattice of a real vector space $$V$$, then we say the **rank** of $$L$$ is the dimension of $$V$$ [^20].
@@ -383,7 +383,7 @@ $$\begin{align*}
 \ell(\ints K^\times) \simeq \frac{\ints K^\times}{\{\pm1\}}
 \end{align*}$$
 
-Luckily for us, $$\ints K^\times$$ is abelian [^31] so can write
+Luckily for us, $$\ints K^\times$$ is abelian [^31] so we can write
 
 $$\begin{align*}
 \zmod2\oplus\ell(\ints K^\times) \simeq \{\pm1\}\oplus\ell(\ints K^\times) \simeq \ints K^\times
@@ -440,7 +440,7 @@ I should mention by appealing to absolute value, the above proof implicitly fixe
 # Pell at Last
 Well, we've gone over a lot, and if you're still here, kudos to you [^33], but we're finally ready to actually solve Pell's equations. Fix any square free $$d\in\Z_{>1}$$. Integer solutions to the equation $$x^2-dy^2=1$$ are units of $$\ints{\Q(\sqrt d)}$$, and these units are all in the form $$\pm\eps^n$$ for some fundamental unit $$\eps$$. In order to call this equation solved, we only need to find a fundamental unit. I'll handle the case that $$d\equiv2,3\pmod4$$. The other case can be done analagously, and figuring out its details is left as an exercise.
 
-Assume $$d\equiv2,3\pmod4$$ and $$\eps$$ is a fundamental unit of $$K:=\Q(\sqrt d)$$. Then, $$-\eps,\eps^{-1}$$, and $$-\eps^{-1}$$ are all fundamental units as well [^34]. Write $$\eps=a_1+b_1\sqrt d$$ with $$a_1,b_1\in\Q^+$$. We can always get positive coefficients by appropriately choosing one of the four fundamental units. Now let $$\eps^k:=a_k+b_k\sqrt d$$ be the positive powers of $$\eps$$ and note that $$b_k=a_1b_{k-1}+b_1a_{k-1}$$ so the sequence $$\{b_k\}$$ is increasing. Thus, if you want to find a fundamental unit, just guess and check. Start with $$b_1=1$$ and check to see if $$db_1^2\pm1$$ is a perfect square. If not, move on to $$b_1=2$$ and repeat. Once you've found a value that works, write $$nb_1^2\pm1=a_1^2$$ and your fundamental unit is $$a_1+b_1\sqrt d$$.
+Assume $$d\equiv2,3\pmod4$$ and $$\eps$$ is a fundamental unit of $$K:=\Q(\sqrt d)$$. Then, $$-\eps,\eps^{-1}$$, and $$-\eps^{-1}$$ are all fundamental units as well [^34]. Write $$\eps=a_1+b_1\sqrt d$$ with $$a_1,b_1\in\Z^+$$. We can always get positive coefficients by appropriately choosing one of the four fundamental units. Now let $$\eps^k:=a_k+b_k\sqrt d$$ be the positive powers of $$\eps$$ and note that $$b_k=a_1b_{k-1}+b_1a_{k-1}$$ so the sequence $$\{b_k\}$$ is increasing. Thus, if you want to find a fundamental unit, just guess and check. Start with $$b_1=1$$ and check to see if $$db_1^2\pm1$$ is a perfect square. If not, move on to $$b_1=2$$ and repeat. Once you've found a value that works, write $$nb_1^2\pm1=a_1^2$$ and your fundamental unit is $$a_1+b_1\sqrt d$$.
 
 >Example<br>
 Let $$d=11$$. If we take $$b_1=1$$, then $$11b_1^2\pm1=\{10,12\}$$ so no good. If we take $$b_1=2$$, then $$11b_1^2\pm1=\{45,43\}$$ so still no luck. Now we try $$b_1=3$$ to get $$11b_1^2\pm1=\{100,98\}$$ and we have a winner. Our fundamental unit is $$10+3\sqrt{11}$$. Indeed, $$10^2-11*3^2=1$$ is a solution to Pell's equation.
@@ -467,7 +467,7 @@ I'd like to say that's everything, but I've left a few loose ends. These include
 [^16]: Although maybe you've already made the connection by now
 [^17]: If I'm wrong, we'll introduce the other stuff as it pops up
 [^18]: Which reminds me, why don't we consider the case d = 0 (mod 4) in the previous theorem?
-[^19]: I usually try not to have prereqs for gaining understanding from my posts, but for this one, I feel like you should at least be comfortable with linear algebra (and in particular abstract vector spaces and determinants), or you'll likely be lost at some key points. Once we start talking about embeddings, a little big of abstract algebra will help too (in particular, knowing about group homomorphisms)
+[^19]: I usually try not to have prereqs for gaining understanding from my posts, but for this one, I feel like you should at least be comfortable with linear algebra (and in particular abstract vector spaces and determinants), or you'll likely be lost at some key points. Once we start talking about embeddings, a little bit of abstract algebra will help too (in particular, knowing about group homomorphisms)
 [^20]: Why not just call this dimension? Because lattices are free Z-modules, and free modules have rank instead of dimesnion. Modules are something I want to talk about on this blog at some point, but for now, just know that although lattices have geometric interpretations, modules (and even free modules) in general do not (unlike typical vector spaces), so we use the less geometric-sounding rank instead of dimension.
 [^21]: Just finished day one of writing this, and it looks like this will end up being my longest post yet by a sizeable amount. I could be wrong about the sizeable amount part (hard to tell), but either way, this post is gonna dethrone [the king](../surreal-numbers)... Having just now finished writing this thing, something tells me it will hold the title of longest post for quite some time. In case anyone's curious, the previous record holder had a little under 26,650 characters. This one has around 45,000.
 [^22]: In general, if L/K is an extension of number fields, then N_{L/K}(O_L) is a subset of O_K. In other words, the norm always maps algebraic integers into algebraic integers.
@@ -479,7 +479,7 @@ I'd like to say that's everything, but I've left a few loose ends. These include
 [^28]: as far as I know, there isn't some deep reason why this expression in particular works. It's just a happy coincidence. I could be wrong though; coincidences are rare in math.
 [^29]: this basically just means if you multiply two units you get another unit, but the same doesn't necessarily hold for addition
 [^30]: and since log(1)=0
-[^31]: plus possibly an argument involving splitting O_K^x into "positive" and "negative" parts and mentioning phrases like [semidirect product](https://www.wikiwand.com/en/Semidirect_product#/Relation_to_direct_products) (the argument I have in my head does this, but I'm pretty sure it's overkill)
+[^31]: plus possibly an argument involving splitting O_K^x into "positive" and "negative" parts and mentioning phrases like [semidirect product](https://www.wikiwand.com/en/Semidirect_product#/Relation_to_direct_products) (the argument I have in my head does this, but I'm pretty sure it's overkill)... A different argument is to notice that O_K^x is an extension of {+/-1} and l(O_K^x). Hence, we get this conslusion by noticing letting N: O_K^x -> {+/-1} be the norm, the map a \|-> N(a)*sign(a) is a [splitting map](http://www.math.uconn.edu/~kconrad/blurbs/linmultialg/splittingmodules.pdf).
 [^32]: for our purposes, the plus in a circle is just another way of writing the direct product. It has the advantage of looking like addition which is good because the dimension of A x B is dim A + dim B instead of dim A * dim B. This notation helps hint at the idea that things should be thought of additively, so you might want to represent the pair (a,b) in A x B as a single value a+b instead (be warned. This is not always a legitimate alternate representation of pairs)
 [^33]: no way I'd ever read this much math without losing interest and moving on to something else
 [^34]: if you fix an embedding into R, then the unique fundamental unit > 1 is often called **the** fundamental unit
