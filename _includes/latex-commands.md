@@ -35,12 +35,38 @@ $$
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\smooth}[0]{C^\infty}
 \newcommand{\del}[0]{\partial}
+\newcommand{\grad}{\nabla}
+\newcommand{\freemod}[0]{R^{\oplus S}}
+\newcommand{\Ith}[2]{#1^{\left(#2\right)}}
+\newcommand{\ith}[1]{\Ith{#1}i}
+\newcommand{\Itht}[2]{(\Ith{#1}{#2})^T}
+\newcommand{\Ithi}[2]{(\Ith{#1}{#2})^{-1}}
+\newcommand{\itht}[1]{(\ith{#1})^T}
+\newcommand{\vft}[2]{#1\pderivd{x_1}+#2\pderivd{x_2}} % vector (field) in \R^2
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mbfx}{\mathbf x}
+\newcommand{\mbfy}{\mathbf y}
+\newcommand{\mbfU}{\mathbf U}
+\newcommand{\hvec}[2]{\begin{pmatrix}#1&#2\end{pmatrix}}
+\newcommand{\hVec}[3]{\begin{pmatrix}#1&#2&#3\end{pmatrix}}
+\newcommand{\vvec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
+\newcommand{\vVec}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
+\newcommand{\mat}[4]{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
+\newcommand{\Mat}[9]{\begin{pmatrix}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{pmatrix}}
+\newcommand{\prb}[1]{P\left\{#1\right\}}
+\newcommand{\tbf}{\textbf}
+\newcommand{\Norm}[1]{\left\|#1\right\|}
+\newcommand{\Zmod}[1]{\frac{\Z}{#1\Z}}
+\newcommand{\Layer}[2]{#1^{\left[#2\right]}}
+\newcommand{\KL}[2]{\mathrm{KL}\left(#1\left\|\,#2\right.\right)}
+\newcommand{\Wedge}{\bigwedge\nolimits}
+\newcommand{\Item}[1]{\item[\tbf{(#1)}]}
 
 \DeclareMathOperator{\image}{image}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\Tor}{Tor}
-\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\ann}{Ann}
 \DeclareMathOperator{\spn}{span}
 \DeclareMathOperator{\ztensor}{\otimes_{\mathbb Z}}
 \DeclareMathOperator{\zHom}{Hom_{\mathbb Z}}
@@ -71,34 +97,20 @@ $$
 \DeclareMathOperator{\Fr}{Fr}
 \DeclareMathOperator{\eps}{\varepsilon}
 \DeclareMathOperator{\vphi}{\varphi}
-\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\N}{\mathbb N}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\E}{\mathbb E}
+\DeclareMathOperator{\Ext}{Ext}
+\renewcommand{\hom}{\mathrm H}
+\DeclareMathOperator{\ZG}{\Z G}
+\renewcommand{\d}{\,\mathrm d} % unsure if I prefer this or just regular $d$
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\sat}{sat}
+\DeclareMathOperator{\Torsion}{Torsion}
 
-\theoremstyle{plain}
-\newtheorem{thm}{Theorem}
-\newtheorem{lemma}[thm]{Lemma}
-\newtheorem{cor}[thm]{Corollary}
-\newtheorem{conject}[thm]{Conjecture}
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem{heur}[thm]{Heuristic}
-\newtheorem{qn}[thm]{Question}
-\newtheorem{claim}[thm]{Claim}
-\newtheorem{prob}{Problem}
-
-\theoremstyle{definition}
-\newtheorem{defn}[thm]{Definition}
-\newtheorem{cond}[thm]{Conditions}
-\newtheorem{notn}{Notation}
-\newtheorem{anotn}[notn]{Abuse of Notation}
-\newtheorem{san}[thm]{Sanity Check}
-
-\theoremstyle{remark}
-\newtheorem{rem}[thm]{Remark}
-\newtheorem*{ex}{Example}
-\newtheorem*{nonex}{Non-example}
-\newtheorem*{exc}{Exercise}
-
-\renewcommand{\qedsymbol}{$\blacksquare$}
-
+\newcommand{\xsspacing}[0]{\hspace*{10pt}}
+\newcommand{\sspacing}[0]{\hspace*{25pt}}
 \newcommand{\mspacing}[0]{\hspace*{50pt}}
 \newcommand{\Text}[2]{\text{#2 #1 #2}}
 
