@@ -4,7 +4,7 @@ title: "Difference of squares"
 modified:
 categories: blog
 excerpt:
-tags: [math, number theory, galois theory, thoughts]
+tags: [math, number theory, galois theory, thoughts, problem]
 date: 2017-12-17 21:55:00
 ---
 
