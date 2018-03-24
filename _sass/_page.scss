@@ -356,3 +356,69 @@ span + .entry-title {
 	height: 0;
 	display: none;
 }
+
+// Based off of http://drz.ac/2013/01/17/latex-theorem-like-environments-for-the-web/
+
+.theorem {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.theorem:before { 
+    content: "Theorem.";
+    font-weight: bold;
+    font-style: normal;
+}
+.theorem[data-name]:before { 
+    content: "Theorem (" attr(data-name) ").";
+    font-weight: bold;
+    font-style: normal;
+}
+.theorem[name]:before { 
+    content: "Theorem (" attr(name) ").";
+    font-weight: bold;
+    font-style: normal;
+}
+.lemma {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.lemma:before {
+    content: "Lemma.";
+    font-weight: bold;
+    font-style: normal;
+}
+.lemma[data-name]:before {
+    content: "Lemma (" attr(data-name) ").";
+    font-weight: bold;
+    font-style: normal;
+}
+.lemma[name]:before {
+    content: "Lemma (" attr(name) ").";
+    font-weight: bold;
+    font-style: normal;
+}
+.proof4 {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.proof4:before {
+    content: "Proof.";
+    font-style: italic;
+}
+.proof4:after {
+    content: "\25FC";
+    float:right;
+}
+.definition {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.definition:before {
+    content: "Definition.";
+    font-weight: bold;
+    font-style: normal;
+}
