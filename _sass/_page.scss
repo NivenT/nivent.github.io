@@ -365,17 +365,17 @@ span + .entry-title {
     font-style: italic;
 }
 .theorem:before { 
-    content: "Theorem.";
+    content: "Theorem. ";
     font-weight: bold;
     font-style: normal;
 }
 .theorem[data-name]:before { 
-    content: "Theorem (" attr(data-name) ").";
+    content: "Theorem (" attr(data-name) "). ";
     font-weight: bold;
     font-style: normal;
 }
 .theorem[name]:before { 
-    content: "Theorem (" attr(name) ").";
+    content: "Theorem (" attr(name) "). ";
     font-weight: bold;
     font-style: normal;
 }
@@ -385,17 +385,17 @@ span + .entry-title {
     font-style: italic;
 }
 .lemma:before {
-    content: "Lemma.";
+    content: "Lemma. ";
     font-weight: bold;
     font-style: normal;
 }
 .lemma[data-name]:before {
-    content: "Lemma (" attr(data-name) ").";
+    content: "Lemma (" attr(data-name) "). ";
     font-weight: bold;
     font-style: normal;
 }
 .lemma[name]:before {
-    content: "Lemma (" attr(name) ").";
+    content: "Lemma (" attr(name) "). ";
     font-weight: bold;
     font-style: normal;
 }
@@ -405,7 +405,7 @@ span + .entry-title {
     font-style: normal;
 }
 .proof4:before {
-    content: "Proof.";
+    content: "Proof. ";
     font-style: italic;
 }
 .proof4:after {
@@ -418,7 +418,38 @@ span + .entry-title {
     font-style: normal;
 }
 .definition:before {
-    content: "Definition.";
+    content: "Definition. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.exercise {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+    //padding: (0px + $doc-line-height)/2;
+}
+.exercise:before {
+    content: "Exercise. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.remark {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.remark:before {
+    content: "Remark. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.example {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.example:before {
+    content: "Example. ";
     font-weight: bold;
     font-style: normal;
 }

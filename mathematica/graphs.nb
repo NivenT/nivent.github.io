@@ -1,0 +1,128 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4514,        118]
+NotebookOptionsPosition[      4165,        101]
+NotebookOutlinePosition[      4505,        116]
+CellTagsIndexPosition[      4462,        113]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Graph", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[Rule]", "2"}], ",", 
+     RowBox[{"2", "\[Rule]", "3"}], ",", 
+     RowBox[{"3", "\[Rule]", "1"}], ",", 
+     RowBox[{"1", "\[Rule]", "1"}], ",", 
+     RowBox[{"2", "\[Rule]", "4"}], ",", 
+     RowBox[{"4", "\[Rule]", "3"}], ",", 
+     RowBox[{"4", "\[Rule]", "4"}]}], "}"}], "]"}], "//", 
+  "UndirectedGraph"}]], "Input",
+ CellChangeTimes->{{3.730942960553359*^9, 3.7309430379937143`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4}, {
+      Null, SparseArray[
+       Automatic, {4, 4}, 0, {
+        1, {{0, 3, 5, 6, 7}, {{1}, {3}, {2}, {3}, {4}, {4}, {4}}}, {1, 1, 1, 
+         1, 1, 1, 1}}]}]]}, 
+    TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJwBMQPO/CFib1JlAgAAADIAAAACAAAAAAAAAAAAAACrm1GytMrbP4Q387M4
+5e0/E0lpHvbL6z+zLX5t/uPtPwAAAAAAAAAAcjCc4vLk/T+Se3l+kMnbPwBg
+LjDVIRC/R3AZY1+K2z/g8+vd2OeGv81yoJjLENc/QKYlpsw6pb+SLfImQfjS
+P0Z8AdMdpra/MPeW0rUpzz/wqpzoAgDDv8kwmE1YWMo/aMWSlPK3y785qE3P
+V9/HP4wKEYzrY9K//f/4eXrxxz8uslDBzbrWvxoVjuhLjco/EkUu54SH2r8f
+rH4NO33PP4ouMiQLfN2/J7MPEvMt0z+3Y5XpsVvfv3avJT0eTtc/CP6i////
+379EEU6LZ8rbP5eSrYrHW9+/+FzF+Fkj4D/kNz+qNHzdv95yqhJ0M+I/HHuJ
+/b6H2r/oAzz4JevjPwd9NL8Tu9a/5W2k6ion5T+ia0XUN2TSv8jMnLwpzuU/
+bPDXfIu4y7/Di+xTvdLlP3BV7eSPAMO/vAX+toc05T/mYLJVCae2vxy1j5Y5
+AOQ/wLKm9yA8pb9Nbrm4jU7iP6CQ4SOy6oa/nnEXLE1C4D8AWCmmODUQv584
+qvwJC9w/L3rCODTl/T8VuaXA5QncP0KV6cXREv4/1fIfMbhB4D93gRGk5Y7+
+PxhKi/PwTeI/2ktXAHxP/z9C7d65kP/jP1CTNx+RIgBA3CvKbc8z5T/9eYgW
+Eq4AQKhj7IXz0eU/1kn/TxA/AUA0dUK5Tc3lP1x8wH3qyQFABMNGdz0m5T9y
+moFqfUMCQEFvQkAp6uM/JOuRrAiiAkDuMAB7azLiP5zReuP23QJAYAIn2kki
+4D+6w3NwefICQP/kwiZCyNs/PJ8ULOvdAkCmkLgB/kvXP9aHWy7yoQJArCw1
+5uEr0z/g0FrzXUMCQAtcUjdIec8/DrPGk8TJAUCyuc8mlonKP84duv3mPgFA
+nZZVeQruxz+YU3es6K0AQOFXGqQw3Mc/R4DC72oiAEDRk5Y0d1XKP+8C2jY8
+T/8/9LqvaRInzz8Cr9CNt47+PyqqJaAH99I/0+Y/FbkS/j9E65mkoQ/XP/cl
+regy5f0/tekuJzuJ2z+/wJZ1
+       "], {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+         {Arrowheads[0.], 
+          ArrowBox[BezierCurveBox[{1, 8, 11, 13, 19, 21, 24, 1},
+           SplineDegree->7], 0.021534611589415525`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 3}, 0.021534611589415525`]}, 
+         {Arrowheads[0.], ArrowBox[{1, 2}, 0.021534611589415525`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 3}, 0.021534611589415525`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 4}, 0.021534611589415525`]}, 
+         {Arrowheads[0.], ArrowBox[{3, 4}, 0.021534611589415525`]}, 
+         {Arrowheads[0.], 
+          ArrowBox[BezierCurveBox[{4, 31, 34, 36, 42, 44, 47, 4},
+           SplineDegree->7], 0.021534611589415525`]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.021534611589415525], DiskBox[2, 0.021534611589415525], 
+         DiskBox[3, 0.021534611589415525], 
+         DiskBox[4, 0.021534611589415525]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{{3.730942970104968*^9, 3.730943038400359*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Set","write",
+   "\"Tag \\!\\(\\*RowBox[{\\\"Inherited\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"Inherited\\\", \\\"[\\\", \\\"\\\\\\\"State\\\\\\\"\\\", \
+\\\"]\\\"}]\\) is Protected.\"",2,7,3,22434192912984726211,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.730943166733096*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{556, Automatic}, {55, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 490, 13, 34, "Input"],
+Cell[1073, 37, 2741, 52, 146, "Output"],
+Cell[3817, 91, 332, 7, 23, "Message"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

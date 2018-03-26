@@ -1,7 +1,5 @@
 $$
 
-\newcommand{\downmapsto}{\rotatebox[origin=c]{-90}{$\scriptstyle\mapsto$}\mkern2mu}
-
 \newcommand{\qadj}[1]{\mathbb Q\left(#1\right)}
 \newcommand{\qadjs}[1]{\qadj{\sqrt {#1}}}
 \newcommand{\qadjns}[1]{\qadjs{-#1}}
@@ -47,11 +45,11 @@ $$
 \newcommand{\mbfx}{\mathbf x}
 \newcommand{\mbfy}{\mathbf y}
 \newcommand{\mbfU}{\mathbf U}
-\newcommand{\hvec}[2]{\begin{pmatrix}#1&#2\end{pmatrix}}
-\newcommand{\hVec}[3]{\begin{pmatrix}#1&#2&#3\end{pmatrix}}
-\newcommand{\vvec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
-\newcommand{\vVec}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
-\newcommand{\mat}[4]{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}
+\newcommand{\hvec}[2]{\begin{pmatrix}#1 & #2 \end{pmatrix}}
+\newcommand{\hVec}[3]{\begin{pmatrix}#1 & #2 & #3 \end{pmatrix}}
+\newcommand{\vvec}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\vVec}[3]{\begin{pmatrix}#1 \\ #2 \\ #3 \end{pmatrix}}
+\newcommand{\mat}[4]{\begin{pmatrix}#1 & #2\\ #3 & #4\end{pmatrix}}
 \newcommand{\Mat}[9]{\begin{pmatrix}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{pmatrix}}
 \newcommand{\prb}[1]{P\left\{#1\right\}}
 \newcommand{\tbf}{\textbf}
@@ -61,6 +59,45 @@ $$
 \newcommand{\KL}[2]{\mathrm{KL}\left(#1\left\|\,#2\right.\right)}
 \newcommand{\Wedge}{\bigwedge\nolimits}
 \newcommand{\Item}[1]{\item[\tbf{(#1)}]}
+\newcommand{\Span}[1]{\spn\{#1\}}
+\newcommand{\dual}[1]{#1^\vee}
+\newcommand{\jota}{\reflectbox{$\iota$}}
+\newcommand{\atoi}{\jota}
+\newcommand{\qadjzeta}[1]{\Q\left(\zeta_{#1}\right)}
+\newcommand{\zadjzeta}[1]{\Z\left[\zeta_{#1}\right]}
+\newcommand{\omittedproof}{\begin{proof}Omitted\end{proof}}
+\newcommand{\msO}{\mathscr O}
+\newcommand{\sm}{\setminus}
+\newcommand{\mscr}{\mathscr}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\mfc}{\mf c}
+\newcommand{\msI}{\mathscr I}
+\newcommand{\msJ}{\mathscr J}
+\newcommand{\ms}{\mathscr}
+\newcommand{\mfq}{\mf q}
+\newcommand{\sep}[1]{#1_{\mathrm{sep}}}
+\newcommand{\units}[1]{#1^{\times}}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\mfP}{\mf P}
+\newcommand{\bits}{\{0,1\}}
+\newcommand{\concat}{\,\|\,}
+\newcommand{\mc}{\mathcal}
+\newcommand{\parens}[1]{\left(#1\right)}
+\newcommand{\brackets}[1]{\left\{#1\right\}}
+\newcommand{\sqbracks}[1]{\left[#1\right]}
+\newcommand{\nabs}[0]{|\,\cdot\,|} % norm + absolute value
+\renewcommand{\l}{\ell}
+\newcommand{\sinv}{\inv S}
+\newcommand{\gnabs}[0]{|g^{-1}(\,\cdot\,)|}
+\renewcommand{\tilde}{\widetilde}
+\newcommand{\invlim}{\varprojlim}
+\newcommand{\mfa}{\mf a}
+\newcommand{\mfb}{\mf b}
+\newcommand{\codiff}[1]{#1^\*}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\actson}{\curvearrowright}
 
 \DeclareMathOperator{\image}{image}
 \DeclareMathOperator{\Hom}{Hom}
@@ -73,7 +110,7 @@ $$
 \DeclareMathOperator{\qz}{\mathbb Q/\mathbb Z}
 \DeclareMathOperator{\Sym}{Sym}
 \DeclareMathOperator{\F}{\mathbb F}
-\DeclareMathOperator{\trace}{Trace}
+\DeclareMathOperator{\trace}{tr}
 \DeclareMathOperator{\sign}{sign}
 \DeclareMathOperator{\Q}{\mathbb Q}
 \DeclareMathOperator{\Z}{\mathbb Z}
@@ -108,7 +145,37 @@ $$
 \DeclareMathOperator{\Cov}{Cov}
 \DeclareMathOperator{\sat}{sat}
 \DeclareMathOperator{\Torsion}{Torsion}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\lead}{lead}
+\DeclareMathOperator{\qtensor}{\otimes_{\Q}}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\trdeg}{trdeg}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\atensor}{\otimes_A}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Adv}{Adv}
+\DeclareMathOperator{\parity}{parity}
+\DeclareMathOperator{\reverse}{reverse}
+\DeclareMathOperator{\EXP}{EXP}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\A}{\mathbb A}
+\DeclareMathOperator{\spec}{spec}
+%\renewcommand{\phi}{\varphi}
+\renewcommand{\tau}{\uptau}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\vol}{vol}
+\renewcommand{\split}{\textrm{split}}
+\DeclareMathOperator{\Qbar}{\bar\Q}
+\renewcommand{\P}{\mathbb P}
+\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\DeclareMathOperator{\Stab}{Stab}
 
+\newcommand{\xxsspacing}[0]{\hspace*{3pt}}
 \newcommand{\xsspacing}[0]{\hspace*{10pt}}
 \newcommand{\sspacing}[0]{\hspace*{25pt}}
 \newcommand{\mspacing}[0]{\hspace*{50pt}}

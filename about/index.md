@@ -7,8 +7,10 @@ image:
   feature: 
 ---
 
-I am a student at Stanford University hoping to become a computer scientist/mathematician. This website is a place for me to talk about interesting topics I come across and motivation for me to learn web development.
+# Last updated: 3/23/2018
 
-Currently, I am developing this site under the assumption that my audience is essentially nonexistent, so the posts are all hurried and likely to contain many errors. Unless I start to get the impression that many people actually read this blog, I will not be fixing those mistakes.
+I am a student at Stanford University hoping to become a computer scientist or mathematician. This website is a place for me to talk about interesting topics I come across and motivation for me to learn some web development.
 
-If someone does stumble upon this blog, and decides it is something worth coming back to, I'd love to hear some [feedback](mailto:nachenjang@gmail.com). Specifically, I am not sure how much mathematical background to assume readers have when writing posts, and so I feel like I jump back and forth between what kind of audience I am writing for. Because of this, I am not sure if my posts are actually even followable by anyone who might read them.
+Currently, I am developing this site under the assumption that my audience is essentially nonexistent, so the posts are all hurried and likely to contain many errors. Unless I start to get the impression that many people actually read this thing, I will not be fixing those mistakes.
+
+If someone does stumble upon this blog, I'd love to hear some [feedback](mailto:nachenjang@gmail.com). In particular, I am not sure how much mathematical background to assume readers have when writing posts, and so I feel like I jump back and forth between what kind of audience I am writing for. Because of this, I am not sure if my posts are actually even followable by anyone who might read them.

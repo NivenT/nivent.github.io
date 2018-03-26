@@ -71,7 +71,7 @@ Pf: Exercise to reader
 For our purposes, we only need the corollary and not the full CRT. We want to confirm that $x^2-82y^2=2$ has solutions (mod $m$) for all $m$. Well, given any $m$, we factor it into prime powers to see that $\zmod m\simeq\zmod{p_1^{r_1}}\oplus\zmod{p_2^{r_2}}\oplus\dots\oplus\zmod{p_n^{r_n}}$. In the previous section, we found solutions in each of these factors so let $(x_j,y_j)$ satisfy $x_j^2-82y_j^2\equiv2\pmod{p_j^{r_j}}$. Then, CRT guarantees the existence of some $$x^*,y^*\in\zmod m$$ such that $$x^*\equiv x_j\pmod{p_j^{r_j}}$$ and $$y^*\equiv y_j\pmod{p_j^{r_j}}$$ for all $j$. Thus, $$(x^*)^2-82(y^*)^2\equiv2\pmod{p_j^{r_j}}$$ for all $j$. Since $$(x^*,y^*)$$ satisfy $q(x,y)$ in each factor of $\zmod m$ (i.e. in each $\zmod{p_j^{r_j}}$), they must satisfy it in $\zmod m$ itself, so $q(x,y)$ does indeed have solutions modulo any integer.
 
 # No Solutions in $\Z$
-To finish things off, we'll show that there are no integer solutions to $x^2-82y^2=2$. This section will use some of the ideas previously touched upon in my [pell's post](../solving-pell). Our first observation is that the right setting to analyze this equation is in $\zadjs{82}$, which, using terminology from that pell's post, is the ring of integers for $K=\qadjs{82}$. We see that solutions to this equation correspond exactly to elements of $\zadj{82}$ with norm $2$. As it turns out, understanding which numbers have norm $2$ is related to understanding how $2$ factors in $\ints K=\zadj{82}$. More specifically, we wish to factor $(2)$ into prime ideals:
+To finish things off, we'll show that there are no integer solutions to $x^2-82y^2=2$. This section will use some of the ideas previously touched upon in my [pell's post](../solving-pell). Our first observation is that the right setting to analyze this equation is in $\zadjs{82}$, which, using terminology from that pell's post, is the ring of integers for $K=\qadjs{82}$. We see that solutions to this equation correspond exactly to elements of $\zadjs{82}$ with norm $2$. As it turns out, understanding which numbers have norm $2$ is related to understanding how $2$ factors in $\ints K=\zadjs{82}$. More specifically, we wish to factor $(2)$ into prime ideals:
 
 $$(2)=(2,\sqrt{82})^2$$
 
@@ -79,19 +79,19 @@ This equality is easily verified as $(2,\sqrt{82})^2=(4,2\sqrt{82},82)=(2)(2,\sq
 
 $$4\knorm(u)=\knorm(2)\knorm(u)=\knorm(2u)=\knorm(z^2)=\knorm(z)^2=4\implies\knorm(u)=1$$
 
-Now, note that $\zadj{82}$ has fundamental unit $$\eps=9+\sqrt{82}$$ and that $$\knorm(\eps)=-1$$. Since every unit is $\pm$ a power of $\eps$, this means we can write $u=\pm\eps^{2k}$ for some $k$. Thus, we can rewrite $z^2=2u$ as $(\eps^{-k}z)^2=\pm2$. To finish things off, we will show that neither of $\pm2$ is a square in $\ints K$, giving a contradiction. This is easily seen by observing that given any $a,b\in\Z$, we have
+Now, note that $\zadjs{82}$ has fundamental unit $$\eps=9+\sqrt{82}$$ and that $$\knorm(\eps)=-1$$. Since every unit is $\pm$ a power of $\eps$, this means we can write $u=\pm\eps^{2k}$ for some $k$. Thus, we can rewrite $z^2=2u$ as $(\eps^{-k}z)^2=\pm2$. To finish things off, we will show that neither of $\pm2$ is a square in $\ints K$, giving a contradiction. This is easily seen by observing that given any $a,b\in\Z$, we have
 
 $$(a+b\sqrt{82})^2=(a^2+82b^2)+2ab\sqrt{82}$$
 
-This can't be $-2$ because the non-$\sqrt{82}$ is always positive, and it can't be $+2$ since that would require $b=0$ and $2$ is not a square in the normal integers. Thus, $\pm2$ are no squres in $\ints K$ so there's no element of norm $2$ which means that $x^2-82y^2=2$ has no integer solutions.
+This can't be $-2$ because the non-$\sqrt{82}$ part is always positive, and it can't be $+2$ since that would require $b=0$ and $2$ is not a square in the normal integers. Thus, $\pm2$ are not squares in $\ints K$ so there's no element of norm $2$ which means that $x^2-82y^2=2$ has no integer solutions.
 
 # Further Work
-So we've shown that $x^2-82y^2=2$ has infinitely many rational solutions, and solutions in $\zmod m$ for all $m$, but no integer solutions. This means congruential obstructions are not the only things that can prevent a polynomial from being solved in the integers. We might still be interested in asking questions about better understanding congruential obstructions though. For example, in our analysis of this equation, the fact that we has solutions in $\zmod m$ for all $m$ was very related to the fact that we had (infinitely) many rational solutions, which begs the question
+So we've shown that $x^2-82y^2=2$ has infinitely many rational solutions, and solutions in $\zmod m$ for all $m$, but no integer solutions. This means congruential obstructions are not the only things that can prevent a polynomial from being solved in the integers. We might still be interested in asking questions about better understanding congruential obstructions though. For example, in our analysis of this equation, the fact that we have solutions in $\zmod m$ for all $m$ was very related to the fact that we had (infinitely) many rational solutions, which begs the question
 
 >Conjecture<br>
 Let $p$ be a polynomial with integer coefficients. Then, $p$ has solutions in $\zmod m$ for all $m\iff p$ has infinitely many rational solutions.
 
-It actually turns out that this conjecture if false, and one counterexample is the polynomial
+It actually turns out that this conjecture is false, and one counterexample is the polynomial
 
 $$p(x) = (x^2-2)(x^2-17)(x^2-34)$$
 
