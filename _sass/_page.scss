@@ -357,7 +357,12 @@ span + .entry-title {
 	display: none;
 }
 
-// Based off of http://drz.ac/2013/01/17/latex-theorem-like-environments-for-the-web/
+/*
+   AMSTheorem-Style
+
+   *Based off of http://drz.ac/2013/01/17/latex-theorem-like-environments-for-the-web/
+   ========================================================================== */
+
 
 .theorem {
     display: block;
@@ -396,6 +401,26 @@ span + .entry-title {
 }
 .lemma[name]:before {
     content: "Lemma (" attr(name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
+.cor {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.cor:before {
+    content: "Corollary. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.cor[data-name]:before {
+    content: "Corollary (" attr(data-name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
+.cor[name]:before {
+    content: "Corollary (" attr(name) "). ";
     font-weight: bold;
     font-style: normal;
 }
@@ -450,6 +475,16 @@ span + .entry-title {
 }
 .example:before {
     content: "Example. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.construction {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.construction:before {
+    content: "Construction. ";
     font-weight: bold;
     font-style: normal;
 }
