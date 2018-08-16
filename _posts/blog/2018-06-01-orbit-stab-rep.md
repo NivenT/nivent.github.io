@@ -108,7 +108,7 @@ Finally, we need the notion of induced representations. This let's you take a re
 </div> 
 
 # Orbit-Stabilizer v2
-This is where we'll prove the main result, which roughly says that permutation representations are induced representations.
+This is where we'll prove the main result, which roughly says that (almost-)permutation representations are induced representations.
 <div class="theorem" name="Orbit-Stabilizer Variation">
     Let $V$ be a $G$-rep with a decomposition $V\simeq\bigoplus_{i=0}^nV_i$ as a vector space s.t. for all $i,j\in\{0,\dots,n\}$, there exists a $g\in G$ s.t. $g\cdot V_i=V_j$, and let $H=\Stab(V_0)$. Then,
     $$V\simeq\Ind_H^GV_0$$
