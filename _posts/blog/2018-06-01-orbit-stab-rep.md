@@ -4,7 +4,7 @@ title: "Orbit-Stabilizer for Finite Group Representations"
 modified:
 categories: blog
 excerpt:
-tags: [math, representation theory, group actions, group theory]
+tags: [math, representation theory, group actions, group theory, algebra]
 date: 2018-06-06 00:19:00
 ---
 

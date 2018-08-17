@@ -424,6 +424,21 @@ span + .entry-title {
     font-weight: bold;
     font-style: normal;
 }
+.conj:before {
+    content: "Conjecture. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.conj[data-name]:before {
+    content: "Conjecture (" attr(data-name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
+.conj[name]:before {
+    content: "Conjecture (" attr(name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
 .proof4 {
     display: block;
     margin: 12px 0;
@@ -485,6 +500,16 @@ span + .entry-title {
 }
 .construction:before {
     content: "Construction. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.question {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.question:before {
+    content: "Question. ";
     font-weight: bold;
     font-style: normal;
 }

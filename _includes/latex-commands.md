@@ -165,7 +165,6 @@ $$
 \DeclareMathOperator{\A}{\mathbb A}
 \DeclareMathOperator{\spec}{spec}
 %\renewcommand{\phi}{\varphi}
-\renewcommand{\tau}{\uptau}
 \DeclareMathOperator{\cl}{cl}
 \DeclareMathOperator{\vol}{vol}
 \renewcommand{\split}{\textrm{split}}
