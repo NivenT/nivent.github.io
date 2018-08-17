@@ -135,7 +135,7 @@ First, a crash course on group rings.
 <div class="definition">
     Let $R$ be a ring and $G$ be a group. The <b>group ring</b> $R[G]$ is the ring of formal sums
     $$R[G]=\brackets{\left.\sum_{g\in G}r_g\cdot e_g\right|r_g\in R}$$
-    where $e_g\cdot e_h=e_{gh}$ for $g,h\in G$, and more generally:
+    where $r_g=0$ for all but finitely many $g\in G$. Multiplication is given by $e_g\cdot e_h=e_{gh}$ for $g,h\in G$, and more generally:
     $$\parens{\sum_{g\in G}r_g\cdot e_g}\parens{\sum_{h\in G}s_h\cdot e_h}=\sum_{g\in G}\sum_{h\in H}r_gs_h\cdot e_{gh}$$
     The additive identity is the sum 0, and the multiplicative identity is the identity element of the group.
 </div>
@@ -167,6 +167,8 @@ At this point, the only remaining question is why would I care about that. Well,
 <div class="conj" name="Kaplansky's Conjecture">
     Let $K$ be a field, and let $G$ be a torsion-free group. Then, the group ring $K[G]$ does not contain nontrivial zero divisors.
 </div>
+
+I should maybe mention that this is only one of Kaplansky's conjectures, so the name isn't well-defined.
 
 [^1]: Depending on how I'm feeling when I get to that part, I might also say why I care about this fact and/or "plug a hole" in this blog by proving that R[x] is a UFD when R is a UFD since I didn't [last time](../ring-intro) I had a chance to.
 [^2]: "functor"
