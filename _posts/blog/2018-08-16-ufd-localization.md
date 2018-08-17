@@ -131,7 +131,7 @@ If that's not a clean proof, then I don't know what is [^6]. In addition, we can
 Based on the last two proofs, we see that the following holds in general. [^9]
 
 <div class="theorem">
-    Let $R$ be a UFD and let $A$ be an integral domain containing $R$. If all primes $\pi\in R$ of $R$ remain prime when considered as elements of $A$, then $A$ is a UFD.
+    Let $R$ be a UFD and let $A$ be an integral domain with a ring map $R\to A$ preserving prime elements (i.e. $\pi\mapsto\tau$ and $\pi\in R$ primes implies that $\tau\in A$ is prime). Then, $A$ is a UFD.
 </div>
 
 # An Interesting Conjecture
