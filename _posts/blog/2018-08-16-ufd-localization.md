@@ -58,10 +58,19 @@ Note that when $R$ is a domain and $\mfp=(0)$, we get $R_{(0)}=\Frac(R)$. In gen
     which is impossible since $st\in S$, so $a/s$ must not be a unit. Thus, $\mfp R_\mfp$ is the set of all non units, and hence the unique maximal ideal.
 </div>
 
-In addition to this, localization also respects many properties of the original ring. For example, we have the following theorems. I will leave the first as an exercise and prove the second.
+In addition to this, localization also respects many properties of the original ring. For example, we have the following theorems.
 
 <div class="theorem">
     If $R$ is a domain, then so is $\sinv R$.
+</div>
+<div class="proof4">
+    Exercise.
+</div>
+<div class="theorem">
+    Let $\mfp\subset R$ be a prime ideal in a domain $R$. Then $\sinv\mfp$ is prime as well.
+</div>
+<div class="proof4">
+    If $\mfp\cap S\neq\emptyset$, then $\sinv\mfp=\sinv R$ as it contains units, and so is prime. Hence, suppose that $\mfp\cap S=\emptyset$. Let $x=a/s,y=b/t\in\sinv A$ ($s,t\in S$ and $a,b\in R$) with $xy\in\sinv\mfp$. Then, $\frac{ab}{st}=\frac c{s'}$ for some $c\in\mfp$ and $s'\in S$ which means that $abs'=cst\in\mfp$. Since $s'\not\in\mfp$, either $a\in\mfp$ or $b\in\mfp$ so $x$ or $y$ lies in $\mfp$, making $\mfp$ primes.
 </div>
 <div class="theorem">
     Let $\mfq\subset\sinv R$ be a prime ideal and let $f:R\to\sinv R$ denote the map $f(r)=r/1$. Then, $\mfp:=\inv f(\mfq)$ is a prime ideal of $R$. When $R$ is a domain, we have $\mfp=\mfq\cap R$.
@@ -71,8 +80,11 @@ In addition to this, localization also respects many properties of the original 
     $$ab\in\inv g(\mfq)\iff g(a)g(b)\in\mfq\iff g(a)\in\mfq\iff a\in\inv g(\mfq)$$
     where I should really say $g(a)$ or $g(b)$ is in $\mfq$ above, but meh.
 </div>
-<div class="exercise">
-    This won't come up here, but prive that $\sinv R$ is a PID when $R$ is a PID.
+<div class="theorem">
+    $\sinv R$ is a PID when $R$ is a PID.
+</div>
+<div class="proof4">
+    Exercise.
 </div>
 
 I think this should be everything we need for this post. With that done, when is a ring a UFD?
@@ -89,7 +101,7 @@ I always hate trying to prove rings are UFDs because my go-to tactics are to pro
     where $u,U$ are units and $\pi_i,\Pi_i$ are irreducibles ($\iff$ primes). We need to show that (possibly after rearrangement) $\pi_i,\Pi_i$ are associates and $n=N$. Well, $\pi_1$ is prime so $\pi_1\mid\Pi_j$ for some $j$. Rearrange to assume that $j=1$, and divide by $\pi_1$ to get that $u\pi_2\dots\pi_n=U'\Pi_2\dots\Pi_N$ for some unite $U'$. The claim then follows by induction, so $R$ is a UFD.
 </div>
 <div class="theorem" name="Kaplansky's Criterion">
-    Let $R$ be an integral domain. Then, $R$ is a UFD iff every (nonzero) prime ideal of $R$ contains a (nonzero) principal prime ideal (i.e. contains a prime element).
+    Let $R$ be an integral domain. Then, $R$ is a UFD iff every nonzero prime ideal of $R$ contains a nonzero principal prime ideal (i.e. contains a prime element).
 </div>
 <div class="proof4">
     $(\implies)$ This direction is easy. If $R$ is a UFD and $\mfp$ is a prime ideal, then consider any $x\in\mfp$. We can write $x=\pi_1\dots\pi_n$ as a product of prime elements, and primality of $\mfp$ implies that $(\pi_i)\subset\mfp$ for some $i$, giving us the result.
@@ -113,26 +125,10 @@ So UFDs are integral domains where every element is a product of primes or are i
     Let $R$ be a UFD. Then, $\sinv R$ is a UFD.
 </div>
 <div class="proof4">
-    Let $\mfq\subset\sinv R$ be a prime ideal, so $\mfp=\mfq\cap R$ is prime in $R$. This means that it contains a principal prime $(\pi)\subset\mfp$, so $\pi\in\mfq$. Thus, it suffices to show that $\pi$ is a prime of $\sinv R$. Pick $a/s,b/t\in\sinv R$ and suppose that $\pi\mid\frac{ab}{st}$. Then, $\pi\mid ab$ (multiply by $st$) so $\pi\mid a$ or $\pi\mid b$ ($\pi$ is prime in $R$), but this means that $\pi\mid a/s$ or $\pi\mid b/t$ (since $s,t$ are units). Thus, $\pi$ is prime in $\sinv R$ and $\sinv R$ is a UFD.
+    Let $\mfq\subset\sinv R$ be a prime ideal, so $\mfp=\mfq\cap R$ is a nonzero prime ideal in $R$. This means that it contains a principal prime $(\pi)\subset\mfp$, so $\pi\in\mfq$. Thus, it suffices to show that $\pi$ is a prime of $\sinv R$. Pick $a/s,b/t\in\sinv R$ and suppose that $\pi\mid\frac{ab}{st}$. Then, $\pi\mid ab$ (multiply by $st$) so $\pi\mid a$ or $\pi\mid b$ ($\pi$ is prime in $R$), but this means that $\pi\mid a/s$ or $\pi\mid b/t$ (since $s,t$ are units). Thus, $\pi$ is prime in $\sinv R$ and $\sinv R$ is a UFD.
 </div>
 
-If that's not a clean proof, then I don't know what is [^6]. In addition, we can clear some intellectual debt by proving a statement I avoided earlier on this blog.
-
-<div class="theorem">
-    Let $R$ be a UFD. Then $R[x]$ is a UFD.
-</div>
-<div class="proof4">
-    Let $\mfq\subset R[x]$ be a non-principal prime ideal. Let $\mfp=\mfq\cap R$, so $\mfp$ contains some prime ideal $(\pi)\subset R$ which means that $\pi\in\mfq$. Since $\pi$ is still prime as an element of $R[x]$ as $R[x]/(\pi)\simeq(R/(\pi))[x]$, a domain, Kaplansky's criterion implies that $R[x]$ is a UFD.
-</div>
-<div class="remark">
-    In the standard proof of this fact, one first proves that $\F[x]$ is a UFD (even a PID) for $\F$ a field and then uses this to establish the theorem for general UFD via an argument that involves passing to the fraction field. A consequence of this is that anyone (who accepts this as the proof that $R$ UFD $\implies R[x]$ UFD) who says that $\F[x]$ is a UFD because $\F$ is a UFD is actually making a circular argument. One thing I like about the above proof instead, is that it allows you to non-circularly say that $\F[x]$ is a UFD because $\F$ is a UFD.
-</div>
-
-Based on the last two proofs, we see that the following holds in general. [^9]
-
-<div class="theorem">
-    Let $R$ be a UFD and let $A$ be an integral domain with a ring map $R\to A$ preserving prime elements (i.e. $\pi\mapsto\tau$ and $\pi\in R$ primes implies that $\tau\in A$ is prime). Then, $A$ is a UFD.
-</div>
+If that's not a clean proof, then I don't know what is. If you read the first footnote, then you may be wondering if I'll prove that $R$ UFD $\implies R[x]$ UFD. I won't [^6].
 
 # An Interesting Conjecture
 First, a crash course on group rings.
@@ -177,7 +173,7 @@ At this point, the only remaining question is why would I care about that. Well,
 [^3]: I won't get into why it's called this, but it's related to studying functions defined near a point of a space by looking at the functions that do not vanish at that point.
 [^4]: Two?
 [^5]: Or at least the second one
-[^6]: That's a lie; I do know. The following proof is even cleaner.
+[^6]: I mistakingly thought that Kaplansky's Criterion gave a simple proof of this along the lines of the localization proof: "Pick a prime ideal I of R[x] and intersect it with R to get a prime ideal J of R. Then J contains a prime element p which remains prime in R[x] so I contains the prime element p. Apply Kaplansky and you win." The issue with this is that J may be the zero ideal of R, in which case you have to go through all the annoyingness of the standard proof that I'd rather avoid writing up.
 [^7]: The kicker is that proving that any ideal is contained in a maximal one involves using Zorn's lemma, so we still appeal to Zorn's lemma; we just do so more implicitly.
 [^8]: theorem, not lemma or corollary
 [^9]: I'm not gonna lie: Kaplansky's Criterion has way more applications than I realized when I started writing this post. Why isn't it more popular?
