@@ -147,7 +147,7 @@ First, a crash course on group rings.
         <li> For $G=\Z$, we have $R[G]\simeq R[t,\inv t]\simeq R[t,s]/(1-st)$ </li>
     </ul>
 </div>
-Now, I came across Kaplansky's Criterion while trying to resolve the following:
+Now, I came across Kaplansky's Criterion while a friend and I were trying to resolve the following:
 
 <div class="question">
     Let $k$ be a field. Is the group ring $k[\Z^n]$ a UFD (or even a domain)?
