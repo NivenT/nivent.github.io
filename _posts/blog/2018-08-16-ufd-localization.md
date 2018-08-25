@@ -128,7 +128,18 @@ So UFDs are integral domains where every element is a product of primes or are i
     Let $\mfq\subset\sinv R$ be a prime ideal, so $\mfp=\mfq\cap R$ is a nonzero prime ideal in $R$. This means that it contains a principal prime $(\pi)\subset\mfp$, so $\pi\in\mfq$. Thus, it suffices to show that $\pi$ is a prime of $\sinv R$. Pick $a/s,b/t\in\sinv R$ and suppose that $\pi\mid\frac{ab}{st}$. Then, $\pi\mid ab$ (multiply by $st$) so $\pi\mid a$ or $\pi\mid b$ ($\pi$ is prime in $R$), but this means that $\pi\mid a/s$ or $\pi\mid b/t$ (since $s,t$ are units). Thus, $\pi$ is prime in $\sinv R$ and $\sinv R$ is a UFD.
 </div>
 
-If that's not a clean proof, then I don't know what is. If you read the first footnote, then you may be wondering if I'll prove that $R$ UFD $\implies R[x]$ UFD. I won't [^6].
+If that's not a clean proof, then I don't know what is. If you think about it, the above really proves the following more general theorem. [^9]
+
+<div class="theorem">
+    Let $\phi:A\to R$ be a ring map with $A$ a UFD. Then if
+    <ul>
+        <li> $\phi(a)$ is irreducible whenver $a$ is irreducible; and</li>
+        <li> $\inv\phi(\mfp)\neq(0)$ for all nonzero primes $\mfp\subset R$</li>
+    </ul>
+    we must have that $R$ is a UFD.
+</div>
+
+If you read the first footnote, then you may be wondering if I'll prove that $R$ UFD $\implies R[x]$ UFD. I won't [^6].
 
 # An Interesting Conjecture
 First, a crash course on group rings.
@@ -179,3 +190,4 @@ I should maybe mention that this is only one of Kaplansky's conjectures, so the 
 [^7]: The kicker is that proving that any ideal is contained in a maximal one involves using Zorn's lemma, so we still appeal to Zorn's lemma; we just do so more implicitly.
 [^8]: theorem, not lemma or corollary
 [^9]: I'm not gonna lie: Kaplansky's Criterion has way more applications than I realized when I started writing this post. Why isn't it more popular?
+[^10]: I must admit that I do not know another situation in which one can apply the below theorem off the top of my head.
