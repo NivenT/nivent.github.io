@@ -62,7 +62,7 @@ if (a & b) cout<<a<<endl;
 but, you know, more relevant to my project.
 
 # First Attempt
-Ok, so we want an automated way to create wrapper classes over arbitrary [^7] types. Well, when creating generic types in C++, the goto method is templates. As such, the first thing we might try to do is something like this:
+Ok [^12], so we want an automated way to create wrapper classes over arbitrary [^7] types. Well, when creating generic types in C++, the goto method is templates. As such, the first thing we might try to do is something like this:
 ```c++
 template<typename T>
 class Wrapper {
@@ -307,3 +307,4 @@ int main(int argc, char* argv[]) {
 [^9]: If you're anything like me, your first thought is something like, "Rust has Traits and those would make this easy. Maybe I should write this project in Rust instead." Unfortunately, if you are like me, it's too late for you to write this project in Rust instead.
 [^10]: I haven't actually confirmed that this compiles, so let me know if it doesn't
 [^11]: Don't worry if you don't know what glm::vec2 is. All that's important is that it doesn't support printing via ostream's
+[^12]: By the time I started writing this section, it was no longer the anniversary of my first CS post
