@@ -8,7 +8,7 @@ tags: [math, stolen, problem, generating functions]
 date: 2017-01-27 22:40:00
 ---
 
-About 5ish minutes ago, I found [this problem](http://bit-player.org/2017/a-tantonalizing-problem), and then started working out a solution on a quarter-piece of paper until I ran out of space. Seemed like the type of thing I might want to blog about, and so I'm going to attempt to finish the solution as I write this post. In case you're too lazy to click the link, here is the problem, originally tweeted by someone named [James Tanton](http://www.jamestanton.com/).
+About 5ish minutes ago [^7], I found [this problem](http://bit-player.org/2017/a-tantonalizing-problem), and then started working out a solution on a quarter-piece of paper until I ran out of space. Seemed like the type of thing I might want to blog about, and so I'm going to attempt to finish the solution as I write this post. In case you're too lazy to click the link, here is the problem, originally tweeted by someone named [James Tanton](http://www.jamestanton.com/).
 
 >Problem<br>
 1, 2, 5/2, 17/6, $$\dots$$<br>
@@ -115,3 +115,4 @@ So, assuming Bertrand's Postulate, we have our answer, and have shown it rigouou
 [^4]: Besides induction. That avenue is not getting explored for a while, or ever. We'll see
 [^5]: I'd just like to say, there is almost certainly an easier way to solve the original problem, and it's still too early to say for sure that this will be helpful.
 [^6]: Remember when I said there was almost certainly an easier way to do this? Looking back at the recurrence relation from the first section, it should have been fairly obvious that a_n=H_{n-1}+1. The recurrence screams harmonic numbers, and the +1 is just so a_1=1
+[^7]: I don't remember how long ago it actually was, but it was almost certainly more than just 5.

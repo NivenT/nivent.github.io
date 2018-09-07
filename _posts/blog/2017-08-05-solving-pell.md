@@ -8,7 +8,7 @@ tags: [math, number theory, geometry of numbers, algebraic number theory]
 date: 2017-08-05 15:50:00
 ---
 
-I think this is going to end up being a long one [^21], and possibly not the easiest post to follow that I've made; mostly because I will likely end up introducing a decent number of topics I haven't talked about here before. I guess we'll see how things turn out [^19].
+I think this is going to end up being a long one [^21], and it possibly won't be the easiest post to follow; mostly because I will likely end up introducing a decent number of topics I haven't talked about here before. I guess we'll see how things turn out [^19].
 
 Historically, one topic of interest to number theorists has been diophantine equations. The are equations where you are looking for integer solutions. One famous example is $$a^2+b^2=c^2$$ where you look for integer solutions. In general, there's no overarching method to solve any diophantine equation [^2], and so individual equations may be solved using ad hoc seeming methods. For example, the pythagorean equation can be solved [by projecting points from the unit circle onto a line](../number-theory) [^3]. Another (class of) well-known example(s) is due to Fermat: $$a^n+b^n=c^n, n>2$$, but we'll put off solving this one until a later post. 
 
@@ -485,5 +485,5 @@ I'd like to say that's everything, but I've left a few loose ends. These include
 [^34]: if you fix an embedding into R, then the unique fundamental unit > 1 is often called **the** fundamental unit
 [^35]: at this point, you might wonder why I didn't just write the problem like this in the first place. That's because the place I stole it from wrote it as y^2=x^3-2 originally as well. 
 [^36]: If you write it as the product of two numbers, one of them is a unit
-[^37]: because I forgot it was possible for it not to be the case
+[^37]: because I forgot it was possible for it not to be the case (i.e. I forgot square numbers exist)
 [^38]: some people will try to tell you that this is impossible, but do not be fooled. I believe in you, and I know you can let out a gasp if you so will it.

@@ -1,0 +1,6 @@
+Ideas for future posts so I don't forget them
+* Swan's theorem
+* Prime factorization of ideals in Dedekind domains
+* Separation axioms in topology
+* Dirichlet's theorem on primes in arithmetic progressions
+* Series on topology and complex analysis
