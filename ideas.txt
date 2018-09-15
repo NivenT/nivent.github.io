@@ -1,6 +1,28 @@
 Ideas for future posts so I don't forget them
 * Swan's theorem
+    * Primer post on categories and modules
 * Prime factorization of ideals in Dedekind domains
 * Separation axioms in topology
 * Dirichlet's theorem on primes in arithmetic progressions
 * Series on topology and complex analysis
+* Nakyama's Lemma
+* Infinite Galois Theory
+* Hensel's Lemma
+* Pass key pattern (I think that's what it's called)
+* Threadpools + Callbacks in C++
+* Abel-Ruffini
+* Every Riemann Surface can be embedded in projective space
+    * This would (probably) need to be a long series
+* (My Experience) Representing entities in games
+* Otrowski's (probably mispelled) theorem
+* Sheaf cohomology with constant coefficients is singular cohomology
+* Various descriptions of class group of a Dedekind domain A
+    * fractional ideals / principal ideals
+    * line bundles over spec A
+    * divisors of spec A / principal divisors
+    * (finitely generated) 1-dimensional projective modules over A
+* Calculating the (complex) Picard group of the sphere
+* Cap set problem
+* Kuratowski's theorem
+* Universal coefficient theorem for cohomology
+* Quadratic Reciprocity
