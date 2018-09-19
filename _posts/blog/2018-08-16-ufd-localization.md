@@ -11,7 +11,7 @@ date: 2018-08-16 14:37:00
 This post will be a little random. I plan on talking about a couple sufficient criteria for a ring $R$ to be a UFD, and then use (one of) them to show that the group ring $R[\Z^n]$ is a UFD when $R$ is [^1]. These criteria will involve the concept of localizing a ring, which is something I have wanted to talk about on this blog for a while now, so let's start with that.
 
 # Localization
-Localiztion [^3] is just about the nicest algebraic operation [^2] one can apply; although this is not apparent from its definition. In essense, localization gives us a way to invert a subset of elements of a ring $R$. In this way, it is a generalization of the field of fractions of a ring. Before constructing the localization of a ring, we need to know which subsets of elements we can invert. Throughout this post, all rings are commutative with unity.
+Localization [^3] is just about the nicest algebraic operation [^2] one can apply; although this is not apparent from its definition. In essense, localization gives us a way to invert a subset of elements of a ring $R$. In this way, it is a generalization of the field of fractions of a ring. Before constructing the localization of a ring, we need to know which subsets of elements we can invert. Throughout this post, all rings are commutative with unity.
 <div class="definition">
     Let $R$ be a ring. A subset $S\subset R$ is called <b>multiplicative</b> if $1\in S$ and $a,b\in S\implies ab\in S$.
 </div>
@@ -45,17 +45,17 @@ Note that when $R$ is a domain and $\mfp=(0)$, we get $R_{(0)}=\Frac(R)$. In gen
 </div>
 <div class="proof4">
     Exercise.
-</div>
-<div class="definition">
-    A ring $R$ is called <b>local</b> if it only has 1 maximal ideal.
-</div>
 <div class="theorem">
-    $R_\mfp$ is a local ring.
+    $R_\mfp$ has exactly 1 maximal ideal.
 </div>
 <div class="proof4">
     We claim that $\mfp R_\mfp$ is the only maximal ideal of $R_\mfp$. This will follow from showing that every $\mfp R_\mfp$ is literally the set of all non-units in $R_\mfp$. Pick som non-unit $a/s\in R_\mfp$. Then, $a\not\in S$ since otherwise $s/a\in R_\mfp$ would be an inverse. Hence, $a\in R\sm S=\mfp$ so $a/s\in\mfp R_\mfp$. Conversely, if $a/s\in\mfp R_\mfp$, then we can assume that $a\in\mfp$. Suppose that $b/t$ was an inverse to $a/s$; then,
     $$\frac{ab}{st}=\frac11\iff\exists u\not\in\mfp:0=u(ab-st)\iff ab-st\in\mfp\iff st\in\mfp$$
     which is impossible since $st\in S$, so $a/s$ must not be a unit. Thus, $\mfp R_\mfp$ is the set of all non units, and hence the unique maximal ideal.
+</div>
+</div>
+<div class="definition">
+    A ring $R$ is called <b>local</b> if it only has 1 maximal ideal.
 </div>
 
 In addition to this, localization also respects many properties of the original ring. For example, we have the following theorems.

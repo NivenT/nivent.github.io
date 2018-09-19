@@ -424,6 +424,26 @@ span + .entry-title {
     font-weight: bold;
     font-style: normal;
 }
+.corollary {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.corollary:before {
+    content: "Corollary. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.corollary[data-name]:before {
+    content: "Corollary (" attr(data-name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
+.corollary[name]:before {
+    content: "Corollary (" attr(name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
 .conj:before {
     content: "Conjecture. ";
     font-weight: bold;
@@ -510,6 +530,26 @@ span + .entry-title {
 }
 .question:before {
     content: "Question. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.theorem {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.proposition:before { 
+    content: "Proposition. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.proposition[data-name]:before { 
+    content: "Proposition (" attr(data-name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
+.proposition[name]:before { 
+    content: "Proposition (" attr(name) "). ";
     font-weight: bold;
     font-style: normal;
 }

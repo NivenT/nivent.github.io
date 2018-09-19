@@ -14,7 +14,7 @@ Ideas for future posts so I don't forget them
 * Every Riemann Surface can be embedded in projective space
     * This would (probably) need to be a long series
 * (My Experience) Representing entities in games
-* Otrowski's (probably mispelled) theorem
+* Ostrowski's (probably mispelled) theorem
 * Sheaf cohomology with constant coefficients is singular cohomology
 * Various descriptions of class group of a Dedekind domain A
     * fractional ideals / principal ideals
