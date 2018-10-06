@@ -4,8 +4,8 @@ $$
 
 % Linear Algebra
 \newcommand{\angled}[2]{\left\langle#1,#2\right\rangle}
-\newcommand{\hvec}[2]{\begin{pmatrix}#1&#2\end{pmatrix}}
-\newcommand{\hVec}[3]{\begin{pmatrix}#1&#2&#3\end{pmatrix}}
+\newcommand{\hvec}[2]{\begin{pmatrix}#1& #2\end{pmatrix}}
+\newcommand{\hVec}[3]{\begin{pmatrix}#1& #2& #3\end{pmatrix}}
 \newcommand{\vvec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
 \newcommand{\vVec}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
 \newcommand{\mat}[4]{\begin{pmatrix}#1& #2\\#3& #4\end{pmatrix}}
