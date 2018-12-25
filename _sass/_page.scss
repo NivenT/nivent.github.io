@@ -482,6 +482,16 @@ span + .entry-title {
     font-weight: bold;
     font-style: normal;
 }
+.notation {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.notation:before {
+    content: "Notation. ";
+    font-weight: bold;
+    font-style: normal;
+}
 .exercise {
     display: block;
     margin: 12px 0;

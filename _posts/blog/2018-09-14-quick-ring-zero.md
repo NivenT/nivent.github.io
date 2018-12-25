@@ -6,6 +6,7 @@ modified:
 excerpt:
 tags: [math, algebra, quick]
 date: 2018-09-14 00:00:00
+modified: 2018-12-22
 ---
 
 I apologize for the title of this post, but I couldn't think of anything good. I had some random mathematical thoughts this morning that led into to a couple (hopefully interesting) questions. Before I forget, I want to write them down along with their resolutions.
@@ -51,7 +52,7 @@ Finally, I never actually answered my original question. That is, does $\sinv R=
   Let $R$ be a commutative ring, and let $S\subset R$ be a multiplicative set such that $\sinv R=0$. Then, $0\in S$.
 </div>
 <div class="proof4">
-  Fix any $s\in S$. Then, $s/s=0/1$ so there exists some $u\in S$ such that $us=0$. However, $S$ is multiplicative, so since $s,u\in S$ we must also have $us=0\in S$.
+  Fix any $s\in S$. Then, $s/s=0/s$ so there exists some $u\in S$ such that $us^2=0$. However, $S$ is multiplicative, so since $s,u\in S$ we must also have $us^2=0\in S$.
 </div>
 
 Luckily for me, I didn't think to make the numerator an element of $S$ when I first thought about this question; if I had, I would have missed out on the fun of the other two questions.
