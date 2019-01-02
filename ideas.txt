@@ -26,3 +26,4 @@ Ideas for future posts so I don't forget them
 * Kuratowski's theorem
 * Universal coefficient theorem for cohomology
 * Quadratic Reciprocity
+* Local-Global principal for quadratic forms
