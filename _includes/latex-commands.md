@@ -265,7 +265,8 @@ $$
 \newcommand{\omittedproof}{\begin{proof}Omitted\end{proof}}
 \newcommand{\sm}{\setminus}
 \renewcommand{\l}{\ell}
-\renewcommand{\tilde}{\widetilde}
+\newcommand{\st}{\tilde}
+%\renewcommand{\tilde}{\widetilde}
 \newcommand{\wt}{\widetilde}
 \newcommand{\wh}{\widehat}
 \newcommand{\vsubseteq}{\rotatebox{90}{$\subseteq$}}
