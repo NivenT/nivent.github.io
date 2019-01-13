@@ -1,5 +1,64 @@
 $$
 
+\usepackage[onehalfspacing]{setspace}
+\usepackage[margin=.6in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{imakeidx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{upgreek}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{tocbibind}
+\usepackage{pgfplots}
+
+\pgfplotsset{width=7cm,compat=1.9}
+
+\makeindex[intoc]
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+\newcommand{\includecode}[1]{\newpage
+	\hfill\textbf{#1}
+	\lstinputlisting[language=python]{code/#1}}
+\newcommand{\includecodesnippet}[1]{\lstinputlisting[language=python]{code/#1}}
+
+\allowdisplaybreaks
+\setlength{\parindent}{0pt}
+\linespread{1.272}  % sqrt(golden ratio) for aesthetic reasons
+
 %% Below are very ill-defined categories
 
 % Linear Algebra
@@ -29,22 +88,22 @@ $$
 \newcommand{\dirlim}{\varinjlim}
 \newcommand{\ses}[5]{
 	\begin{tikzcd}[ampersand replacement=\&]
-		0\arrow[r]\&#1\arrow[r, "#2"]\&#3\arrow[r, "#4"]\&#5\arrow[r]\&0
+		0\arrow[r]\& #1\arrow[r, "#2"]\& #3\arrow[r, "#4"]\& #5\arrow[r]\&0
 	\end{tikzcd}
 }
 \newcommand{\scmplx}[5]{ % single complex
 	\begin{tikzcd}[ampersand replacement=\&]
-		#1\arrow[r, "#2"]\&#3\arrow[r, "#4"]\&#5
+		#1\arrow[r, "#2"]\& #3\arrow[r, "#4"]\& #5
 	\end{tikzcd}
 }
 \newcommand{\lses}[5]{
 	\begin{tikzcd}[ampersand replacement=\&]
-		0\arrow[r]\&#1\arrow[r, "#2"]\&#3\arrow[r, "#4"]\&#5
+		0\arrow[r]\& #1\arrow[r, "#2"]\& #3\arrow[r, "#4"]\& #5
 	\end{tikzcd}
 }
 \newcommand{\rses}[5]{
 	\begin{tikzcd}[ampersand replacement=\&]
-		#1\arrow[r, "#2"]\&#3\arrow[r, "#4"]\&#5\arrow[r]\&0
+		#1\arrow[r, "#2"]\& #3\arrow[r, "#4"]\& #5\arrow[r]\&0
 	\end{tikzcd}
 }
 \newcommand{\ab}[1]{#1^{\mathrm{ab}}}
@@ -96,7 +155,7 @@ $$
 \newcommand{\sep}[1]{#1_{\mathrm{sep}}}
 \newcommand{\nabs}[0]{|\,\cdot\,|} % norm + absolute value
 \newcommand{\gnabs}[0]{|g^{-1}(\,\cdot\,)|}
-\newcommand{\codiff}[1]{#1^\*}
+\newcommand{\codiff}[1]{#1^* }
 \newcommand{\compl}[1]{#1^{\wedge}} % Completion
 \DeclareMathOperator{\norm}{N}
 \DeclareMathOperator{\Aut}{Aut}
@@ -119,6 +178,11 @@ $$
 \DeclareMathOperator{\vol}{vol}
 \renewcommand{\split}{\textrm{split}}
 \DeclareMathOperator{\Qbar}{\bar\Q}
+\DeclareMathOperator{\lcm}{lcm}
+
+% Modular Forms/Curves
+\newcommand{\sump}{\sideset{}'\sum}
+\newcommand{\slz}{\SL_2(\Z)}
 
 % Point-Set Topology
 \newcommand{\closure}[1]{\bar{#1}}
@@ -193,9 +257,13 @@ $$
 \DeclareMathOperator{\priv}{priv}
 \DeclareMathOperator{\key}{key}
 
+% Complexity Theory
+\DeclareMathOperator{\NP}{NP}
+\DeclareMathOperator{\TIME}{TIME}
+
 % Machine Learning
 \newcommand{\grad}{\nabla}
-\newcommand{\Ith}[2]{#1^{\left(#2\right)}}
+\newcommand{\Ith}[2]{ {#1}^{\left(#2\right)}}
 \newcommand{\ith}[1]{\Ith{#1}i}
 \newcommand{\Itht}[2]{(\Ith{#1}{#2})^T}
 \newcommand{\Ithi}[2]{(\Ith{#1}{#2})^{-1}}
@@ -233,6 +301,9 @@ $$
 \newcommand{\mbb}{\mathbb}
 \newcommand{\msR}{\ms R}
 \newcommand{\msS}{\ms S}
+\newcommand{\mcH}{\mc H}
+\newcommand{\mcS}{\mc S}
+\newcommand{\mcM}{\mc M}
 \DeclareMathOperator{\F}{\mathbb F}
 \DeclareMathOperator{\Q}{\mathbb Q}
 \DeclareMathOperator{\Z}{\mathbb Z}
@@ -243,6 +314,7 @@ $$
 \DeclareMathOperator{\eps}{\varepsilon}
 \DeclareMathOperator{\vphi}{\varphi}
 \DeclareMathOperator{\A}{\mathbb A}
+\renewcommand{\tau}{\uptau}
 \renewcommand{\P}{\mathbb P}
 \DeclareMathOperator{\msE}{\ms E}
 \DeclareMathOperator{\mcA}{\mc A}
@@ -253,9 +325,11 @@ $$
 \newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
 \newcommand{\parens}[1]{\left(#1\right)}
 \newcommand{\brackets}[1]{\left\{#1\right\}}
+\newcommand{\bracks}[1]{\brackets{#1}}
 \newcommand{\sqbracks}[1]{\left[#1\right]}
 
 % Misc
+\newcommand{\actson}{\curvearrowright}
 \newcommand{\conj}{\overline}
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\tbf}{\textbf}
@@ -265,12 +339,12 @@ $$
 \newcommand{\omittedproof}{\begin{proof}Omitted\end{proof}}
 \newcommand{\sm}{\setminus}
 \renewcommand{\l}{\ell}
-\newcommand{\st}{\tilde}
 %\renewcommand{\tilde}{\widetilde}
+\newcommand{\st}{\tilde}
 \newcommand{\wt}{\widetilde}
 \newcommand{\wh}{\widehat}
 \newcommand{\vsubseteq}{\rotatebox{90}{$\subseteq$}}
-\renewcommand{\ast}[1]{#1^*}
+\renewcommand{\ast}[1]{#1^* }
 \newcommand{\twocases}[3]{
 	\begin{cases}
 		\hfill#1\hfill&\text{if }#2\\
@@ -287,7 +361,16 @@ $$
 \newcommand{\xlongrightarrow}[1]{\overset{#1}{\longrightarrow}}
 \newcommand{\push}[1]{#1_*}
 \newcommand{\by}{\times}
-\newcommand{\actson}{\curvearrowright}
+\newcommand{\xto}{\xrightarrow}
+\newcommand{\too}{\longrightarrow}
+\newcommand{\xtoo}{\xlongrightarrow}
+\newcommand{\iso}{\xto\sim}
+\newcommand{\mapdesc}[5]{
+	\begin{matrix}
+		#1:& #2&\longrightarrow& #3\\
+		& #4&\longmapsto& #5
+	\end{matrix}
+}
 \DeclareMathOperator{\sign}{sign}
 \renewcommand{\Re}{\mathrm{Re}\,}
 \renewcommand{\Im}{\mathrm{Im}\,}
@@ -295,5 +378,11 @@ $$
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\Cont}{Cont}
 \DeclareMathOperator{\Open}{Open}
+
+\newcommand{\xxsspacing}[0]{\hspace* {3pt}}
+\newcommand{\xsspacing}[0]{\hspace* {10pt}}
+\newcommand{\sspacing}[0]{\hspace* {25pt}}
+\newcommand{\mspacing}[0]{\hspace* {50pt}}
+\newcommand{\Text}[2]{\text{#2 #1 #2}}
 
 $$
