@@ -543,7 +543,7 @@ span + .entry-title {
     font-weight: bold;
     font-style: normal;
 }
-.theorem {
+.proposition {
     display: block;
     margin: 12px 0;
     font-style: italic;
@@ -560,6 +560,16 @@ span + .entry-title {
 }
 .proposition[name]:before { 
     content: "Proposition (" attr(name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
+.aside {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.aside:before { 
+    content: "Aside. ";
     font-weight: bold;
     font-style: normal;
 }

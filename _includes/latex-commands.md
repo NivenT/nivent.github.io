@@ -314,7 +314,7 @@ $$
 \DeclareMathOperator{\eps}{\varepsilon}
 \DeclareMathOperator{\vphi}{\varphi}
 \DeclareMathOperator{\A}{\mathbb A}
-\renewcommand{\tau}{\uptau}
+%\renewcommand{\tau}{\uptau}
 \renewcommand{\P}{\mathbb P}
 \DeclareMathOperator{\msE}{\ms E}
 \DeclareMathOperator{\mcA}{\mc A}
