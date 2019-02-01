@@ -5,7 +5,7 @@ modified:
 categories: blog
 excerpt:
 tags: [math, analytic number theory, number theory, zeta, L-function, quadratic reciprocity]
-date: 2019-01-25
+date: 2019-01-31
 ---
 
 In this post, I want to focus on the Riemman $\zeta$ function, and (one type of) its generalizations: the Dirichlet $L$-functions. We'll prove some nice properties of these things (e.g. their meromorphic continuations, product formulas, and functional equations), and use them to prove some infinitude results involving primes (spoiler: we'll show e.g. that there are infinitely many primes!).
