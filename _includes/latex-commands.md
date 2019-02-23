@@ -1,74 +1,15 @@
 $$
 
-\usepackage[onehalfspacing]{setspace}
-\usepackage[margin=.6in]{geometry}
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{mathrsfs}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{tikz}
-\usepackage{tikz-cd}
-\usepackage{listings}
-\usepackage{color}
-\usepackage{enumitem}
-\usepackage{imakeidx}
-\usepackage[colorinlistoftodos]{todonotes}
-\usepackage{upgreek}
-\usepackage{hyperref}
-\usepackage{mdframed}
-\usepackage{tocbibind}
-\usepackage{pgfplots}
-
-\pgfplotsset{width=7cm,compat=1.9}
-
-\makeindex[intoc]
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-	backgroundcolor=\color{backcolour},   
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{codepurple},
-	basicstyle=\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2
-}
-
-\lstset{style=mystyle}
-\newcommand{\includecode}[1]{\newpage
-	\hfill\textbf{#1}
-	\lstinputlisting[language=python]{code/#1}}
-\newcommand{\includecodesnippet}[1]{\lstinputlisting[language=python]{code/#1}}
-
-\allowdisplaybreaks
-\setlength{\parindent}{0pt}
-\linespread{1.272}  % sqrt(golden ratio) for aesthetic reasons
-
 %% Below are very ill-defined categories
 
 % Linear Algebra
 \newcommand{\angled}[2]{\left\langle#1,#2\right\rangle}
-\newcommand{\hvec}[2]{\begin{pmatrix}#1& #2\end{pmatrix}}
-\newcommand{\hVec}[3]{\begin{pmatrix}#1& #2& #3\end{pmatrix}}
+\newcommand{\hvec}[2]{\begin{pmatrix}#1&#2\end{pmatrix}}
+\newcommand{\hVec}[3]{\begin{pmatrix}#1&#2&#3\end{pmatrix}}
 \newcommand{\vvec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
 \newcommand{\vVec}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
-\newcommand{\mat}[4]{\begin{pmatrix}#1& #2\\#3& #4\end{pmatrix}}
-\newcommand{\Mat}[9]{\begin{pmatrix}#1& #2& #3\\#4& #5& #6\\#7& #8& #9\end{pmatrix}}
+\newcommand{\mat}[4]{\begin{pmatrix}#1&#2\\ #3&#4\end{pmatrix}}
+\newcommand{\Mat}[9]{\begin{pmatrix}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{pmatrix}}
 \newcommand{\Wedge}{\bigwedge\nolimits}
 \newcommand{\Span}[1]{\spn\{#1\}}
 \newcommand{\dual}[1]{#1^\vee}
@@ -82,31 +23,14 @@ $$
 \newcommand{\op}[0]{^\text{op}}
 \newcommand{\freemod}[0]{R^{\oplus S}}
 \newcommand{\units}[1]{#1^{\times}}
+\newcommand{\punits}[1]{\units{\parens{#1}}}
 \newcommand{\inv}[1]{#1^{-1}}
 \newcommand{\sinv}{\inv S}
 \newcommand{\invlim}{\varprojlim}
 \newcommand{\dirlim}{\varinjlim}
-\newcommand{\ses}[5]{
-	\begin{tikzcd}[ampersand replacement=\&]
-		0\arrow[r]\& #1\arrow[r, "#2"]\& #3\arrow[r, "#4"]\& #5\arrow[r]\&0
-	\end{tikzcd}
-}
-\newcommand{\scmplx}[5]{ % single complex
-	\begin{tikzcd}[ampersand replacement=\&]
-		#1\arrow[r, "#2"]\& #3\arrow[r, "#4"]\& #5
-	\end{tikzcd}
-}
-\newcommand{\lses}[5]{
-	\begin{tikzcd}[ampersand replacement=\&]
-		0\arrow[r]\& #1\arrow[r, "#2"]\& #3\arrow[r, "#4"]\& #5
-	\end{tikzcd}
-}
-\newcommand{\rses}[5]{
-	\begin{tikzcd}[ampersand replacement=\&]
-		#1\arrow[r, "#2"]\& #3\arrow[r, "#4"]\& #5\arrow[r]\&0
-	\end{tikzcd}
-}
+
 \newcommand{\ab}[1]{#1^{\mathrm{ab}}}
+\newcommand{\normal}{\triangleleft}
 \DeclareMathOperator{\image}{image}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
@@ -132,6 +56,7 @@ $$
 \DeclareMathOperator{\SL}{SL}
 \DeclareMathOperator{\PSL}{PSL}
 \DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\SO}{SO}
 
 % Number Theory/Field Theory
 \newcommand{\qadj}[1]{\mathbb Q\left(#1\right)}
@@ -155,7 +80,7 @@ $$
 \newcommand{\sep}[1]{#1_{\mathrm{sep}}}
 \newcommand{\nabs}[0]{|\,\cdot\,|} % norm + absolute value
 \newcommand{\gnabs}[0]{|g^{-1}(\,\cdot\,)|}
-\newcommand{\codiff}[1]{#1^* }
+\newcommand{\codiff}[1]{#1^\*}
 \newcommand{\compl}[1]{#1^{\wedge}} % Completion
 \DeclareMathOperator{\norm}{N}
 \DeclareMathOperator{\Aut}{Aut}
@@ -183,6 +108,14 @@ $$
 % Modular Forms/Curves
 \newcommand{\sump}{\sideset{}'\sum}
 \newcommand{\slz}{\SL_2(\Z)}
+\newcommand{\glp}{\GL_2^+}
+\renewcommand{\sp}[1]{\sqbracks{\C/\Lambda_{#1},\frac1N+\Lam_{#1}}}
+\newcommand{\Sp}[2]{\sqbracks{\C/\Lambda_{#1},\frac1{#2}+\Lam_{#1}}}
+\newcommand{\spp}[1]{\sqbracks{\C/\Lambda_{#1},\parens{\frac{#1}N+\Lam_{#1},\frac1N+\Lam_{#1}}}}
+\newcommand{\Spp}[2]{\sqbracks{\C/\Lambda_{#1},\parens{\frac{#1}{#2}+\Lam_{#1},\frac1{#2}+\Lam_{#1}}}}
+\newcommand{\sg}[1]{\sqbracks{\C/\Lambda_{#1},\angles{\frac1N+\Lam_{#1}}}}
+\newcommand{\Sg}[2]{\sqbracks{\C/\Lambda_{#1},\angles{\frac1{#2}+\Lam_{#1}}}}
+\newcommand{\pmI}{\bracks{\pm I}}
 
 % Point-Set Topology
 \newcommand{\closure}[1]{\bar{#1}}
@@ -259,7 +192,18 @@ $$
 
 % Complexity Theory
 \DeclareMathOperator{\NP}{NP}
+\DeclareMathOperator{\NL}{NL}
+\DeclareMathOperator{\coNL}{coNL}
+\DeclareMathOperator{\coNP}{coNP}
 \DeclareMathOperator{\TIME}{TIME}
+\DeclareMathOperator{\ccP}{P} % cc = complexity class
+\DeclareMathOperator{\SAT}{SAT}
+\DeclareMathOperator{\UNSAT}{UNSAT}
+\DeclareMathOperator{\Perm}{Perm} % Permanent of a matrix
+\DeclareMathOperator{\MAJPP}{MAJPP}
+\DeclareMathOperator{\ccRP}{RP}
+\DeclareMathOperator{\coRP}{coRP}
+\DeclareMathOperator{\ZPP}{ZPP}
 
 % Machine Learning
 \newcommand{\grad}{\nabla}
@@ -304,6 +248,8 @@ $$
 \newcommand{\mcH}{\mc H}
 \newcommand{\mcS}{\mc S}
 \newcommand{\mcM}{\mc M}
+\newcommand{\mrm}{\mathrm}
+\newcommand{\Lam}{\Lambda}
 \DeclareMathOperator{\F}{\mathbb F}
 \DeclareMathOperator{\Q}{\mathbb Q}
 \DeclareMathOperator{\Z}{\mathbb Z}
@@ -311,10 +257,11 @@ $$
 \DeclareMathOperator{\C}{\mathbb C}
 \DeclareMathOperator{\E}{\mathbb E}
 \DeclareMathOperator{\N}{\mathbb N}
+\DeclareMathOperator{\T}{\mathbb T}
+\DeclareMathOperator{\A}{\mathbb A}
 \DeclareMathOperator{\eps}{\varepsilon}
 \DeclareMathOperator{\vphi}{\varphi}
-\DeclareMathOperator{\A}{\mathbb A}
-%\renewcommand{\tau}{\uptau}
+\renewcommand{\tau}{\uptau}
 \renewcommand{\P}{\mathbb P}
 \DeclareMathOperator{\msE}{\ms E}
 \DeclareMathOperator{\mcA}{\mc A}
@@ -327,24 +274,23 @@ $$
 \newcommand{\brackets}[1]{\left\{#1\right\}}
 \newcommand{\bracks}[1]{\brackets{#1}}
 \newcommand{\sqbracks}[1]{\left[#1\right]}
+\newcommand{\angles}[1]{\left\langle#1\right\rangle}
 
 % Misc
 \newcommand{\actson}{\curvearrowright}
 \newcommand{\conj}{\overline}
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\tbf}{\textbf}
+\newcommand{\bp}[1]{\tbf{(#1)}} % bold parens
 \newcommand{\Item}[1]{\item[\tbf{(#1)}]}
-\newcommand{\jota}{\reflectbox{$\iota$}}
 \newcommand{\atoi}{\jota}
-\newcommand{\omittedproof}{\begin{proof}Omitted\end{proof}}
 \newcommand{\sm}{\setminus}
 \renewcommand{\l}{\ell}
 %\renewcommand{\tilde}{\widetilde}
 \newcommand{\st}{\tilde}
 \newcommand{\wt}{\widetilde}
 \newcommand{\wh}{\widehat}
-\newcommand{\vsubseteq}{\rotatebox{90}{$\subseteq$}}
-\renewcommand{\ast}[1]{#1^* }
+\renewcommand{\ast}[1]{#1^\*}
 \newcommand{\twocases}[3]{
 	\begin{cases}
 		\hfill#1\hfill&\text{if }#2\\
@@ -359,12 +305,15 @@ $$
 }
 \newcommand{\xlongleftarrow}[1]{\overset{#1}{\longleftarrow}}
 \newcommand{\xlongrightarrow}[1]{\overset{#1}{\longrightarrow}}
-\newcommand{\push}[1]{#1_*}
+\newcommand{\push}[1]{#1_\*}
+\newcommand{\pull}[1]{#1^\*}
 \newcommand{\by}{\times}
+\newcommand{\from}{\leftarrow}
 \newcommand{\xto}{\xrightarrow}
 \newcommand{\too}{\longrightarrow}
 \newcommand{\xtoo}{\xlongrightarrow}
 \newcommand{\iso}{\xto\sim}
+\newcommand{\into}{\hookrightarrow}
 \newcommand{\mapdesc}[5]{
 	\begin{matrix}
 		#1:& #2&\longrightarrow& #3\\
@@ -374,15 +323,11 @@ $$
 \DeclareMathOperator{\sign}{sign}
 \renewcommand{\Re}{\mathrm{Re}\,}
 \renewcommand{\Im}{\mathrm{Im}\,}
+\newcommand{\nimplies}{\nRightarrow}
 \DeclareMathOperator{\Map}{Map}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\Cont}{Cont}
 \DeclareMathOperator{\Open}{Open}
 
-\newcommand{\xxsspacing}[0]{\hspace* {3pt}}
-\newcommand{\xsspacing}[0]{\hspace* {10pt}}
-\newcommand{\sspacing}[0]{\hspace* {25pt}}
-\newcommand{\mspacing}[0]{\hspace* {50pt}}
-\newcommand{\Text}[2]{\text{#2 #1 #2}}
 
 $$
