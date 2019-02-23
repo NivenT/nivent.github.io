@@ -75,7 +75,7 @@ Since we also have $\ast b_0=2F_0=0$ and $\ast b_1=2F_2=2$, this shows that $b_n
 
 $$x_n=a_n+F_{2n}\text{ and }y_n=F_{2n}.$$
 
-Thus, the (positive) integers $y$ such that $5y^2+4$ exactly make up every other Fibonacci number! This is a very surprising fact on first glance, but it came our fairly naturally from our analysis of the equation $x^2-5y^2=4$. The fibonacci numbers showed up since we worked in the ring $\ints K=\Z[\phi]$ where $\phi$ is the golden ratio, and it's every other fibonacci number because $\knorm(\phi)=-1$ so you switch between $5y^2+4$ being a square and $5y^2-4$ being a square as you consider consecutive powers of $\phi$ (consecutive Fibonacci numbers).
+Thus, the (positive) integers $y$ such that $5y^2+4$ exactly make up every other Fibonacci number! This is a very surprising fact on first glance, but it came fairly naturally from our analysis of the equation $x^2-5y^2=4$. The fibonacci numbers showed up since we worked in the ring $\ints K=\Z[\phi]$ where $\phi$ is the golden ratio, and it's every other fibonacci number because $\knorm(\phi)=-1$ so you switch between $5y^2+4$ being a square and $5y^2-4$ being a square as you consider consecutive powers of $\phi$ (consecutive Fibonacci numbers).
 
 [^1]: that I'm still not proving here
 [^2]: We could have reached this conclusion earlier if we had used unique factorization at the level of elements, but the detour through ideals was a short one, so no biggy

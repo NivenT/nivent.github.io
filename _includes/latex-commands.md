@@ -1,15 +1,36 @@
 $$
 
+\usepackage[onehalfspacing]{setspace}
+\usepackage[margin=.6in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{imakeidx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{upgreek}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{tocbibind}
+\usepackage{pgfplots}
+
 %% Below are very ill-defined categories
 
 % Linear Algebra
 \newcommand{\angled}[2]{\left\langle#1,#2\right\rangle}
-\newcommand{\hvec}[2]{\begin{pmatrix}#1&#2\end{pmatrix}}
-\newcommand{\hVec}[3]{\begin{pmatrix}#1&#2&#3\end{pmatrix}}
+\newcommand{\hvec}[2]{\begin{pmatrix}#1& #2\end{pmatrix}}
+\newcommand{\hVec}[3]{\begin{pmatrix}#1& #2& #3\end{pmatrix}}
 \newcommand{\vvec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
 \newcommand{\vVec}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
-\newcommand{\mat}[4]{\begin{pmatrix}#1&#2\\ #3&#4\end{pmatrix}}
-\newcommand{\Mat}[9]{\begin{pmatrix}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{pmatrix}}
+\newcommand{\mat}[4]{\begin{pmatrix}#1& #2\\ #3& #4\end{pmatrix}}
+\newcommand{\Mat}[9]{\begin{pmatrix}#1& #2& #3\\#4& #5& #6\\#7& #8& #9\end{pmatrix}}
 \newcommand{\Wedge}{\bigwedge\nolimits}
 \newcommand{\Span}[1]{\spn\{#1\}}
 \newcommand{\dual}[1]{#1^\vee}
@@ -80,7 +101,7 @@ $$
 \newcommand{\sep}[1]{#1_{\mathrm{sep}}}
 \newcommand{\nabs}[0]{|\,\cdot\,|} % norm + absolute value
 \newcommand{\gnabs}[0]{|g^{-1}(\,\cdot\,)|}
-\newcommand{\codiff}[1]{#1^\*}
+\newcommand{\codiff}[1]{#1^*}
 \newcommand{\compl}[1]{#1^{\wedge}} % Completion
 \DeclareMathOperator{\norm}{N}
 \DeclareMathOperator{\Aut}{Aut}
@@ -261,7 +282,6 @@ $$
 \DeclareMathOperator{\A}{\mathbb A}
 \DeclareMathOperator{\eps}{\varepsilon}
 \DeclareMathOperator{\vphi}{\varphi}
-\renewcommand{\tau}{\uptau}
 \renewcommand{\P}{\mathbb P}
 \DeclareMathOperator{\msE}{\ms E}
 \DeclareMathOperator{\mcA}{\mc A}
@@ -290,7 +310,7 @@ $$
 \newcommand{\st}{\tilde}
 \newcommand{\wt}{\widetilde}
 \newcommand{\wh}{\widehat}
-\renewcommand{\ast}[1]{#1^\*}
+\renewcommand{\ast}[1]{#1^*}
 \newcommand{\twocases}[3]{
 	\begin{cases}
 		\hfill#1\hfill&\text{if }#2\\
@@ -305,8 +325,8 @@ $$
 }
 \newcommand{\xlongleftarrow}[1]{\overset{#1}{\longleftarrow}}
 \newcommand{\xlongrightarrow}[1]{\overset{#1}{\longrightarrow}}
-\newcommand{\push}[1]{#1_\*}
-\newcommand{\pull}[1]{#1^\*}
+\newcommand{\push}[1]{#1_*}
+\newcommand{\pull}[1]{#1^*}
 \newcommand{\by}{\times}
 \newcommand{\from}{\leftarrow}
 \newcommand{\xto}{\xrightarrow}
