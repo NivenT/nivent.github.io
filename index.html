@@ -8,7 +8,30 @@ search_omit: true
 <b><a href="{{ site.url }}/tags">All posts grouped by tags</a></b>
 
 <ul class="post-list">
-{% for post in site.posts limit:5 %}
-  <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once | truncate:500}}</span>{% endif %}</a></article></li>
-{% endfor %}
+  {% assign count = 0 %}
+  {% for post in site.posts %}
+    {% unless post.hidden %}
+      <li>
+        <article>
+          <a href="{{ site.url }}{{ post.url }}">
+            {{ post.title }} 
+            <span class="entry-date">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %d, %Y" }}
+              </time>
+            </span>
+            {% if post.excerpt %} 
+            <span class="excerpt">
+              {{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once | truncate:500}}
+            </span>
+            {% endif %}
+          </a>
+        </article>
+      </li>
+      {% assign count = count | plus:1 %}
+    {% endunless %}
+    {% if count >= 5 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
 </ul>

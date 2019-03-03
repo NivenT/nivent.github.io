@@ -14,7 +14,7 @@ Let's start with Parseval. Recall that we have a nice theory of Fourier analysis
 
 $$\angles{f,g}=\int_0^1f(x)\conj{g(x)}\dx.$$
 
-We claim (without proof) that the (linear) span of $\bracks{e_n}$ is dense in $C^2([0,1])$, letting us make a limit argument to show that for any $f\in C^2([0,1])$, one has
+We claim (without proof) that the (linear) span of $\bracks{e_n}$ is dense in $C^2([0,1])$, letting us make a limit argument to show that for any $f\in C^2([0,1])$, one has [^7]
 
 $$\sum_{n=-\infty}^\infty\abs{\angles{f,e_n}}^2=\|f\|^2:=\int_0^1\abs{f(x)}^2\dx.$$
 

@@ -128,6 +128,7 @@ $$
 
 % Modular Forms/Curves
 \newcommand{\sump}{\sideset{}'\sum}
+\newcommand{\prodp}{\sideset{}'\prod}
 \newcommand{\slz}{\SL_2(\Z)}
 \newcommand{\glp}{\GL_2^+}
 \renewcommand{\sp}[1]{\sqbracks{\C/\Lambda_{#1},\frac1N+\Lam_{#1}}}
@@ -280,6 +281,7 @@ $$
 \DeclareMathOperator{\N}{\mathbb N}
 \DeclareMathOperator{\T}{\mathbb T}
 \DeclareMathOperator{\A}{\mathbb A}
+\DeclareMathOperator{\I}{\mathbb I}
 \DeclareMathOperator{\eps}{\varepsilon}
 \DeclareMathOperator{\vphi}{\varphi}
 \renewcommand{\P}{\mathbb P}

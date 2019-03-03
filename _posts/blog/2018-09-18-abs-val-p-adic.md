@@ -80,12 +80,12 @@ Having a metric is great for many reasons; one of them is that a metric induces 
 </div>
 {::options parse_block_html="true" /}
 <span class="exercise">
-    Let $\nabs:D\to\R_{\ge0}$ be an absolute value on a domain $D$. Given $D$ the topology induced by $\nabs$. Prove that $\nabs$ is a continuous function to $\R_{\ge0}$ with the Euclidean topology. [^2]
+    Let $\nabs:D\to\R_{\ge0}$ be an absolute value on a domain $D$. Give $D$ the topology induced by $\nabs$. Prove that $\nabs$ is a continuous function to $\R_{\ge0}$ with the Euclidean topology. [^2]
 </span>
 
 {::options parse_block_html="false" /}
 <div class="definition">
-    Let $\nabs,\nabs':D\to\R_{\ge0}$ be two absolute values on a domain $D$. We say that they are <b>equivalent</b>, denote $\nabs\sim\nabs'$ if the topologies they induce on $D$ coincide. i.e. they are not just homeomorphic, but are literally the same as sets.
+    Let $\nabs,\nabs':D\to\R_{\ge0}$ be two absolute values on a domain $D$. We say that they are <b>equivalent</b>, denoted $\nabs\sim\nabs'$ if the topologies they induce on $D$ coincide. i.e. they are not just homeomorphic, but are literally the same as sets.
 </div>
 <div class="theorem">
     Let $\nabs,\nabs':F\to\R_{\ge0}$ be two absolute values on a field $F$. Then, they are equivalent if and only if there exists some $t>0$ s.t. $\nabs^t=\nabs'$.
@@ -189,7 +189,7 @@ For the last theorem, I'll need to introduce the notion of a complete metric spa
 <div class="definition">
     A metric space $(X,d)$ is called <b>complete</b> if every Cauchy sequence converges.
 </div>
-Cauchy sequences look like they should converge; in the tail of the sequence, there's barely any difference between one term and the next so you would expect that it eventually converges to some point. As the example above shows, this isn't true in general, so complete spaces are extra nice. In particular, complete spaces coming from a non-Archimedean norm has a very simple criterion for convergence. 
+Cauchy sequences look like they should converge; in the tail of the sequence, there's barely any difference between one term and the next so you would expect that it eventually converges to some point. As the example above shows, this isn't true in general, so complete spaces are extra nice. In particular, complete spaces coming from a non-Archimedean norm have a very simple criterion for convergence of series.
 <div class="lemma">
     $\abs{x+y}\ge\abs{x}-\abs{y}$
 </div>
@@ -241,12 +241,12 @@ The rest of this section will be devoted to constructing a canonical choice of r
     whenever $n,m\ge N$. Fix an index $n\ge N$ such that $\abs{a_n}>\eps$. Then, for any $m\ge n$, because all triangles are isosceles (with largest side length appearing twice) and $\abs{a_n-a_m}_p<\eps$, we get that $\abs{a_n}_p=\abs{a_m}_p$, showing that $\abs{a_n}_p$ is eventually constant.
 </div>
 <div class="corollary">
-    $\abs{\Q_p}_p=\abs{\Q_p}$. That is, for all $x\in\Q_p$, $\abs x_p=p^n$ for some $n\in\Z$.
+    $\abs{\Q_p}_p=\abs{\Q}_p$. That is, for all $x\in\Q_p$, $\abs x_p=p^n$ for some $n\in\Z$.
 </div>
 <div class="remark">
     The above theorem (and corollary) hold anytime you complete a field with respect to a non-archimedean absolute value. Passing to the completion does not affect the set of possible absolute values. This is in contrast to, for example, the archimedean place $\nabs_\infty$ on $\Q$ since $\R$ has more possible absolute values than $\Q$.
 </div>
-This fact will allow us to simply things slightly by shifting focus from $\Q_p$ to $\Z_p$ without losing too much information.
+This fact will allow us to simplify things slightly by shifting focus from $\Q_p$ to $\Z_p$ without losing too much information.
 <div class="definition">
     For a prime $p$, the <b>$p$-adic integers</b> form the ring
     $$\Z_p:=\brackets{q\in\Q_p:\abs q_p\le 1}$$
@@ -373,7 +373,7 @@ For example, $\nabs_p$ is discretely valued for all primes $p$, since $\abs{\Q_p
     Let $F$ be a field with a discrete absolute value $\nabs:F\to\R_{\ge0}$. Then, $A=\{x\in F:\abs x\le1\}$ is $F$'s <b>valuation ring</b>. It is a local ring whose unique maximal ideal is $\mfm=\{x\in F:\abs x< 1\}$. The field $k=A/\mfm$ is call the <b>residue field</b> of $F$.
 </div>
 <div class="exercise">
-    Let $\nabs:F\to\R_{\ge0}$ be an absolute value on a field $F$. Show that this makes $F$ a local field if and only if $\nabs$ is discretely valued with a finite residue field (and, of course, $F$ is complete w.r.t $\nabs$).
+    Let $\nabs:F\to\R_{\ge0}$ be a non-trivial non-archimedean absolute value on a field $F$. Show that this makes $F$ a local field if and only if $\nabs$ is discretely valued with a finite residue field (and, of course, $F$ is complete w.r.t $\nabs$).
 </div>
 
 [^1]: If you don't know what a topology is, don't worry.
