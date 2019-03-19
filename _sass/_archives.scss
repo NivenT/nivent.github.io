@@ -26,6 +26,9 @@
   a > span {
     float: right;
   }
+  .MathJax {
+    float: none;
+  }
   .entry-date {
     @include font-size(14,no);
     text-transform: uppercase;

@@ -22,7 +22,8 @@ search_omit: true
             </span>
             {% if post.excerpt %} 
             <span class="excerpt">
-              {{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once | truncate:500}}
+              {{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once |
+                  truncate:500}}
             </span>
             {% endif %}
           </a>
