@@ -9,7 +9,7 @@ sitemap: false
       "title"			: {{ post.title | jsonify }},
       "link"			: "{% if post.link %}{{ post.link }}{% else %}{{ site.url }}{{ post.url }}{% endif %}",
       "tags"      : "{{ post.tags }}",
-      "content"		: "{{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once | remove: '\[' | remove: '\]' | remove: '\(' | remove: '\)' | remove: '\"'}}"
+      "content"		: "{{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once | remove: '\[' | remove: '\]' | remove: '\(' | remove: '\)' | remove: '\"' | remove: '$' | remove: '\' }}"
     }
   {% endif %}
 {% endfor %}
