@@ -5,7 +5,29 @@ excerpt: ""
 search_omit: true
 ---
 
-<b><a href="{{ site.url }}/tags">All posts grouped by tags</a></b>
+<script type="text/javascript">
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i+1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+  function displayTopFive() {
+    var faves = $("#faves");
+    // Have more than 5 in this list?
+    var best = shuffle(['love-air', 'abs-val-p-adic', 'geo-group', 
+                        'number-theory', 'godilocks-three-bears']);
+    for (let i = 0; i < best.length; i++) {
+      faves.append(`<a href="{{ site.url }}/blog/${best[i]}">${i+1}</a> `);
+    }
+  }
+
+  $(document).ready(() => displayTopFive());
+</script>
+
+<b id="faves">My top five favorite posts: </b>
+<span style="float:right;"><b><a href="{{ site.url }}/tags">All posts grouped by tags</a></b></span>
 
 <ul class="post-list">
   {% assign count = 0 %}
