@@ -10,7 +10,18 @@
 <script type="text/javascript" src="{{ site.url }}/assets/js/plugins/bigfoot.js"></script>
 <script type="text/javascript">
     $.bigfoot({
-      positionContent: true
+      positionContent: true,
+      // https://esham.io/2014/07/mathjax-and-bigfoot
+      activateCallback: function($popover, $button) {
+        if (MathJax && !$button.data('mathjax-processed')) {
+            var content_wrapper = $popover.find('.bigfoot-footnote__content')[0];
+            MathJax.Hub.Queue(['Typeset', MathJax.Hub, content_wrapper]);
+            MathJax.Hub.Queue(function () {
+                $button.attr('data-bigfoot-footnote', content_wrapper.innerHTML);
+                $button.data('mathjax-processed', true);
+            });
+        }
+    }
     });
 </script>
 
