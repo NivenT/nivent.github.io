@@ -4,8 +4,8 @@ title: "Covering Spaces, $\\pi_1$-actions, and Locally Constant Sheaves"
 modified:
 categories: blog
 excerpt:
-tags: [math, fundamental group, sheaf, covering space]
-date: 2019-03-20 00:00:00
+tags: [math, fundamental group, sheaf, covering space, category theory]
+date: 2019-03-22 00:00:00
 ---
 
 It makes me happy to know that this post will be the one knocking the "Covering Spaces" post off of the front page. This one will cover a related topic but (hopefully) with the noticable difference that while that post is trash, this one will be somewhat well-written. That being said, I'm going to be (mostly) stepping away from the (certain flavor of) number theory that I have been writing about, and make my next few posts more geometric/topological. [^1] Kicking things off, this post will be about showing an equivalence between 3 seemingly different[^2] kinds of objects. I'll start off by briefly introducing categories and sheaves [^7]; then I'll say some things about covers, and finally get into the good stuff.
