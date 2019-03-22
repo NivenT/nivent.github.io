@@ -78,6 +78,8 @@ $$
 \DeclareMathOperator{\PSL}{PSL}
 \DeclareMathOperator{\PGL}{PGL}
 \DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\ob}{ob}
+\DeclareMathOperator{\Mor}{Mor}
 
 % Number Theory/Field Theory
 \newcommand{\qadj}[1]{\mathbb Q\left(#1\right)}

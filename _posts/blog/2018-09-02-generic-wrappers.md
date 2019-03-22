@@ -8,7 +8,7 @@ tags: [CS, C++, wrapper, macros, code]
 date: 2018-09-07
 ---
 
-For a blog entitled "Thoughts of a Programmer," I don't actually have many CS-related posts; a more accurate name of this blog would be something like "Grammatically Flawed Ramblings of a Not Quite Mathematician"[^1]. However, I recently wrote some code I think might be worth sharing, so this is a chance for me to return to this blog's roots [^2]. The main goal of this post is to explain the code written in [this beautiful file](https://github.com/NivenT/jubilant-funicular/tree/master/include/nta/Wrapper.h). This code automates the process of creating a wrapper class, so next time I want to have a "named int" class, I won't need to write[^3]
+For a blog entitled "Thoughts of a Programmer," I don't actually have many CS-related posts; a more accurate name of this blog would be something like "Grammatically Flawed Ramblings of a Not Quite Mathematician"[^1]. However, I recently wrote some code I think might be worth sharing, so this is a chance for me to return to this blog's roots [^2]. The main goal of this post is to explain the code written in [this beautiful file](https://github.com/NivenT/jubilant-funicular/tree/master/include/nta/Wrapper.h) [^13]. This code automates the process of creating a wrapper class, so next time I want to have a "named int" class, I won't need to write[^3]
 
 ```c++
 class NamedInt {
@@ -308,3 +308,4 @@ int main(int argc, char* argv[]) {
 [^10]: I haven't actually confirmed that this compiles, so let me know if it doesn't
 [^11]: Don't worry if you don't know what glm::vec2 is. All that's important is that it doesn't support printing via ostream's
 [^12]: By the time I started writing this section, it was no longer the anniversary of my first CS post
+[^13]: Because I linked to the master branch and not a specific comment, "this beautiful file" no longer (directly) points to code relevant to this post. Click [here](https://github.com/NivenT/jubilant-funicular/blob/595231552f9524fe72d4a908b3f2612e955973b1/include/nta/Wrapper.h) for the correct file and [here](https://github.com/NivenT/utilities/blob/4bc9c92f7d8bb07b86b8f9f9dc3557af99f1b0fb/utils/wrapper/Wrapper.h) for an improved version of the ideas in this post.
