@@ -14,7 +14,7 @@ Let's start with Parseval. Recall that we have a nice theory of Fourier analysis
 
 $$\angles{f,g}=\int_0^1f(x)\conj{g(x)}\dx.$$
 
-We claim (without proof) that the (linear) span of $\bracks{e_n}$ is dense in $C^2([0,1])$, letting us make a limit argument to show that for any $f\in C^2([0,1])$, one has [^7]
+We claim (without proof) that the (linear) span of $\bracks{e_n}$ is dense in $C^2([0,1])$, letting us make a limit argument to show that for any $f\in C^2([0,1])$, one has
 
 $$\sum_{n=-\infty}^\infty\abs{\angles{f,e_n}}^2=\|f\|^2:=\int_0^1\abs{f(x)}^2\dx.$$
 
@@ -80,7 +80,7 @@ In particular, plugging in $k=1$ recovers the classic
 
 $$\zeta(2)=(-1)^{1-1}B_2\frac{(2\pi)^2}{2(2!)}=\frac{\pi^2}6$$
 
-which is a good sign [^6]. Furthermore, I haven't actually checked this myself yet, but I'm pretty sure that using the functional equation for the $\zeta$ function along with this calculation let's you show that $\zeta(1-2k)\in\Q$ for all $k$ (and so $\zeta(1-k)\in\Q$ for all $k$ since it's 0 even $k$ is odd) which is quite surprising. To end, I'll really indulge a high-school fantasy by "proving" everyone's favorite "theorem."
+which is a good sign [^6]. Furthermore, I haven't actually checked this myself yet, but I'm pretty sure that using the functional equation for the $\zeta$ function along with this calculation let's you show that $\zeta(1-2k)\in\Q$ for all $k$ (and so $\zeta(1-k)\in\Q$ for all $k$ since it's 0 when $k$ is odd) which is quite surprising. To end, I'll really indulge a high-school fantasy by "proving" everyone's favorite "theorem."
 
 <div class="theorem" name="The Best One">
     The sum of the naturals is $-1/12$. That is,

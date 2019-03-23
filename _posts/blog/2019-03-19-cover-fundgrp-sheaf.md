@@ -257,7 +257,7 @@ I bet you can guess what comes next: to show that $\Fib_x$ gives an equivalence 
 <div class="theorem">
     The categories $\Cov(X)$ of covers of $X$ and $\mrm{Set}^{\pi_1(X,x)}$ of sets with a $\pi_1(X,x)$-action are equivalent.
 </div>
-<div class="example">
+<div class="exercise">
     Let $\wh{\pi_1(X,x)}$ denote the profinite completion of $\pi_1(X,x)$ (i.e. $\invlim\pi_1(X,x)/H$ where $N$ ranges over normal subgroups of finite index partially ordered by inclusion). Prove that $\Fib_x$ induces an equivalence of categories between the category of finite covers of $X$ (i.e. covers with finite fibers) and sets with a continuous left $\wh{\pi_1(X,x)}$-action.
 </div>
 
@@ -285,7 +285,7 @@ Now, recall that a constant sheaf $\msS=S_X$ is the sheafification of the preshe
     Let $p:Y\to X$ be a cover with $X$ connected. Then, the sheaf $\ms F_Y$ of sections is locally constant, and is constant if $p$ is trivial (i.e. a homeomorphism).
 </div>
 <div class="proof4">
-    Given some $x\in X$, let $V$ be one of its fundamental neighborhoods. The image of a section $V\to Y$ must be one of the connected components of $\inv p(V)$, so sections over $V$ correspond bijectively to points of the fiber $\inv p(x)$. Hence, $\ms F_Y\mid_V$ is (isomorphic to) the constant sheaf $F_X$ defined by $F$. $\ms F_Y$ itself is constant if and only if we may take $V=X$ if and only if $p$ is trivial.
+    Given some $x\in X$, let $V$ be one of its fundamental neighborhoods. The image of a section $V\to Y$ must be one of the connected components of $\inv p(V)$, so sections over $V$ correspond bijectively to points of the fiber $\inv p(x)$. Hence, $\ms F_Y\mid_V$ is (isomorphic to) the constant sheaf $F_X$ defined by $F=\inv p(x)$. $\ms F_Y$ itself is constant if and only if we may take $V=X$ if and only if $p$ is trivial.
 </div>
 <div class="corollary">
     Let $p:Y\to X$ be a cover and fix any $x\in X$. Then the stalk $\ms F_{Y,x}$ of $\ms F_Y$ at $x$ is (isomorphic to) the fiber $\inv p(x)$.
@@ -328,7 +328,7 @@ There you have it. A locally constant sheaf on a space $X$ is nothing more than 
     Let $X$ be path connected and locally simply connected, and fix some basepoint $x\in X$. Let $R$ be a commutative ring. Then, the category of locally constant sheaves of $R$-modules on $X$ is equivalent to the category of (left) modules over the group ring $R[\pi_1(X,x)]$.
 </div>
 
-For motivation for why you might care about this, fix a field $k$, and recall that a linear representation $\rho:\pi_1(X,x)\to\GL_n(k)$ of the fundamental group of $X$ is the same thing as a choice of a $k[\pi_1(X,x)]$-module $M$ (i.e. there's an equivalence of categories between these two types of objects). With this in mind, the above exercise asks you to show that a locally constant sheaf of $k$-modules on a (sufficiently nice) space $X$ is the same thing as a representation of its fundamental group! [^21]
+For motivation for why you might care about this, fix a field $k$, and recall that a linear representation $\rho:\pi_1(X,x)\to\GL_n(k)$ of the fundamental group of $X$ is the same thing as a choice of a $k[\pi_1(X,x)]$-module $M$ (i.e. there's an equivalence of categories between linear representations and modules over the group ring). With this in mind, the above exercise asks you to show that a locally constant sheaf of $k$-modules on a (sufficiently nice) space $X$ is the same thing as a representation of its fundamental group! [^21]
 
 [^1]: As a rule of thumb, [if](../fourier) [I](../group-intro) [ever](../Modular-Arithmetic) [say](../interesting-equation-ii) that I will write a post about something, you probably shouldn't believe that I will actually follow through with that promise.
 [^2]: Admittedly, the first two are unsurprisingly related
@@ -350,4 +350,4 @@ For motivation for why you might care about this, fix a field $k$, and recall th
 [^18]: Think of this as the presheaf of constant functions $X\to M$.
 [^19]: Show rigorously that this is a well-defined map of sheaves (hint: because these things are sheaves to show that $\phi\circ s$ is a section, it suffices to show that it restricts to a section on each set in an open cover of $U$)
 [^20]: I don't think I'll ever be able to remember which of "coarser" and "finer" means smaller without pulling up Wikipedia.
-[^21]: Perhaps if you wanted to define a version of the fundamental group in algebraic contexts where you have a not-so-nice topology, you should try giving a definition in terms of locally constant sheaves of that space or in terms of covers of that space.
+[^21]: (I'm pretty sure that) It is possible to recover a group from its category of $k$-linear representations, so perhaps if you wanted to define a version of the fundamental group in algebraic contexts where you have a not-so-nice topology, you should try giving a definition in terms of locally constant sheaves of that space (or in terms of covers of that space).
