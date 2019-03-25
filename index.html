@@ -15,10 +15,10 @@ search_omit: true
   }
   function displayTopFive() {
     var faves = $("#faves");
-    // Have more than 5 in this list?
     var best = shuffle(['love-air', 'abs-val-p-adic', 'geo-group', 
-                        'number-theory', 'godilocks-three-bears']);
-    for (let i = 0; i < best.length; i++) {
+                        'number-theory', 'godilocks-three-bears',
+                        'cover-fundgrp-sheaf']);
+    for (let i = 0; i < 5; i++) {
       faves.append(`<a href="{{ site.url }}/blog/${best[i]}">${i+1}</a> `);
     }
   }

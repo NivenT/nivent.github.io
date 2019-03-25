@@ -338,6 +338,7 @@ $$
 \newcommand{\xtoo}{\xlongrightarrow}
 \newcommand{\iso}{\xto\sim}
 \newcommand{\into}{\hookrightarrow}
+\newcommand{\onto}{\twoheadrightarrow}
 \newcommand{\mapdesc}[5]{
 	\begin{matrix}
 		#1:& #2&\longrightarrow& #3\\
