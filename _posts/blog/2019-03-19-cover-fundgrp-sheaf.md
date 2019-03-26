@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Covering Spaces, $\\pi_1$-actions, and Locally Constant Sheaves"
-modified:
+modified: 2019-03-25
 categories: blog
 excerpt:
 tags: [math, fundamental group, sheaf, covering space, category theory]
@@ -60,7 +60,7 @@ Category theory is all about studying objects through their properties and their
 Now that we know what a functor is, we can form a (large) category $\mrm{Cat}$ whose objects are (small) categories and whose morphisms are functors, but why stop there? The real raison d'être of category theory is to look at categories whose objects are functors and whose morphisms are $\dots$[^6]
 
 <div class="definition">
-    Given two functors $F,G:\mc C\to\mc D$, a <b>natural transformation</b> $\eta$ is a collection of maps $\eta_A:F(A)\to G(A)$ such that for all $A,B\in\mc C$ and $f\in\Hom_{\mc C}(A,B)$, we have $G(f)\circ\eta_A=\eta_B\circ F(f)$. i.e. the following square commutes
+    Given two (covariant) functors $F,G:\mc C\to\mc D$, a <b>natural transformation</b> $\eta$ is a collection of maps $\eta_A:F(A)\to G(A)$ such that for all $A,B\in\mc C$ and $f\in\Hom_{\mc C}(A,B)$, we have $G(f)\circ\eta_A=\eta_B\circ F(f)$. i.e. the following square commutes
     <center>
         <img src="{{ site.url }}/images/blog/cover-fundgrp-sheaf/nat.png" width="200" height="100">
     </center>
@@ -332,7 +332,7 @@ For motivation for why you might care about this, fix a field $k$, and recall th
 
 [^1]: As a rule of thumb, [if](../fourier) [I](../group-intro) [ever](../Modular-Arithmetic) [say](../interesting-equation-ii) that I will write a post about something, you probably shouldn't believe that I will actually follow through with that promise.
 [^2]: Admittedly, the first two are unsurprisingly related
-[^3]: Always thought it would be in some blog post about $R$-modules and I thought I would not be doing you the disservice of talking about categories without mentionning universal properties. Oh well... it just goes to show
+[^3]: Always thought it would be in some blog post about $R$-modules and I thought I would not be doing you the disservice of talking about categories without mentioning universal properties. Oh well... it just goes to show
 [^4]: The irony (or not irony? What does this word even technically mean?) of $\mrm{Set}$ technically being the first example I give is not lost on me.
 [^5]: The category of right $R$-modules is written $\mrm{Mod}-R$.
 [^6]: There's a reason people call this stuff abstract nonsense
@@ -342,7 +342,7 @@ For motivation for why you might care about this, fix a field $k$, and recall th
 [^10]: We're still in the prelims (!)
 [^11]: Exercise convince yourself that any morphism $\ms A\to\ms B$ between presheaves induces a morphism $\ms A_x\to\ms B_x$ on stalks.
 [^12]: i.e. $M_X(U)=M^{\oplus\dim\hom_0(U,\R)}$
-[^13]: I'm starting to understand why people write textbooks instead of just trying to jam everything into one post. Maybe I should take a page from [Jeremy Kun's](https://jeremykun.com/) playbook and start separating all the background material into their own separate posts.
+[^13]: I'm starting to understand why people write textbooks instead of just trying to jam everything into individual blog posts. Maybe I should take a page from [Jeremy Kun's](https://jeremykun.com/) playbook and start separating all the background material into their own separate posts.
 [^14]: I'm also assuming you've seen fundamental groups before, so probably you've also seen covering spaces and this section is mostly review
 [^15]: My introduction to sheaf theory was somewhat nonstandard, so it's possible that this is a commonly taught/known result and I just happened to be out of the loop until recently
 [^16]: When we get into the meat of things, we'll actually be looking at $\mrm{Set}$-valued sheaves
