@@ -16,7 +16,7 @@ I've wanted to introduce categories on this blog for a long time now, but this i
 <div class="definition">
     A <b>(small) category</b> $\mc C$ is a collection (not necessarily a set) $\ob\mc C$ of <b>objects</b> and, for each pair $A,B\in\ob\mc C$ of objects in $\mc C$, a set $\mc C(A,B)=\Hom_{\mc C}(A,B)$ of <b>morphisms</b> such that
     <ol>
-        <li> If $f\in\Hom_{\mc C}(A,B)$ and $g\in\Hom_{\mc C}(B,C)$ are morphisms, then there is a unique composite morphisms $g\circ f\in\Hom_{\mc C}(A,C)$. Furthermore, composition of morphisms is associative so $h\circ(g\circ f)=(h\circ g)\circ f$ whenever either (and hence both) side is defined.</li>
+        <li> If $f\in\Hom_{\mc C}(A,B)$ and $g\in\Hom_{\mc C}(B,C)$ are morphisms, then there is a unique composite morphism $g\circ f\in\Hom_{\mc C}(A,C)$. Furthermore, composition of morphisms is associative so $h\circ(g\circ f)=(h\circ g)\circ f$ whenever either (and hence both) side is defined.</li>
         <li> For all $A\in\ob\mc C$, there exists an identity morphism $1_A\in\Hom_{\mc C}(A,A)$ such that, for all $B\in\ob\mc C$ all $f\in\Hom_{\mc C}(A,B)$ and all $g\in\Hom_{\mc C}(B,A)$, we have $f=f\circ1_A$ and $g=1_A\circ g$. </li>
     </ol>
     If $f\in\mc C(A,B)$ we will often denote this by writing $f:A\to B$ like we do for normal functions. Finally, let $\Mor\mc C=\bigcup\Hom_{\mc C}(A,B)$ be the collection of all morphisms in $\mc C$.
@@ -25,7 +25,7 @@ I've wanted to introduce categories on this blog for a long time now, but this i
     Our categories are small because we require our hom-sets to be, well, sets instead of allowing (potentially proper) classes like we do for our collection of objects.
 </div>
 
-The notion of a category is very general; think of your favorite type of mathematical object and you can probably form a category out of these things. The goto first example of a category people see is $\\mrm{Set}$, the category whose objects are sets and whose morphisms are set maps. However, while easy to understand, this is a terrible example becasue (1) nobody ever does math in the category $\mrm{Set}$ (sets are too unstructured) and (2) seeing this example makes it harder to internalize the facts that objects/morphisms are atomic as far as category theory is concerned (you're objects don't have to be sets, and your morphisms don't have to be "structure-preserving" set maps). [^4]
+The notion of a category is very general; think of your favorite type of mathematical object and you can probably form a category out of these things. The goto first example of a category people see is $\\mrm{Set}$, the category whose objects are sets and whose morphisms are set maps. However, while easy to understand, this is a terrible example becasue (1) nobody ever does math in the category $\mrm{Set}$ (sets are too unstructured) and (2) seeing this example makes it harder to internalize the fact that objects/morphisms are atomic as far as category theory is concerned (you're objects don't have to be sets, and your morphisms don't have to be "structure-preserving" set maps). [^4]
 
 As far as fixing (1) above, better examples to have in mind are $\mrm{Top}$, the category of topological spaces with continuous maps are morphisms; $\mrm{Ab}$, the category of abelian groups with group homomorphisms as its morphisms; and $R-\mrm{Mod}$ (here, $R$ is some ring), the category of left $R$-modules [^5] with $R$-linear maps as its morphisms. For better examples as far as (2) is concerned, think about the following.
 
@@ -42,19 +42,22 @@ As far as fixing (1) above, better examples to have in mind are $\mrm{Top}$, the
     Think of another category whose morphisms are not set-theoretic.
 </div>
 
-Category theory is all about studying objects through their properties and their interactions (i.e. maps) with other objects of the same type instead of through their particular construction. That being said, what are the maps between categories?
+Category theory is all about studying objects through their properties and their interactions (i.e. maps) with other objects of the same type instead of through their particular construction. So if we want to study categories, we should study maps between categories.
 
 <div class="definition">
-    Let $\mc C,\mc D$ be two categories. A <b>(covariant) functor</b> $F:\mc C\to\mc D$ is a choice of object $F(A)\in\mc D$ for each object $A\in\mc A$, and a collection of maps $\mc C(A,B)\xto F\mc D(F(A),F(B))$ such that $F(1_A)=1_A$ (i.e. $F$ preserves identites) for all $A\in\mc C$ and $F(f\circ g)=F(f)\circ F(g)$ (i.e. $F$ preserves compositions) for all morphisms $f,g\in\Mor C$ whenever both sides are defined.
+    Let $\mc C,\mc D$ be two categories. A <b>(covariant) functor</b> $F:\mc C\to\mc D$ is a choice of object $F(A)\in\mc D$ for each object $A\in\mc C$, and a collection of maps $\mc C(A,B)\xto F\mc D(F(A),F(B))$ such that $F(1_A)=1_A$ (i.e. $F$ preserves identites) for all $A\in\mc C$ and $F(f\circ g)=F(f)\circ F(g)$ (i.e. $F$ preserves compositions) for all morphisms $f,g\in\Mor C$ whenever both sides are defined.
 </div>
 <div class="remark">
-    If a function $F$ reverses arrows (i.e. gives maps $\mc C(A,B)\to\mc D(F(B),F(A))$), then we call is a <b>contravariant functor</b>. Letting $\mc C\op$ denote the category whoses objects are the same as in $\mc C$ and whose morphisms are the same as in $\mc C$ except going the other way around, a contravariant functor $\mc C\to\mc D$ is the same thing as a covariant functor $\mc C\op\to\mc D$.
+    If an asignment $F$ reverses arrows (i.e. gives maps $\mc C(A,B)\to\mc D(F(B),F(A))$), then we call is a <b>contravariant functor</b>. Letting $\mc C\op$ denote the category whoses objects are the same as in $\mc C$ and whose morphisms are the same as in $\mc C$ except going the other way around, a contravariant functor $\mc C\to\mc D$ is the same thing as a covariant functor $\mc C\op\to\mc D$.
 </div>
 <div class="example">
-    Many (pairs of) categories have "forgetful functors" that just forget some structure. For examples, there's a forgetful functor $\mrm{Ab}\to\mrm{Set}$ and also one from $R\mrm{-Mod}$ to $\mrm{Ab}$. Less boringly, the fundamental group $\pi_1$ is a functor $\mrm{Top}\to\mrm{Grp}$. Similarly, $n$th singular cohomology gives a contravariant functor $\mrm{Top}\to\mrm{Ab}$.
+    Many (pairs of) categories have "forgetful functors" that just forget some structure. For examples, there's a forgetful functor $\mrm{Ab}\to\mrm{Set}$ and also one from $R\mrm{-Mod}$ to $\mrm{Ab}$.
 </div>
 <div class="example">
-    This is an important example, so it gets its own block. Given any $A\in\mc C$, we can form two <b>$\Hom$-functors</b> $\Hom(A,-)$ and $\Hom(-,A)$. It's often beneficial to try and understand an object by understanding its $\Hom$-functors. Note that $\Hom(A,-)$ is covariant while $\Hom(-,A)$ is contravariant. This is often a source of confusion.
+    Less boringly, the fundamental group $\pi_1$ is a functor $\mrm{Top}\to\mrm{Grp}$. Similarly, $n$th singular cohomology gives a contravariant functor $\mrm{Top}\to\mrm{Ab}$.
+</div>
+<div class="example">
+    Given any $A\in\mc C$, we can form two <b>$\Hom$-functors</b> $\Hom(A,-)$ and $\Hom(-,A)$. It's often beneficial to try and understand an object by understanding its $\Hom$-functors. Note that $\Hom(A,-)$ is covariant while $\Hom(-,A)$ is contravariant. This is often a source of confusion.
 </div>
 
 Now that we know what a functor is, we can form a (large) category $\mrm{Cat}$ whose objects are (small) categories and whose morphisms are functors, but why stop there? The real raison d'être of category theory is to look at categories whose objects are functors and whose morphisms are $\dots$[^6]
@@ -75,13 +78,13 @@ I know I joked above about this stuff being abstract nonsense [^8], but these fu
     Let $G$ be a group and $k$ be a field. Recall that we can view $G$ itself as a category. With this in mind, the category of linear $G$-reps in the functor category $k$-Mod$^G$.
 </div>
 <div class="example">
-    A directed graph is two sets - arrows and vertices - with two maps from the arrow set to the vertex set - source and target - so the category of directed graphs is the functor category Set$^{\mc C}$ where $\mc C$ is the category with 2 objects $A,B$ and 2 morphisms $A\rightrightarrows B$.
+    A directed graph is two sets - edges and vertices - with two maps from the edge set to the vertex set - source and target - so the category of directed graphs is the functor category Set$^{\mc C}$ where $\mc C$ is the category with 2 objects $A,B$ and 2 morphisms $A\rightrightarrows B$.
 </div>
 <div class="definition">
     Let $X$ be a topological space, and let $\Open(X)$ be the category whose objects are open subsets of $X$ and whose morphisms are inclusion maps $U\into V$ (in particular, each Hom-set as cardinality at most 1). Fix a category $\mc C$. The category of <b>($\mc C$-valued) presheaves</b> on $X$ is the functor category $\mc C^{\Open(X)\op}$.
 </div>
 <div class="remark">
-    Let $X$ be a topological space. Unpacking the above definition, a presheaf $\msP$ on $X$ is, for every open $U\subseteq X$, a choice of $\msP(U)\in\ob\mc C$ such that if $U\subseteq V$ are both open, there is a "restriction" morphism $\rho_{UV}:\msP(V)\to\msP(U)$. We require that $\rho_{UU}=1_{\msP(U)}$ and $\rho_{UV}\circ\rho_{VW}=\rho_{UW}$ for all $U\subseteq V\subseteq W$ open in $X$. We usually write $f\mid_U$ for $\rho_{UV}(f)$ (This is because many important examples of (pre)sheaves are of the form "locally nice" functions on $U$ where "locally nice" might mean continuous, smooth, holomorphic, etc.).
+    Let $X$ be a topological space. Unpacking the above definition, a presheaf $\msP$ on $X$ is, for every open $U\subseteq X$, a choice of $\msP(U)\in\ob\mc C$ such that if $U\subseteq V$ are both open, there is a "restriction" morphism $\rho_{UV}:\msP(V)\to\msP(U)$. We require that $\rho_{UU}=1_{\msP(U)}$ and $\rho_{UV}\circ\rho_{VW}=\rho_{UW}$ for all $U\subseteq V\subseteq W$ open in $X$. We usually write $f\mid_U$ for $\rho_{UV}(f)$ (This is because many important examples of (pre)sheaves are of the form "nice" functions on $U$ where "nice" might mean continuous, smooth, holomorphic, etc.).
     <br><br>
     A morphism of presheaves $\msP,\msS$ on $X$ is a collection of maps $\msP(U)\to\msS(U)$ commuting with the restriction maps on $\msP,\msS$ respectively.
 </div>
@@ -101,13 +104,13 @@ This turns out to be too strong a condition most of the time, so people usually 
 The goal of this post is to show that three certain categories are equivalent. One of these is the category of locally constant sheaves, so let us return to (pre)sheaves. [^9]
 
 <div class="definition">
-    Let $\msP$ be a $\mc C$-valued presheaf on a topological space $X$ where $\mc C$ is a category with a forgetful functor to $\mrm{Set}$ (e.g. $\Ab$). Recall that this means that $\msP$ is a contravariant functor $\Open(X)\to\mc C$. We say that $\msP$ is a <b>sheaf</b> if it is "locally defined" in the sense that for any collection $\{U_i\}$ of open sets and elements $f_i\in U_i$ satisfying $f_i\mid_{U_i\cap U_j}=f_j\mid_{U_i\cap U_j}$ for all $i,j$, there is a unique $f\in\msP(U)$ with $f\mid_{U_i}=f_i$ for all $i$.
+    Let $\msP$ be a $\mc C$-valued presheaf on a topological space $X$ where $\mc C$ is a category with a forgetful functor to $\mrm{Set}$ (e.g. $\Ab$). Recall that this means that $\msP$ is a contravariant functor $\Open(X)\to\mc C$. We say that $\msP$ is a <b>sheaf</b> if it is "locally defined" in the sense that for any collection $\{U_i\}$ of open sets and elements $f_i\in\msP(U_i)$ satisfying $f_i\mid_{U_i\cap U_j}=f_j\mid_{U_i\cap U_j}$ for all $i,j$, there is a unique $f\in\msP(U)$ with $f\mid_{U_i}=f_i$ for all $i$.
 </div>
 
-That definition is a bit of a mouthful because I tried to make it general, but then ran into the issue that not all categories are build from sets. To stop furthermore confusion, for the rest of this section assume all presheaves (at the very least) spit out abelian groups because this is (almost) always true in practice anyway [^16]. A sheaf is a presheave where given a consistent choice of elements $f_i\in\msP(U_i)$, you can always (uniquely) glue these to get a global elements $f\in\msP(\bigcup U_i)$. Now, sheaves are really good for studying local properties and studying their ability (or failure) to satisfy local-to-global principals. One notion that helps in studying local properties via sheafs is that of a stalk.
+That definition is a bit of a mouthful because I tried to make it general, but then ran into the issue that not all categories are built from sets. To stop further confusion, for the rest of this section assume all presheaves (at the very least) spit out abelian groups because this is (almost) always true in practice anyway [^16]. A sheaf is a presheaf where given a consistent choice of elements $f_i\in\msP(U_i)$, you can always (uniquely) glue these to get a global elements $f\in\msP(\bigcup U_i)$. Now, sheaves are really good for studying local properties and studying their ability (or failure) to satisfy local-to-global principals. One notion that helps in studying local properties via sheafs is that of a stalk.
 
 <div class="definition">
-    Fix a presheaf $\msP$ on a space $X$, and choose some $x\in X$. Let $U,V\subseteq X$ be (open) neighborhoods of $X$. We say $f\in\msP(U)$ and $g\in\msP(V)$ have the same <b>germ</b> if there's some $W\subseteq U\cap V$ such that $f\mid_W=g\mid_W$. This is an equivalence relation. The <b>stalk</b> $\msP_x$ of $\msP$ at $x$ is the set of germs of sections defined near $x$ (i.e. of $f\in\msP(U)$ for any $U\ni x$).
+    Fix a presheaf $\msP$ on a space $X$, and choose some $x\in X$. Let $U,V\subseteq X$ be (open) neighborhoods in $X$. We say $f\in\msP(U)$ and $g\in\msP(V)$ have the same <b>germ</b> if there's some $W\subseteq U\cap V$ such that $f\mid_W=g\mid_W$. This is an equivalence relation. The <b>stalk</b> $\msP_x$ of $\msP$ at $x$ is the set of germs of sections defined near $x$ (i.e. of $f\in\msP(U)$ for any $U\ni x$).
 </div>
 <div class="remark">
     More algebraically, the stalk of a presheaf is the direct limit
