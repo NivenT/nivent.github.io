@@ -4,7 +4,7 @@ title: "Dedekind Domains Done Right"
 modified:
 categories: blog
 excerpt:
-tags: [math, Dedekind domain, localization]
+tags: [math, Dedekind domain, localization, cayley-hamilton]
 date: 2019-03-26 00:00:00
 ---
 
