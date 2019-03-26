@@ -117,7 +117,7 @@ That definition is a bit of a mouthful because I tried to make it general, but t
 
 This post is looking like it might get quite long [^10], so I'm just gonna move on without discussing stalks further except to say that, for our needs, they will appear as fibers of certain topological covers. 
 
-Sheaves are nice to have and work with, but presheaves are easier to write down. Thus, it's really nice that there is a (functorial) process called <b>sheafification</b> that, given any presheaf $\msP$ spits out a sheaf $\msP^+$ with a morphism $\msP\to\msP^+$ inducing an isomorphism on stalks [^11] such that any morphism $\msP\to\msS$ from $\msP$ to a sheaf $\msS$ factors uniquely as $\msP\to\msP^+\to\msS$. Let's end this section with a simple example. Fix an abelian group $M$ and a topological space $X$. Let $M_X$ denote the <b>constant presheaf</b>, i.e. $M_X(U)=M$ for all $U\in\Open(X)$. [^18] Its sheafification $M_X^+$ is the locally constant sheaf (which, because sheaves > presheaves, we still denote $M_X$ and we refer to as a <b>constant sheaf</b>) whose value on $U\in\Open(X)$ is $M\oplus M\oplus\cdots\oplus M$ where the number of factors of $M$ equals the number of connected components of $U$ [^12]. It would not be a bad idea to pause and go through the trouble of varifying that the constant presheaf really is a sheaf whose sheafification really is the constant sheaf as I have defined them.
+Sheaves are nice to have and work with, but presheaves are easier to write down. Thus, it's really nice that there is a (functorial) process called <b>sheafification</b> that, given any presheaf $\msP$ spits out a sheaf $\msP^+$ with a morphism $\msP\to\msP^+$ inducing an isomorphism on stalks [^11] such that any morphism $\msP\to\msS$ from $\msP$ to a sheaf $\msS$ factors uniquely as $\msP\to\msP^+\to\msS$. Let's end this section with a simple example. Fix an abelian group $M$ and a topological space $X$. Let $M_X$ denote the <b>constant presheaf</b>, i.e. $M_X(U)=M$ for all $U\in\Open(X)$. [^18] Its sheafification $M_X^+$ is the locally constant sheaf (which, because sheaves > presheaves, we still denote $M_X$ and we refer to as a <b>constant sheaf</b>) whose value on $U\in\Open(X)$ is $M\oplus M\oplus\cdots\oplus M$ where the number of factors of $M$ equals the number of connected components of $U$ [^12]. It would not be a bad idea to pause and go through the trouble of varifying that the constant presheaf really is a presheaf whose sheafification really is the constant sheaf as I have defined them.
 
 # Covers
 
@@ -131,16 +131,16 @@ Well, that last section felt like a lot of material to introduce all at once, so
     The set $\inv p(x)$ is called the <b>fiber</b> over $x$.
 </div>
 <div class="definition">
-    Let $X$ be a topological space. A <b>cover (or covering space of $X$</b> $p:Y\to X$ is a space over $X$ such that every point $x\in X$ has a neighborhood $U\ni x$ (called an <b>elementary (or fundamental) neighborhood</b>) such that $\inv p(U)$ is a disjoint union of open sets $\wt U_i$ of $Y$ and $p\mid_{\wt U_i}:\wt U_i\to U$ is a homeomorphism for all $i$.
+    Let $X$ be a topological space. A <b>cover (or covering space) of $X$</b> is a space $p:Y\to X$ over $X$ such that every point $x\in X$ has a neighborhood $U\ni x$ (called an <b>elementary (or fundamental) neighborhood</b>) such that $\inv p(U)$ is a disjoint union of open sets $\wt U_i$ of $Y$ and $p\mid_{\wt U_i}:\wt U_i\to U$ is a homeomorphism for all $i$.
 </div>
 <div class="remark">
-    Given any discrete space $I$, there's a trivial cover $X\by I\to X$ given by projection onto the first factor. More generally, the existence of fundamental neighborhoods means that any cover $p:Y\to X$ is locally trivial in the sense that each point of $X$ has a neighborhood $U$ s.t. $\inv p(U)\simeq X\by I$ (here, this isomorphism is in the category of spaces over $X$, or equivalently, in the category over covers of $X$) for some discrete $I$.
+    Given any discrete space $I$, there's a trivial cover $X\by I\to X$ given by projection onto the first factor. More generally, the existence of fundamental neighborhoods means that any cover $p:Y\to X$ is locally trivial in the sense that each point of $X$ has a neighborhood $U$ s.t. $\inv p(U)\simeq X\by I$ (here, this isomorphism is in the category of spaces over $X$, or equivalently, in the category of covers of $X$) for some discrete $I$.
 </div>
 <div class="remark">
     Because covers $p:Y\to X$ are locally trivial fibers are "locally homeomorphic" in the sense that each point $x\in X$ has a neighborhood in which every point's fiber is homeomorphic to $\inv p(x)$. This allows us to conclude that all fibers in any connected component of $X$ are homeomorphic. This remark does not use the discreteness of fibers and in fact holds for more general "fiber bundles" that I will not define here.
 </div>
 <div class="definition">
-    Let $p:Y\to X$ be a cover. The size $\abs{\inv p(x)}$ of any fiber is called the <b>degree</b> of the cover.
+    Let $p:Y\to X$ be a cover with $X$ connected. The size $\abs{\inv p(x)}$ of any fiber is called the <b>degree</b> of the cover.
 </div>
 
 Let's collect some facts about covers.
@@ -152,7 +152,7 @@ Let's collect some facts about covers.
     If $G\actson Y$ evenly, then the natural projection $Y\to G\sm Y$ is a cover.
 </div>
 <div class="proposition">
-    Let $p:Y\to X$ be a cover and $Z$ a connected topological space. If two maps $f,g:Z\rightrightarrows Y$ satisfy $p\circ f=p\circ g$ (i.e. $f,g$ life the same map $Z\to X$), then $f,g$ either agree everywhere or nowhere. That is, if there's some $z\in Z$ with $f(z)=g(z)$, then $f=g$.
+    Let $p:Y\to X$ be a cover and $Z$ a connected topological space. If two maps $f,g:Z\rightrightarrows Y$ satisfy $p\circ f=p\circ g$ (i.e. $f,g$ lift the same map $Z\to X$), then $f,g$ either agree everywhere or nowhere. That is, if there's some $z\in Z$ with $f(z)=g(z)$, then $f=g$.
 </div>
 <div class="proof4">
     This was shown in a <a href="../covering-spaces">previous post</a>.
@@ -193,7 +193,7 @@ We'll show that $\Fib_x$ is an equivalence of categories in the next section. To
     Let $X$ be path-connected and semilocally simply connected, and fix a base point $x\in X$. Then, the functor $\Fib_x$ is representable by a cover $\wt X_x\to X$.
 </div>
 
-I think the construction of $\wt X_x$ is one of those things that becomes obviously the right choice after you see it an digest it, but that can be hard to succinctly motivate beforehand, so I won't try to. As a general rule of thumb, let $I=[0,1]$ denote the unit interval.
+I think the construction of $\wt X_x$ is one of those things that becomes obviously the right choice after you see it and digest it, but that can be hard to succinctly motivate beforehand, so I won't try to. As a general rule of thumb, let $I=[0,1]$ denote the unit interval.
 
 <div class="proof4">
     Let $\wt X_x=[(I,0)\to(X,x)]$ be the set of homotopy classes (rel basepoints) of paths starting from $x$, and let $p:\wt X_x\to X$ be projection onto the right endpoint. To turn $\wt X_x$ into a space, we endow it with the following topology: given a point $[f]\in\wt X_x$, its neighborhood base consists of sets of the form
@@ -219,7 +219,7 @@ At this point, I think we have (almost) everything we need to show that covers o
 You may have noticed the "(almost)" in the previous sentence. That's there because directly proving a functor gives an equivalence of categories is annoying since you need to give an inverse functor and two natural transformations. To help ease our pain, we'll prove a lemma which says that the existence of one "nice" functor suffices to prove an equivalence of categories.
 
 <div class="definition">
-    A functor $F:\mc C_1\to\mc C_2$ is <b>faithful</b> the induced map $\mc C_1(A,B)\to\mc C_2(F(A),F(B))$ is injective for all $A,B\in\mc C_1$. If these maps are always bijective, then $F$ is <b>fully faithful</b>.
+    A functor $F:\mc C_1\to\mc C_2$ is <b>faithful</b> if the induced map $\mc C_1(A,B)\to\mc C_2(F(A),F(B))$ is injective for all $A,B\in\mc C_1$. If these maps are always bijective, then $F$ is <b>fully faithful</b>.
 </div>
 <div class="definition">
     A functor $F:\mc C_1\to\mc C_2$ is <b>essentially surjective</b> if every $A_2\in\mc C_2$ is isomorphic to $F(A_1)$ for some $A_1\in\mc C_1$.
@@ -258,20 +258,20 @@ I bet you can guess what comes next: to show that $\Fib_x$ gives an equivalence 
     The categories $\Cov(X)$ of covers of $X$ and $\mrm{Set}^{\pi_1(X,x)}$ of sets with a $\pi_1(X,x)$-action are equivalent.
 </div>
 <div class="exercise">
-    Let $\wh{\pi_1(X,x)}$ denote the profinite completion of $\pi_1(X,x)$ (i.e. $\invlim\pi_1(X,x)/H$ where $N$ ranges over normal subgroups of finite index partially ordered by inclusion). Prove that $\Fib_x$ induces an equivalence of categories between the category of finite covers of $X$ (i.e. covers with finite fibers) and sets with a continuous left $\wh{\pi_1(X,x)}$-action.
+    Let $\wh{\pi_1(X,x)}$ denote the profinite completion of $\pi_1(X,x)$ (i.e. $\invlim\pi_1(X,x)/N$ where $N$ ranges over normal subgroups of finite index partially ordered by inclusion). Prove that $\Fib_x$ induces an equivalence of categories between the category of finite covers of $X$ (i.e. covers with finite fibers) and sets with a continuous left $\wh{\pi_1(X,x)}$-action.
 </div>
 
 Whelp. I hope the journey was worth it. Probably if you've seen covering spaces before, this isn't too surprising, but I think it's still nice to see things from a more categorical perspective. I suspect that the next result is will be more surprising even to someone who has seen sheaves before (unless, of course, they've also seen this result before) [^15]: the category of (left) $\pi_1(X,x)$-sets is equivalent to the category of locally constant sheaves on $X$.
 
 # The Second Equivalence
 
-Let's get started. First off, I don't think I mentioned this before (but I did use this terminology earlier), but if $\ms P$ is a presheave and $U\subseteq X$ is open, then any $s\in\msP(U)$ is called a <b>section</b> of $\msP$ (defined) over $U$. This is because "sheaves of sections" (this use of "section" refering to (local) right inverses) show up fairly regularly in math [^17]. As an example
+Let's get started. First off, I don't think I mentioned this before (but I did use this terminology earlier), but if $\ms P$ is a presheaf and $U\subseteq X$ is open, then any $s\in\msP(U)$ is called a <b>section</b> of $\msP$ (defined) over $U$. This is because "sheaves of sections" (this use of "section" refering to (local) right inverses) show up fairly regularly in math [^17]. As an example
 
 <div class="definition">
     Let $p:Y\to X$ be a space over $X$ (note: not necessarily a cover), and $U\subset X$ an open set. A <b>section</b> of $p$ over $U$ is a continous map $s:U\to Y$ such that $p\circ s=1_U$.
 </div>
 <div class="example">
-    Let $p:Y\to X$ be a space over $X$, and let $\ms F_Y$ be the $\mrm{Set}$-valued presheaf on $X$ on sections of $p$. i.e.
+    Let $p:Y\to X$ be a space over $X$, and let $\ms F_Y$ be the $\mrm{Set}$-valued presheaf on $X$ of sections of $p$. i.e.
     $$\ms F_Y(U)=\bracks{s:U\to Y:p\circ s=1_U},$$
     and the restriction maps $\ms F_Y(U)\to\ms F_Y(V)$ for an inclusion $V\into U$ are literally given by restricted a section to a subspace. This presheaf is actually a sheaf essentially because continuous functions are locally definable (use the pasting lemma).
 </div>
@@ -299,9 +299,9 @@ Note that a morphism $\phi:Y\to Z$ of covers of $X$ induces a morphism $\ms F_Y\
 
 Let $X$ be a topological space, and let $\ms F$ be a presheaf (of sets) on $X$. Let 
 $$X_{\ms F}=\bigsqcup_{x\in X}\ms F_x$$
-be the disjoint union of the stalks of $\ms F$. We want to give this set a topology. Note that for any open $U\subset X$, a section $s\in\ms F(U)$ gives rise to a map $i_s:U\to X_{\ms F}$ sending each $x\in U$ to the germ $s_x\in\ms F_x$ of $s$ over $x$. Give $X_{\ms F}$ the coarsest (i.e. smallest) [^20] topology in which the sets $i_s(U)$ are open for all $U$ and $s$. Let $p_{\ms F}:X_{\ms F}\to X$ be the map sending a germ to the point over which it is defined (i.e. $p_{\ms F}\mid_{\ms F_x}=x$ for all $x\in X$). This map is continuos because
+be the disjoint union of the stalks of $\ms F$. We want to give this set a topology. Note that for any open $U\subset X$, a section $s\in\ms F(U)$ gives rise to a map $i_s:U\to X_{\ms F}$ sending each $x\in U$ to the germ $s_x\in\ms F_x$ of $s$ over $x$. Give $X_{\ms F}$ the coarsest (i.e. smallest) [^20] topology in which the sets $i_s(U)$ are open for all $U$ and $s$. Let $p_{\ms F}:X_{\ms F}\to X$ be the map sending a germ to the point over which it is defined (i.e. $p_{\ms F}\mid_{\ms F_x}=x$ for all $x\in X$). This map is continuous because
 $$\inv p_{\ms F}(U)=\bigcup_{s\in\ms F(U)}i_s(U)$$
-is open. Furthermore, the maps $i_s:U\to X_{\ms F}$ are open as well, and I'll leave this for you to check. Note that a morphism $\phi:\ms F\to\ms G$ of presheaves induces maps $\ms F\to\ms G$ for each $x\in X$, and hence a set map $\phi:X_{\ms F}\to X_{\ms G}$ compatible with the projections onto $X$. Thus, the assignment $\ms F\mapsto X_{\ms F}$ gives a functor from the category of sheaves on $X$ to the category of spaces over $X$ (Technically, we need to show that $\phi$ is continuous, but this is easy).
+is open. Furthermore, the maps $i_s:U\to X_{\ms F}$ are continuous as well, and I'll leave this for you to check. Note that a morphism $\phi:\ms F\to\ms G$ of presheaves induces maps $\ms F_x\to\ms G_x$ for each $x\in X$, and hence a set map $\phi:X_{\ms F}\to X_{\ms G}$ compatible with the projections onto $X$. Thus, the assignment $\ms F\mapsto X_{\ms F}$ gives a functor from the category of sheaves on $X$ to the category of spaces over $X$ (Technically, we need to show that $\phi$ is continuous, but this is easy).
 
 <div class="proposition">
     The assignment $C:\ms F\mapsto X_{\ms F}$ restricts to a functor $\LCS(X)\to\Cov(X)$.
@@ -343,7 +343,7 @@ For motivation for why you might care about this, fix a field $k$, and recall th
 [^11]: Exercise convince yourself that any morphism $\ms A\to\ms B$ between presheaves induces a morphism $\ms A_x\to\ms B_x$ on stalks.
 [^12]: i.e. $M_X(U)=M^{\oplus\dim\hom_0(U,\R)}$
 [^13]: I'm starting to understand why people write textbooks instead of just trying to jam everything into individual blog posts. Maybe I should take a page from [Jeremy Kun's](https://jeremykun.com/) playbook and start separating all the background material into their own separate posts.
-[^14]: I'm also assuming you've seen fundamental groups before, so probably you've also seen covering spaces and this section is mostly review
+[^14]: I'm assuming you've seen fundamental groups before, so probably you've also seen covering spaces and this section is mostly review
 [^15]: My introduction to sheaf theory was somewhat nonstandard, so it's possible that this is a commonly taught/known result and I just happened to be out of the loop until recently
 [^16]: When we get into the meat of things, we'll actually be looking at $\mrm{Set}$-valued sheaves
 [^17]: e.g. when proving that the category of vector bundles on a space is equivalent to the category of locally free sheaves on that space
