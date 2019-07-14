@@ -80,7 +80,7 @@ We next move on to analytically continuing the $\zeta$ function. I wish I could 
 
 $$\vartheta(s)=\sum_{n=-\infty}^\infty e^{-\pi n^2s}$$
 
-and then translate the equality $\vartheta(s)=s^{-1/2}\vartheta(1/s)$ into a similarl functional equation for the $\zeta$ function. How do you think up this approach? I don't know.
+and then translate the equality $\vartheta(s)=s^{-1/2}\vartheta(1/s)$ into a similar functional equation for the $\zeta$ function. How do you think up this approach? I don't know. [^18]
 
 Before the proof, recall the Gamma function
 
@@ -92,7 +92,7 @@ $$F_m(s)=\frac{\Gamma(s+m)}{(s+m-1)(s+m-2)\cdots s}$$
 
 gives a meromorphic extension of $\Gamma$ to the half plane $\Re(s)>-m$. We can relate $\zeta(s)$ to $\vartheta(s)$ through $\Gamma(s)$ via the following equality:
 
-$$\int_0^\infty e^{-\pi n^2u}u^{(s/2)-1}\d u=\pi^{-s/2}\Gamma(s/2)n^{-s},\text{ }\text{ }\text{ }n\ge1.$$
+$$\int_0^\infty e^{-\pi n^2u}u^{s/2}\frac{\d u}u=\pi^{-s/2}\Gamma(s/2)n^{-s},\text{ }\text{ }\text{ }n\ge1.$$
 
 This is seen by making the change of variables $u=\frac t{\pi n^2}$ on the LHS. Motivated by this, call $\xi(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)$ the <b>xi function</b> [^3].
 
@@ -518,13 +518,14 @@ which is the law of quadratic reciprocity. [^16]
 [^5]: Really less a "dive" than a "dip our toes in the water"
 [^6]: actually, holomorphic when the character is nontrivial
 [^7]: See the end of my "Fourier Analysis" post if you don't know what this is
-[^8]: In hindsight, it would have been better to define f(x) = (Nx)^{\eps}e^{-\pi(Nx)^2s/N}, and then apply poisson summation to get \sum_{k\in\Z}f(k+a) = \sum_{k\in\Z}F(f)(k)e^{2\pi ina} <br> PS: I really wish latex worked in these footnotes
+[^8]: In hindsight, it would have been better to define $f(x) = (Nx)^{\eps}e^{-\pi(Nx)^2s/N}$, and then apply poisson summation to get $\sum_{k\in\Z}f(k+a) = \sum_{k\in\Z}F(f)(k)e^{2\pi ina}$ <br> PS: --I really wish latex worked in these footnotes-- (turns out dreams do come true)
 [^9]: If you see a mistake somewhere, let me know
 [^10]: completed L function?
 [^11]: At the very least, letting $N=1$ and $\chi=1$ (so $\eps=0$) recovers the functional equation for the classic theta function, as it should
 [^12]: But I will say more about it in the next section
 [^13]: But don't worry, we will prove something involving primes.
 [^14]: Which, honestly, might be very hard to do. I haven't tried.
-[^15]: We've incidentally shown that \zeta_K has a meromorphic continuation in the quadratic number field case
+[^15]: We've incidentally shown that $\zeta_K$ has a meromorphic continuation in the quadratic number field case
 [^16]: I must admit, this whole section turned out more dubious than I intended. I wanted to present a (clean) proof of qudratic reciprocity, but it's unclear to me how much machinary/grunt work one would need to turn this outline into a rigorous, non-circular proof
 [^17]: Alternatively, it may actually be easier to calculate the residue of L(\chi, s) at s=1, and show that this residue is 0. I haven't tried this, but I imagine (could be wrong) that it boils down to some orthagonality relation a la the last theorem of the shallow dive showing that this residue is 0 iff chi is nontrivial. You would still need to below theorem for non-vanishing though.
+[^18]: Actually, I have a guess. The theta function has terms that look like $e^{-s}$ while the zeta function has terms that look like $(1/n)^s$. If you want to exploit the theta function's functional equation, then you need some kind of bridge between the two; this leads you to the Gamma function which has both a $e^{-\mrm{blah}}$ factor and a $\mrm{blah}^s$ factor. In fancier words, to introduce terms that help you relate the theta function to the zeta function you do something like take the [Mellin transform](https://www.wikiwand.com/en/Mellin_transform) of $s\mapsto e^{-\pi n^2s}$ (I say something like because I think we technically end up using the Mellin transform of $s\mapsto e^{-\pi n^2s^2}$ instead (and then substitute $u=x^2$), but potato potato)
