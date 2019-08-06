@@ -5,7 +5,7 @@ modified:
 categories: blog
 excerpt:
 tags: [math, topology, vector bundle, duality, separation axioms]
-date: 2019-03-24 00:00:00
+date: 2019-07-28
 hidden: true
 ---
 
@@ -17,7 +17,7 @@ I talked a little bit about the topic of this post's title in a [recent post](..
 
 This might just be because there's no point-set topology class at my school [^3], but I get the sense that too many people don't know about the theory of separation axioms for topological spaces. Sadly, I do not think I have enough space in this post to develop this theory, but I can state some needed highlights. 
 
-# $X``=" C^0(X)$
+# $X ``=" C^0(X)$
 
 # Swan's Theorem
 

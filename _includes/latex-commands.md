@@ -103,7 +103,7 @@ $$
 \newcommand{\sep}[1]{#1_{\mathrm{sep}}}
 \newcommand{\nabs}[0]{|\,\cdot\,|} % norm + absolute value
 \newcommand{\gnabs}[0]{|g^{-1}(\,\cdot\,)|}
-\newcommand{\codiff}[1]{#1^*}
+\newcommand{\codiff}[1]{#1^\*}
 \newcommand{\compl}[1]{#1^{\wedge}} % Completion
 \DeclareMathOperator{\norm}{N}
 \DeclareMathOperator{\Aut}{Aut}
@@ -314,7 +314,7 @@ $$
 \newcommand{\st}{\tilde}
 \newcommand{\wt}{\widetilde}
 \newcommand{\wh}{\widehat}
-\renewcommand{\ast}[1]{#1^*}
+\renewcommand{\ast}[1]{#1^\*}
 \newcommand{\twocases}[3]{
 	\begin{cases}
 		\hfill#1\hfill&\text{if }#2\\
@@ -329,8 +329,8 @@ $$
 }
 \newcommand{\xlongleftarrow}[1]{\overset{#1}{\longleftarrow}}
 \newcommand{\xlongrightarrow}[1]{\overset{#1}{\longrightarrow}}
-\newcommand{\push}[1]{#1_*}
-\newcommand{\pull}[1]{#1^*}
+\newcommand{\push}[1]{#1_\*}
+\newcommand{\pull}[1]{#1^\*}
 \newcommand{\by}{\times}
 \newcommand{\from}{\leftarrow}
 \newcommand{\xto}{\xrightarrow}

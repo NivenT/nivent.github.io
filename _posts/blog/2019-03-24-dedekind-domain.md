@@ -8,7 +8,7 @@ tags: [math, Dedekind domain, localization, cayley-hamilton]
 date: 2019-03-26 00:00:00
 ---
 
-I've wanted to write this post for a long time now. Dedekind domain's are, objectively, the best rings in existence, and their greatness stems from one fact: ideals in a Dedekind domain factor uniquely into (finite) products of prime ideals. However, I've never seen a proof of this fact that I liked (i.e. one that's straightforward enough for me to actually remember) [^1], and so this post is my attempt to remedy this situation. Like (almost) always, I'll start by introducing some background I'll need in the proof, and then I'll actually get into the good stuff in a separate section.
+I've wanted to write this post for a long time now. Dedekind domain's are, objectively, the best rings in existence [^2], and their greatness stems from one fact: ideals in a Dedekind domain factor uniquely into (finite) products of prime ideals. However, I've never seen a proof of this fact that I liked (i.e. one that's straightforward enough for me to actually remember) [^1], and so this post is my attempt to remedy this situation. Like (almost) always, I'll start by introducing some background I'll need in the proof, and then I'll actually get into the good stuff in a separate section.
 
 # Background
 
@@ -163,4 +163,5 @@ Well, that wasn't so bad, was it? I feel like this is a nice proof because it do
     Let $A$ be an integral domain such that every nonzero ideal $I\subset A$ factors uniquely into a finite product of prime ideals. Show that $A$ is a Dedekind domain.
 </div>
 
-[^1]: Although Serre comes close in his "Local Fields" book (maybe I should only admit that I've only seen two approaches aside from the one I'll show here)
+[^1]: Although Serre comes close in his "Local Fields" book (maybe I should also admit that I've only seen two approaches aside from the one I'll show here). I should also add that when I say "never seen," I mean excluding the approach in this post; this proof was outlined in one of my classes, but I don't know where else it's written down.
+[^2]: Fight me

@@ -32,7 +32,7 @@ search_omit: true
 <ul class="post-list">
   {% assign count = 0 %}
   {% for post in site.posts %}
-    {% unless post.hidden %}
+    {% unless post.hidden2 %}
       <li>
         <article>
           <a href="{{ site.url }}{{ post.url }}">

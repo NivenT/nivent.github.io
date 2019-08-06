@@ -573,3 +573,18 @@ span + .entry-title {
     font-weight: bold;
     font-style: normal;
 }
+.claim {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.claim:before { 
+    content: "Claim. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.claim[name]:before { 
+    content: "Claim (" attr(name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}
