@@ -16,3 +16,5 @@ The title of this post is a bit of a misnomer. We won't be talking about represe
 # Prelim on Elliptic Curves
 
 An <b>elliptic curve</b> is a curve of genus with a specified base point. This is basically a fancy way of saying that elliptic curves are (one-holed) tori. Now, a torus is not a priori something you would think to call a "curve," so I guess we'll start by explaining why tori are in fact curves. 
+
+Given a 

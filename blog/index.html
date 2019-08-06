@@ -31,20 +31,34 @@ search_omit: true
 
 {% if paginator.total_pages > 1 %}
   {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/'}}">
-    <li class="newer">
-      < Newer Posts
-    </li>
-  </a>
+    {% if paginator.previous_page > 1 %}
+      <a href="{{ site.url }}/blog">
+        <li class="newer">
+          << Newest Posts
+        </li>
+      </a>
+    {% endif %}
+    <a href="{{ paginator.previous_page_path }}">
+      <li class="newer">
+        < Newer Posts
+      </li>
+    </a>
   {% endif %}
 
   <span></span>
 
   {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/'}}">
-    <li class="older">
-      Older Posts >
-    </li>
-  </a>
+    {% if paginator.next_page < paginator.total_pages %}
+      <a href="{{ site.url }}/blog/{{ paginator.total_pages }}">
+        <li class="older">
+          Oldest Posts >>
+        </li>
+      </a>
+    {% endif %}
+    <a href="{{ paginator.next_page_path }}">
+      <li class="older">
+        Older Posts >
+      </li>
+    </a>
   {% endif %}
 {% endif %}

@@ -207,7 +207,8 @@ span + .entry-title {
 	@extend .btn;
 	padding: 4px 10px;
 	@include font-size(18);
-	float: right;
+  margin-left: 4px;
+  float: right;
 }
 
 .newer {
