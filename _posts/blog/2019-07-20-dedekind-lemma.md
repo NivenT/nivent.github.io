@@ -5,17 +5,14 @@ modified:
 categories: blog
 excerpt:
 tags: [math, Dedekind domain, adeles, localization, completion]
-date: 2019-07-28
-hidden: true
+date: 2019-08-12
 ---
 
-<b>If you're somehow seeing this right now, look away. It's not finished, and I'm not sure when/if it will be</b>
-
-Often times in these posts, the main focus is one some big/nice theorem/result; there's [a nice lemma about Dedekind domains](https://www.youtube.com/watch?v=F8mYLi3PGOc) that I think merits its own post. Partially because I'm still shocked that it's true, and partially because I don't know where else it is written down. After proving it, I will (maybe briefly) mention one of its uses [^1]. However, I think this use is less exciting than the lemma itself. The gist of the lemma is that lattices over Dedekind domains can be modified at a single prime.
+Often times in these posts, the main focus is some big/nice theorem/result; however, this time there's [a nice lemma about Dedekind domains](https://www.youtube.com/watch?v=F8mYLi3PGOc) that I think merits its own post. This is partially because I'm still shocked that it's true, and partially because I don't know where else it is written down. After proving it, I will (maybe briefly [^9]) mention one of its uses [^1]. However, I think this use is less exciting than the lemma itself. The gist of the lemma is that lattices over Dedekind domains can be modified at a single prime.
 
 # The Lemma
 
-I guess I might as well start with stating this thing. Before I can do that thought, it's probably worthwhile to define what I mean by a lattice.
+I guess I might as well start with stating this thing. Before I can do that though, it's probably worthwhile to define what I mean by a lattice.
 <div class="definition">
     Let $A$ be an integral domain with fraction field $F$. Let $V$ be an $F$-vector space. Then, an <b>$A$-lattice</b> (or <b>lattice over $A$</b>) $L\subset V$ is a torsion-free, finitely generated $A$-module. Its <b>rank</b>
  is $\dim_F(F\otimes_AL)$.
@@ -121,32 +118,69 @@ Cool. Now that we know something about adeles, we can prove the thing we alluded
 
 When $R$ is a Dedekind domain (and $P$ is finitely generated), this is just a fancy way to say that $P$ is torsion-free [^4]. Given a projective $R$-module $P$, its <b>rank</b> is $\dim_F(P\otimes_RF)$ where $F=\Frac(R)$ [^5]. 
 
-The one use of our main lemma I know is proving the following:
+One last thing: for proving the below theorem, it will be helpful to know that (finitely presented) projective modules are "locally free" in the below sense. [^7]
+
+<div class="proposition">
+    Let $M$ be a finitely presented $R$-module. Then, TFAE
+    <ul>
+        <li> $M$ is projective. </li>
+        <li> There exists $r_1,\dots,r_k\in R$ s.t. $(r_1,\dots,r_k)=R$ and $M[\frac1{r_i}]$ is a free $R[\frac1{r_i}]$-module for all $i$. </li>
+    </ul>
+</div>
+<div class="proof4">
+    Somewhere in <a href="http://math.stanford.edu/~church/teaching/210A-F17/math210A-F17-hw3-sols.pdf">here</a>.
+</div>
+
+Finally, the one use of our main lemma I know is proving the following:
 
 <div class="theorem">
-    Let $R$ be a Dedekind domain with fraction field $F$. Then, the set of isomorphism classes of finitely generated projective $R$-modules of rank $n$ can be identified with the double coset space $\GL_n(F)\sm\GL_n(\A_R)\,/\,\GL_n(\wh R)$.
+    Let $R$ be a Dedekind domain with fraction field $F$. Then, the set of isomorphism classes of finitely generated projective $R$-modules of rank $n$ can be identified with the double coset space $\GL_n(\wh R)\sm\GL_n(\A_R)\,/\,\GL_n(F)$.
 </div>
 <div class="proof4">
     First convince yourself that $\GL_n(\wh R)\simeq\prod_\mfp\GL_n(R_\mfp)$. Now we'll describe the map
     $$\bracks{\text{isomorphism classes of finitely generated projective $R$-modules of rank $n$}}\too\GL_n(F)\sm\GL_n(\A_R)\,/\,\GL_n(\wh R).$$
-    Let $P$ be a such an $R$-module, fix an $F$-linear isomorphism $f:F\otimes_RM\iso F^n$, and choose any prime $\mfp$. Let $\bracks{\ith e_\mfp}_{i=1}^n$ be an $R_\mfp$-basis of $M_\mfp$, so $\bracks{1\otimes\ith e_\mfp}_{i=1}^n$ is an $F_\mfp$-basis of $F_\mfp\otimes_{R_\mfp}M_\mfp$. This choice of basis gives rise to a map $g_\mfp:F_\mfp\otimes_{R_\mfp}M_\mfp\to F_\mfp^n$, and comparing this map with $f$ (really, $f_\mfp$) gives us some $T_\mfp\in\GL_n(F_\mfp)$.
+    Let $P$ be such an $R$-module, fix an $F$-linear isomorphism $f:F\otimes_RM\iso F^n$, and choose any prime $\mfp\subset R$. Now, fix $r_1,\dots,r_m$ (I'm pretty sure, secretly, $m=n$ but that's not needed for this proof) as in the previous proposition, and let $\bracks{\ith e_j}_{j=1}^n$ be an $R[\frac1{r_i}]$-basis for $M[\frac1{r_i}]$. Choosing a basis like this gives rise to a map $\ith g:F\otimes_{R[\frac1{r_i}]}M[\frac1{r_i}]\iso F^n$. Noting that
+    $$F\otimes_{R[\frac1{r_i}]}M\sqbracks{\frac1{r_i}}\simeq F\otimes_{R[\frac1{r_i}]}R\sqbracks{\frac1{r_i}}\otimes_RM\simeq F\otimes_RM,$$
+    and comparing $\ith g$ with $f$ gives us some $\ith T\in\GL_n(F)$.
     $$\begin{CD}
-    F_\mfp\otimes_{R_\mfp}M_\mfp @>f_\mfp>> F_\mfp^n\\
-    @VVV @VV{T_\mfp}V\\
-    F_\mfp\otimes_{R_\mfp}M_\mfp @>g_\mfp>> F_\mfp^n
+    F\otimes_RM @>f>> F^n\\
+    @VVV @VV\ith TV\\
+    F\otimes_{R\sqbracks{\frac1{r_i}}}M\sqbracks{\frac1{r_i}} @>\ith g>> F^n
     \end{CD}$$
-
-    Hence, (we claim that) our desired map is
-    $$\mapdesc\psi{\bracks{f:F\otimes_RM\iso F^n}}{\GL_n(F)\sm\GL_n(\A_R)\,/\,\GL_n(\wh R)}f{\parens{f_\mfp}_\mfp}.$$
-    To show that this map is well-defined, we will show that changing the isomorphism $f$ (i.e. changing the global basis) affects our result by an element of $\GL_n(F)$ on the left, while changing the local bases affects the result by an element of $\GL_n(\wh R)$ acting on the right.<br>
+    Now we make use of the prime $\mfp$ we fixed earlier. Since $(r_1,\dots,r_m)=R$, there must exist some $k=k_\mfp\in\{1,\dots,m\}$ such that $r_k\not\in\mfp$, so $\bracks{\Ith ek_j}_{j=1}^n$ descends to an $R_\mfp$-basis of $M_\mfp$, and $\Ith Tk$ descends to a map $\Ith Tk_\mfp\in\GL_n(F_\mfp)$. Now, we investigate when we further have that $\Ith Tk_\mfp\in\GL_n(R_\mfp)$. By construction, $\det(\Ith Tk_\mfp)=\det(\Ith Tk)$, so since there are only finitely many $\ith T$, we claim that we will have $\Ith Tk_\mfp\in\GL_n(R_\mfp)$ for all but finitely many $\mfp$. In more detail, we can first fix some $a\in R$ s.t. the matrix for $a\ith T$ has $R$-entries for all $i$. Hence, if both $a$ and $\det(a\Ith Tk)$ are invertible in $R_\mfp$, then $\Ith Tk_\mfp$ will be an element of $\GL_n(R_\mfp)$. Thus, any prime $\mfq$ with $\Ith T{k_\mfq}_\mfq\not\in\GL_n(R_\mfq)$ must divide
+    $$a\prod_{i=1}^m\det\parens{a\ith T}\in R.$$
+    There are only finitely many such primes, so (we claim that) our desired map is
+    $$\mapdesc\psi{\bracks{f:F\otimes_RM\iso F^n}}{\GL_n(\wh R)\sm\GL_n(\A_R)\,/\,\GL_n(F)}f{\parens{\Ith T{k_\mfp}_\mfp}_\mfp}$$
+    where we really should have chosen notation that made it clear that $\Ith T{k_\mfp}_\mfp$ depends on $f$. To show that this map is well-defined, we will show that changing the isomorphism $f$ affects our result by an element of $\GL_n(F)$ on the left, while changing the local bases affects the result by an element of $\GL_n(\wh R)$ acting on the right.<br>
     Let $\phi:M\to N$ be an isomorphism of projective $R$-modules. Then, we get a commutative diagram
     $$\begin{CD}
         F\otimes_RM @>f>> F^n\\
         @V{1\otimes\phi}VV         @VVTV\\
         F\otimes_RN @>g>> F^n
     \end{CD}$$
-    where $T\in\GL_n(F)$. Now, giving $F\otimes_RM$ the basis coming from the composition $F\otimes_RM\to F\otimes_RN\to F^n$ instead of the one coming from $f$ has the effect of multiplying each of our $e_i$ by 
+    where $T\in\GL_n(F)$. Now, using the composition $g\circ(1\otimes\phi)$ in place of $F$ has the effect of turning $\ith T$ into $\ith T\inv T$ as one sees by staring at the below commutative diagram
+    $$\begin{CD}
+    F\otimes_RM @>g>> F^n\\
+    @A{1\otimes\phi}AA @AATA\\
+    F\otimes_RM @>f_\mfp>> F^n\\
+    @VVV @VV\ith TV\\
+    F\otimes_{R\sqbracks{\frac1{r_i}}}M\sqbracks{\frac1{r_i}} @>\ith g>> F^n
+    \end{CD}$$
+    Hence, changing our isomorphism really does correspond to an action of $\GL_n(F)$ on the right.<br>
+    Now, fix a prime $\mfp\subset R$ and an $R_\mfp$-basis $\bracks{f_j}_{j=1}^n$ for $M_\mfp$. What would happen to $\Ith Tk_\mfp$ if we used this basis instead of $\bracks{\Ith ek_j}_{j=1}^n$? Well, this alternate choice of basis gives rise to a map $g_\mfp:F_\mfp\otimes_{R_\mfp}M_\mfp\iso F_\mfp^n$, and then again, you stare at a diagram and see that this would have the effect of replacing $\Ith Tk_\mfp$ with $T_\mfp\Ith Tk_\mfp$ where $T_\mfp$ is what makes the below commute
+    $$\begin{CD}
+    F_\mfp\otimes_{R_\mfp}M_\mfp @>f>> F^n_\mfp\\
+    @VVV @VV{\Ith Tk_\mfp}V\\
+    F_\mfp\otimes_{R_\mfp}M_\mfp @>\Ith gk_\mfp>> F^n_\mfp\\
+    @VVV @VV{T_\mfp}V\\
+    F_\mfp\otimes_{R_\mfp}M_\mfp @>g_\mfp>> F^n_\mfp
+    \end{CD}$$
+    Clearly, $T_\mfp\in\GL_n(\mfp)$ since it corresponds to changing $R_\mfp$-bases from our original choice to our new choice, so changing all local bases at once corresponds to an action of $\GL_n(\wh R)$ on the left as desired.<br>
+    So far, all we've done is defined this map; we still need to show that it's a bijection. We start with surjectivity. Fix some representative $(T_\mfp)_\mfp$ of an element of $\GL_n(\wh R)\sm\GL_n(\A_R)\,/\,\GL_n(F)$ (i.e. $T_\mfp\in\GL_n(F_\mfp)$). Since $T_\mfp\in\GL_n(R_\mfp)$ almost always, we can act by $\GL_n(\wh R)$ on the left to assume that $T_\mfp=I$, the identity for all but finitely many $\mfp$. The point of doing this is that taking $L=R^n$ and letting $f:F\otimes_RL\iso F^n$ be the natural isomorphism, we get that $\psi(f)$ is represented by the identity in every slot. Hence, $\psi(f)_\mfp=T_\mfp$ for all but finitely many $\mfp$, and we use our main lemma to change $L$, one prime at a time, in the finiely many differing slots to arrive at a new lattice $L'$ for which $\psi(L')=(T_\mfp)_\mfp$, proving surjectivity. <br>
+    I'll leave injectivity for the reader because I mainly just cared about applying the main lemma, and I've done that now.
 </div>
+
+I don't actually know why this theorem is useful, but it probably is for something. I guess, geometrically, rank $n$ projective $R$-modules correspond to rank $n$ vector bundles over $\spec R$, so this gives some characterization of vector bundles in terms of this double coset space. [^8] When $n=1$, we see that the Picard group $\Pic(R)$ is $\units{\wh R}\sm\units{\A_R}\,/\,\units F$. Maybe one could use this to prove finiteness of class groups when $R=\ints K$ is the ring of integers of some number field or something; I really don't know.
 
 # An Exercise
 
@@ -157,3 +191,7 @@ The simplest Dedekind domains are PIDs. Try proving the results of this post jus
 [^3]: Assuming I'm not remembering things incorrectly, when $n=1$, this gives the Picard group of $R$.
 [^4]: Exercise: prove this (hint: use the fact that $R$ is locally a PID and (finitely generated) torsion-free modules over PIDs are free)
 [^5]: Secretly, the rank of a projective $R$-module $P$ is supposed to be a function $r:\spec(R)\to\N_{\ge0}$ given by $r(\mfp)=\dim_{R/\mfp}(P\otimes_RR/\mfp)$, but this function is constant (and equal to what I wrote outside this footnote) when $R$ is not stupid (e.g. when $R$ is an integral domain)
+[^6]: Exercise: prove that these are equivalent
+[^7]: We say an $R$-module $M$ is finitely presented if there exists a short exact sequence $0\to A\to F\to M\to 0$ with $F$ a finitely generated free $R$-module and $A$ finitely generated. When $R$ is Noetherian, this is equivalent to being finitely generated.
+[^8]: Something something the geometry of Dedekind domains is controlled by adeles something something?
+[^9]: Spoiler: I accidentally ended up spending most of my time on this one use instead of keeping focus on the lemma throughout
