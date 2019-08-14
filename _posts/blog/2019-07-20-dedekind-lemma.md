@@ -4,7 +4,7 @@ title: "A Nice Lemma about Dedekind Domains"
 modified:
 categories: blog
 excerpt:
-tags: [math, Dedekind domain, adeles, localization, completion]
+tags: [math, Dedekind domain, adeles, localization, completion, projective module]
 date: 2019-08-12
 ---
 

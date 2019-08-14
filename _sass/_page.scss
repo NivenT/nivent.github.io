@@ -589,3 +589,18 @@ span + .entry-title {
     font-weight: bold;
     font-style: normal;
 }
+.notation {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.notation:before { 
+    content: "Notation. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.notation[name]:before { 
+    content: "Notation (" attr(name) "). ";
+    font-weight: bold;
+    font-style: normal;
+}

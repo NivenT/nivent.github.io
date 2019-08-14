@@ -4,7 +4,7 @@ title: "Spectral Sequences"
 modified:
 categories: blog
 excerpt:
-tags: [math, homological algebra, topology, algebra]
+tags: [math, homological algebra, topology, algebra, primer, algebraic topology]
 date: 2019-08-06
 hidden: true
 ---
