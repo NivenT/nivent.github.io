@@ -497,10 +497,14 @@ span + .entry-title {
     display: block;
     margin: 12px 0;
     font-style: normal;
-    //padding: (0px + $doc-line-height)/2;
 }
 .exercise:before {
     content: "Exercise. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.exercise[name]:before {
+    content: "Exercise (" attr(name) "). ";
     font-weight: bold;
     font-style: normal;
 }
