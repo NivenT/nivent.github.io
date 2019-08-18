@@ -129,7 +129,7 @@ Before going on, I should maybe also say what homology is.
 
 Now we start developing the good stuff. I should probably start by saying that I will only be considering spectral sequences in cohomology in this post, so, for example, we'll we be working in the (abelian) category $\CoCh(\msA)$ of cochain complexes of an abelian category $\msA$. [^6]
 
-For the remainder of this post, fix some abelian category $\msA$. Probably a good place to start here is with the definition of a filtered complex.
+For the remainder of this section, fix some abelian category $\msA$. Probably a good place to start here is with the definition of a filtered complex.
 <div class="definition">
     A <b>decreasing filtration</b> $F$ on an object $A\in\msA$ is a famility $(F^nA)_{n\in\Z}$ of subobjects of $A$ such that
     $$A\supseteq\dots\supseteq F^nA\supseteq F^{n+1}A\supseteq\dots\supseteq0.$$
@@ -199,7 +199,7 @@ where $z\in F^pA^{p+q}\cap\inv d(F^{p+r}A^{p+q+1})$. Note that $d_r$ has bidegre
             $$E_{r+1}^{p,q}\simeq\frac{\ker\parens{d_r^{p,q}:E_r^{p,q}\to E_r^{p+r,q-r+1}}}{\im\parens{d_r^{p-r,q+r-1}:E_r^{p-r,q+r-1}\to E_r^{p,q}}}$$
         </li>
         <li> $E_1^{p,q}=\hom^{p+q}(G^pA^\bullet)$. </li>
-        <li> If the filtration of $A^\bullet$ is bounded, then for every $p,q$, for $r$ sufficiently large, we have $E^r_{p,q}=G^p\hom^{p+q}(A^\bullet)$. In this case, we say $E_1$ <b>converges</b> (or <b>abuts</b>) to $\hom^{p+q}(A^\bullet)$. </li>
+        <li> If the filtration of $A^\bullet$ is bounded, then for every $p,q$, for $r$ sufficiently large, we have $E_r^{p,q}=G^p\hom^{p+q}(A^\bullet)$. In this case, we say $E_1$ <b>converges</b> (or <b>abuts</b>) to $\hom^{p+q}(A^\bullet)$, and denote this $E_1^{p,q}\implies\hom^{p+q}(A^\bullet)$. </li>
     </ol>
 </div>
 <div class="proof4">
@@ -212,10 +212,12 @@ where $z\in F^pA^{p+q}\cap\inv d(F^{p+r}A^{p+q+1})$. Note that $d_r$ has bidegre
             Note that $K_{r+1}^{p,q}\subset K_r^{p,q}$, so there's a natual induced injection $Z_{r+1}^{p,q}\into Z_r^{p,q}$. Composing this with the quotient map gives a map $\phi:Z_{r+1}^{p,q}\to E_r^{p,q}$. Now, for $z\in K_{r+1}^{p,q}$, we have $\phi([z])\in\ker d_r^{p,q}$ since $d_r(\phi([z]))=[dz]\in E_r^{p+r,q-r+1}$ and $dz\in F^{p+r+1}A^{p+q+1}=F^{(p+r)+1}A^{(p+r)+(q-r+1)}$. In fact, we have that $\phi$ surjects onto $\ker d_r^{p,q}$ because its image, by definition, contains every $z$ s.t. $dz\in F^{p+r+1}A^{p+q+1}$. Now, we claim that $\ker\phi=B_r^{p,q}$ which suffices to prove 2. It's clear that $I_{r+1}^{p,q}\subset I_r^{p,q}$, so $B_r^{p,q}\subset\ker\phi$. Conversely, suppose that $z\in\ker\phi\subset Z_{r+1}^{p,q}$. Well, $\phi(z)=[z]$, so this means that $z\in B_r^{p,q}$. Hence, $z\in B_r^{p,q}\cap Z_{r+1}^{p,q}$, so $z\in B_{r+1}^{p,q}$.
         </li>
         <li>
-            It's clear from definitions that $Z_1^{p,q}=\ker\parens{G^pA^{p+q}\to G^pA^{p+q+1}}$ and that $B_1^{p,q}=\im\parens{G^pA^{p+q-1}\to G^pA^{p,q}}$. 3. follows.
+            It's clear from definitions that $Z_1^{p,q}=\ker\parens{G^pA^{p+q}\to G^pA^{p+q+1}}$ and that $B_1^{p,q}=\im\parens{G^pA^{p+q-1}\to G^pA^{p,q}}$. Part 3 follows.
         </li>
         <li>
-            Suppose now that there exists $n,m\in\Z$ such that $F^nA^\bullet=A^\bullet$ and $F^mA^\bullet=0$ (so $m>n$). Fix any $p,q\in\Z$. Note that $d_r^{p,q}=0$ and $d_r^{p-r,q+r-1}=0$ whenever $r>\max\{m-p,p-n\}$.
+            Suppose now that there exists $n,m\in\Z$ such that $F^nA^\bullet=A^\bullet$ and $F^mA^\bullet=0$ (so $m>n$). Fix any $p,q\in\Z$, and choose any $r>\max\{m-p,p-n+1,0\}$. Then, 
+            $$F^{p+r}A^{p+q+1}\subseteq F^mA^{p+q+1}=0\text{ and }F^{p-r+1}A^{p+q-1}\supseteq F^nA^{p+q-1}=A^{p+q-1},$$
+            so $Z_r^{p,q}=\parens{F^pA^{p+q}\cap\ker d+F^{p+1}A^{p+q}}/F^{p+1}A^{p+q}$, and $B_r^{p,q}=\parens{F^pA^{p+q}\cap\im d+F^{p+1}A^{p+q}}/F^{p+1}A^{p+q}$. With these descriptions stated, we obviously have a surjective map $F^p\hom^{p+q}(A^\bullet)\onto E_r^{p,q}$. The kernel of this map will be the cohomology classes $\alpha\in F^p\hom^{p+q}(A^\bullet)$ represented by a cycle $x\in F^{p+1}A^{p+q}$; that is, the kernel is exacly $F^{p+1}A^{p+q}$, so we get our desired isomorphism $G^p\hom^{p+q}\iso E_r^{p,q}$.
         </li>
     </ol>
 </div>
@@ -224,7 +226,11 @@ Before ending this section, I should maybe mention some standard terminology. Th
 
 # A Couple Neat Applications
 
+Now that we've seen a way of constructing spectral sequences, let's spend some time looking at their applications on topology. In this section, we'll (re)prove a couple results one usually gets without spectral sequences, and then in the next section we'll look into something more substantive.
+
 ### Cellular Cohomology is Singular Cohomology
+
+Fix a CW-complex $X$, and let $X^k$ denote its $k$-skeleton. Let $C^\bullet(X)$ denote its singular cochain complex, and filter it via $F^pC^\bullet(X)=C^\bullet(X^p)$ [^11]. We then get a spectral sequence $E_0^{p,q}\implies\hom^{p+q}(X)$ with $E_0$-page $E_0^{p,q}=C^{p+q}(X^p)/C^{p+q}(X^{p+1})$. Notice that the chains in this page agree with those defining relative cohomology, so $E_1^{p,q}=\hom^{p+q}(X^{p+1},X^p)$.
 
 ### Kunneth Formula
 
@@ -232,10 +238,15 @@ Before ending this section, I should maybe mention some standard terminology. Th
 
 Let $F\to E\to B$ be a (Serre) fibration with $\pi_1B=0$ [^8].
 
+### Hurewicz isomorphism
+
 <div class="exercise" name="Thom-Gysin sequence">
     Let $S^n\to E\to B$ be a fibration with $B$ simply connected. Construct a long exact sequence
     $$\cdots\too\hom^{p+n}(B;\Z)\too\hom^{p+n}(E;\Z)\too\hom^p(B;\Z)\too\hom^{p+n+1}(B;\Z)\too\hom^{p+n+1}(E;\Z)\too\cdots$$
     Use this sequence to show that if $S^n\to S^{n+k}\to S^k$ is a sphere fibration, then $n=k-1$.
+</div>
+<div class="exercise">
+    Let $F\to E\to S^n$ be a fibration with $n>1$. Construct a long exact sequence relating the cohomology of $F$ to that of $E$. Use this to determine the cohomology of the loop space $\Omega S^n$.
 </div>
 
 # Sepctral Sequence of a Double Complex
@@ -250,3 +261,4 @@ Let $F\to E\to B$ be a (Serre) fibration with $\pi_1B=0$ [^8].
 [^8]: This condition can be weakened, but it makes things easier for me to assume it.
 [^9]: There's some dubious reasoning here, but I'm only trying to build intuition so that's fine
 [^10]: Don't read the proof of this; do it for yourself. The only reason I have it typed up here is that I've never worked through it on my own before this.
+[^11]: We have $C^n(X^{p+1})\subset C^n(X^p)$ since any $\phi\in\Hom_{\Z}(C_n(X^{p+1}),\Z)$ restricts to a cochain on $X^p$.
