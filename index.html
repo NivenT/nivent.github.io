@@ -17,7 +17,7 @@ search_omit: true
     var faves = $("#faves");
     var best = shuffle(['love-air', 'abs-val-p-adic', 'geo-group', 
                         'number-theory', 'godilocks-three-bears',
-                        'cover-fundgrp-sheaf']);
+                        'cover-fundgrp-sheaf', 'spectral-seq']);
     for (let i = 0; i < 5; i++) {
       faves.append(`<a href="{{ site.url }}/blog/${best[i]}">${i+1}</a> `);
     }
