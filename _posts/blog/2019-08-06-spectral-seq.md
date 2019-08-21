@@ -4,7 +4,7 @@ title: "Spectral Sequences"
 modified:
 categories: blog
 excerpt:
-tags: [math, homological algebra, primer, algebraic topology, category theory, homotopy theore, spheres]
+tags: [math, homological algebra, primer, algebraic topology, category theory, homotopy theory, spheres]
 date: 2019-08-19 01:00:00
 ---
 
@@ -287,7 +287,7 @@ In this section, I'll need to assume more topology background that in the previo
     $$\hom^{p+q}(\wt D^p,\wt S^{p-1})\simeq\hom^{p+q-1}(\wt D_-^{p-1},\wt S^{p-2}).$$
     Applying this to $\wt D_\alpha^p$ + a little bit of induction gives a map
     $$\eps_\alpha:\hom^{p+q}(\wt D_\alpha^p,\wt S_\alpha^{p-1})\iso\hom^q(\wt D_\alpha^0).$$
-    Now, $\wt D_\alpha^0$ is the fiber over some $0$-cell $D_\alpha$, which is not necessarily $F$ (the fiber over our chosen basepoint $*$). However, lifting a (contractible) path from $D_\alpha^0$ to $F$ gives a (canonical) isomorphism $\hom^q(\wt D_\alpha^0)\simeq\hom^q(F)$, so we're done comparing groups. It's now left to show that the below square (whose vertical maps are isomorphism) commutes
+    Now, $\wt D_\alpha^0$ is the fiber over some $0$-cell $D_\alpha$, which is not necessarily $F$ (the fiber over our chosen basepoint $*$). However, lifting a (contractible) path from $D_\alpha^0$ to $F$ gives a (canonical) isomorphism $\hom^q(\wt D_\alpha^0)\simeq\hom^q(F)$, so we're done comparing groups. It's now left to show that the below square (whose vertical maps are isomorphisms) commutes
     $$\begin{CD}
         \hom^{p+q}(X^p,X^{p-1}) @>d_1>> \hom^{p+q+1}(X^{p+1},X^p)\\
         @VVV @VVV\\
@@ -351,7 +351,7 @@ Above, $x\in\hom^3(S^3)$ is a generator as is $a\in\hom^2(\CP^\infty)$. The cup 
 
 $$d(a^2)=(da)a+a(da)=2ada=2ax\text{ and in general }d(a^q)=na^{q-1}da=qa^{q-1}x.$$
 
-Thus, the differential $d_3^{0,2q}$ is really just multiplication by $q$. Since this is the last page with nontrivial differentials, we get that, on the $E_\infty=E_4$-page, the only nonzero object on the $n=5$ diagonal is $E_\infty^{3,2}\simeq\zmod2$ and that the $n=4$ diagonal is 0 everywhere. Thus, $\hom^4(X)=0$ and $\hom^5(X)=\zmod2$. In general, we get $\hom^{2k}(X)=0$ and $\hom^{2k+1}(X)=\zmod k$. Because these groups all have rank $1$, universal coefficients tells us that
+Thus, the differential $d_3^{0,2q}$ is really just multiplication by $q$. Since this is the last page with nontrivial differentials, we get that, on the $E_\infty=E_4$-page, the only nonzero object on the $n=5$ diagonal is $E_\infty^{3,2}\simeq\zmod2$ and that the $n=4$ diagonal is 0 everywhere. Thus, $\hom^4(X)=0$ and $\hom^5(X)=\zmod2$. In general, we get $\hom^{2k}(X)=0$ and $\hom^{2k+1}(X)=\zmod k$. Because these groups all have rank $0$, universal coefficients tells us that
 
 $$\hom^k(X)=\Ext^1(\hom_{k-1}(X),\Z),$$
 
