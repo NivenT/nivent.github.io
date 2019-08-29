@@ -9,8 +9,6 @@ date: 2019-07-28
 hidden: true
 ---
 
-<b>If you're somehow seeing this right now, look away. It's not finished, and I'm not sure when/if it will be</b>
-
 I talked a little bit about the topic of this post's title in a [recent post](../comm-alg), but I want to stress that this [duality between algebra and geometry](https://www.youtube.com/watch?v=F8mYLi3PGOc) goes beyond [^1] this $\spec$ business. In particular, I'm going to discuss a more "topological" setting where we see nice interplay between algebra and geometry [^2]: relating a (compact, Hausdorff) topological space to its ring of (real-valued) continuous functions.
 
 # Prelim on Separation Axioms
