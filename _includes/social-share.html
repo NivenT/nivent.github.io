@@ -1,5 +1,5 @@
 <span class="social-share-reddit">
-    <a href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | escape | replace: ' ', '%20' }}" title="Share on Reddit" itemprop="Reddit"><i class="fa fa-reddit-square"></i> Post</a>
+    <a href="http://www.reddit.com/r/math/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | escape | replace: ' ', '%20' }}" title="Share on Reddit" itemprop="Reddit"><i class="fa fa-reddit-square"></i> Post</a>
 </span>
 <span class="social-share-twitter">
   <a href="https://twitter.com/intent/tweet?hashtags={{ page.tags | join: ',' | remove: ' ' }}&amp;text={{ page.title | escape | replace:' ','%20' }}&amp;url={{ site.url }}{{ page.url }}{% if author.twitter %}&amp;via={{ author.twitter }}{% endif %}" title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
