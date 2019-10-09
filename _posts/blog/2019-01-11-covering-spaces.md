@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Covering Spaces"
+favorite: false
 modified:
 categories: blog
 excerpt:

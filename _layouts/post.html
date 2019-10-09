@@ -55,7 +55,7 @@
         {{ content }}
 
         <div class="related-header">
-          <b>You may also like</b>
+          <b>You may also like...</b>
         </div>
         <ul class="related-list" id="rellist"></ul>
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}
@@ -112,6 +112,7 @@
                 score += TAG_SCORE * common_tags.length;
                 
                 score += FAV_SCORE * (posts[i].favorite == "true");
+                score -= FAV_SCORE * (posts[i].favorite == "false");
 
                 scored_posts.push([posts[i], score]);
             }
