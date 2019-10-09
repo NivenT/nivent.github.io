@@ -6,7 +6,7 @@ description: Niven Achenjang's Personal Website
 nav_description: Code, Math, Maybe some other stuff
 logo: site-logo.png
 search: true
-url: http://localhost:4000 #https://nivent.github.io
+url: https://nivent.github.io
 comments: true
 
 # Jekyll configuration
