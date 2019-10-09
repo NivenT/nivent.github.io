@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "Riemann, Dirichlet, and Their Favorite Letters"
+favorite: true
 modified:
 categories: blog
 excerpt:
+series: "Riemann Zeta"
 tags: [math, analytic number theory, number theory, zeta, L-function, quadratic reciprocity]
 date: 2019-01-31
 ---

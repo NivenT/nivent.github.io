@@ -4,6 +4,7 @@ title: "Algebra Part I"
 modified: 2017-09-15
 categories: blog
 excerpt:
+series: "Algebra Primer"
 tags: [math, algebra, groups, group theory]
 date: 2017-09-12 5:00:00
 ---

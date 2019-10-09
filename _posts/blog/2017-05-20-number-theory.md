@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A Little Bit of Number Theory"
+favorite: true
 modified: 
 categories: blog
 excerpt:

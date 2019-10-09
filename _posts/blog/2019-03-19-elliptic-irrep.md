@@ -299,7 +299,19 @@ and there exists some $m>0$ s.t. $n<-m\implies a_n(g)=0$. With this in mind, def
 
 $$\res_P(\omega)=a_{-1}(g)$$
 
-modelled after residues in complex analysis. Note that $\ord_P(g)$ is the smallest $n$ such that $a_n(g)\neq0$, so $\res_P(\omega)=0$ for any holomorphic form $\omega$. Now, we'll prove a special case of the previous lemma, and leave the construction of this exact sequence for an arbitrary divisor $D$ as an exercise.
+modelled after residues in complex analysis [^10]. Note that $\ord_P(g)$ is the smallest $n$ such that $a_n(g)\neq0$, so $\res_P(\omega)=0$ for any holomorphic form $\omega$. In our to be able to effectively employ residues, one needs to know the following. [^11]
+
+<div class="lemma">
+    Let $C$ be a smooth curve, and let $\omega\in\Omega_C$ be any differential form. Then,
+    $$\sum_{P\in C}\res_P(\omega)=0.$$
+</div>
+<div class="proof4">
+    First note that $\res_P(\omega)=0$ for any point $P\in C$ where $\omega$ does not have a pole. Hence, the sum under consideration is actually finite. To do show this, we'll start by showing it in the special case of $C=\P^1=\bar k\cup\{\infty\}$. In this case, $\bar k(C)=\bar k(t)$, and $t_c=t-c$ is a uniformizer at $c\in\bar k\subset\P^1$ while $t_\infty=\frac1t$ is a uniformizer at $\infty$. Now, write $\omega=g\dt$ for some $g\in\bar k(t)$. For any $c\in\bar k$, we have
+    $$\omega=g\dt=g\d(t-c)=g\dt_c=g(t_c+c)\dt_c\implies\res_c(\omega)=$$
+    $$\omega=g\dt=g\inv{\parens{\dt_\infty/\dt}}\dt_\infty=-gt^ 2\dt_\infty=-g(1/t_\infty)t_\infty^{-2}\implies\res_\infty(\omega)=$$
+</div>
+
+Now, we'll prove a special case of the previous lemma, and leave the construction of this exact sequence for an arbitrary divisor $D$ as an exercise.
 
 <div class="lemma">
     Let $C$ be a smooth curve, and fix a point $P\in C$. Then, there is an exact sequence
@@ -340,7 +352,7 @@ modelled after residues in complex analysis. Note that $\ord_P(g)$ is the smalle
 
 # $\l$-adic Representations
 
-[^1]: There is a lot to explain, so I anticipate this becoming one of my longer (and also more fun) posts to date
+[^1]: There is a lot to explain, so I anticipate this becoming one of my longer (and also more fun) posts to date.... In the end, this became my [second post](../solving-pell) that I feel is overly ambitious and so hard to follow. If you've read some of this, please tell me how hard it is to understand so I can know for sure if I really am trying to do too much all at once.
 [^2]: My main reference for this post is Silverman who doesn't use $\spec$, and rather not have to do the extra work associated with translating terminology and making sure I don't say anything false.
 [^3]: This section is basically just the first chapter of Silverman because I'm unoriginal.
 [^4]: Think of meromorphic maps from complex analysis
@@ -349,3 +361,5 @@ modelled after residues in complex analysis. Note that $\ord_P(g)$ is the smalle
 [^7]: I've also said the word sheaf before, so I could really try to be fancy
 [^8]: I'm sure things aren't as bad as I make them sound hear, but gotta set the bar low so it's easier to exceed expectations.
 [^9]: At the very least, showing that the underlying additive group of this ring is formall power series can be done relatively easily in much the same manner as in my [p-adic post](../abs-val-p-adic)
+[^10]: This value does not depend on the choice of uniformizer $t$, but to avoid having to show this, we fixed a canonical choice in the beginning (if you're bothered by this, show independence as an exercise).
+[^11]: Working over $\C$, one can show this easily using Stoke's theorem. However, we're doing algebraic geometry, not complex geometry, so we need to be more creative

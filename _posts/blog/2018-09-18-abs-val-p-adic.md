@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Absolute Values and p-adics"
+favorite: true
 modified:
 categories: blog
 excerpt:

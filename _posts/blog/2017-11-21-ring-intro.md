@@ -4,6 +4,7 @@ title: "Algebra Part II"
 modified:
 categories: blog
 excerpt:
+series: "Algebra Primer"
 tags: [math, algebra, rings, fields]
 date: 2017-11-21 3:00:00
 ---

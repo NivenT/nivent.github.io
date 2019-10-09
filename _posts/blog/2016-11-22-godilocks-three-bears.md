@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Goldilocks and the Three Bears"
+favorite: true
 modified: 
 categories: blog
 excerpt:

@@ -4,6 +4,7 @@ title: "An interesting equation"
 modified:
 categories: blog
 excerpt:
+series: "Interesting Equation"
 tags: [math, number theory, algebraic number theory]
 date: 2017-12-17 20:39:00
 ---

@@ -4,6 +4,7 @@ title: "A Quick Note on Values of the Riemann Zeta Function"
 modified:
 categories: blog
 excerpt:
+series: "Riemann Zeta"
 tags: [math, riemann zeta, quick, zeta, bernoulli number, bernoulli polynomial]
 date: 2019-02-23 00:01:00
 ---

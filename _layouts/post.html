@@ -53,6 +53,11 @@
           </center>
         {% endif %}
         {{ content }}
+
+        <div class="related-header">
+          <b>You may also like</b>
+        </div>
+        <ul class="related-list" id="rellist"></ul>
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
           {% include disqus-comments.html %}
@@ -77,6 +82,62 @@
 </div><!-- /.footer-wrapper -->
 
 {% include scripts.html %}
+<script type="text/javascript">
+    function displayRelatedPosts() {
+        $.getJSON("/related.json", function (posts) {
+            var list = $("#rellist");
+
+            const MAX_NUM_REL = 4;
+
+            const TAG_SCORE = 1;
+            const SERIES_SCORE = 5;
+            const FAV_SCORE = 0.01;
+
+            var self = posts[0]; // There's at least one post on this site
+            for (var i = 0; i < posts.length; i++) {
+                if (posts[i].url == "{{ page.url }}") {
+                    self = posts[i];
+                    break;
+                }
+            }
+
+            var scored_posts = [];
+            for (var i = 0; i < posts.length; i++) {
+                if (posts[i] == self) continue;
+                if (posts[i].hidden) continue;
+                
+                var score = posts[i].series ? SERIES_SCORE * (posts[i].series == self.series) : 0;
+                
+                const common_tags = posts[i].tags.filter(tag => self.tags.includes(tag));
+                score += TAG_SCORE * common_tags.length;
+                
+                score += FAV_SCORE * (posts[i].favorite == "true");
+
+                scored_posts.push([posts[i], score]);
+            }
+            //console.log(scored_posts);
+            scored_posts.sort((lhs, rhs) => rhs[1] - lhs[1])
+
+            for (var i = 0; i < Math.min(MAX_NUM_REL, scored_posts.length); i++) {
+                var post = scored_posts[i][0];
+                list.append(
+                    `<li>
+                        <div class="related-entry">
+                          <a href="{{ site.url }}/${post.url}" class>
+                            ${post.title}
+                          </a>
+                          <span class="date">${post.date}</span>
+                        </div>
+                     </li>
+                    `
+                )
+            }
+
+        });
+    }
+
+    $(document).ready(() => displayRelatedPosts());
+</script>
 
 </body>
 </html>

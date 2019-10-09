@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Spectral Sequences"
+favorite: true
 modified:
 categories: blog
 excerpt:
-tags: [math, homological algebra, primer, algebraic topology, category theory, homotopy theory, spheres]
+tags: [math, homological algebra, primer, algebraic topology, category theory, homotopy theory, spheres, cohomology]
 date: 2019-08-19 01:00:00
 ---
 
@@ -335,7 +336,7 @@ Alright, got that out of the way. Before proving Hurewicz, I should note that wh
 
 ### $\pi_4(S^3)=\zmod2$
 
-For our final application of spectral sequences this post, we'll compute a nontrivial homotopy group of a sphere. First note that the Hopf fibration $S^1\to S^3\to S^2$ gives $\pi_k(S^3)\simeq\pi_k(S^2)$ for all $k>2$, so last corollary already showed that $\pi_3(S^2)\simeq\Z$. This section, we'll see that $\pi_4(S^2)\simeq\pi_4(S^3)\simeq\zmod2$. 
+For our final application of spectral sequences this post, we'll compute a nontrivial homotopy group of a sphere. First note that the Hopf fibration $S^1\to S^3\to S^2$ gives $\pi_k(S^3)\simeq\pi_k(S^2)$ for all $k>2$, so last corollary already showed that $\pi_3(S^2)\simeq\Z$. This section, we'll see that $\pi_4(S^2)\simeq\pi_4(S^3)\simeq\zmod2$. [^25]
 
 First let $S^3\to K(\Z,3)$ be a map inducing an isomorphism on $\pi_3$. Let $X$ be the homotopy fiber of this map, and let $Y$ be the homotopy fiber of the map $X\to S^3$. Then, $Y\simeq\Omega K(\Z,3)=K(\Z,2)\simeq\CP^\infty$. Furthermore, the long exact sequence of the original fibration $X\to S^3\to K(\Z,3)$ shows that $\pi_k(X)=0$ for $k\le3$ (use that $\pi_3(S^3)\to\pi_3(K(\Z,3))$ is an isomorphism) and that $\pi_4(X)\simeq\pi_4(S^3)$. By Hurewicz, this means that $\hom_4(X)\simeq\pi_4(S^3)$ and we'll compute this by looking at the Serre spectral sequence (in cohomology, where we have cup products) of the left fibration $\CP^\infty\to X\to S^3$. The $E_3$-page of this sequence looks like
 
@@ -437,3 +438,4 @@ as claimed.
 [^22]: I think you may need to use that $\hom_{k-1}(X)$ is finitely generated and so looks like $\Z^r\oplus\zmod{p_1^{k_1}}\oplus\dots\oplus\zmod{p_g^{k_g}}$ and then use that Ext splits over direct sums in the first factor
 [^23]: Unimportant technical detail: in general, abelian categories are only required to have finite direct sums ("biproducts"). However, if you have a really big double complex (i.e. $A^{p,q}\neq0$ even when $p<0$ and/or $q<0$), then formation of the total complex can involve infinite direct sums, and so may not always be possible.
 [^24]: Actually, two natural filtrations/spectral sequences, but I'll only mention one of them
+[^25]: By Freudenthal suspension, we actually get the stronger result that $\pi_{n+1}(S^n)\cong\zmod2$ for all $n\ge3$.

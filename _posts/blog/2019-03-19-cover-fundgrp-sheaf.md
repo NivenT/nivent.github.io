@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Covering Spaces, $\\pi_1$-actions, and Locally Constant Sheaves"
+favorite: true
 modified: 2019-03-25
 categories: blog
 excerpt:

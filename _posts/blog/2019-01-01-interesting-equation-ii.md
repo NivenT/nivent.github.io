@@ -4,6 +4,7 @@ title: "An Interesting Equation II"
 modified:
 categories: blog
 excerpt:
+series: "Interesting Equation"
 tags: [math, number theory, dedekind domain, algebraic number theory]
 date: 2019-01-01
 ---

@@ -186,6 +186,42 @@ span + .entry-title {
 	}
 }
 
+/* Related posts */
+
+.related-header {
+  font-size: 18px;
+  border-bottom: 2px solid black;
+}
+
+.related-list {
+  margin-top: 0;
+  border-style: none none solid none;
+  list-style-type: none;
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  a:link {
+    color: blue;
+  }
+  a:visited {
+    color: purple;
+  }
+  a:hover {
+    color: purple;
+  }
+  a:active {
+    color: blue;
+  }
+  .related-entry {
+    font-size: 18px;
+  }
+  .date {
+    font-weight: bold;
+    float: right;
+  }
+}
+
 /*
    Disqus
    ========================================================================== */
