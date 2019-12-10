@@ -5,7 +5,7 @@ favorite: true
 modified: 
 categories: blog
 excerpt:
-tags: [math, number theory]
+tags: [math, number theory, geometry]
 date: 2017-05-20 21:01:00
 ---
 
