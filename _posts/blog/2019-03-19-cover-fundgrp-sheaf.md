@@ -5,7 +5,7 @@ favorite: true
 modified: 2019-03-25
 categories: blog
 excerpt:
-tags: [math, fundamental group, sheaf, covering space, category theory]
+tags: [math, fundamental group, sheaf, covering space, category theory, topology]
 date: 2019-03-22 00:00:00
 ---
 
