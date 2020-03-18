@@ -5,7 +5,7 @@ favorite: true
 modified:
 categories: blog
 excerpt:
-tags: [math, p-adic, absolute value]
+tags: [math, p-adic, absolute value, local fields, analytic, completion]
 date: 2018-09-19
 ---
 
