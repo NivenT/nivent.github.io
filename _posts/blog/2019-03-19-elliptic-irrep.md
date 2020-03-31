@@ -7,6 +7,7 @@ excerpt:
 tags: [math, irreducible, elliptic curve, galois group, representation, algebraic number theory, geometry, algebraic geometry]
 date: 2019-08-12
 hidden: true
+toc: true
 ---
 
 The title of this post is a bit of a misnomer. We won't be talking about representations of elliptic curves, but about representations attached to (associated with?) elliptic curves. In particular, the goal of this post is to prove that given an elliptic curve $E/\Q$ defined over the rationals, and a prime $\l$, the $\l$-adic representation 
