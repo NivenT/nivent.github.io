@@ -188,9 +188,6 @@ GEM
       jekyll-seo-tag (~> 2.0)
     jekyll-titles-from-headings (0.5.1)
       jekyll (~> 3.3)
-    jekyll-toc (0.13.1)
-      jekyll (>= 3.7)
-      nokogiri (~> 1.9)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jemoji (0.10.2)
@@ -211,7 +208,7 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.11.3)
     multipart-post (2.0.0)
-    nokogiri (1.10.4)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     octokit (4.14.0)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -255,7 +252,6 @@ DEPENDENCIES
   jekyll-feed
   jekyll-gist
   jekyll-sitemap
-  jekyll-toc
   nokogiri (>= 1.8.5)
 
 BUNDLED WITH
