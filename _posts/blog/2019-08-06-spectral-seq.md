@@ -227,6 +227,8 @@ Before ending this section, I should maybe mention some standard terminology. Th
     Show that this spectral sequence is compatible with cup products in the sense that, on each page, we get an induced map
     $$\mapdesc{\smile}{E_r^{p,q}\by E_r^{s,t}}{E_r^{p+s,q+t}}{([x],[y])}{[x\smile y]}$$
     such that $d_r(\alpha\smile\beta)=d_r(\alpha)\smile\beta+(-1)^{p+q}\alpha\smile d_r(\beta)$.
+    <br>
+    Actually, hold off on this exercise for now, and then do it specifically for the Serre spectral sequence construction later.
 </div>
 
 # A Neat Application
@@ -295,6 +297,12 @@ In this section, I'll need to assume more topology background that in the previo
         \Hom(\hom_p(B^p,B^{p-1}),\hom^q(F)) @>>> \Hom(\hom_{p-1}(B^p,B^{p-1}),\hom^q(F))
     \end{CD}$$
     We won't bother doing this here because I'm lazy, so just trust me when I say this is the case. QED.
+</div>
+<div class="remark">
+    The assumption that the base is simply connected is sufficient for our purposes in this post, but not strictly necessary. More generally, whenever $F\to E\xto\pi B$ is a fiber sequence with $\pi_1(B)$ acting on $\ast\hom(F)$ trivially, we get the same spectral sequence. Even more generally, when $\pi_1(B)$ acts on $\ast\hom(F)$ nontrivially, one can still get a spectral sequence abutting to the cohomology of the base space, but the $\hom^p(B;\hom^q(F))$ in the $E_2$ page can no longer be interpreted as singular cohomology; one now has to consider "cohomology with local coefficients" or "cohomology of a local system (locally constant sheaf)".
+</div>
+<div class="remark">
+    You do note need to use integral cohomology. The same argument(s) give a spectral sequence with $E_2^{p,q}=\hom^p(B;\hom^q(F;A))implies\hom^{p+q}(E;A)$ for any abelian group $A$.
 </div>
 
 This is our first serious, readily applicable spectral sequence. Perhaps unsurprisingly, it turns out to be really useful, so let's see it in action.

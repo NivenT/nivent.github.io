@@ -188,8 +188,8 @@ $$
 %% Algebraic Topology
 \DeclareMathOperator{\simhom}{\hom^\Delta}
 \DeclareMathOperator{\redhom}{\wt\hom}
-\DeclareMathOperator{\RP}{\mathbb RP}
-\DeclareMathOperator{\CP}{\mathbb CP}
+\DeclareMathOperator{\RP}{\mathbb R\mathbb P}
+\DeclareMathOperator{\CP}{\mathbb C\mathbb P}
 \DeclareMathOperator{\fiber}{fiber}
 \DeclareMathOperator{\hofiber}{hofiber}
 
@@ -235,8 +235,6 @@ $$
 \newcommand{\meas}{m_{\star}}
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\dabs}[1]{\left\|#1\right\|}
-\let\templim\lim
-\renewcommand{\lim}{\templim\limits}
 \DeclareMathOperator{\BV}{BV}
 
 %% Quantum Mechanics/Computing

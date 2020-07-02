@@ -270,7 +270,7 @@ it should suffice to study the Dirichlet $L$-series defined below.
 
 Note that the trivial character $\chi=1$ has $\zeta(s)$ as its $L$-series (when $N=1$). 
 
-Fix some (primitive) character $\chi\in X(N)$. It will turn out that these $L$-series each extend to meromorphic [^6] functions on the plane with their own product formulae and functional equations. The proofs of these facts are similar to those in the case of the Zeta function, so we may not always be as careful and trust that arguments could be made more carefully. For example, we observe the following product formula
+Fix some (primitive) character $\chi\in X(N)$ with $N>1$ (so $\chi$ nontrivial!). It will turn out that these $L$-series each extend to meromorphic [^6] functions on the plane with their own product formulae and functional equations. The proofs of these facts are similar to those in the case of the Zeta function, so we may not always be as careful and trust that arguments could be made more carefully. For example, we observe the following product formula
 
 $$L(\chi,s)=\sum_{n\ge1}\frac{\chi(n)}{n^s}=\sum_{n\ge1}\prod_{p\mid n}\frac{\chi(p)^{v_p(n)}}{p^{v_p(n)s}}=\prod_p\sum_{n\ge0}\frac{\chi(p)^n}{p^{sn}}=\prod_p\parens{\frac1{1-\chi(p)p^{-s}}}$$
 
@@ -290,7 +290,7 @@ Motivated by this, we also define a $\chi$-analogue of the theta series
 
 $$\theta(\chi, s):=\sum_{n\in\Z}\chi(n)n^{\eps}e^{-\pi n^2s/N}$$
 
-At this point, we would like to be able to apply Poisson summation [^7] to get a functional equation for $\theta(\chi, z)$. To do this, first define
+In the above definition, since $\chi$ is nontrivial, we have $\chi(0)=0$; hence, there is no $n=0$ term above. This may seem like a small remark, but the $n=0$ term in the case of trivial $\chi$ of conductor $N$ (i.e. in the case of Riemann zeta) was the source of the poles of the completed xi function. At this point, we would like to be able to apply Poisson summation [^7] to get a functional equation for $\theta(\chi, z)$. To do this, first define
 
 $$\theta_a(s):=\sum_{n\equiv a\pmod N}n^{\eps}e^{-\pi n^2s/N}=\sum_{k\in\Z}(Nk+a)^{\eps}e^{-\pi(Nk+a)^2s/N}$$
 
@@ -353,50 +353,35 @@ Hence, we will find a functional equation for the <b>$\chi$-xi function </b> [^1
 $$\xi(\chi, s)=\parens{\frac N\pi}^{\frac{s+\eps}2}\Gamma(\chi, s)L(\chi, s).$$
 
 <div class="theorem">
+    $\xi(\chi,s)$ extends to an entire function satisfying
     $$\xi(\chi, s) = W(\chi)\xi(\conj\chi, 1-s),$$
-    where $W(\chi)=\frac{\tau(\chi, 1)}{i^{\eps}\sqrt n}$.
+    where $W(\chi)=\frac{\tau(\chi, 1)}{i^{\eps}\sqrt N}$.
 </div>
 <div class="proof4">
-    First note that $\xi(\chi, s)=\frac12\int_0^\infty u^{(s+\eps)/2}\sqbracks{\theta(\chi, u)-1}\frac{\d u}u$, and let $\psi(\chi, u)=\frac12(\theta(\chi, u)-1)$. Then,
-    $$\begin{align*}
-        \psi(\chi, u)
-        =\frac12\parens{\frac{\tau(\chi, 1)}{(iu)^{\eps}(Nu)^{1/2}}\theta(\conj\chi, 1/u)-1}
-        &=\frac12\parens{\frac{\tau(\chi, 1)}{(iu)^{\eps}(Nu)^{1/2}}\sqbracks{2\psi(\conj\chi, 1/u)+1}-1}\\
-        &=\frac{\tau(\chi, 1)}{(iu)^{\eps}(Nu)^{1/2}}\psi(\conj\chi,1/u)+\frac12\frac{\tau(\chi, 1)}{(iu)^{\eps}(Nu)^{1/2}}-\frac12.
-    \end{align*}$$
-    This let's us calculate
+    First note that $\xi(\chi, s)=\frac12\int_0^\infty u^{(s+\eps)/2}{\theta(\chi, u)}\frac{\d u}u$, where there is no $``-1"$  there since $\chi(0)=0$. Since $\theta(\chi,u)=\frac{W(\chi)}{u^{1/2+\eps}}\theta(\bar\chi,1/u)$, we can calculate
     $$\begin{align*}
         \xi(\chi, s)
-        &=\int_0^\infty u^{(s+\eps)/2}\psi(\chi, u)\frac{\d u}u\\
-        &=\int_0^1u^{(s+\eps)/2}\psi(\chi, u)\frac{\d u}u+\int_1^\infty u^{(s+\eps)/2}\psi(u)\frac{\d u}u\\
-        &=\int_0^1u^{(s+\eps)/2}\sqbracks{\frac{\tau(\chi, 1)}{(iu)^{\eps}(Nu)^{1/2}}\psi(\conj\chi,1/u)+\frac12\frac{\tau(\chi, 1)}{(iu)^{\eps}(Nu)^{1/2}}-\frac12}\frac{\d u}u+\int_1^\infty u^{(s+\eps)/2}\psi(\chi, u)\frac{\d u}u
-    \end{align*}$$
-    Like last time, we now want to calculate the various parts of the left integral.
-    $$\begin{align*}
-        \frac{\tau(\chi,1)}{i^{\eps}\sqrt N}\int_0^1u^{(s-\eps-1)/2}\psi(\conj\chi, 1/u)\frac{\d u}u
-        &&&=\frac{\tau(\chi,1)}{i^{\eps}\sqrt N}\int_1^\infty\frac{\psi(\conj\chi, u)}{u^{(s-\eps-1)/2}}\frac{\d u}u\\
-        \frac12\frac{\tau(\chi,1)}{i^{\eps}\sqrt N}\int_0^1u^{(s-\eps-1)/2}\frac{\d u}u
-        &=\frac{\tau(\chi,1)}{i^{\eps}\sqrt N}\sqbracks{\frac{u^{(s-\eps-1)/2}}{s-\eps-1}}_0^1 &&= \frac{\tau(\chi,1)}{i^{\eps}\sqrt N}\frac1{s-\eps-1}\\
-        -\frac12\int_0^1u^{(s+\eps)/2}\frac{\d u}u
-        &=-\sqbracks{\frac{u^{(s+\eps)/2}}{s+\eps}}_0^1 &&= \frac{-1}{s+\eps}
+        &=\frac12\int_0^\infty u^{(s+\eps)/2}\theta(\chi, u)\frac{\d u}u\\
+        &=\frac12\int_0^1u^{(s+\eps)/2}\theta(\chi, u)\frac{\d u}u+\frac12\int_1^\infty u^{(s+\eps)/2}\theta(\chi,u)\frac{\d u}u\\
+        &=\frac{W(\chi)}2\int_0^1u^{(s-\eps-1)/2}\theta(\bar\chi,1/u)\frac{\d u}u + \frac12\int_1^\infty u^{(s+\eps)/2}\theta(\chi, u)\frac{\d u}u\\
+        &=\frac{W(\chi)}2\int_1^\infty u^{(1+\eps-s)/2}\theta(\bar\chi,u)\frac{\d u}u + \frac12\int_1^\infty u^{(s+\eps)/2}\theta(\chi, u)\frac{\d u}u\\
+        &=\frac12\int_1^\infty\sqbracks{W(\chi)u^{(1+\eps-s)/2}\theta(\bar\chi,u)+u^{(s+\eps)/2}\theta(\chi,u)}\frac{\d u}u
         .
     \end{align*}$$
-    Thus, letting $W(\chi)={\tau(\chi,1)}/\parens{i^{\eps}\sqrt N}$, we have
-    $$\xi(\chi, s)=\frac{W(\chi)}{s-\eps-1}-\frac1{s+\eps}+\int_1^\infty\sqbracks{W(\chi)u^{(1+\eps-s)/2}\psi(\conj\chi, u)+u^{(s+\eps)/2}\psi(\chi, u)}\frac{\d u}u.$$
-    Now, the integral above defines an entire function since $\psi(\chi, u)$ ($\chi$ fixed) decays rapidly, so $\xi(\chi, s)$ is meromorphic with two simple poles at $s+\eps=0$ and $s-\eps=1$. Note that 
+    Now, the integral above defines an entire function since $\theta(\chi, u)$ ($\chi$ fixed) decays rapidly, so $\xi(\chi, s)$ is entire. Note that 
     $$W(\conj\chi)=\tau(\conj\chi,1)/(i^{\eps}\sqrt N)=(-1)^{\eps}\conj{\tau(\chi,1)}/(i^{\eps}\sqrt N)=\conj{\tau(\chi, 1)}/((-i)^{\eps}\sqrt N)=\conj{W(\chi)},$$
     so
-    $$\xi(\conj\chi, 1-s)=-\frac{\conj{W(\chi)}}{s+\eps}+\frac1{s-\eps-1}+\int_1^{\infty}\sqbracks{\conj{W(\chi)}u^{(s+\eps)/2}\psi(\chi,u)+u^{(1+\eps-s)/w}\psi(\conj\chi, u)}\frac{\d u}u.$$
+    $$\xi(\conj\chi, 1-s)=\frac12\int_1^\infty\sqbracks{\overline{W(\chi)}u^{(s+\eps)/2}\theta(\chi,u)+u^{(1-s+\eps)/2}\theta(\bar\chi,u)}\frac{\d u}u.$$
     This formula looks pretty familiar, and indeed (after remarking that $\abs{W(\chi)}=1$) we see that
     $$\xi(\chi, s)=W(\chi)\xi(\conj\chi, 1-s).$$
 </div>
 <div class="corollary">
-    $L(\chi, s)$ has a meromorphic continuation to the entire plane with at most one pole.
+    $L(\chi, s)$ has an analytic continuation to the entire plane with no poles.
 </div>
 <div class="proof4">
     Just use
     $$L(\chi, s)=\parens{\frac\pi N}^{(s+\eps)/2}\frac{\xi(\chi, s)}{\Gamma(\chi, s)}.$$
-    Note that $1/\Gamma(\chi, s)$ has a simple zero when $s+\eps$ is a non-positive even integer (and has no other poles/zeros), so the pole at $s+\eps=0$ of $\xi(\eps, s)$ gets cancelled out, meaning $L(\chi, s)$ has at most one pole (which, if it exists, is simple and occurs at $s-\eps=1$).
+    Both $\xi(\chi,s)$ and $1/\Gamma(\chi,s)$ are entire, so the claim holds.
 </div>
 <div class="corollary">
     The same as the last corollary except without the implicit assumption that $\chi$ is primitive. To prove this, just notice that any character factors through a primitive one and then relate their $L$-functions.
@@ -405,7 +390,7 @@ $$\xi(\chi, s)=\parens{\frac N\pi}^{\frac{s+\eps}2}\Gamma(\chi, s)L(\chi, s).$$
 Now that we've gotten this far, let's return to the question of primes in arithmetic progressions. In order to prove Dirichlet's theorem, we'll need to make use of one non-trivial result that I will not prove in this post [^12]
 
 <div class="theorem">
-    For every non-trivial character $\chi\in X(N)$, one has $L(\chi,s)$ is holomorphic at $s=1$ (i.e. there's not a pole there), and $L(\chi, 1)\neq0$.
+    For every non-trivial character (even the non-primitive ones) $\chi\in X(N)$, one has $L(\chi, 1)\neq0$.
 </div>
 
 Now, let
@@ -453,15 +438,16 @@ Now, as it turns out, Dedekind's favorite letter is the same as Riemann's.
     $\zeta_K(s)$ defines a holomorphic function in the half-plane $\Re(s)>1$. Perhaps unsurprisingly at this point, it is possible to show that $\zeta_K$ extends to a meromorphic function on the entire complex plane with a simple pole at $s=1$. This is harder to show than the analagous result for $\zeta(s),L(\chi, s)$ (although the idea is the same), so showing it is beyond the scope of this post. 
 </div>
 
-One can use $\zeta_K$ to prove my earlier claim about the holomorphicity and non-vanishing of $L$-functions attached to nontrivial characters at $s=1$. This follows as a corollary of (a stronger verion of) the following.[^17]
+One can use $\zeta_K$ to prove my earlier claim about the non-vanishing of $L$-functions attached to nontrivial characters at $s=1$ [^19]. This follows as a corollary of the following.
 
 <div class="theorem">
     Let $K=\Q(\zeta_N)$ where $\zeta_N$ is a primitive $N$ root of unity. Then,
-    $$\zeta_K(s)\left/\prod_{\chi\in X(N)}L(\chi, s)\right.$$
-    is holomorphic.
+    $$\zeta_K(s)=\prod_{\chi\in X(N)}L(\chi, s).$$
 </div>
 
-An analagous result holds for arbitrary abelian extensions of $\Q$, and combining this with the knowledge that $L(1, s),\zeta_K(s)$ both have a simple pole at $s=1$ let's you conclude what you want. We'll see a simple case of this.
+The LHS above has a simple pole at $s=1$. The factor on the RHS belonging to the trivial character (which is just $\zeta(s)$ with some Euler factors removed) also has a simple pole at $s=1$. The rest of the factors on the RHS are holomorphic at $s=1$. Counting zeros/poles, we see that $L(\chi,1)\neq0$ if $\chi$ is nontrivial.
+
+An analagous result holds for arbitrary abelian extensions of $\Q$. We'll see a simple case of this.
 
 First note that unique factorization of ideals gives a product formula
 
@@ -507,11 +493,18 @@ to $\zeta_K(s)$. Thus, we see that
 
 $$\zeta_K(s)=\prod_p\frac1{1-p^{-s}}\frac1{1-\legendre Dpp^{-s}}.$$
 
-where the product is taken over rational primes $p\in\Z$. Now, granting that one could show that $\chi(n)=\legendre Dn$ is multiplicative and factors through a map $U(D)\to\bracks{\pm1}$ [^14], we would have $\zeta_K(s)=\zeta(s)L(\chi,s)$. [^15] Furthermore, taking $D=(-1)^{(q-1)/2}q$ ($q$ a prime) would mean there's only one quadratic Dirichlet character $\bmod D$ (i.e. one homomorphism $U(D)\to\\{\pm1\\}$) which is $\chi(n)=\legendre nq$. This shows that
+where the product is taken over rational primes $p\in\Z$. This looks like it is saying $\zeta_K(s)=\zeta(s)L(\legendre D\cdot,s)$, but is $\chi(n)=\legendre Dn$ even a Dirichlet character?
 
-$$\legendre pq=\legendre{(-1)^{(q-1)/2}q}p=\legendre{-1}p^{(q-1)/2}\legendre qp=(-1)^{\frac{q-1}2\frac{p-1}2}\legendre qp,$$
+Yes, it is (since $D\equiv0,1\pmod4$). First, for $n=p_1^{e_1}\dots p_g^{e_g}$, we define
+
+$$\chi(n)=\legendre Dn=\prod_{i=1}^g\legendre D{p_i}^{e_i},$$
+
+so $\chi(n)$ is at least well-defined, if not a Dirichlet character. It is multiplicative by design, so to show that it is a Dirichlet character (mod $D$), we only need to know that $\chi(n)$ only depends on the value of $n\pmod D$. I must admit that I do not know how to show this [^20], but taking its truth for granted for a bit, this gives $\zeta_K(s)=\zeta(s)L(\chi,s)$. If one takes $D=(-1)^{(q-1)/2}q$ for $q$ an odd prime, then there is only one quadratic Dirichlet character mod $D$ (i.e. one non-trivial homomorphism $U(D)\to\{\pm1\}$) since $\units{(\zmod q)}$ is cyclic. This character is $\chi(n)=\legendre nq$, but we've just shown that $\chi(n)=\legendre Dn$ is also a character. Thus,
+
+$$\chi(p)=\legendre pq=\legendre Dp=\legendre{(-1)^{(q-1)/2}q}p=\legendre{-1}p^{(q-1)/2}\legendre qp=(-1)^{\frac{q-1}2\frac{p-1}2}\legendre qp,$$
 
 which is the law of quadratic reciprocity. [^16]
+
 
 [^1]: The first time I saw this theorem, I thought it was the kind of dry, technical result that almost never shows up in the wild; I was wrong.
 [^2]: You may object that expanding out the RHS let's you pick a term with infinitely many prime factors, but this is a non-issue because those'll all multiply out at 0, so we good. 
@@ -524,10 +517,11 @@ which is the law of quadratic reciprocity. [^16]
 [^9]: If you see a mistake somewhere, let me know
 [^10]: completed L function?
 [^11]: At the very least, letting $N=1$ and $\chi=1$ (so $\eps=0$) recovers the functional equation for the classic theta function, as it should
-[^12]: But I will say more about it in the next section
+[^12]: Proving this is not too hard, but would take too much time. You can probably find a proof in like Davenport or something.
 [^13]: But don't worry, we will prove something involving primes.
 [^14]: Which, honestly, might be very hard to do. I haven't tried.
 [^15]: We've incidentally shown that $\zeta_K$ has a meromorphic continuation in the quadratic number field case
 [^16]: I must admit, this whole section turned out more dubious than I intended. I wanted to present a (clean) proof of qudratic reciprocity, but it's unclear to me how much machinary/grunt work one would need to turn this outline into a rigorous, non-circular proof
-[^17]: Alternatively, it may actually be easier to calculate the residue of L(\chi, s) at s=1, and show that this residue is 0. I haven't tried this, but I imagine (could be wrong) that it boils down to some orthagonality relation a la the last theorem of the shallow dive showing that this residue is 0 iff chi is nontrivial. You would still need to below theorem for non-vanishing though.
 [^18]: Actually, I have a guess. The theta function has terms that look like $e^{-s}$ while the zeta function has terms that look like $(1/n)^s$. If you want to exploit the theta function's functional equation, then you need some kind of bridge between the two; this leads you to the Gamma function which has both a $e^{-\mrm{blah}}$ factor and a $\mrm{blah}^s$ factor. In fancier words, to introduce terms that help you relate the theta function to the zeta function you do something like take the [Mellin transform](https://www.wikiwand.com/en/Mellin_transform) of $s\mapsto e^{-\pi n^2s}$ (I say something like because I think we technically end up using the Mellin transform of $s\mapsto e^{-\pi n^2s^2}$ instead (and then substitute $u=x^2$), but potato potato)
+[^19]: This is not the standard way to do so
+[^20]: More accurately any proof I've seen of this uses quadratic reciprocity, and I don't want to use that for reasons that will become apparent soon.
