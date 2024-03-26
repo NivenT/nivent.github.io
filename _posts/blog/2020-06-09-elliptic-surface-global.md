@@ -6,6 +6,7 @@ categories: blog
 excerpt:
 tags: [math, for me, elliptic surfaces, complex surfaces, complex geometry, algebraic geometry, monodromy]
 date: 2020-07-26
+hidden: true
 ---
 
 To some extent, every post I write is written for me moreso than for you, the proverbial reader. However, this post is especially written for me. I want to understand the construction of complex elliptic surfaces with prescribed global monodromy, but don't want to type up the details of the parts of this story that are needed for this construction (e.g. the local classification of elliptic surfaces), so here we are. I'll start by recalling the local picture [^1], and then we'll look at the global picture (only constructing these surfaces; no calculating numerical invariants or whatnot) [^2].
